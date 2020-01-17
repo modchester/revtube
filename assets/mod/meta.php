@@ -23,7 +23,7 @@
     <script type="text/javascript" src="/assets/js/bootstrap-tabs.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The world's smallest video sharing community">
-    <meta name="author" content="neroidev, Kai">
+    <meta name="author" content="neroidev, skyiebox">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
