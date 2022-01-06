@@ -1,39 +1,42 @@
+<head>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;}
+.tg td{background-color:#EBF5FF;border-bottom-width:1px;border-color:#9ABAD9;border-style:solid;border-top-width:1px;
+  border-width:0px;color:#444;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;
+  word-break:normal;}
+.tg th{background-color:#409cff;border-bottom-width:1px;border-color:#9ABAD9;border-style:solid;border-top-width:1px;
+  border-width:0px;color:#fff;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg .tg-c9ig{background-color:#efefef;font-family:serif !important;;text-align:left;vertical-align:top}
+.tg .tg-v070{background-color:#efefef;color:#000000;font-family:serif !important;;text-align:left;vertical-align:top}
+.tg .tg-e4k9{background-color:#efefef;font-family:serif !important;;text-align:left;vertical-align:top}
 
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    .logowh {
-        background-color: black;
-    }
+.nolinkw {
+    color: white;
+    text-decoration: none;
+}
 </style>
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>vistatube</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="vistatube" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:url" content="http://vt.redst0ne.xyz/" />
-<meta property="og:site_name" content="vistatube" />
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="https://lake-sketch.github.io/assets/css/style.css?v=105cc1030840380fa2690d4d168610561c6d93e4">
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-
-<img src="janbetablack.png" class="logowh">
-
-      <h1 id="lake-sketchgithubio">Welcome</h1>
-<p>Site is very unfinished, oh boy</p>
-
-
-      
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  </body>
-</html>
+</head>
+<body>
+<br>
+<center><div style="width: 985px; background: darkblue; padding: 10px;"><br><img src="janbeta.png"><br><p style="color: white; font-family: sans-serif; padding: -5px;"><a class="nolinkw" href="index.php">Home</a> | <a class="nolinkw" href="videos.php">Videos</a> | <a class="nolinkw" href="channels.php">Channels</a></p></div></center>
+<center><h1>Statistics</h1>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-v070">Registered Users</th>
+    <th class="tg-v070">PLACEHOLDER</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-e4k9">Uploaded Videos</td>
+    <td class="tg-e4k9">PLACEHOLDER</td>
+  </tr>
+  <tr>
+    <td class="tg-c9ig">Published Comments</td>
+    <td class="tg-c9ig">PLACEHOLDER</td>
+  </tr>
+</tbody>
+</table></center>
+</body>
