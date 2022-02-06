@@ -6,3 +6,5 @@ As of February 5, 2022, the RevTube project has been terminated. You are allowed
 For the current "skeuo" layout, the link is ~~http://vistatube.revtube.ml~~ 
 ## There is currently no official RevTube instances.
 If there ends up being one, it will be posted here.-->
+# What does this mean?
+In the following days, the RevTube feed Chrome extension and the site will stop functioning.
