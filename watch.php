@@ -103,6 +103,7 @@
             $result = $stmt->get_result();
             if($result->num_rows === 0) exit('Fatal error');
             while($row = $result->fetch_assoc()) {
+                echo "<b>Share</b>";
                 echo "URL <input value=\"http://revtube.ml/watch.php?id=" . $row["id"] . "\"><br>
                 Embed <input style=\"margin-right: 13px;\" value='<iframe style=\"border: 0px; overflow: hidden;\" src=\"http://revtube.ml/player/embed.php?id=" . $_GET['id'] . "\" height=\"360\" width=\"480\"></iframe>'>";
                 echo "<br>";
