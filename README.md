@@ -3,8 +3,8 @@ RevTube is a video <!--(with audio uploading a feature that was going to be adde
 # Access the site 
 You can access RevTube at https://rev.yoretude.com.
 <!--~~For the upcoming "Redux" layout, the link is: https://redst0ne.xyz/vistatuberedux~~ (Redux is cancelled)
-For the current "skeuo" layout, the link is ~~http://coming.soon~~ 
-## There is currently no official RevTube instances.
-If there ends up being one, it will be posted here.-->
+For the current "skeuo" layout, the link is https://rev.yoretude.com.
+## There is an offical RevTube instance at https://rev.yoretude.com..
+-->
 # New codebase???
-Uh, soon.
+Uh, soon...
