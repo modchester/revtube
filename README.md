@@ -1,7 +1,7 @@
 # RevTube
 RevTube is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
 # Access the site 
-Coming soon......
+You can access RevTube at https://rev.yoretude.com.
 <!--~~For the upcoming "Redux" layout, the link is: https://redst0ne.xyz/vistatuberedux~~ (Redux is cancelled)
 For the current "skeuo" layout, the link is ~~http://coming.soon~~ 
 ## There is currently no official RevTube instances.
