@@ -14,9 +14,16 @@
             <br>
             <br>
             <br>
+            <?php
+            if(!isset($_SESSION['profileuser3'])) {
+              echo('<script>
+              window.location.href = "alogin.php";
+              </script>');
+          }
+          ?>
                 <h3>Upload Video</h3>
-                <h3><i>Please check if you're logged in, if you're not, you need to sign in to upload videos.</i></h3>
-                <small>This will be fixed in a later update.</small>
+               <!-- <h3><i>Please check if you're logged in, if you're not, you need to sign in to upload videos.</i></h3>
+                <small>This will be fixed in a later update.</small> -->
                 <br>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="input-group">
@@ -45,7 +52,7 @@
     <?php
     if (isset($_POST['submit'])){
         if(!isset($_SESSION['profileuser3'])) {
-            echo("Login to upload videos...");
+            die("Login to upload videos...");
         }
         $target_dir = "./videos/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
