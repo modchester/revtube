@@ -28,7 +28,7 @@ if(isset($_POST["submit"])){
     ->addFields(
         ["Reason:", $proname, true],
         ["Offending video:", $link, true],
-        ["Username:", $user, true]
+        ["User:", $user, true]
     )
     ->setTimestamp()
     ->send();    
