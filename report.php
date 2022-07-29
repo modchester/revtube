@@ -27,7 +27,7 @@ if(isset($_POST["submit"])){
     ->setColor("#3238a8")
     ->addFields(
         ["Reason:", $proname, true],
-        ["Video link:", $link, true],
+        ["Offending video:", $link, true],
         ["Username:", $user, true]
     )
     ->setTimestamp()
