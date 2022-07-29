@@ -56,7 +56,7 @@
                 </form>
             </div>
             <div class="card message">
-                Never give your password to a stranger! You could get hacked or worse.
+                Never give your password to a stranger! You could get hacked, or worse.
             </div>
         </div>
     </div></center> 
