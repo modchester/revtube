@@ -167,13 +167,14 @@
                 $stmt->execute();
                 $stmt->close();
                 
-                echo "<h3>Comment published</h3>";
+                echo "<h4>Comment published</h4>";
             }
         }
     ?>
     <form action="" method="post" enctype="multipart/form-data"><br>
         Post a comment <br><br><textarea name="bio" rows="3" cols="40" required="required"></textarea><br><br>
         <input class="yt-button primary" type="submit" value="Comment" name="submit">
+        <small>Make sure to follow our <a href="tos.php">Terms of Service</a></small>
     </form>
     <hr>
     <?php
