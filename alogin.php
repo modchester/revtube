@@ -54,7 +54,7 @@
                                             if(password_verify($_POST['password'], $hash)){
                                                 session_start();
                                                 $_SESSION["profileuser3"] = htmlspecialchars($_POST['name']);
-                                                header("Location: .");
+                                                echo("<a href='.'>Click here to go home</a>");
                                             }
                                             else {
                                                 echo 'Username and password combo do not match our records.';
