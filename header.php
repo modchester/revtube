@@ -1,7 +1,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="./index.php"><!--<strong>RevTube</strong>--><img src="./assets/revtubenavbar.png" height="23px" width="69px"></a>
+          <a class="brand logost" href="./index.php"><!--<strong>RevTube</strong>--><img src="./assets/revtubenavbar.png" height="23px" width="59px"></a>
           <ul class="nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="videos.php">Videos</a></li>
