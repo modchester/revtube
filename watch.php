@@ -28,27 +28,8 @@
         while($row = $result->fetch_assoc()) {
             echo '
             <h2>' . $row['videotitle'] . '</h2>
-            <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player/embed.php?id=' . $_GET['id'] . '" height="360px" width="480px"></iframe> <br><br>
-                <script>
-                    var vid = document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\');
-                    function hmsToSecondsOnly(str) {
-                        var p = str.split(\':\'),
-                            s = 0, m = 1;
-
-                        while (p.length > 0) {
-                            s += m * parseInt(p.pop(), 10);
-                            m *= 60;
-                        }
-
-                        return s;
-                    }
-
-
-                    function setTimePlayer(seconds) {
-                        var parsedSec = hmsToSecondsOnly(seconds);
-                        document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\').currentTime = parsedSec;
-                    }
-                </script>';
+            <iframe height="360px" width="480px" src="http://hyperion.lol/embed?v=' . $row["filename"] . '"></iframe>
+                ';
 
             $videoembed = '\
             <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player/lolplayer.php?id=' . $_GET['id'] . '" height="360px" width="480px"></iframe> <br><br>
@@ -174,11 +155,13 @@
     <form action="" method="post" enctype="multipart/form-data"><br>
         Post a comment <br><br><textarea name="bio" rows="3" cols="40" required="required"></textarea><br><br>
         <input class="yt-button primary" type="submit" value="Comment" name="submit">
+        <br>
+        <br>
         <small>Make sure to follow our <a href="tos.php">Terms of Service</a></small>
     </form>
     <hr>
     <?php
-        $stmt = $mysqli->prepare("SELECT * FROM comments WHERE tovideoid = ?");
+        $stmt = $mysqli->prepare("SELECT * FROM comments WHERE tovideoid = ? LIMIT 4");
         $stmt->bind_param("s", $_GET['id']);
         $stmt->execute();
         $result = $stmt->get_result();

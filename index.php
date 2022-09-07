@@ -9,6 +9,7 @@
 <?php include 'header.php';?>
     <div class="container">
  <div class="content">
+ <img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">
         <div class="page-header">
             <?php include 'alert.php'?>
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
