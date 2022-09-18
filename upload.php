@@ -54,7 +54,7 @@
         if(!isset($_SESSION['profileuser3'])) {
             die("Login to upload videos...");
         }
-        $target_dir = "./videos/";
+        $target_dir = "./content/video/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         if(!is_dir($target_dir)){
             mkdir($target_dir);

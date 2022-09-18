@@ -22,11 +22,11 @@
                         <input type="text" name="name" pattern="[^()/><\][\\\x22,;|]+" placeholder="Channel Name" required>
                     </div>
                     <br>
-                    <div class="input-group">
-                   <!--    <label class="labelcenter" for="email">Email: </label>-->
+              <!--      <div class="input-group">
+                   <!-    <label class="labelcenter" for="email">Email: </label>->
                         <input type="email" name="email" placeholder="Email" required>
                     </div>
-                    <br>
+                    <br> -->
                     <div class="input-group">
                         <!--<label for="password">Password: </label>-->
                         <input type="password" name="password" placeholder="Password" required>

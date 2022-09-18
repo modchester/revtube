@@ -30,7 +30,7 @@
                                 <div class="col-1-3 video-thumbnail">
                                 <a href="watch.php?id='.$row['id'].'">
                                     <video>
-                                        <source src="../videos/'.$row['filename'].'" type="video/mp4">
+                                        <source src="content/video/'.$row['filename'].'" type="video/mp4">
                                         Thumbnail could not be loaded :(
                                     </video> 
                                 </a>

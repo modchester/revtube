@@ -28,7 +28,7 @@
         while($row = $result->fetch_assoc()) {
             echo '
             <h2>' . $row['videotitle'] . '</h2>
-            <iframe height="360px" width="480px" src="http://hyperion.lol/embed?v=' . $row["filename"] . '"></iframe>
+            <iframe height="360px" width="480px" src="embed?v=' . $row["filename"] . '"></iframe>
                 ';
 
             $videoembed = '\
