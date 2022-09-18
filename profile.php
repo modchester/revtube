@@ -83,14 +83,19 @@
           <div class="span4">
             <h3>Bio</h3>
                             <?php
-                $statement = $mysqli->prepare("SELECT `description` FROM `users` WHERE `id` = ? LIMIT 1");
+                $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `id` = ? LIMIT 1");
                 $statement->bind_param("i", $_GET['id']);
                 $statement->execute();
                 $result = $statement->get_result();
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='card message'>
                     ".$row["description"]."
-                    </div>";
+                    </div>
+                    <hr>
+                    <h3>Statistics</h3>
+                    <div class='card message'>
+                    Joined ".$row["date"]."
+                    ";
                 }
                 $statement->close();
                 ?>

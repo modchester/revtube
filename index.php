@@ -12,16 +12,15 @@
  <!--<img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">-->
         <div class="page-header">
           <?php
-          
-       if ($_GET === null) {
-        echo ' ';
-       } else {
-        echo '
-         <div class="alert-message success">
+      if(empty($_GET)) {
+        echo "<p style='display:none;'>no</p>";
+      } else if($_GET === " ") {
+        echo "<p style='display:none;'>no</p>";
+      } else { echo '
+          <div class="alert-message success">
         <p>'.$_GET["msg"].'</p>
-       </div>';
-       }
-  //  echo $_GET['msg'];
+      </div>';
+    }
           ?>
             <?php include 'alert.php'?>
           <h1>Uploads <small><div id="clockbox"></div></small></h1>

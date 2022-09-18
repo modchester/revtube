@@ -85,6 +85,8 @@
             ";
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                $video = $_POST['videotitle'];
+                $user = $_POST['author'];
                 $statement = $mysqli->prepare("INSERT INTO videos (videotitle, description, author, filename, date) VALUES (?, ?, ?, ?, now())");
                 $statement->bind_param("ssss", $videotitle, $description, $author, $filename);
                 $videotitle = htmlspecialchars($_POST['videotitle']);
@@ -93,6 +95,18 @@
                 $filename = basename($_FILES["fileToUpload"]["name"]);
                 $statement->execute();
                 $statement->close();
+                $webhookurl = "https://discord.com/api/webhooks/1020876390301700159/zPC-pJlefZ974cClid_IzzdpkbLL3dUxigsJSIZQGSMoHm2JUDfnmsaDyjgF24X0nkeW";
+                $msg = "$user just uploaded **$video**";
+                $json_data = array ('content'=>"$msg");
+                $make_json = json_encode($json_data);
+                $ch = curl_init( $webhookurl );
+                curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+                curl_setopt( $ch, CURLOPT_POST, 1);
+                curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
+                curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+                curl_setopt( $ch, CURLOPT_HEADER, 0);
+                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+                $response = curl_exec( $ch );
                 echo('<script>
               window.location.href = "index.php?msg=Your video has been uploaded!";
               </script>');
