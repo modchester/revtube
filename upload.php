@@ -62,15 +62,27 @@
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         if (file_exists($target_file)) {
-            echo "Video with the same filename already exists.";
+            echo "
+            <div class='alert-message error'>
+            Video with the same filename already exists.
+            </div>
+            ";
             $uploadOk = 0;
         }
         if($imageFileType != "mp4") {
-            echo "MP4 files only.";
+            echo "
+            <div class='alert-message error'>
+            MP4 files only.
+            </div>
+            ";
             $uploadOk = 0;
         }
         if ($uploadOk == 0) {
-            echo "unknown error.";
+            echo "
+            <div class='alert-message error'>
+            unknown error.
+            </div>
+            ";
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $statement = $mysqli->prepare("INSERT INTO videos (videotitle, description, author, filename, date) VALUES (?, ?, ?, ?, now())");
@@ -82,7 +94,7 @@
                 $statement->execute();
                 $statement->close();
                 echo('<script>
-              window.location.href = "index.php?msg=Your video has been added!";
+              window.location.href = "index.php?msg=Your video has been uploaded!";
               </script>');
             } else {
                 echo "error!!!!!!!!!!!!!!!!!! error code: ";
