@@ -54,6 +54,8 @@
                                             if(password_verify($_POST['password'], $hash)){
                                                 session_start();
                                                 $_SESSION["profileuser3"] = htmlspecialchars($_POST['name']);
+                                                echo('<script>
+                                                   window.location.href = "index.php";</script>');
                                              //   echo("<a href='.'>Click here to go home</a>");
                                             }
                                             else {

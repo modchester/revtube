@@ -94,4 +94,9 @@
 video {
   background: black;
 }
+.topbar > .fill > .container {
+  background-size: auto 100%;
+  animation: animatedBackground 110s linear infinite alternate;
+  background-image: url(assets/skyline.png);
+}
     </style>

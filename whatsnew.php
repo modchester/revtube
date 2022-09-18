@@ -1,6 +1,9 @@
 <h3>What's New</h3>
             <ul class="unstyled">
-<li>none yet, just the "to do" list</li>
+<li>account dropdown has been fixed</li>
+<li>featured videos added</li>
+<li>watch page improved</li>
+<li>and, the "to do" list</li>
 <br>
 <li>1. report button on video page</li>
 <li><del>2. upload button on header</del></li>
