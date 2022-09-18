@@ -20,7 +20,7 @@
         <div class="container-flex">
             <div class="col-2-3">
                 <?php
-                    $statement = $mysqli->prepare("SELECT `username`, `id`, `subscribers`, `verified` FROM `users` WHERE `id` = ? LIMIT 1");
+                    $statement = $mysqli->prepare("SELECT `username`, `id`, `subscribers` FROM `users` WHERE `id` = ? LIMIT 1");
                     $statement->bind_param("i", $_GET['id']);
                     $statement->execute();
                     $result = $statement->get_result();
@@ -30,7 +30,7 @@
                         <div class=\"user-info\">
                             <!--<div class=\"user-name\"><a href=\"profile.php?id=".$row["id"]."\">".$row["username"]."</a></div>-->
                             <div><h3><span class=\"black\">".$row["subscribers"]."</span> subscribers</h3></div>";
-                            if($_SESSION["subscribedto".$row["id"]] === false) {
+                      /*      if($_SESSION["subscribedto".$row["id"]] === false) {
                                 $finalstring .= "<div><a class\"btn danger\" href=\"subscribe.php?id=".$row["id"]."&u=0\"><!--<img src=\"buttonsub.png\">-->SUBSCRIBE</a></div>";
                             }
                             else{
@@ -39,8 +39,8 @@
                                             if ($row['verified'] == 'TRUE') {
                     echo "
                 <span class=\"label success\">Verified</span>
-                ";
-                }
+                "; 
+                } */
                         $finalstring .= "</div>";
 
                         echo $finalstring;
@@ -58,7 +58,7 @@
                                 <div class="col-1-3 video-thumbnail">
                                 <a href="watch.php?id='.$row['id'].'">
                                     <video>
-                                        <source src="videos/'.$row['filename'].'" type="video/mp4">
+                                        <source src="content/video/'.$row['filename'].'" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video> 
                                 </a>

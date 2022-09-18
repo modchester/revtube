@@ -9,7 +9,7 @@
 <?php include 'header.php';?>
     <div class="container">
  <div class="content">
- <img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">
+ <!--<img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">-->
         <div class="page-header">
             <?php include 'alert.php'?>
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
@@ -17,6 +17,46 @@
         </div>
         <div class="row">
           <div class="span10">
+          <h3>Featured Videos</h3>
+            <div class="featured-videos container-flex">
+                <?php
+                    $statement = $mysqli->prepare("SELECT * FROM videos WHERE featured = TRUE LIMIT 4"); //sexy variable names
+                    //$statement->bind_param("s", $_POST['fr']);
+                    $statement->execute();
+                    $result = $statement->get_result();
+                    $howmany = 0;
+                    if($result->num_rows !== 0){
+                        while($row = $result->fetch_assoc()) {
+                            echo '
+                            <div class="featured-video col-generic">
+                                <div class="video-thumbnail">
+                                    <a href="viewvideo.php?id=' . $row['id'] . '">
+                                        <video>
+                                            <source src="videos/' . $row['filename'] . '" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                         </video>
+                                    </a>
+                                </div>
+                                <div class="featured-video-info">
+                                    <div class="video-title"><a href="viewvideo.php?id='.$row['id'].'">'.$row['videotitle'].'</a></div>
+                                    <div class="video-author"><a href="profile.php?id='.$row['author'].'">'.$row['author'].'</a></div>
+                                </div>
+                            </div>';
+                            $howmany++;
+                        }
+                        if($howmany !== 4){
+                            for($i = 4-$howmany; $i > 3; $i++){
+                                echo("the j");
+                            }
+                        }
+                    }
+                    else{
+                        echo "It seems there are no videos here. Perhaps one of your videos could be here?";
+                    }
+                ?>
+            </div>
+            <br>
+            <br>
             <h2>Latest Uploads</h2>
             <?php
                     $statement = $mysqli->prepare("SELECT * FROM videos ORDER BY date DESC");
@@ -55,14 +95,7 @@
             </ul>
           </div>
           <div class="span4">
-            <h3>What's New</h3>
-            <ul class="unstyled">
-<li>none yet, just the "to do" list</li>
-<br>
-<li>1. report button on video page</li>
-<li>2. upload button on header</li>
-<li>3. new video player</li>
-            </ul>
+            <?php include 'whatsnew.php'; ?>
             <!--<input class="input" type="text" placeholder="Username">
             <br>
             <input class="input" type="password" placeholder="Password">

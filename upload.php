@@ -81,7 +81,9 @@
                 $filename = basename($_FILES["fileToUpload"]["name"]);
                 $statement->execute();
                 $statement->close();
-                header("Location: .");
+                echo('<script>
+              window.location.href = "index.php?msg=Your video has been added!";
+              </script>');
             } else {
                 echo "error!!!!!!!!!!!!!!!!!! error code: ";
                 echo $_FILES["fileToUpload"]["error"];

@@ -27,12 +27,13 @@
         if($result->num_rows === 0) exit('No rows');
         while($row = $result->fetch_assoc()) {
             echo '
-            <h2>' . $row['videotitle'] . '</h2>
-            <iframe height="360px" width="480px" src="embed?v=' . $row["filename"] . '"></iframe>
+            <h2>' . $row['videotitle'] . ' <small>by ' . $row['author'] . '</small></h2>
+           <!-- <iframe height="360px" width="480px" src="embed?v=' . $row["filename"] . '"></iframe> -->
+           <video src="content/video/' . $row["filename"] . '" height="360px" width="480px" controls autoplay></video>
                 ';
 
             $videoembed = '\
-            <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player/lolplayer.php?id=' . $_GET['id'] . '" height="360px" width="480px"></iframe> <br><br>
+            <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player2009/lolplayer.php?id=' . $_GET['id'] . '" height="360px" width="480px"></iframe> <br><br>
             <script>
                 var vid = document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\');
                 function hmsToSecondsOnly(str) {
@@ -58,7 +59,7 @@
         ?>
 
 <!--<div class="topRight" style="margin-left: 500px; margin-top: -336px;">-->
-<div class="card gray">
+<div class="videoinfo">
         <?php
             $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
             $stmt->bind_param("s", $_GET['id']);
@@ -76,7 +77,7 @@
         ?> 
     </div>
         <br>
-        <div class="card message"> 
+        <!-- <div class="card message"> 
         <?php
             $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
             $stmt->bind_param("s", $_GET['id']);
@@ -93,7 +94,7 @@
             }
 
         ?>  
-    </div>
+    </div> -->
         </div>
 
 </div>
@@ -101,9 +102,9 @@
         <?php
         mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE id = '" . $videoid . "'");
         $stmt->close();
-        echo '<hr style="
-    margin-top: 50px;
-">';
+       // echo '<hr style="
+//    margin-top: 50px;
+// ">';
             $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
             $stmt->bind_param("s", $_GET['id']);
             $stmt->execute();
@@ -112,24 +113,11 @@
             while($row = $result->fetch_assoc()) {
                 
                 if ($row['featured'] == '1') {
-                    echo "
-                <div style=\"
-                    color: #000;
-                    background-color: var(--card-blue-1);
-                    border: 1px solid var(--card-blue-2);
-                    padding: 7px 15px;
-                    font-size: 12px;
-                    border-radius: 7px;
-                    text-align: center;
-                \"><strong>This video is featured on the main page!</strong></div>
-                </div>
-                ";
+                    echo "<strong style='font-size:8pt;''>This video is featured on the main page!</strong>";
                 }
             }
 
-        echo '<h3 style="
-    margin-top: 32px;
-">Comments &amp; Responses</h3>';
+        echo '<h3 style="margin-top: 32px;">Comments &amp; Responses</h3>';
 ?>
 
 
@@ -148,7 +136,7 @@
                 $stmt->execute();
                 $stmt->close();
                 
-                echo "<h4>Comment published</h4>";
+                echo "<p>Comment published</p>";
             }
         }
     ?>
@@ -170,6 +158,17 @@
             echo "<div class='commenttitle'>" . $row['author'] . " (" . $row['date'] . ")</div>" . $row['comment'] . "<br><br>";
         }
         $stmt->close();
+    ?>
+    <?php
+    $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
+    $stmt->bind_param("s", $_GET['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if($result->num_rows === 0) echo('No comments.');
+    while($row = $result->fetch_assoc()) {
+    echo '<a href="all_comments.php?id='.$row['id'].'">view all comments</a>';
+    }
+    $stmt->close();
     ?>
     <hr>
     <?php include("footer.php") ?>

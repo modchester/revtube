@@ -22,7 +22,7 @@ $fmt_stream_map = [
         "url" => "./content/video/".$_GET['video_id'],
         "sig" => "holyfuckingshitchiefbazingaissexyplsmrbazingamarryme",
         "fallback_host" => "tc.v14.cache3.c.youtube.com",
-        "quality" => "hd1080",
+        "quality" => "hd720",
         "type" => "video/mp4; codecs=\"avc1.4d002a\""
     ],
 ];

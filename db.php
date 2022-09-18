@@ -26,4 +26,5 @@
     }
     
     $loggedIn = isset($_SESSION['profileuser3']);
+	//echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
 ?>
