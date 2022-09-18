@@ -67,7 +67,8 @@
             $result = $stmt->get_result();
             if($result->num_rows === 0) exit('No rows');
             while($row = $result->fetch_assoc()) {
-                echo "Uploaded on " . $row['date'] . " by " . $row['author'] . "<br><br>";
+                $uploaddate = date('F d, Y', strtotime($row['date']));
+                echo "Uploaded on $uploaddate by " . $row['author'] . "<br><br>";
                 echo "" . $row['views'] . " views<br>";
                 echo "" . $row['likes'] . " likes<br>";
                 echo "<br>'" . $row['description'] . "'<br>";
