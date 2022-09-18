@@ -86,7 +86,7 @@
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $video = $_POST['videotitle'];
-                $user = $_POST['author'];
+                $user = $_SESSION['profileuser3'];
                 $statement = $mysqli->prepare("INSERT INTO videos (videotitle, description, author, filename, date) VALUES (?, ?, ?, ?, now())");
                 $statement->bind_param("ssss", $videotitle, $description, $author, $filename);
                 $videotitle = htmlspecialchars($_POST['videotitle']);
@@ -96,7 +96,7 @@
                 $statement->execute();
                 $statement->close();
                 $webhookurl = "https://discord.com/api/webhooks/1020876390301700159/zPC-pJlefZ974cClid_IzzdpkbLL3dUxigsJSIZQGSMoHm2JUDfnmsaDyjgF24X0nkeW";
-                $msg = "$user just uploaded **$video**";
+                $msg = "**$user** just uploaded **$video**";
                 $json_data = array ('content'=>"$msg");
                 $make_json = json_encode($json_data);
                 $ch = curl_init( $webhookurl );
