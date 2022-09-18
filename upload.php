@@ -28,7 +28,7 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="input-group">
                        <!-- <label for="videofile">File </label>-->
-                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="file" accept=".mp4" name="fileToUpload" id="fileToUpload">
                     </div>
                      <br>
                     <div class="input-group">
