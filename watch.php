@@ -150,7 +150,7 @@
     </form>
     <hr>
     <?php
-        $stmt = $mysqli->prepare("SELECT * FROM comments WHERE tovideoid = ? LIMIT 4");
+        $stmt = $mysqli->prepare("SELECT * FROM comments WHERE tovideoid = ? ORDER BY date DESC LIMIT 4");
         $stmt->bind_param("s", $_GET['id']);
         $stmt->execute();
         $result = $stmt->get_result();

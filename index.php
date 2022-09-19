@@ -12,9 +12,9 @@
  <!--<img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">-->
         <div class="page-header">
           <?php
-      if(empty($_GET)) {
+      if(empty($_GET["msg"])) {
         echo "<p style='display:none;'>no</p>";
-      } else if($_GET === " ") {
+      } else if($_GET["msg"] === " ") {
         echo "<p style='display:none;'>no</p>";
       } else { echo '
           <div class="alert-message success">
