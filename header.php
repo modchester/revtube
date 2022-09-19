@@ -7,7 +7,7 @@
             <li><a href="videos.php">Videos</a></li>
             <li><a href="channels.php">Channels</a></li>
             <li><a href="community.php">Community</a></li>
-            <li><a href="upload.php">Upload</a></li>
+           <!-- <li><a href="upload.php">Upload</a></li> -->
           </ul>
           	<?php
       if(!$loggedIn) {
@@ -25,6 +25,7 @@
               <ul class=\"dropdown-menu\">
                 <li><a href=\"./profile.php?id=".$row["id"]."\">Your Channel</a></li>
                 <li><a href=\"account.php\">Account Settings</a></li>
+                <li><a href=\"upload.php\">Upload</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"logout.php\">Logout ".$row["username"]."</a></li>
               </ul>
