@@ -1,3 +1,3 @@
 <div class="alert-message warning">
-  <p><strong>RevTube is back. </strong>Please note, this is still unfinished.</p>
+  <p><strong>SkyTube is in development. </strong>Please note, this is still unfinished.</p>
 </div>

@@ -18,6 +18,14 @@
     <link href="assets/bootstrap.min.css" rel="stylesheet">
     <link href="https://s.imon.fr/css3-youtube-buttons/yt-buttons.css" rel="stylesheet">
     <style type="text/css">
+      @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+}
       /* Override some defaults */
       html, body {
         background-color: #eee;
@@ -96,7 +104,16 @@ video {
 }
 .topbar > .fill > .container {
   background-size: auto 100%;
-  animation: animatedBackground 110s linear infinite alternate;
+  animation: animatedBackground 65s linear infinite alternate;
   background-image: url(assets/skylinewhite.png);
+}
+.topbar > .fill {
+  background-size: auto 100%;
+  animation: animatedBackground 65s linear infinite alternate;
+  background-image: url(assets/skylinewhite.png);
+background: -moz-linear-gradient(top,  rgba(20,0,150,1) 0%, rgba(16,0,122,1) 100%);
+background: -webkit-linear-gradient(top,  rgba(20,0,150,1) 0%,rgba(16,0,122,1) 100%);
+background: linear-gradient(to bottom,  rgba(20,0,150,1) 0%,rgba(16,0,122,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#140096', endColorstr='#10007a',GradientType=0 );
 }
     </style>

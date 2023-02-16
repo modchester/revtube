@@ -1,5 +1,5 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "", "revtube");
+    $mysqli = new mysqli("localhost", "root", "", "skytube");
     session_start();
 
     function idFromUser($nameuser){

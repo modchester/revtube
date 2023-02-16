@@ -17,11 +17,17 @@
         <div class="row">
           <div class="span10">
 <div class="topLeft">
+<div class="alert-message warning">
+    <?php echo "<p><strong>Current video ID:</strong>";
+    echo var_dump($_GET['v']);
+    echo "</p>";
+    ?>
+    </div>
     <?php
 
 
-        $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
-        $stmt->bind_param("s", $_GET['id']);
+        $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
+        $stmt->bind_param("s", $_GET['v']);
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) exit('No rows');
@@ -33,7 +39,7 @@
                 ';
 
             $videoembed = '\
-            <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player2009/lolplayer.php?id=' . $_GET['id'] . '" height="360px" width="480px"></iframe> <br><br>
+            <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player2009/lolplayer.php?id=' . $_GET['v'] . '" height="360px" width="480px"></iframe> <br><br>
             <script>
                 var vid = document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\');
                 function hmsToSecondsOnly(str) {
@@ -61,8 +67,8 @@
 <!--<div class="topRight" style="margin-left: 500px; margin-top: -336px;">-->
 <div class="videoinfo">
         <?php
-            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
-            $stmt->bind_param("s", $_GET['id']);
+            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
+            $stmt->bind_param("s", $_GET['v']);
             $stmt->execute();
             $result = $stmt->get_result();
             if($result->num_rows === 0) exit('No rows');
@@ -80,14 +86,14 @@
         <br>
         <!-- <div class="card message"> 
         <?php
-            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
-            $stmt->bind_param("s", $_GET['id']);
+            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
+            $stmt->bind_param("s", $_GET['v']);
             $stmt->execute();
             $result = $stmt->get_result();
             if($result->num_rows === 0) exit('Fatal error');
             while($row = $result->fetch_assoc()) {
                 echo "<b>Share</b>";
-                echo "URL <input value=\"http://revtube.ml/watch.php?id=" . $row["id"] . "\"><br>
+                echo "URL <input value=\"http://revtube.ml/watch.php?v=" . $row["vid"] . "\"><br>
                 Embed <input style=\"margin-right: 13px;\" value='<iframe style=\"border: 0px; overflow: hidden;\" src=\"http://revtube.ml/player/embed.php?id=" . $_GET['id'] . "\" height=\"360\" width=\"480\"></iframe>'>";
                 echo "<br>";
                 echo "Direct video link <input value=\"http://revtube.ml/videos/" . $row["filename"] . "\">";
@@ -101,13 +107,13 @@
 </div>
 
         <?php
-        mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE id = '" . $videoid . "'");
+        mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '" . $videoid . "'");
         $stmt->close();
        // echo '<hr style="
 //    margin-top: 50px;
 // ">';
-            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
-            $stmt->bind_param("s", $_GET['id']);
+            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
+            $stmt->bind_param("s", $_GET['v']);
             $stmt->execute();
             $result = $stmt->get_result();
             if($result->num_rows === 0) exit('No rows');
@@ -130,7 +136,7 @@
             }
             else {
                 $stmt = $mysqli->prepare("INSERT INTO comments (tovideoid, author, comment, date) VALUES (?, ?, ?, now())");
-                $stmt->bind_param("sss", $_GET['id'], $_SESSION['profileuser3'], $comment);
+                $stmt->bind_param("sss", $_GET['v'], $_SESSION['profileuser3'], $comment);
     
                 $comment = str_replace(PHP_EOL, "<br>", htmlspecialchars($_POST['bio']));
     
@@ -151,7 +157,7 @@
     <hr>
     <?php
         $stmt = $mysqli->prepare("SELECT * FROM comments WHERE tovideoid = ? ORDER BY date DESC LIMIT 4");
-        $stmt->bind_param("s", $_GET['id']);
+        $stmt->bind_param("s", $_GET['v']);
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) echo('No comments.');
@@ -161,13 +167,13 @@
         $stmt->close();
     ?>
     <?php
-    $stmt = $mysqli->prepare("SELECT * FROM videos WHERE id = ?");
-    $stmt->bind_param("s", $_GET['id']);
+    $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
+    $stmt->bind_param("s", $_GET['v']);
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->num_rows === 0) echo('No comments.');
     while($row = $result->fetch_assoc()) {
-    echo '<a href="all_comments.php?id='.$row['id'].'">view all comments</a>';
+    echo '<a href="all_comments.php?id='.$row['vid'].'">view all comments</a>';
     }
     $stmt->close();
     ?>

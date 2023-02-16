@@ -87,8 +87,12 @@
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $video = $_POST['videotitle'];
                 $user = $_SESSION['profileuser3'];
-                $statement = $mysqli->prepare("INSERT INTO videos (videotitle, description, author, filename, date) VALUES (?, ?, ?, ?, now())");
-                $statement->bind_param("ssss", $videotitle, $description, $author, $filename);
+                function randstr($len, $charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"){
+                    return substr(str_shuffle($charset),0,$len);
+                }
+                $v_id = randstr(11);
+                $statement = $mysqli->prepare("INSERT INTO videos (videotitle, vid, description, author, filename, date) VALUES (?, ?, ?, ?, ?, now())");
+                $statement->bind_param("sssss", $videotitle, $v_id, $description, $author, $filename);
                 $videotitle = htmlspecialchars($_POST['videotitle']);
                 $description = str_replace(PHP_EOL, "<br>", htmlspecialchars($_POST['bio']));
                 $author = htmlspecialchars($_SESSION['profileuser3']);
