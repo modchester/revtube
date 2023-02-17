@@ -17,12 +17,14 @@
         <div class="row">
           <div class="span10">
 <div class="topLeft">
+<?php if($debug == 'true') { ?>
 <div class="alert-message warning">
     <?php echo "<p><strong>Current video ID:</strong>";
     echo var_dump($_GET['v']);
     echo "</p>";
     ?>
     </div>
+    <?php } ?>
     <?php
 
 
