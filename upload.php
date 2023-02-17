@@ -99,7 +99,7 @@
                 $filename = basename($_FILES["fileToUpload"]["name"]);
                 $statement->execute();
                 $statement->close();
-                $webhookurl = "https://discord.com/api/webhooks/1020876390301700159/zPC-pJlefZ974cClid_IzzdpkbLL3dUxigsJSIZQGSMoHm2JUDfnmsaDyjgF24X0nkeW";
+                $webhookurl = "";
                 $msg = "**$user** just uploaded **$video**";
                 $json_data = array ('content'=>"$msg");
                 $make_json = json_encode($json_data);
