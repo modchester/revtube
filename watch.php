@@ -34,8 +34,7 @@
         while($row = $result->fetch_assoc()) {
             echo '
             <h2>' . $row['videotitle'] . ' <small>by ' . $row['author'] . '</small></h2>
-           <!-- <iframe height="360px" width="480px" src="embed?v=' . $row["filename"] . '"></iframe> -->
-           <video src="content/video/' . $row["filename"] . '" height="360px" width="480px" controls autoplay></video>
+           <iframe height="360px" width="550px" src="embed?v=' . $row["filename"] . '"></iframe>
                 ';
 
             $videoembed = '\
@@ -60,7 +59,7 @@
                     document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\').currentTime = parsedSec;
                 }
             </script>';
-            $videoid = $row['id'];
+            $videoid = $row['vid'];
         }
         ?>
 
@@ -78,7 +77,7 @@
                 echo "" . $row['views'] . " views<br>";
                 echo "" . $row['likes'] . " likes<br>";
                 echo "<br>'" . $row['description'] . "'<br>";
-                echo "<a href='likevideo.php?id=" . $row['id'] . "'>Like</a>";
+                echo "<a href='likevideo.php?id=" . $row['vid'] . "'>Like</a>";
             }
 
         ?> 
