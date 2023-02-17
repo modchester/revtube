@@ -1,7 +1,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="/"><strong>SkyTube</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a>
+          <a class="brand logost" href="/"><strong>revista</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/videos">Videos</a></li>
@@ -21,8 +21,9 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]."</a>
+              <a href=\"#\" class=\"dropdown-toggle\"><img style='margin-bottom:-2px;' width='12px' src='/pfp/".$row["id"]."'> ".$row["username"]."</a>
               <ul class=\"dropdown-menu\">
+              <li></li>
                 <li><a href=\"./profile?id=".$row["id"]."\">Your Channel</a></li>
                 <li><a href=\"account\">Account Settings</a></li>
                 <li><a href=\"upload\">Upload</a></li>
