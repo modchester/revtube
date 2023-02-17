@@ -46,7 +46,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `videos` (
   `videotitle` varchar(255) NOT NULL,
-  `vid` int(11) NOT NULL,
+  `vid` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT '',
   `author` varchar(255) NOT NULL,
   `likes` int(11) NOT NULL DEFAULT '0',
