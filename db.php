@@ -1,4 +1,7 @@
 <?php
+    // put your discord webhook here
+    $webhook = "";
+
     $mysqli = new mysqli("localhost", "root", "", "skytube");
     session_start();
 
