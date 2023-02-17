@@ -1,6 +1,9 @@
 <?php
     // put your discord webhook here
     $webhook = "";
+    
+    // debug mode
+    $debug = "true";
 
     $mysqli = new mysqli("localhost", "root", "", "skytube");
     session_start();
@@ -28,7 +31,9 @@
 		return $userpic;
     }
     
-    $loggedIn = isset($_SESSION['profileuser3']);
+   $loggedIn = isset($_SESSION['profileuser3']);
+
+   if($debug == 'true') {
    //DEBUG ONLY
    $sql = "SELECT COUNT(*) FROM users";
    $result = mysqli_query($mysqli, $sql);
@@ -41,5 +46,6 @@
    $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
    $phpver = phpversion();
    echo "<center>DEBUG ONLY <span style='color: red;'>DO NOT USE IN PRODUCTION ENVIRONMENT</span> - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
-	//echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
+	//echo '<br>skytube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
+   }
 ?>
