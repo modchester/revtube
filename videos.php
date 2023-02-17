@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>      
+  <?php include './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include 'db.php';?>
-<?php include 'header.php';?>
+<?php include './assets/mod/db.php';?>
+<?php include './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include 'alert.php';?>
+        <?php include './assets/mod/alert.php';?>
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
-          <?php include 'todaysdate.php'; ?>
+          <?php include './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -54,17 +54,7 @@
             </ul>
           </div>
           <div class="span4">
-            <h3>What's New</h3>
-            <ul class="unstyled">
-<li>Hopefully we will be able to replace the shitty 2009 frontend soon</li>
-            </ul>
-            <!--<input class="input" type="text" placeholder="Username">
-            <br>
-            <input class="input" type="password" placeholder="Password">
-            <br>
-            <button class="btn" type="submit">login</button>-->
-          </div>
-        </div>
+        <?php include './assets/mod/whatsnew.php'; ?>
       </div>
 
       <footer>

@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("./assets/mod/db.php");
  session_start();
  unset($_SESSION['']);
 

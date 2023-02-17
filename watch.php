@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>   
+  <?php include './assets/mod/meta.php';?>   
 </head>
 
   <body>
-<?php include 'db.php';?>
-<?php include 'header.php';?>
+<?php include './assets/mod/db.php';?>
+<?php include './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-            <?php include 'alert.php'; ?>
+            <?php include './assets/mod/alert.php'; ?>
           <h1>Watch <small><div id="clockbox"></div></small></h1>
-          <?php include 'todaysdate.php'; ?>
+          <?php include './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -151,7 +151,7 @@
         <input class="yt-button primary" type="submit" value="Comment" name="submit">
         <br>
         <br>
-        <small>Make sure to follow our <a href="tos.php">Terms of Service</a></small>
+        <small>Make sure to follow our <a href="/tos">Terms of Service</a></small>
     </form>
     <hr>
     <?php
@@ -177,7 +177,7 @@
     $stmt->close();
     ?>
     <hr>
-    <?php include("footer.php") ?>
+    <?php include("./assets/mod/footer.php") ?>
 </div>
             <ul class="unstyled">
 

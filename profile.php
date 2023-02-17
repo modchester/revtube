@@ -1,19 +1,19 @@
         <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>      
+  <?php include './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include 'db.php';?>
-<?php include 'header.php';?>
+<?php include './assets/mod/db.php';?>
+<?php include './assets/mod/header.php';?>
 
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include 'alert.php';?>
+        <?php include './assets/mod/alert.php';?>
           <h1>Channel <small><div id="clockbox"></div></small></h1>
-          <?php include 'todaysdate.php'; ?>
+          <?php include './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -56,14 +56,14 @@
                         echo '
                         <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
-                                <a href="watch.php?v='.$row['vid'].'">
+                                <a href="/watch?v='.$row['vid'].'">
                                     <video>
-                                        <source src="content/video/'.$row['filename'].'" type="video/mp4">
+                                        <source src="/content/video/'.$row['filename'].'" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video> 
                                 </a>
                                 </div>
-                                <div class="col-1-3 video-title"><a href="watch.php?v='.$row['vid'].'">'.$row['videotitle'].'</a></div>
+                                <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'">'.$row['videotitle'].'</a></div>
                                 <div class="col-1-3 video-info">
                                     <div><span>'.$row['views'].'</span> views</div>
                                     <div><span>'.$row['likes'].'</span> likes</div>

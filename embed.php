@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
   <head>
-    <link rel="stylesheet" href="./yt/cssbin/www-embed-refresh-vflIpfDM2.css">
+    <link rel="stylesheet" href="/yt/cssbin/www-embed-refresh-vflIpfDM2.css">
     <!-- This style tag is to show the 'Full screen' button -->
     <style>
       .el-embedded .html5-fullscreen-button {
@@ -25,12 +25,12 @@
 
 
 
-    <script src="./yt/jsbin/www-embed_core_module-vflyEJLff.js"></script>
+    <script src="/yt/jsbin/www-embed_core_module-vflyEJLff.js"></script>
 
 
     <script>
       yt.setConfig({
-        'EMBED_BINARY_URL': './yt/jsbin/www-embed_core_module-vflyEJLff.js',
+        'EMBED_BINARY_URL': '/yt/jsbin/www-embed_core_module-vflyEJLff.js',
         'ORIGIN': "*",
         'IS_OPERA_MINI': false
       });
@@ -40,8 +40,8 @@
       yt.setConfig({
         'PLAYER_CONFIG': {
           "assets": {
-            "html": ".\/html5_player_template",
-            "css": ".\/yt\/cssbin\/www-player-vflAajDXF.css",
+            "html": "\/html5_player_template",
+            "css": "\/yt\/cssbin\/www-player-vflAajDXF.css",
             "js": ".\/yt\/jsbin\/html5player-vfl4vf-DJ.js"
           },
           "url": "",
@@ -56,21 +56,21 @@
             "allow_ratings": 1,
             "hl": "en_US",
             "use_tablet_controls": "0", // if you want the tablet player for some reason change this to 1
-            "eurl": "https://player.billyisreal.com/",
-            "iurl": ".\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
+            "eurl": "https://player.redst0ne.xyz",
+            "iurl": "\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
             "view_count": 731650,
             "title": "",
             "avg_rating": 1.84592688903,
             "video_id": "<?php echo (isset($_GET['v'])) ? htmlspecialchars($_GET['v']) : "" ?>",
             "sw": "1.0",
-            "iurlmaxres": ".\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
+            "iurlmaxres": "\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
             "enablejsapi": "0",
             "sk": "PwcYoZXnL15O-tkWlQGRO-BYdf7IQNNYC",
             "advideo": "1",
             "use_native_controls": false, // if you are a demon and want the default player with extra steps change this to true
             "rel": "1",
             "playlist_module": "",
-            "iurlsd": ".\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
+            "iurlsd": "\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
           },
           "url_v9as2": "",
           "params": {

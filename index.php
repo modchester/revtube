@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include 'meta.php';?>
+    <?php include './assets/mod/meta.php';?>
     </head>
 
   <body>
-<?php include 'db.php';?>
-<?php include 'header.php';?>
+<?php include './assets/mod/db.php';?>
+<?php include './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
- <!--<img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">-->
         <div class="page-header">
           <?php
       if(empty($_GET["msg"])) {
@@ -22,9 +21,9 @@
       </div>';
     }
           ?>
-            <?php include 'alert.php'?>
+            <?php include './assets/mod/alert.php'?>
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
-          <?php include 'todaysdate.php'; ?>
+          <?php include './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -49,8 +48,8 @@
                                     </a>
                                 </div>
                                 <div class="featured-video-info">
-                                    <div class="video-title"><a href="viewvideo.php?id='.$row['id'].'">'.$row['videotitle'].'</a></div>
-                                    <div class="video-author"><a href="profile.php?id='.$row['author'].'">'.$row['author'].'</a></div>
+                                    <div class="video-title"><a href="/watch?v='.$row['vid'].'">'.$row['videotitle'].'</a></div>
+                                    <div class="video-author"><a href="/profile?id='.$row['author'].'">'.$row['author'].'</a></div>
                                 </div>
                             </div>';
                             $howmany++;
@@ -106,7 +105,7 @@
             </ul>
           </div>
           <div class="span4">
-            <?php include 'whatsnew.php'; ?>
+            <?php include './assets/mod/whatsnew.php'; ?>
             <!--<input class="input" type="text" placeholder="Username">
             <br>
             <input class="input" type="password" placeholder="Password">

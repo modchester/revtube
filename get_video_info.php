@@ -19,7 +19,7 @@
 $fmt_stream_map = [
     [
         "itag" => "43",
-        "url" => "./content/video/".$_GET['video_id'],
+        "url" => "/content/video/".$_GET['video_id'],
         "sig" => "revoozieisacutecatfoundoncatbouncedotcom",
         "fallback_host" => "tc.v14.cache3.c.youtube.com",
         "quality" => "hd720",

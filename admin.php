@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include 'meta.php';?>
+    <?php include './assets/mod/meta.php';?>
     </head>
 
   <body>
-<?php include 'db.php';?>
-<?php include 'header.php';?>
+<?php include './assets/mod/db.php';?>
+<?php include './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
- <!--<img src="wii1.png" width="820px" height="180px" alt="Theres no add here Why not add one?" border="0" align="absmiddle">-->
         <div class="page-header">
           <?php
       if(empty($_GET)) {
@@ -22,9 +21,9 @@
       </div>';
     }
           ?>
-            <?php include 'alert.php'?>
+            <?php include './assets/mod/alert.php'?>
           <h1>Admin Panel <small><div id="clockbox"></div></small></h1>
-          <?php include 'todaysdate.php'; ?>
+          <?php include './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -97,7 +96,7 @@
             </ul>
           </div>
           <div class="span4">
-            <?php include 'whatsnew.php'; ?>
+            <?php include './assets/mod/whatsnew.php'; ?>
             <hr>
             <h3>Reminders</h3>
             <ul>
