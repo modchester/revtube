@@ -76,7 +76,7 @@ ALTER TABLE `users`
 -- Indexes for table `videos`
 --
 ALTER TABLE `videos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`vid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
