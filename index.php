@@ -96,7 +96,7 @@
                     }
                 }
                 else{
-                    echo "Hm. Interesting. Either nobody has uploaded yet or we have a serious problem o_o";
+                    echo "There are no videos uploaded to this instance.";
                 }
                 $statement->close();
             ?>
