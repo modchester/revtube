@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>      
+  <?php include './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include 'db.php';?>
-    <?php include("header.php"); ?>
+<?php include './assets/mod/db.php';?>
+    <?php include("./assets/mod/header.php"); ?>
     <div class="container-flex">
             <hr>
             <?php
@@ -61,7 +61,7 @@
         </div>
     </div></center> 
     <hr>
-    <?php include("footer.php") ?>
+    <?php include("./assets/mod/footer.php") ?>
 </body>
 </html>
 <?php $mysqli->close();?>

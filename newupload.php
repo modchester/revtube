@@ -1,6 +1,6 @@
 <?php
 
-$webhookurl = "https://discord.com/api/webhooks/1020876390301700159/zPC-pJlefZ974cClid_IzzdpkbLL3dUxigsJSIZQGSMoHm2JUDfnmsaDyjgF24X0nkeW";
+$webhookurl = "";
 
 $msg = "**ipod** just uploaded **doin your mom 4k remaster**";
 $json_data = array ('content'=>"$msg");

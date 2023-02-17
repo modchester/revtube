@@ -1970,7 +1970,7 @@ body[data-player-size=fullscreen] #playlist-bar {
 }
 
 .html5-scrubber-button {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) -89px 0;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) -89px 0;
   height: 17px;
   width: 16px;
   border: none;
@@ -1998,7 +1998,7 @@ body[data-player-size=fullscreen] #playlist-bar {
 
 .html5-scrubber-button:focus,
 .html5-scrubber-button:hover {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) -89px -19px
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) -89px -19px
 }
 
 .hide-controls .html5-scrubber-button,
@@ -2088,12 +2088,12 @@ body[data-player-size=fullscreen] #playlist-bar {
 }
 
 .html5-play-progress {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c00), color-stop(100%, #600));
-  background: -webkit-linear-gradient(top, #c00, #600);
-  background: -moz-linear-gradient(top, #c00, #600);
-  background: -o-linear-gradient(top, #c00, #600);
-  background: -ms-linear-gradient(top, #c00, #600);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#cc0000',EndColorStr='#660000')";
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(37, 0, 204)), color-stop(100%, rgb(15, 0, 102)));
+  background: -webkit-linear-gradient(top, rgb(37, 0, 204), rgb(15, 0, 102));
+  background: -moz-linear-gradient(top, rgb(37, 0, 204), rgb(15, 0, 102));
+  background: -o-linear-gradient(top, rgb(37, 0, 204), rgb(15, 0, 102));
+  background: -ms-linear-gradient(top, rgb(37, 0, 204), rgb(15, 0, 102));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(37, 0, 204)',EndColorStr='#660000')";
   z-index: 933
 }
 
@@ -2218,27 +2218,27 @@ body[data-player-size=fullscreen] #playlist-bar {
 }
 
 .html5-play-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -168px -60px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -168px -60px;
   height: 19px;
   width: 15px
 }
 
 .html5-play-button:focus .yt-uix-button-icon,
 .html5-play-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -135px -71px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -135px -71px;
   height: 19px;
   width: 15px
 }
 
 .html5-pause-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -168px -38px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -168px -38px;
   height: 19px;
   width: 14px
 }
 
 .html5-pause-button:focus .yt-uix-button-icon,
 .html5-pause-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -152px -71px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -152px -71px;
   height: 19px;
   width: 14px
 }
@@ -2306,44 +2306,44 @@ body[data-player-size=fullscreen] #playlist-bar {
 
 .html5-volume-button[data-value=max] .yt-uix-button-icon,
 .html5-volume-button[data-value=loud] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -164px 0
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -164px 0
 }
 
 .html5-volume-button[data-value=max]:focus .yt-uix-button-icon,
 .html5-volume-button[data-value=max]:hover .yt-uix-button-icon,
 .html5-volume-button[data-value=loud]:focus .yt-uix-button-icon,
 .html5-volume-button[data-value=loud]:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -90px -19px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -90px -19px
 }
 
 .html5-volume-button[data-value=normal] .yt-uix-button-icon,
 .html5-volume-button[data-value=quiet] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -18px -38px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -18px -38px
 }
 
 .html5-volume-button[data-value=normal]:focus .yt-uix-button-icon,
 .html5-volume-button[data-value=normal]:hover .yt-uix-button-icon,
 .html5-volume-button[data-value=quiet]:focus .yt-uix-button-icon,
 .html5-volume-button[data-value=quiet]:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -140px -19px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -140px -19px
 }
 
 .html5-volume-button[data-value=min] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -90px 0
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -90px 0
 }
 
 .html5-volume-button[data-value=min]:focus .yt-uix-button-icon,
 .html5-volume-button[data-value=min]:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -22px -19px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -22px -19px
 }
 
 .html5-volume-button[data-value=off] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -22px 0
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -22px 0
 }
 
 .html5-volume-button[data-value=off]:focus .yt-uix-button-icon,
 .html5-volume-button[data-value=off]:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -46px 0
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -46px 0
 }
 
 .html5-video-player .html5-player-chrome .progress-text {
@@ -2363,23 +2363,23 @@ body[data-player-size=fullscreen] #playlist-bar {
 }
 
 .html5-fullscreen-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -114px -18px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -114px -18px;
   height: 18px;
   width: 24px
 }
 
 .html5-fullscreen-button:focus .yt-uix-button-icon,
 .html5-fullscreen-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -104px -74px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -104px -74px
 }
 
 body[data-player-size=fullscreen] .html5-fullscreen-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -19px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -19px
 }
 
 body[data-player-size=fullscreen] .html5-fullscreen-button:focus .yt-uix-button-icon,
 body[data-player-size=fullscreen] .html5-fullscreen-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 0
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 0
 }
 
 .html5-small-player-button,
@@ -2390,27 +2390,27 @@ body[data-player-size=fullscreen] .html5-fullscreen-button:hover .yt-uix-button-
 .html5-small-player-button .yt-uix-button-icon,
 body[data-player-size=small] .html5-small-player-button:focus .yt-uix-button-icon,
 body[data-player-size=small] .html5-small-player-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -70px -20px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -70px -20px;
   height: 13px;
   width: 18px
 }
 
 .html5-small-player-button:focus .yt-uix-button-icon,
 .html5-small-player-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -84px -74px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -84px -74px
 }
 
 .html5-large-player-button .yt-uix-button-icon,
 body[data-player-size=large] .html5-large-player-button:focus .yt-uix-button-icon,
 body[data-player-size=large] .html5-large-player-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -60px -74px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -60px -74px;
   height: 15px;
   width: 22px
 }
 
 .html5-large-player-button:focus .yt-uix-button-icon,
 .html5-large-player-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -135px -54px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -135px -54px
 }
 
 body[data-player-size=small] .html5-small-player-button,
@@ -2428,7 +2428,7 @@ body[data-player-size=large] .html5-large-player-button:hover {
 }
 
 .html5-captions-button .yt-uix-button-arrow {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -46px -19px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -46px -19px;
   height: 12px;
   width: 17px;
   margin: 0
@@ -2436,11 +2436,11 @@ body[data-player-size=large] .html5-large-player-button:hover {
 
 .html5-captions-button:focus .yt-uix-button-arrow,
 .html5-captions-button:hover .yt-uix-button-arrow {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -77px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -77px
 }
 
 .cc-loaded .html5-captions-button .yt-uix-button-arrow {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -19px -77px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -19px -77px
 }
 
 .html5-annotations-button {
@@ -2448,18 +2448,18 @@ body[data-player-size=large] .html5-large-player-button:hover {
 }
 
 .html5-annotations-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -42px -58px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -42px -58px;
   height: 18px;
   width: 16px
 }
 
 .html5-annotations-button:focus .yt-uix-button-icon,
 .html5-annotations-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -78px -54px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -78px -54px
 }
 
 .iv-loaded .html5-annotations-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) -70px 0
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) -70px 0
 }
 
 .yt-uix-button.yt-uix-button-player.html5-text-button {
@@ -2471,14 +2471,14 @@ body[data-player-size=large] .html5-large-player-button:hover {
 }
 
 .html5-watch-later-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -38px;
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -38px;
   height: 17px;
   width: 17px
 }
 
 .html5-watch-later-button:focus .yt-uix-button-icon,
 .html5-watch-later-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -57px
+  background: no-repeat url(/yt/imgbin/player-dark-vfl5Wrt5j.png) 0 -57px
 }
 
 .html5-watch-on-youtube-button {
@@ -2486,18 +2486,18 @@ body[data-player-size=large] .html5-large-player-button:hover {
 }
 
 .html5-watch-on-youtube-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) -28px -87px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) -28px -87px;
   height: 18px;
   width: 38px
 }
 
 .html5-watch-on-youtube-button:focus .yt-uix-button-icon,
 .html5-watch-on-youtube-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) -28px -107px
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) -28px -107px
 }
 
 .html5-watermark {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 0;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 0;
   opacity: 0.5;
   height: 39px;
   width: 87px;
@@ -2532,7 +2532,7 @@ body[data-player-size=large] .html5-large-player-button:hover {
 .html5-video-player .yt-uix-button.html5-async-progress .yt-uix-button-icon,
 .html5-video-player .yt-uix-button.html5-async-progress:focus .yt-uix-button-icon,
 .html5-video-player .yt-uix-button.html5-async-progress:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 -92px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 -92px;
   height: 17px;
   width: 17px
 }
@@ -2540,7 +2540,7 @@ body[data-player-size=large] .html5-large-player-button:hover {
 .html5-video-player .yt-uix-button.html5-async-success .yt-uix-button-icon,
 .html5-video-player .yt-uix-button.html5-async-success:focus .yt-uix-button-icon,
 .html5-video-player .yt-uix-button.html5-async-success:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 -111px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 -111px;
   height: 14px;
   width: 12px
 }
@@ -2548,7 +2548,7 @@ body[data-player-size=large] .html5-large-player-button:hover {
 .html5-video-player .yt-uix-button.html5-async-error .yt-uix-button-icon,
 .html5-video-player .yt-uix-button.html5-async-error:focus .yt-uix-button-icon,
 .html5-video-player .yt-uix-button.html5-async-error:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) -14px -111px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) -14px -111px;
   height: 14px;
   width: 12px
 }
@@ -3286,19 +3286,19 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
 }
 
 .html5-replay-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 -41px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 -41px;
   width: 15px;
   height: 14px
 }
 
 .html5-like-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 -127px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 -127px;
   width: 13px;
   height: 15px
 }
 
 .html5-dislike-button .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 -74px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 -74px;
   width: 14px;
   height: 16px
 }
@@ -3527,7 +3527,7 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
 }
 
 .annotation-link-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-common-vfl6Awq62.png) 0 -57px;
+  background: no-repeat url(/yt/imgbin/player-common-vfl6Awq62.png) 0 -57px;
   width: 15px;
   height: 15px;
   background-size: contain;

@@ -1,5 +1,5 @@
-<?php include 'db.php';?>
-<?php include("webhook.php"); ?>
+<?php include './assets/mod/db.php';?>
+<?php include("./assets/mod/webhook.php"); ?>
 <h1>Report Video</h1>
 <form action="report.php" method="POST">
         <input type="text" name="reason" placeholder="Reason">

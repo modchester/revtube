@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>      
+  <?php include './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include 'db.php';?>
-<?php include 'header.php';?>
+<?php include './assets/mod/db.php';?>
+<?php include './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -36,7 +36,7 @@
           <div class="span4">
             <h3>What's New</h3>
             <ul class="unstyled">
-<li><?php include 'whatsnew.php'; ?></li>
+<li><?php include './assets/mod/whatsnew.php'; ?></li>
             </ul>
             <!--<input class="input" type="text" placeholder="Username">
             <br>

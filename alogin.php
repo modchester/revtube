@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>
+  <?php include './assets/mod/meta.php';?>
 </head>
 
   <body>
-<?php include 'db.php';?>
-    <?php include("header.php");?>
+<?php include './assets/mod/db.php';?>
+    <?php include("./assets/mod/header.php");?>
     <div class="container-flex"> 
         <div class="col-1-2">
             <br>
@@ -16,7 +16,7 @@
             <center><h3>User Login</h3>
             <br>
             <div class="card blue">
-                <form method="post" action="alogin.php">
+                <form method="post" action="/alogin">
                     <div class="input-group">
                       <!--  <label for="username">Username: </label>-->
                         <input type="text" name="name" pattern="[^()/><\][\\\x22,;|]+" placeholder="Channel Name" required>
@@ -74,11 +74,11 @@
             </div>
         </div>
         <!--<div class="col-1-2">
-            <h2>Welcome to RevTube!</h2>
+            <h2>Welcome to SkyTube!</h2>
         </div>-->
     </div>
     <hr>
-    <?php include("footer.php") ?>
+    <?php include("./assets/mod/footer.php") ?>
 </body>
 </html>
 <?php $mysqli->close();?>

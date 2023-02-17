@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include 'meta.php';?>      
+  <?php include './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include 'db.php';?>
-    <?php include("header.php"); ?>
+<?php include './assets/mod/db.php';?>
+    <?php include("./assets/mod/header.php"); ?>
    <center> <div class="container-flex">
         <div class="col-2-3">
             <div class="card blue">
@@ -17,7 +17,7 @@
             <?php
             if(!isset($_SESSION['profileuser3'])) {
               echo('<script>
-              window.location.href = "alogin.php";
+              window.location.href = "/alogin";
               </script>');
           }
           ?>
@@ -122,7 +122,7 @@
     }
     ?>
     <hr>
-    <?php include("footer.php") ?>
+    <?php include("./assets/mod/footer.php") ?>
 </body>
 </html>
 <?php $mysqli->close();?>
