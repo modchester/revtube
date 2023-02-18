@@ -56,7 +56,7 @@
             "allow_ratings": 1,
             "hl": "en_US",
             "use_tablet_controls": "0", // if you want the tablet player for some reason change this to 1
-            "eurl": "https://player.redst0ne.xyz",
+            "eurl": "",
             "iurl": "\/content\/thumb\/<?php echo (isset($_GET['t'])) ? htmlspecialchars($_GET['t']) : "" ?>",
             "view_count": 731650,
             "title": "",

@@ -8,6 +8,37 @@
 <?php include './assets/mod/db.php';?>
     <?php include("./assets/mod/header.php");?>
     <div class="container-flex"> 
+                            <?php
+                                if(!empty($_POST)){
+                                    $username = htmlspecialchars($_POST['name']);
+                                    $statement = $mysqli->prepare("SELECT `password` FROM `users` WHERE `username` = ? LIMIT 1");
+                                    $statement->bind_param("s", $username);
+                                    $statement->execute();
+                                    $result = $statement->get_result();
+                                    if($result->num_rows !== 0){
+                                    while($row = $result->fetch_assoc()){
+                                            $hash = $row['password'];
+                                            if(password_verify($_POST['password'], $hash)){
+                                                session_start();
+                                                $_SESSION["profileuser3"] = htmlspecialchars($_POST['name']);
+                                                echo('<script>
+                                                   window.location.href = "/";</script>');
+                                             //   echo("<a href='.'>Click here to go home</a>");
+                                            }
+                                            else {
+                                                echo '<div class="alert-message error page-alert">
+                                                  <p>Username and password combo do not match our records.</p>
+                                                </div>';
+                                            }
+                                        }
+                                    }
+                                    else{
+                                        echo '<div class="alert-message error page-alert">
+                                        <p>Username and password combo do not match our records.</p>
+                                      </div>';
+                                    }
+                                }
+                            ?>
         <div class="col-1-2">
             <br>
             <br>
@@ -37,37 +68,10 @@
                         <div><button type="submit" class="yt-button" name="reg_user" class="button">Login to Channel</button></div>
                     </div>
                     <br>
-                    <a class="yt-button danger" onclick="alert(' ')">Forgot your password?</a></center>
+                    <a class="yt-button danger" onclick="alert('Contact the team with proof that you own the channel.')">Forgot your password?</a></center>
                     <div class="input-group">
                         <div></div>
                         <div class="red">
-                            <?php
-                                if(!empty($_POST)){
-                                    $username = htmlspecialchars($_POST['name']);
-                                    $statement = $mysqli->prepare("SELECT `password` FROM `users` WHERE `username` = ? LIMIT 1");
-                                    $statement->bind_param("s", $username);
-                                    $statement->execute();
-                                    $result = $statement->get_result();
-                                    if($result->num_rows !== 0){
-                                    while($row = $result->fetch_assoc()){
-                                            $hash = $row['password'];
-                                            if(password_verify($_POST['password'], $hash)){
-                                                session_start();
-                                                $_SESSION["profileuser3"] = htmlspecialchars($_POST['name']);
-                                                echo('<script>
-                                                   window.location.href = "index.php";</script>');
-                                             //   echo("<a href='.'>Click here to go home</a>");
-                                            }
-                                            else {
-                                                echo 'Username and password combo do not match our records.';
-                                            }
-                                        }
-                                    }
-                                    else{
-                                        echo 'Username and password combo do not match our records.';
-                                    }
-                                }
-                            ?>
                         </div>
                     </div>
                 </form>
