@@ -7,6 +7,11 @@
 
   <body>
 <?php include './assets/mod/db.php';?>
+<?php
+    if (isset($_POST['submit'])){
+        if(!isset($_SESSION['profileuser3'])) {
+            die("Login to report....");
+        } ?>
     <?php include("./assets/mod/header.php");?>
     <div class="container-flex"> 
     <?php
