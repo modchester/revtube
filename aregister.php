@@ -24,9 +24,10 @@
                     $statement->execute();
                     $statement->close();
                     $mysqli->close();
-                    echo '<div class="alert-message success page-alert">
-                                        <p>Channel creation successful! <a href="/alogin">Login here.</a></p>
-                                      </div>';
+                    echo '
+                           <div class="alert-message success page-alert">
+                           <p>Channel creation successful! <a href="/alogin">Login here.</a></p>
+                           </div>';
                 }
             }
             ?>

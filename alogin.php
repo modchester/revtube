@@ -26,14 +26,16 @@
                                              //   echo("<a href='.'>Click here to go home</a>");
                                             }
                                             else {
-                                                echo '<div class="alert-message error page-alert">
+                                                echo '
+                                                <div class="alert-message error page-alert">
                                                   <p>Username and password combo do not match our records.</p>
                                                 </div>';
                                             }
                                         }
                                     }
                                     else{
-                                        echo '<div class="alert-message error page-alert">
+                                        echo '
+                                        <div class="alert-message error page-alert">
                                         <p>Username and password combo do not match our records.</p>
                                       </div>';
                                     }
