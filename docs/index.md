@@ -11,4 +11,6 @@ If all these steps were followed correctly, your instance should look like this:
 ## Section 2 - Prepare for production environment
 Now that your instance is setup, you might want to make some changes to your configuration file. To disable the debugging statistics header:
 Open the file `assets/mod/db.php` and set `$debug` to false in the file.
-# THIS DOCUMENTATION IS NOT YET FINISHED
+# THIS DOCUMENTATION IS NOT YET FINISHED!
+It is not recommended to follow this at the moment as steps might change.
+
