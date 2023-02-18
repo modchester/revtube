@@ -10,7 +10,7 @@
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include 'alert.php';?>
+        <?php include './assets/mod/alert.php';?>
           <h1>Terms of Service <small>Last updated December 28, 2021</small></h1>
         </div>
         <div class="row">
@@ -34,23 +34,10 @@
                 </ul>
           </div>
           <div class="span4">
-            <h3>What's New</h3>
-            <ul class="unstyled">
-<li><?php include './assets/mod/whatsnew.php'; ?></li>
-            </ul>
-            <!--<input class="input" type="text" placeholder="Username">
-            <br>
-            <input class="input" type="password" placeholder="Password">
-            <br>
-            <button class="btn" type="submit">login</button>-->
-          </div>
-        </div>
+<?php include './assets/mod/whatsnew.php'; ?>
       </div>
 
-      <footer>
-        <p>&copy;Redst0ne 2012-2023</p>
-      </footer>
-
+      <?php include './assets/mod/footer.php'; ?>
     </div> <!-- /container -->
 
   </body>

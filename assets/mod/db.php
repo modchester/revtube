@@ -46,6 +46,6 @@
    $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
    $phpver = phpversion();
    echo "<center>DEBUG ONLY <span style='color: red;'>DO NOT USE IN PRODUCTION ENVIRONMENT</span> - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
-	//echo '<br>skytube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
+	//echo '<br>revista is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    }
 ?>
