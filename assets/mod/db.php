@@ -25,7 +25,7 @@
 
     function getUserPic($uid){
     	$userpic = (string)$uid;
-		if(file_exists("./pfp/".$userpic) !== TRUE){
+		if(file_exists("./content/pfp/".$userpic) !== TRUE){
 			$userpic = "default";
 		}
 		return $userpic;

@@ -42,7 +42,7 @@
 					    $uid = 0;
 					    try{
 					    	$uid = idFromUser($_SESSION["profileuser3"]);
-						    $target_file = "./pfp/".$uid;
+						    $target_file = "./content/pfp/".$uid;
 						    $supported = false;
 						    foreach($supportedFormats as $value){
 						    	if($value === mime_content_type($_FILES["new_pic"]["tmp_name"])){
@@ -85,7 +85,7 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo "
 			        <div class=\"user-info\">
-				        <a href=\"./profile.php?id=".$row["id"]."\"><img width=\"128px\" src=\"pfp/".getUserPic($row["id"])."\"></a>
+				        <a href=\"./profile.php?id=".$row["id"]."\"><img width=\"128px\" src=\"/content/pfp/".getUserPic($row["id"])."\"></a>
 				        <div class=\"user-stats\">
 					        <div class=\"username\"><a href=\"./profile.php?id=".$row["id"]."\">".$row["username"]."</a></div>
 					        <div><span class=\"subscribers black\">".$row["subscribers"]."</span> subscribers</div>
