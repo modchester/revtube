@@ -1,4 +1,4 @@
-# Revista: 2013 edition
+# Revista: semi-2013 edition
 *UI maintaned by Cattskit.*
 
 Revista (formerly RevTube/VistaTube) is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
@@ -12,4 +12,4 @@ Revista is currently in development, so we do not have a public instance at this
 ## February 19, 2022
 The project started.
 
-*To see every update, view the full [changelog](https://github.com/Cattskit/revista/blob/skeuo/changelog.md).*
+*To see every update, view the full [changelog](https://github.com/Cattskit/revista/blob/2013-layout/changelog.md).*
