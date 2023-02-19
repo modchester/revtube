@@ -5,7 +5,7 @@
     // debug mode
     $debug = "true";
 
-    $mysqli = new mysqli("localhost", "root", "", "skytube");
+    $mysqli = new mysqli("localhost", "root", "", "revista");
     session_start();
 
     function idFromUser($nameuser){
@@ -25,16 +25,17 @@
 
     function getUserPic($uid){
     	$userpic = (string)$uid;
-		if(file_exists("./pfp/".$userpic) !== TRUE){
-			$userpic = "default";
+		if(file_exists("./content/pfp/".$userpic) !== TRUE){
+			$userpic = "default.png";
 		}
 		return $userpic;
     }
     
+    
    $loggedIn = isset($_SESSION['profileuser3']);
 
    if($debug == 'true') {
-   //DEBUG ONLY
+   //  Debug mode
    $sql = "SELECT COUNT(*) FROM users";
    $result = mysqli_query($mysqli, $sql);
    $usercount = mysqli_fetch_assoc($result)['COUNT(*)'];
@@ -46,6 +47,6 @@
    $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
    $phpver = phpversion();
    echo "<center>DEBUG ONLY <span style='color: red;'>DO NOT USE IN PRODUCTION ENVIRONMENT</span> - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
-	//echo '<br>skytube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
+	//echo '<br>revista is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    }
 ?>

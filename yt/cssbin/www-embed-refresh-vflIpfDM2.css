@@ -2551,7 +2551,7 @@ body[data-player-size=fullscreen] #playlist-bar {
 }
 
 .html5-volume-slider {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAOCAYAAADdeGlVAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAABmAAAADgBV/HzAAAABWklEQVRYw+2Yv2rCUBSHvyu3QhYtNiDuXYqTS6eALnmDvkG3PkAfonMpfYPuWeOgayk4ZSt0cLEQnUqDiXg71EhJOtSblGvED+6Qw/3z++VwbjgRSimqhhACAKVUH7gDLoFn4FYIMa6ip5zHIiZc1/3z3PFoVJroZLUCIIqieb1eb6XxOI4XlmWdnUiZW9MfDHY6w/f90vTqIItvocdTp6O99mo6BaBWq7VWmySlz6b8lI24sKzK1v1LGOZip82maVmlIO/bbdMatPlZLYeG/FyvTWvQJkkS0xL+DflxTMxeIt+PidlL5NtyaVqDNgedmKDXM61Bm98+/rv2K/uKsQbzutHQPvdxsQAgCIKc+G63K44N5g5kX8xrkc2GQwBmsxm2bW/D4aavOYiqUUpVbqQ4jjP3PE9NJhPleZ5yHGdeVU/ZUegqM0X6ExNwgQfgnO8ivAH8KnrK8gWUVJKQEjVwyAAAAABJRU5ErkJggg==);
+  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAOCAYAAADdeGlVAAABM0lEQVRYR2NkGMLg////9kDndwGxGRCfAuIyRkbGg0PYS3CnMw5lT3z//v0tGxubEMwPv379esfJySk8lP0Ec/uQjpifP3/+R48Ednb2Ie0neMSwc2tieG6opLh3r85gOJWfX2CoOB+vOxnFtfYM2Yi5ddwUw3PCwiLDI2JE1TcN2Yi5ftQKIxIkJCSHR8SIqC4bshFz+ZAjRiTIysoNj4gRVpwwZCPm/MEgjEhQUlIeHhHDJ5k/dCPmSB5GJKirawyPiHFxcRmyETN16lSMSMjOzh4eETOUfXH16lWMRKWtrT08+jFDOWL27t37X0QE0Tx+8+YNg7Oz82jEDHSk2tjYvC0rKxOSlZVlePz4MUNXV9e7I0eOjA7JDHTEAO13BeJpQKwCxHeAOAuIdw8Cd1HsBADBMkgi0rjjfAAAAABJRU5ErkJggg==');
   background-repeat: no-repeat;
   display: block;
   height: 15px;
@@ -3205,31 +3205,31 @@ body[data-player-size=large] .light-theme .html5-large-player-button:hover {
 
 .html5-tablet button.yt-uix-button-player.html5-active,
 .html5-tablet button.yt-uix-button-player:active {
-  background: rgb(180, 9, 9);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b93028) color-stop(100%, #85231e))
+  background: rgb(26, 9, 180);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3228b9) color-stop(100%, #281e85))
 }
 
 .html5-tablet .html5-play-button .yt-uix-button-icon,
 .html5-tablet .html5-play-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -658px 0;
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -658px 0;
   height: 42px;
   width: 42px
 }
 
 .html5-tablet .html5-play-button:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -816px 0;
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -816px 0;
   height: 42px
 }
 
 .html5-tablet .html5-pause-button .yt-uix-button-icon,
 .html5-tablet .html5-pause-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -264px 0;
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -264px 0;
   height: 42px;
   width: 42px
 }
 
 .html5-tablet .html5-pause-button:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -176px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -176px 0
 }
 
 .html5-tablet .html5-fullscreen-button {
@@ -3238,22 +3238,22 @@ body[data-player-size=large] .light-theme .html5-large-player-button:hover {
 
 .html5-tablet .html5-fullscreen-button .yt-uix-button-icon,
 .html5-tablet .html5-fullscreen-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -746px 0;
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -746px 0;
   height: 42px;
   width: 42px
 }
 
 .html5-tablet .html5-fullscreen-button:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -132px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -132px 0
 }
 
 body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button .yt-uix-button-icon,
 body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:hover .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -396px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -396px 0
 }
 
 body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -308px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -308px 0
 }
 
 .html5-tablet.html5-video-player .html5-volume-button.yt-uix-button.yt-uix-button-player {
@@ -3271,12 +3271,12 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
 .html5-tablet .html5-volume-button[data-value=loud] .yt-uix-button-icon,
 .html5-tablet .html5-volume-button[data-value=loud]:hover .yt-uix-button-icon,
 .html5-tablet .html5-volume-control:focus .html5-volume-button[data-value=loud] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -44px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -44px 0
 }
 
 .html5-tablet .html5-volume-button[data-value=max]:active .yt-uix-button-icon,
 .html5-tablet .html5-volume-button[data-value=loud]:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -88px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -88px 0
 }
 
 .html5-tablet .html5-volume-button[data-value=normal] .yt-uix-button-icon,
@@ -3285,32 +3285,32 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
 .html5-tablet .html5-volume-button[data-value=quiet] .yt-uix-button-icon,
 .html5-tablet .html5-volume-button[data-value=quiet]:hover .yt-uix-button-icon,
 .html5-tablet .html5-volume-control:focus .html5-volume-button[data-value=quiet] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -1035px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -1035px 0
 }
 
 .html5-tablet .html5-volume-button[data-value=normal]:active .yt-uix-button-icon,
 .html5-tablet .html5-volume-button[data-value=quiet]:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) 0 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) 0 0
 }
 
 .html5-tablet .html5-volume-button[data-value=min] .yt-uix-button-icon,
 .html5-tablet .html5-volume-button[data-value=min]:hover .yt-uix-button-icon,
 .html5-tablet .html5-volume-control:focus .html5-volume-button[data-value=min] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -484px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -484px 0
 }
 
 .html5-tablet .html5-volume-button[data-value=min]:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -220px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -220px 0
 }
 
 .html5-tablet .html5-volume-button[data-value=off] .yt-uix-button-icon,
 .html5-tablet .html5-volume-button[data-value=off]:hover .yt-uix-button-icon,
 .html5-tablet .html5-volume-control:focus .html5-volume-button[data-value=off] .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -528px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -528px 0
 }
 
 .html5-tablet .html5-volume-button[data-value=off]:active .yt-uix-button-icon {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -702px 0
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -702px 0
 }
 
 .html5-tablet .html5-volume-control {
@@ -3327,7 +3327,7 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
   -moz-transition: none;
   -o-transition: none;
   -ms-transition: none;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAHCAYAAACWcWqYAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAl2cEFnAAAAVAAAAAcAzYxhLwAAANxJREFUSMftlU1qAkEQhb8qexH/kgHTPQRFPEUOIeTcWQRyAA+hmVEchFCVxTQuTchmGJlv09DVRT8eryjZbNZOJlQVjyJ87r8Y+B1VpXiak+ICBEAInu18U2O7fgFgOxj6J8yM/aHCgRSfEUDBAed1/EBjRmPWtc7eUdcnwHCc4DmiFzNGXSvrKSKCO4g46g7u8H75HhL6T1KMkH0M7cjDx3TOrq5Iql3r6w0hBMoUKcvI8VgjgKxWy+uWL4qC2WSKquSb9pS8wURuf2DXdN/uu5d37sa5aVozc+0HTm5e28A5WNMAAAAASUVORK5CYII=);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAHCAYAAACWcWqYAAABEElEQVRIS+2VzWoCMRSFT34QcdSM6Iyok4z9eYru3QiuXHbb1+iq7+OjiFBclSKl64I6UDdlppmb6q4ybiUXkkC494R8HO5lYzMu8Bf7nQRDG1+75fHKn2cIcM6hWiGibmy52bAbS01KQOXPDCqYUvnyzZ0+qhHoqA6iXkxEWaod0LZ8geABKaze59WUfBYREELgztw7h5rEENCWeAbnDUp43Tx6VBcQkFLiRt+W/gTTiSagNUxQFw8ks/54ukDOpw4GQwT1JvVRpkcOqApDZFtlXRpj87nwlCoQKJ0ZR3307cr2mXNoMkpOUz60UBtBE5xxJ0eji1qt6w/Hi38ey/O8Ut215BV5gcPh+wSz/PwvSbc/AQHdq68AAAAASUVORK5CYII=');
   background-position: 1px 17px;
   background-repeat: no-repeat
 }
@@ -3338,13 +3338,13 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
   margin: 0;
   padding: 0;
   position: relative;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAqCAYAAADCgRdOAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAl2cEFnAAAAVQAAACoAJvroZQAAAI1JREFUaN7t1jEKwkAQBdBZ2AuIoBZew0t4K8/lEbyDCNYhpSKYtZAgsU5cCe9VO9V+hil+BAAAAAAAVJJ2y0WpHWJOTk2b8mG7rp1jVvZNG/nWdbVzzE6+Py11bC51Avn4sNSx5etqE5HSeyp9EUgRKT7vga+yUKYtD6VP8McZB86X3/0FAAAAAAD8wAsA4yBP8DS0SgAAAABJRU5ErkJggg==);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAqCAYAAADCgRdOAAABF0lEQVRoQ+3XsUpCYQCG4fNdgZtDGW3uQaKcW3ANWly9qtYWodVbEEPBvS2shjav4KiQhs7/C4Kvm4Pv+XnON/ym8lNcIMWLBitRgRGIKiogACRdqqiAAJB0qaICAkDSpYoKCABJlyoqIAAkXaqogACQdKmiAgJAMu1WrwG6V5v83SyS+n4qasEJzD6HSf/uTdSCqO/rp+Tx9lXUgqjL71HycPMiakHU1c846XaeRS2I+vE1SQaDusnfbbU58O6+Hy+w5zfZs1dw/E3Bg52m9g9Mddln/D/xfD47HBUTucqw/6iA1y6qqIAAkHSpogICQNKligoIAEmXKiogACRdqqiAAJB0qaICAkDSpYoKCABJlyoqIAAkt/7UJyvCaaPnAAAAAElFTkSuQmCC');
   background-position: 0 0;
   background-repeat: no-repeat
 }
 
 .html5-tablet .html5-volume-slider-foreground {
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -440px 0;
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -440px 0;
   width: 42px;
   height: 42px;
   margin-left: -19px;
@@ -3469,7 +3469,7 @@ body[data-player-size=fullscreen] .html5-tablet .html5-fullscreen-button:active 
   -ms-transform-origin: 50% 100%;
   -ms-transform: scale(1);
   -ms-transition-property: -ms-transform;
-  background: no-repeat url(//s.ytimg.com/yt/imgbin/player-tablet-vflK09vHs.png) -1079px 0;
+  background: no-repeat url(/yt/imgbin/player-tablet-vflK09vHs.png) -1079px 0;
   top: auto;
   bottom: 0;
   left: 0;

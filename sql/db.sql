@@ -32,10 +32,10 @@ CREATE TABLE `users` (
   `date` datetime NOT NULL,
   `subscribers` int(11) NOT NULL DEFAULT '0',
   `username` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL DEFAULT 'v',
+  `description` varchar(255) NOT NULL DEFAULT 'No description.',
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `pfp` varchar(255) NOT NULL DEFAULT 'acc.jpg'
+  `pfp` varchar(255) NOT NULL DEFAULT 'default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

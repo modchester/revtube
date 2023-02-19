@@ -27,14 +27,14 @@
                         echo '
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
-                                <a href="watch.php?id='.$row['id'].'">
+                                <a href="/watch?v='.$row['vid'].'">
                                     <video>
-                                        <source src="../videos/'.$row['filename'].'" type="video/mp4">
+                                        <source src="/content/video/'.$row['filename'].'" type="video/mp4">
                                         Thumbnail could not be loaded :(
                                     </video> 
                                 </a>
                                 </div>
-                                <div class="col-1-3 video-title"><a href="watch.php?id='.$row['id'].'">'.$row['videotitle'].'</a></div>
+                                <div class="col-1-3 video-title"><a href="/watch?id='.$row['vid'].'">'.$row['videotitle'].'</a></div>
                                 <div class="col-1-3 video-info">
                                     <div><a href="profile.php?id='.$row['author'].'">'.$row['author'].'</a></div>
                                     <div><span>'.$row['views'].'</span> views</div>
@@ -57,9 +57,7 @@
         <?php include './assets/mod/whatsnew.php'; ?>
       </div>
 
-      <footer>
-        <p>&copy;Redst0ne 2012-2022</p>
-      </footer>
+      <?php include './assets/mod/footer.php'; ?>
 
     </div> <!-- /container -->
 
