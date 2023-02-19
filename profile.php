@@ -26,7 +26,7 @@
                     $result = $statement->get_result();
                     while($row = $result->fetch_assoc()) {
                         $finalstring = "<h2>".$row['username']."</h2>
-                        <!--<img class=\"user-pic\" src=\"pfp/".getUserPic($row["id"])."\">-->
+                        <img class=\"user-pic\" src=\"/content/pfp/".getUserPic($row["id"])."\">
                         <div class=\"user-info\">
                             <!--<div class=\"user-name\"><a href=\"profile.php?id=".$row["id"]."\">".$row["username"]."</a></div>-->
                             <div><h3><span class=\"black\">".$row["subscribers"]."</span> subscribers</h3></div>";
