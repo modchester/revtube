@@ -5,7 +5,7 @@
     // debug mode
     $debug = "true";
 
-    $mysqli = new mysqli("localhost", "root", "", "skytube");
+    $mysqli = new mysqli("localhost", "root", "", "revista");
     session_start();
 
     function idFromUser($nameuser){
@@ -26,15 +26,16 @@
     function getUserPic($uid){
     	$userpic = (string)$uid;
 		if(file_exists("./content/pfp/".$userpic) !== TRUE){
-			$userpic = "default";
+			$userpic = "default.png";
 		}
 		return $userpic;
     }
     
+    
    $loggedIn = isset($_SESSION['profileuser3']);
 
    if($debug == 'true') {
-   //DEBUG ONLY
+   //  Debug mode
    $sql = "SELECT COUNT(*) FROM users";
    $result = mysqli_query($mysqli, $sql);
    $usercount = mysqli_fetch_assoc($result)['COUNT(*)'];
