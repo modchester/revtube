@@ -2,3 +2,5 @@ content/video/
 *.bak
 *.mp4
 *.db
+pfp
+!*/pfp/default
