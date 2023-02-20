@@ -52,55 +52,7 @@
             $videoid = $row['vid'];
         }
         ?>
-<<<<<<< Updated upstream
-
-<!--<div class="topRight" style="margin-left: 500px; margin-top: -336px;">-->
-<div class="videoinfo">
-        <?php
-            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
-            $stmt->bind_param("s", $_GET['v']);
-            $stmt->execute();
-            $result = $stmt->get_result();
-            if($result->num_rows === 0) exit('No rows');
-            while($row = $result->fetch_assoc()) {
-                $uploaddate = date('F d, Y', strtotime($row['date']));
-                echo("<b>" . $row['author'] . " &bull; " . $row['views'] . " views &bull; " . $row['likes'] . " likes &bull; $uploaddate</b>");
-                // echo "Uploaded on $uploaddate by " . $row['author'] . "<br><br>";
-                // echo "" . $row['views'] . " views<br>";
-                // echo "" . $row['likes'] . " likes<br>";
-                 echo "<br>" . $row['description'] . "<br>";
-                // echo "<a href='likevideo.php?id=" . $row['vid'] . "'>Like</a>";
-            }
-
-        ?> 
-    </div>
-        <br>
-        <!-- <div class="card message"> 
-        <?php
-            $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
-            $stmt->bind_param("s", $_GET['v']);
-            $stmt->execute();
-            $result = $stmt->get_result();
-            if($result->num_rows === 0) exit('Fatal error');
-            while($row = $result->fetch_assoc()) {
-                echo "<b>Share</b>";
-                echo "URL <input value=\"http://revtube.ml/watch.php?v=" . $row["vid"] . "\"><br>
-                Embed <input style=\"margin-right: 13px;\" value='<iframe style=\"border: 0px; overflow: hidden;\" src=\"http://revtube.ml/player/embed.php?id=" . $_GET['id'] . "\" height=\"360\" width=\"480\"></iframe>'>";
-                echo "<br>";
-                echo "Direct video link <input value=\"http://revtube.ml/videos/" . $row["filename"] . "\">";
-                echo "<br>";
-            }
-
-        ?>  
-    </div> -->
-        </div>
-
-</div>
-
-        <?php
-=======
-                <?php
->>>>>>> Stashed changes
+<?php
         mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '" . $videoid . "'");
         $stmt->close();
        // echo '<hr style="
