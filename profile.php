@@ -25,12 +25,12 @@
                     $statement->execute();
                     $result = $statement->get_result();
                     while($row = $result->fetch_assoc()) {
-                        $finalstring = "<h2>".$row['username']."</h2>
-                        <img class=\"user-pic\" src=\"/content/pfp/".getUserPic($row["id"])."\">
-                        <div class=\"user-info\">
+                     /*   $finalstring = "<h2>".$row['username']."</h2>
+                       <!-- <img style=\"width:128px;\" src=\"pfp/".getUserPic($row["id"])."\">
+                        <div class=\"user-info\"> -->
                             <!--<div class=\"user-name\"><a href=\"profile.php?id=".$row["id"]."\">".$row["username"]."</a></div>-->
                             <div><h3><span class=\"black\">".$row["subscribers"]."</span> subscribers</h3></div>";
-                      /*      if($_SESSION["subscribedto".$row["id"]] === false) {
+                            if($_SESSION["subscribedto".$row["id"]] === false) {
                                 $finalstring .= "<div><a class\"btn danger\" href=\"subscribe.php?id=".$row["id"]."&u=0\"><!--<img src=\"buttonsub.png\">-->SUBSCRIBE</a></div>";
                             }
                             else{
@@ -41,9 +41,9 @@
                 <span class=\"label success\">Verified</span>
                 "; 
                 } */
-                        $finalstring .= "</div>";
+                     //   $finalstring .= "</div>";
 
-                        echo $finalstring;
+                       // echo $finalstring;
                         $username = $row["username"];
                     }
                     $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `author` = ?");
@@ -81,6 +81,18 @@
         </div>
           </div>
           <div class="span4">
+          <?php
+                $statement = $mysqli->prepare("SELECT * FROM `users` WHERE `id` = ? LIMIT 1");
+                $statement->bind_param("i", $_GET['id']);
+                $statement->execute();
+                $result = $statement->get_result();
+                while($row = $result->fetch_assoc()) {
+                  echo('
+            <h3><h2>'.$row["username"].'</h2></h3>
+            <img style="width:225px;" src="/content/pfp/'.$row["id"].'">
+            '); }
+            ?>
+            <hr>
             <h3>Bio</h3>
                             <?php
                 $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `id` = ? LIMIT 1");
@@ -108,7 +120,7 @@
         </div>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
+            <?php include './assets/mod/footer.php'; ?>
 
     </div> <!-- /container -->
 

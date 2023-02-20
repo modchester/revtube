@@ -75,11 +75,12 @@
             if($result->num_rows === 0) exit('No rows');
             while($row = $result->fetch_assoc()) {
                 $uploaddate = date('F d, Y', strtotime($row['date']));
-                echo "Uploaded on $uploaddate by " . $row['author'] . "<br><br>";
-                echo "" . $row['views'] . " views<br>";
-                echo "" . $row['likes'] . " likes<br>";
-                echo "<br>'" . $row['description'] . "'<br>";
-                echo "<a href='likevideo.php?id=" . $row['vid'] . "'>Like</a>";
+                echo("<b>" . $row['author'] . " &bull; " . $row['views'] . " views &bull; " . $row['likes'] . " likes &bull; $uploaddate</b>");
+                // echo "Uploaded on $uploaddate by " . $row['author'] . "<br><br>";
+                // echo "" . $row['views'] . " views<br>";
+                // echo "" . $row['likes'] . " likes<br>";
+                 echo "<br>" . $row['description'] . "<br>";
+                // echo "<a href='likevideo.php?id=" . $row['vid'] . "'>Like</a>";
             }
 
         ?> 
