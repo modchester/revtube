@@ -89,7 +89,7 @@
                 while($row = $result->fetch_assoc()) {
                   echo('
             <h3><h2>'.$row["username"].'</h2></h3>
-            <img style="width:225px;" src="content/pfp/'.$row["id"].'">
+            <img style="width:225px;" src="/content/pfp/'.$row["id"].'">
             '); }
             ?>
             <hr>
@@ -120,9 +120,7 @@
         </div>
       </div>
 
-      <footer>
-        <p>&copy;Redst0ne 2012-2022</p>
-      </footer>
+            <?php include './assets/mod/footer.php'; ?>
 
     </div> <!-- /container -->
 
