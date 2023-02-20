@@ -7,18 +7,10 @@
   <body>
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
-    <div class="container">
- <div class="content">
-        <div class="page-header">
-            <?php include './assets/mod/alert.php'; ?>
-          <h1>Watch <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
-        </div>
-        <div class="row">
-          <div class="span10">
-<div class="topLeft">
+<!-- guide -->
+<?php include './assets/mod/guide.php';?>
 <?php if($debug == 'true') { ?>
-<div class="alert-message warning">
+<div class="alert-message warning page-alert">
     <?php echo "<p><strong>Current video ID:</strong>";
     echo var_dump($_GET['v']);
     echo "</p>";
@@ -26,44 +18,41 @@
     </div>
     <?php } ?>
     <?php
-
-
         $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
         $stmt->bind_param("s", $_GET['v']);
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) exit('No rows');
         while($row = $result->fetch_assoc()) {
+            $uploaddate = date('F d, Y', strtotime($row['date']));
             echo '
-            <h2>' . $row['videotitle'] . ' <small>by ' . $row['author'] . '</small></h2>
-           <iframe height="360px" width="550px" src="embed?v=' . $row["filename"] . '"></iframe>
+            <div class="rewatch">
+            <iframe height="360px" width="640px" src="/embed?v=' . $row["filename"] . '" style="border: none;"></iframe>
+            <div class="rewatch-content rewatch-main">
+             <h1 id="rewatch-title">
+               <span id="title">' . $row['videotitle'] . '</span>
+             </h1>
+             <div class="rewatch-views">
+               <span class="rewatch-views-text">' . $row['views'] . '</span><br>
+               <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> ' . $row['likes'] . '</span>
+             </div>
+             <div id="rewatch-author">
+              <img class="rewatch-pfp" src="/assets/img/' .getUserPic($row["author"]). '" height="48">
+              <span>' . $row['author'] . '</span>
+            </div>
+            <div class="rewatch-buttons">
+            <a class="yt-button" href="/likevideo?id=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a>
+            </div>
+            </div>
+            <div class="rewatch-content">
+            <p id="rewatch-date"><strong>Uploaded on ' . $uploaddate . '</strong></p>
+               <span id="description">' . $row['description'] . '</span>
+           <hr>         
                 ';
-
-            $videoembed = '\
-            <iframe id="vid-player" style="border: 0px; overflow: hidden;" src="player2009/lolplayer.php?id=' . $_GET['v'] . '" height="360px" width="480px"></iframe> <br><br>
-            <script>
-                var vid = document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\');
-                function hmsToSecondsOnly(str) {
-                    var p = str.split(\':\'),
-                        s = 0, m = 1;
-
-                    while (p.length > 0) {
-                        s += m * parseInt(p.pop(), 10);
-                        m *= 60;
-                    }
-
-                    return s;
-                }
-
-
-                function setTimePlayer(seconds) {
-                    var parsedSec = hmsToSecondsOnly(seconds);
-                    document.getElementById(\'vid-player\').contentWindow.document.getElementById(\'video-stream\').currentTime = parsedSec;
-                }
-            </script>';
             $videoid = $row['vid'];
         }
         ?>
+<<<<<<< Updated upstream
 
 <!--<div class="topRight" style="margin-left: 500px; margin-top: -336px;">-->
 <div class="videoinfo">
@@ -109,6 +98,9 @@
 </div>
 
         <?php
+=======
+                <?php
+>>>>>>> Stashed changes
         mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '" . $videoid . "'");
         $stmt->close();
        // echo '<hr style="
@@ -126,7 +118,8 @@
                 }
             }
 
-        echo '<h3 style="margin-top: 32px;">Comments &amp; Responses</h3>';
+        echo '
+        <h4><strong><a href="/all_comments?id='.$row['vid'].'">All comments</a></strong></h4>';
 ?>
 
 
@@ -145,16 +138,18 @@
                 $stmt->execute();
                 $stmt->close();
                 
-                echo "<p>Comment published</p>";
+                echo '<div class="alert-message success page-alert"><p>Comment published!</p></div>';
             }
         }
     ?>
+
+
     <form action="" method="post" enctype="multipart/form-data"><br>
-        Post a comment <br><br><textarea name="bio" rows="3" cols="40" required="required"></textarea><br><br>
-        <input class="yt-button primary" type="submit" value="Comment" name="submit">
+        <textarea name="bio" rows="3" cols="40" required="required" style="width: 600px; height: 60px;"></textarea><br><br>
+        <input class="yt-button primary" type="submit" value="Comment" name="submit" style="float: right;">
         <br>
         <br>
-        <small>Make sure to follow our <a href="/tos">Terms of Service</a></small>
+        <small>Make sure to follow our <a href="/tos">Terms of Service</a>!</small>
     </form>
     <hr>
     <?php
@@ -174,13 +169,8 @@
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->num_rows === 0) echo('No comments.');
-    while($row = $result->fetch_assoc()) {
-    echo '<a href="all_comments.php?id='.$row['vid'].'">view all comments</a>';
-    }
     $stmt->close();
     ?>
-    <hr>
-    <?php include("./assets/mod/footer.php") ?>
 </div>
             <ul class="unstyled">
 
