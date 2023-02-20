@@ -1,7 +1,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="/"><strong>revista</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a>
+          <a class="brand logost" href="/"><strong>Revista</strong></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/videos">Videos</a></li>
@@ -11,7 +11,7 @@
           </ul>
           	<?php
       if(!$loggedIn) {
-        echo '<ul class="nav secondary-nav"><li><strong><a class="yt-button dark" href="aregister.php">Sign Up</a></li> <li><a class="yt-button dark" href="alogin.php">Login</a></strong></li></ul>';
+        echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/alogin">Sign in</a></li></ul>';
       } else {
         $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
 			    $statement->bind_param("s", $_SESSION['profileuser3']);
@@ -21,7 +21,7 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\"><img style='margin-bottom:-2px;' width='12px' src='/content/pfp/".getUserPic($row["id"])."'> ".$row["username"]."</a>
+              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]." <img style='margin-bottom:-2px;' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
               <ul class=\"dropdown-menu\">
               <li></li>
                 <li><a href=\"./profile?id=".$row["id"]."\">Your Channel</a></li>

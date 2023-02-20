@@ -7,6 +7,8 @@
   <body>
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
+<!-- guide -->
+<?php include './assets/mod/guide.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -115,9 +117,7 @@
         </div>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
-
     </div> <!-- /container -->
-
+    <?php include './assets/mod/footer.php'; ?>
   </body>
 </html>
