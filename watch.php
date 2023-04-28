@@ -25,6 +25,7 @@
         if($result->num_rows === 0) exit('No rows');
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, Y', strtotime($row['date']));
+            $pfp = idFromUser($row['author']);
             echo '
             <div class="rewatch">
             <iframe height="360px" width="640px" src="/embed?v=' . $row["filename"] . '" style="border: none;"></iframe>
@@ -34,14 +35,15 @@
              </h1>
              <div class="rewatch-views">
                <span class="rewatch-views-text">' . $row['views'] . '</span><br>
-               <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> ' . $row['likes'] . '</span>
+               <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> ' . $row['likes'] . ' <i class="bi bi-hand-thumbs-down-fill"></i> ' . $row['likes'] . '</span>
              </div>
              <div id="rewatch-author">
-              <img class="rewatch-pfp" src="/assets/img/' .getUserPic($row["author"]). '" height="48">
-              <span>' . $row['author'] . '</span>
+              <img class="rewatch-pfp" src="content/pfp/' .getUserPic($pfp). '" height="48">
+              <span class="rewatch-name">' . $row['author'] . '</span>
+              <a class="yt-button danger" style="margin-left: 44px; margin-top: 4px;" href="#">Subscribe</a>
             </div>
             <div class="rewatch-buttons">
-            <a class="yt-button" href="/likevideo?id=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a>
+            <a class="yt-button" href="/likevideo?id=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button" href="/likevideo?id=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a>
             </div>
             </div>
             <div class="rewatch-content">
@@ -70,8 +72,7 @@
                 }
             }
 
-        echo '
-        <h4><strong><a href="/all_comments?id='.$row['vid'].'">All comments</a></strong></h4>';
+        echo '<h4><strong><a href="/all_comments?id='.$_GET['v'].'">All comments</a></strong></h4>';
 ?>
 
 
@@ -97,7 +98,7 @@
 
 
     <form action="" method="post" enctype="multipart/form-data"><br>
-        <textarea name="bio" rows="3" cols="40" required="required" style="width: 600px; height: 60px;"></textarea><br><br>
+        <textarea class="yt-search-input" name="bio" rows="3" cols="40" required="required" style="width: 600px; height: 60px;"></textarea><br><br>
         <input class="yt-button primary" type="submit" value="Comment" name="submit" style="float: right;">
         <br>
         <br>

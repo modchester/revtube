@@ -28,10 +28,7 @@
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
                                 <a href="/watch?v='.$row['vid'].'">
-                                    <video>
-                                        <source src="/content/video/'.$row['filename'].'" type="video/mp4">
-                                        Thumbnail could not be loaded :(
-                                    </video> 
+                                <img height="70px" width="120px" src="content/thumb/' . $row['thumb'] . '">
                                 </a>
                                 </div>
                                 <div class="col-1-3 video-title"><a href="/watch?id='.$row['vid'].'">'.$row['videotitle'].'</a></div>

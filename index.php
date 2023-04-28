@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <?php include './assets/mod/meta.php';?>
+    <?php include './assets/mod/db.php';?>
     </head>
-
+    <?php include './assets/mod/guide.php';?>
   <body>
-<?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
 <!-- guide -->
     <div class="container">
@@ -28,7 +28,7 @@
         </div>
         
         <div class="row">
-        <?php include './assets/mod/guide.php';?>
+        <?php //include './assets/mod/guide.php';?>
           <div class="span10">
           <h3>Featured Videos</h3>
             <div class="featured-videos container-flex">
@@ -44,10 +44,7 @@
                             <div class="featured-video col-generic">
                                 <div class="video-thumbnail">
                                     <a href="watch.php?v=' . $row['vid'] . '">
-                                        <video>
-                                            <source src="videos/' . $row['filename'] . '" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                         </video>
+                                    <img src="content/thumb/' . $row['thumb'] . '">
                                     </a>
                                 </div>
                                 <div class="featured-video-info">
@@ -82,10 +79,7 @@
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
                                 <a href="watch.php?v='.$row['vid'].'">
-                                    <video>
-                                        <source src="content/video/'.$row['filename'].'" type="video/mp4">
-                                        Thumbnail could not be loaded :(
-                                    </video> 
+                                <img height="70px" width="120px" src="content/thumb/' . $row['thumb'] . '">
                                 </a>
                                 </div>
                                 <div class="col-1-3 video-title"><a href="watch.php?v='.$row['vid'].'">'.$row['videotitle'].'</a></div>

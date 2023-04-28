@@ -28,8 +28,8 @@
 
     function getUserPic($uid){
     	$userpic = (string)$uid;
-		if(file_exists("./content/pfp/".$userpic) !== TRUE){
-			$userpic = "default.png";
+		if(file_exists("content/pfp/".$userpic) !== TRUE){
+			$userpic = "assets/img/default.png";
 		}
 		return $userpic;
     }

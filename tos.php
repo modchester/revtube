@@ -37,8 +37,8 @@
 <?php include './assets/mod/whatsnew.php'; ?>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
+      
     </div> <!-- /container -->
-
+    <?php include './assets/mod/footer.php'; ?>
   </body>
 </html>

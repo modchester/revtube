@@ -84,7 +84,7 @@
                $processed_file = "content/video/$v_id.mp4";
                unlink("content/unprocessed/$v_id.mp4");
                $target_thumb = "content/thumb/".$v_id.".jpg";
-               $thumbcmd = "$ffmpeg -i $processed_file -vf \"thumbnail\" -frames:v 1 -s 120x70 $target_thumb";
+               $thumbcmd = "$ffmpeg -i $processed_file -vf \"thumbnail\" -frames:v 1 -s 1280x720 $target_thumb";
                $video = $_POST['videotitle'];
                $user = $_SESSION['profileuser3'];
              //  $v_id = randstr(11);
@@ -146,12 +146,12 @@
                      <br>
                     <div class="input-group">
                        <!-- <label for="videotitle">Title </label>-->
-                        <input type="text" id="videotitle" placeholder="Title" name="videotitle">
+                        <input class="yt-search-input" type="text" id="videotitle" placeholder="Title" name="videotitle">
                     </div>
                      <br>
                     <div class="input-group">
                  <!--       <label for="bio">Description </label> -->
-                        <textarea style="background-color: var(--inputlol);" name="bio" placeholder="Enter a description for your video here" rows="4" cols="50" required="required"></textarea>
+                        <textarea class="yt-search-input" style="background-color: var(--inputlol);" name="bio" placeholder="Enter a description for your video here" rows="4" cols="50" required="required"></textarea>
                     </div>
                     <div class="input-group">
                          <br>
