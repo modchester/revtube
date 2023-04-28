@@ -8,7 +8,6 @@
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
 <!-- guide -->
-<?php include './assets/mod/guide.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -27,7 +26,9 @@
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
           <?php include './assets/mod/todaysdate.php'; ?>
         </div>
+        
         <div class="row">
+        <?php include './assets/mod/guide.php';?>
           <div class="span10">
           <h3>Featured Videos</h3>
             <div class="featured-videos container-flex">

@@ -3,9 +3,12 @@
     $webhook = "";
     
     // debug mode
-    $debug = "true";
+    $debug = "false";
 
-    $mysqli = new mysqli("localhost", "root", "", "revista");
+    // ffmpeg
+    $ffmpeg = 'C:\ffmpeg.exe';
+    
+    $mysqli = new mysqli("localhost", "root", "", "skycube");
     session_start();
 
     function idFromUser($nameuser){
