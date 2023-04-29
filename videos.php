@@ -24,6 +24,10 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
+                      include("assets/lib/profile.php");
+                      $likec = getLikes($row['vid'], $mysqli);
+    $dislikec = getDislikes($row['vid'], $mysqli);
+    $views = getViews($row['vid'], $mysqli); 
                         echo '
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
@@ -31,11 +35,11 @@
                                 <img height="70px" width="120px" src="content/thumb/' . $row['thumb'] . '">
                                 </a>
                                 </div>
-                                <div class="col-1-3 video-title"><a href="/watch?id='.$row['vid'].'">'.$row['videotitle'].'</a></div>
+                                <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
-                                    <div><a href="profile.php?id='.$row['author'].'">'.$row['author'].'</a></div>
-                                    <div><span>'.$row['views'].'</span> views</div>
-                                    <div><span>'.$row['likes'].'</span> likes</div>
+                                    <div><a href="profile?user='.$row['author'].'">'.$row['author'].'</a></div>
+                                    <div>'.$views.' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div><em>'.$row['description'].'</em></div>
                                 </div>
                             </div>
                             <hr>';
@@ -54,9 +58,9 @@
         <?php include './assets/mod/whatsnew.php'; ?>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
+      
 
     </div> <!-- /container -->
-
+    <?php include './assets/mod/footer.php'; ?>
   </body>
 </html>

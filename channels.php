@@ -22,13 +22,14 @@
 			$result = $statement->get_result();
 			if($result->num_rows !== 0){
 				while($row = $result->fetch_assoc()) {
+					$rows = getSubscribers($row['username'], $mysqli);
 				    echo "
 				    <div class='user'>
 				    	<div class='user-info'>
-						    <div><a href='./profile.php?id=".$row['id']."'>".$row['username']."</a></div>
-						    <div><span class='black'>".$row['subscribers']."</span> subscribers</div>
+						    <div><a href='./profile?user=".$row['username']."'>".$row['username']."</a></div>
+						    <div><span class='black'>".$rows."</span> subscribers</div>
 					    </div>
-					  <!--  <div><a href='./profile.php?id=".$row["id"]."'><img class='user-picture' src='./pfp/".getUserPic($row["id"])."'></a></div> -->
+					  <!--  <div><a href='./profile?user=".$row["username"]."'><img class='user-picture' src='./pfp/".getUserPic($row["id"])."'></a></div> -->
 				    </div>
 				    <hr>";
 				}

@@ -20,8 +20,8 @@
         <div class="container-flex">
             <div class="col-2-3">
                 <?php
-                    $statement = $mysqli->prepare("SELECT `username`, `id`, `subscribers` FROM `users` WHERE `id` = ? LIMIT 1");
-                    $statement->bind_param("i", $_GET['id']);
+                    $statement = $mysqli->prepare("SELECT `username`, `id`, `subscribers` FROM `users` WHERE `username` = ? LIMIT 1");
+                    $statement->bind_param("s", $_GET['user']);
                     $statement->execute();
                     $result = $statement->get_result();
                     while($row = $result->fetch_assoc()) {
@@ -50,9 +50,13 @@
                     $statement->bind_param("s", $username);
                     $statement->execute();
                     $result = $statement->get_result();
-                    echo "<hr><h3>Videos</h3>";
+                    echo "<h3>Videos</h3>";
                     if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
+                      include("assets/lib/profile.php");
+                      $likec = getLikes($row['vid'], $mysqli);
+    $dislikec = getDislikes($row['vid'], $mysqli);
+    $views = getViews($row['vid'], $mysqli); 
                         echo '
                         <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
@@ -63,10 +67,10 @@
                                     </video> 
                                 </a>
                                 </div>
-                                <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'">'.$row['videotitle'].'</a></div>
+                                <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
-                                    <div><span>'.$row['views'].'</span> views</div>
-                                    <div><span>'.$row['likes'].'</span> likes</div>
+                                    <div>'.$views.' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div><em>'.$row['description'].'</em></div>
                                 </div>
                             </div>
                             <hr>';
@@ -82,22 +86,44 @@
           </div>
           <div class="span4">
           <?php
-                $statement = $mysqli->prepare("SELECT * FROM `users` WHERE `id` = ? LIMIT 1");
-                $statement->bind_param("i", $_GET['id']);
+                $statement = $mysqli->prepare("SELECT * FROM `users` WHERE `username` = ? LIMIT 1");
+                $statement->bind_param("s", $_GET['user']);
                 $statement->execute();
                 $result = $statement->get_result();
                 while($row = $result->fetch_assoc()) {
+                  $pfp = idFromUser($_GET['user']);
+                  $rows = getSubscribers($_GET['user'], $mysqli);
                   echo('
-            <h3><h2>'.$row["username"].' <button style="width:100px !important;" class="yt-button big danger">Subscribe</button></h2></h3>
-            <img style="width:225px;" src="/content/pfp/'.$row["id"].'">
-            '); }
+            <h3><h2>'.$row["username"].'</h2></h3>
+            <img style="width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
+            '); 
+            if($row['username'] == $_SESSION['profileuser3']) {
+              echo '
+              <a href="account" id="editprof" class="yt-button primary" type="button">Manage Account</a>';
+          } else {
+      if(isset($_SESSION['profileuser3'])) {
+          if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
+         echo '
+         <a class="yt-button danger" href="/subscribe?name=' . $row['username'] . '">Subscribe ('.$rows.')</a>
+         ';
+         } else { 
+          echo '
+          <a class="yt-button" href="/unsubscribe?name=' . $row['username'] . '">Unsubscribe ('.$rows.')</a>
+      ';
+           } 
+          } else {
+              echo'
+              <a class="yt-button danger disabled">Subscribe ('.$rows.')</a>
+          ';
+          }
+      }}
             echo '';
             ?>
             <hr>
             <h3>Bio</h3>
                             <?php
-                $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `id` = ? LIMIT 1");
-                $statement->bind_param("i", $_GET['id']);
+                $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `username` = ? LIMIT 1");
+                $statement->bind_param("s", $_GET['user']);
                 $statement->execute();
                 $result = $statement->get_result();
                 while($row = $result->fetch_assoc()) {

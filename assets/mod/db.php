@@ -52,4 +52,28 @@
    echo "<center>DEBUG ONLY <span style='color: red;'>DO NOT USE IN PRODUCTION ENVIRONMENT</span> - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
 	//echo '<br>revista is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    }
+
+      // get subs
+      function getSubscribers($id, $mysqli) {
+         $stmt = $mysqli->prepare("SELECT * FROM subscribers WHERE receiver = ?");
+         $stmt->bind_param("s", $id);
+         $stmt->execute();
+         $result = $stmt->get_result();
+         $rows = mysqli_num_rows($result); 
+         $stmt->close();
+      
+         return $rows;
+      }
+      //idk
+      function ifSubscribed($user, $reciever, $mysqli) {
+          $stmt = $mysqli->prepare("SELECT * FROM subscribers WHERE sender = ? AND receiver = ?");
+          $stmt->bind_param("ss", $user, $reciever);
+          $stmt->execute();
+      $result = $stmt->get_result();
+      $user = $result->fetch_assoc();
+      if($result->num_rows === 1) { return true; } else { return false; }
+      $stmt->close();
+      
+      return $user;
+      }
 ?>

@@ -46,8 +46,9 @@
       }
       
       .logost {
-                font-family: 'Red Hat Display', sans-serif;
-                color: rgb(43, 17, 196)!important;
+                /* font-family: 'Red Hat Display', sans-serif; */
+                /* color: rgb(43, 17, 196)!important; */
+                font-style: italic;
       }
       
       .video-thumbnail{
@@ -95,8 +96,8 @@ a.menu::after, .dropdown-toggle::after {
 }
 .page-alert {
 	width: 820px;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto;
+	margin-right: auto; */
 }
 .user-pic {
   width: 100px;
@@ -288,4 +289,12 @@ a.menu::after, .dropdown-toggle::after {
   .guide {
     display: none;
   }
+}
+/* .comment shit */
+.cmn {
+  float: left;
+  margin-right: 2px;
+}
+.cmntxt {
+  display: block;
 }
