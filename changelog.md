@@ -1,3 +1,3 @@
 # Changelog
-## February 19, 2022
-The project has started.
+## April 28, 2023
+Semi-2013 is in a somewhat complete state.

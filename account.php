@@ -23,11 +23,11 @@
 				</div>
 				<div class="input-group">
 				    <label for="description">Description: </label>
-				    <textarea name="description" rows="4" cols="50"></textarea>
+				    <textarea class="yt-search-input" name="description" rows="4" cols="50"></textarea>
 				</div>
 				<div class="input-group">
 					<div></div>
-					<div><input type="submit" value="Update" name="submit"></div>
+					<div><input style="float:right;margin-right:159px;" class="yt-button" type="submit" value="Update" name="submit"></div>
 				</div>
 				<div class="input-group">
 					<div></div>

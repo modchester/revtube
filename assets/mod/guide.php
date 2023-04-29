@@ -1,14 +1,14 @@
 <div class="guide">
     <ul>
         <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>    
-    <span>Most of Revista</span>
+    <span>Most of Catrill</span>
         <a href="/videos"><li class="guide-item"><i class="bi bi-camera-video-fill"></i> Videos</li></a>
         <a href="/community"><li class="guide-item"><i class="bi bi-people-fill"></i> Community</li></a>
     <?php
-      if(!$loggedIn) {
+      if(!isset($_SESSION['profileuser3'])) {
         echo '
         <div class="sign-in-box">
-        Yo, you are not signed in. By signing in, you will enjoy Revista more.
+        Yo, you are not signed in. By signing in, you will enjoy Catrill more.
         <br>
         <a class="yt-button primary" href="/alogin">Sign in</a>
         </div>';
@@ -22,7 +22,8 @@
 			        echo '
                     <span>My channel</span>
                         <a href="/account"><li class="guide-item"><i class="bi bi-gear-fill"></i> Settings</li></a>
-                        <a href="/upload"><li class="guide-item"><i class="bi bi-file-earmark-arrow-up-fill"></i> Upload</li></a>';
+                        <a href="/upload"><li class="guide-item"><i class="bi bi-file-earmark-arrow-up-fill"></i> Upload</li></a>
+                        <a href="/inbox/index"><li class="guide-item"><i class="bi bi-envelope-fill"></i> Catmail</li></a>';
 			    }
 			    $statement->close();
       }

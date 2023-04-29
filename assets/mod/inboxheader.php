@@ -1,12 +1,11 @@
-    <div class="topbar">
+<div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="/"><strong>Catrill</strong></a>
+          <a class="brand logost" href="/"><strong>Catmail</strong></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/videos">Videos</a></li>
-            <li><a href="/channels">Channels</a></li>
-            <li><a href="/community">Community</a></li>
+            <li><a href="/inbox/index">Videos</a></li>
+            <li><a href="/inbox/contacts">Contacts</a></li>
            <!-- <li><a href="/upload">Upload</a></li> -->
           </ul>
           	<?php
@@ -21,15 +20,12 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]." <img style='margin-bottom:-2px;' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
+              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]."</a>
               <ul class=\"dropdown-menu\">
               <li></li>
-                <li><a href=\"./profile?user=".$row["username"]."\">Your Channel</a></li>
-                <li><a href=\"account\">Account Settings</a></li>
-                <li><a href=\"upload\">Upload</a></li>
+                <li><a href=\"account\">Back to Catrill</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"logout\">Logout ".$row["username"]."</a></li>
-                <li><a href='/inbox/index'>RTMail</a></li>
               </ul>
             </li>
           </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".$row["username"]."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";

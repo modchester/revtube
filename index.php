@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
     <?php include './assets/mod/meta.php';?>
+    <?php include './assets/mod/db.php';?>
     </head>
-
+    <?php include './assets/mod/guide.php';?>
   <body>
-<?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
 <!-- guide -->
-<?php include './assets/mod/guide.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -27,7 +26,9 @@
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
           <?php include './assets/mod/todaysdate.php'; ?>
         </div>
+        
         <div class="row">
+        <?php //include './assets/mod/guide.php';?>
           <div class="span10">
           <h3>Featured Videos</h3>
             <div class="featured-videos container-flex">
@@ -43,10 +44,7 @@
                             <div class="featured-video col-generic">
                                 <div class="video-thumbnail">
                                     <a href="watch.php?v=' . $row['vid'] . '">
-                                        <video>
-                                            <source src="videos/' . $row['filename'] . '" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                         </video>
+                                    <img src="content/thumb/' . $row['thumb'] . '">
                                     </a>
                                 </div>
                                 <div class="featured-video-info">
@@ -77,21 +75,21 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
+                      include("assets/lib/profile.php");
+                      $likec = getLikes($row['vid'], $mysqli);
+    $dislikec = getDislikes($row['vid'], $mysqli);
+    $views = getViews($row['vid'], $mysqli); 
                         echo '
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
                                 <a href="watch.php?v='.$row['vid'].'">
-                                    <video>
-                                        <source src="content/video/'.$row['filename'].'" type="video/mp4">
-                                        Thumbnail could not be loaded :(
-                                    </video> 
+                                <img height="70px" width="120px" src="content/thumb/' . $row['thumb'] . '">
                                 </a>
                                 </div>
-                                <div class="col-1-3 video-title"><a href="watch.php?v='.$row['vid'].'">'.$row['videotitle'].'</a></div>
+                                <div class="col-1-3 video-title"><a href="watch.php?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
-                                    <div><a href="profile.php?id='.$row['author'].'">'.$row['author'].'</a></div>
-                                    <div><span>'.$row['views'].'</span> views</div>
-                                    <div><span>'.$row['likes'].'</span> likes</div>
+                                    <div><a href="profile.php?user='.$row['author'].'">'.$row['author'].'</a></div>
+                                    <div>'.$views.' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                 </div>
                             </div>
                             <hr>';
