@@ -1,15 +1,16 @@
-# Revista: semi-2013 edition
-*UI maintaned by Cattskit.*
+# Catrill: semi-2013 edition
+*UI formerly maintaned by Cattskit, now maintained by jkosixtyfour/ky-1.*
 
-Revista (formerly RevTube/VistaTube) is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
+Catrill (formerly RevTube/VistaTube) is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
+*Name used with the permission of Cattskit.*
 # Access the site 
 <!--You can access RevTube at https://rev.yoretude.com.-->
 <!--~~For the upcoming "Redux" layout, the link is: https://redst0ne.xyz/vistatuberedux~~ (Redux is cancelled)
 For the current "skeuo" layout, the link is https://rev.yoretude.com.
 -->
-Revista is currently in development, so we do not have a public instance at this time.
+Catrill is currently in development, so we do not have a public instance at this time.
 # Changelog (only shows latest major update)
-## February 19, 2022
-The project started.
+## April 28, 2023
+Semi-2013 is in a somewhat complete state.
 
-*To see every update, view the full [changelog](https://github.com/Cattskit/revista/blob/2013-layout/changelog.md).*
+*To see every update, view the full [changelog](https://github.com/cosmixcode/revtube/blob/semi-2013/changelog.md).*
