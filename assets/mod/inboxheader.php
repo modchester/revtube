@@ -1,7 +1,7 @@
 <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="/"><strong>RTMail</strong></a>
+          <a class="brand logost" href="/"><strong>Catmail</strong></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/inbox/index">Videos</a></li>
@@ -23,7 +23,7 @@
               <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]."</a>
               <ul class=\"dropdown-menu\">
               <li></li>
-                <li><a href=\"account\">Back to OpenRT</a></li>
+                <li><a href=\"account\">Back to Catrill</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"logout\">Logout ".$row["username"]."</a></li>
               </ul>

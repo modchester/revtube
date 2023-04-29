@@ -23,7 +23,7 @@
                     <span>My channel</span>
                         <a href="/account"><li class="guide-item"><i class="bi bi-gear-fill"></i> Settings</li></a>
                         <a href="/upload"><li class="guide-item"><i class="bi bi-file-earmark-arrow-up-fill"></i> Upload</li></a>
-                        <a href="/inbox/index"><li class="guide-item"><i class="bi bi-envelope-fill"></i> RTMail</li></a>';
+                        <a href="/inbox/index"><li class="guide-item"><i class="bi bi-envelope-fill"></i> Catmail</li></a>';
 			    }
 			    $statement->close();
       }
