@@ -102,7 +102,7 @@
                     <div class="input-group">
                          <br>
                     </div>
-                    <button type="submit" class="yt-button big primary"><i class="bi bi-send-fill"></i> Send</button>
+                    <button type="submit" name="submit" class="yt-button big primary"><i class="bi bi-send-fill"></i> Send</button>
 
             <ul class="unstyled">
 
