@@ -30,37 +30,29 @@
         <div class="row">
         <?php //include './assets/mod/guide.php';?>
           <div class="span10">
-            <h2></h2>
-            <table class="condensed-table">
-                        <thead>
-                          <tr>
-                            <th>From</th>
-                            <th>Subject</th>
-                            <th>Content</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
+
             <?php
-                    $statement = $mysqli->prepare("SELECT * FROM inbox WHERE reciever = ? ORDER BY id DESC");
-                $statement->bind_param("s", $_SESSION['profileuser3']);
+                    $statement = $mysqli->prepare("SELECT * FROM inbox WHERE reciever = ? AND id = ? ORDER BY id DESC");
+                $statement->bind_param("si", $_SESSION['profileuser3'], $_GET['id']);
                 $statement->execute();
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
-                        echo '
-                          <tr>
-                            <td>'.$row['sender'].'</td>
-                            <td>'.$row['subject'].'</td>
-                            <td>'.$row['content'].'</td>
-                            <td><a href="view?id='.$row['id'].'">View</a></td>
-                          </tr>
-                          <tr>
+                        if ($_SESSION['profileuser3'] !== $row['reciever']) {
+                            echo '
+        <script>
+             window.location.href = "../index?err=Forbidden.";
+             </script>';
+                        }
+                        echo '<h2>'.$row['subject'].'</h2>
+<em>From: '.$row['sender'].'<br>
+To: '.$row['reciever'].'<br>Sent: '.$row['date'].'<br></em><hr>
+                           <p> '.$row['content'].'</p>
                         ';
                     }
                 }
                 else{
-                    echo "You have no mail.";
+                    echo "<h2>Oops!</h2><hr>The message you are looking for does not exist.";
                 }
                 $statement->close();
             ?>

@@ -47,7 +47,7 @@
           "url": "",
           "min_version": "8.0.0",
           "args": {
-            "el": "embedded", // comment this out for normal player
+            //"el": "embedded", // comment this out for normal player
             "fexp": "919100,909904,914102",
             "is_html5_mobile_device": false,
             "length_seconds": 0,

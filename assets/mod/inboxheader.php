@@ -23,7 +23,7 @@
               <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]."</a>
               <ul class=\"dropdown-menu\">
               <li></li>
-                <li><a href=\"account\">Back to Catrill</a></li>
+                <li><a href=\"../\">Back to Catrill</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"logout\">Logout ".$row["username"]."</a></li>
               </ul>

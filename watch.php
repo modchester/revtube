@@ -35,7 +35,8 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
             $pfp = idFromUser($row['author']);
             echo '
             <div class="rewatch">
-            <iframe height="360px" width="640px" src="/embed?v=' . $row["filename"] . '" style="border: none;"></iframe>
+            <!--<iframe height="360px" width="640px" src="/embed?v=' . $row["filename"] . '" style="border: none;"></iframe>-->
+            <video height="360px" width="640px" src="content/video/' . $row["filename"] . '" controls>No HTML5?</video>
             <div class="rewatch-content rewatch-main">
              <h1 id="rewatch-title">
                <span id="title">' . $row['videotitle'] . '</span>

@@ -237,7 +237,10 @@ By <span></span>
       <span class="yt-uix-button-menu-item html5-context-menu-show-video-info">Show video info</span>
     </li>
     <li>
-      <a class="yt-uix-button-menu-item" target="_blank" href="http://www.youtube.com/html5">About HTML5</a>
+      <a class="yt-uix-button-menu-item" target="_blank" href="/html5">About HTML5</a>
+    </li>
+    <li>
+      <span class="yt-uix-button-menu-item">Catrill Player</span>
     </li>
   </ul>
 
@@ -297,6 +300,9 @@ By <span></span>
     <button onclick=";return false;" title="Quality" type="button" class="html5-text-button html5-quality-button html5-control-right yt-uix-button-reverse flip hid yt-uix-button yt-uix-button-player yt-uix-tooltip" tabindex="10" role="button" aria-pressed="false" aria-expanded="false" aria-haspopup="true" aria-activedescendant="" aria-label="Quality"><span class="yt-uix-button-content">Quality </span><img class="yt-uix-button-arrow" src="http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt=""><div class="yt-uix-button-menu yt-uix-button-menu-player" style="display: none;">  <ul class="html5-quality-popup-menu html5-popup-menu">
     <li class="yt-uix-button-menu-item" data-value="Original">
 Original <sup>HD</sup>
+    </li>
+    <li class="yt-uix-button-menu-item" data-value="2160p">
+      2160p <sup>4K</sup>
     </li>
     <li class="yt-uix-button-menu-item" data-value="1080p">
       1080p <sup>HD</sup>
