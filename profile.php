@@ -20,7 +20,7 @@
         <div class="container-flex">
             <div class="col-2-3">
                 <?php
-                    $statement = $mysqli->prepare("SELECT `username`, `id`, `subscribers` FROM `users` WHERE `username` = ? LIMIT 1");
+                    $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
                     $statement->bind_param("s", $_GET['user']);
                     $statement->execute();
                     $result = $statement->get_result();
