@@ -4,7 +4,7 @@
           <a class="brand logost" href="/"><strong>Catmail</strong></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/inbox/index">Videos</a></li>
+            <li><a href="/inbox/index">Inbox</a></li>
             <li><a href="/inbox/contacts">Contacts</a></li>
            <!-- <li><a href="/upload">Upload</a></li> -->
           </ul>

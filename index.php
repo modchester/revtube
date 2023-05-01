@@ -3,6 +3,12 @@
   <head>
     <?php include './assets/mod/meta.php';?>
     <?php include './assets/mod/db.php';?>
+    <style>
+      @media(max-width: 1156px) {
+  .guide {
+    display: none;
+  }
+  </style>
     </head>
     <?php include './assets/mod/guide.php';?>
   <body>
@@ -74,8 +80,8 @@
                 $statement->execute();
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
+                  include("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
-                      include("assets/lib/profile.php");
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
     $views = getViews($row['vid'], $mysqli); 
@@ -92,7 +98,7 @@
                                     <div>'.$views.' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                 </div>
                             </div>
-                            <hr>';
+                            <hr class="indexdivider">';
                     }
                 }
                 else{

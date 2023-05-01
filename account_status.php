@@ -11,11 +11,11 @@
  <div class="content">
         <div class="page-header">
         <?php include './assets/mod/alert.php';?>
-          <h1>Manage Your Account <small>BETA</small></h1>
+          <h1>Account Status <small>BETA</small></h1>
         </div>
         <div class="row">
           <div class="span10">
-		    <h3>Edit your settings</h3>
+		    <h3>Terms of Service Strikes</h3>
 			<form action="" method="post" enctype="multipart/form-data">
 				<div class="input-group">
 				    <label for="new_pic">Set a new picture: </label>

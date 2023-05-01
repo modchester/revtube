@@ -301,3 +301,7 @@ a.menu::after, .dropdown-toggle::after {
 .comment {
   padding:5px;
 }
+.indexdivider {
+  border: 1px solid #FFF;
+  opacity: 0;
+}

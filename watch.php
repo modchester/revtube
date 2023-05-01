@@ -30,6 +30,7 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) exit('No rows');
+        error_reporting(E_ALL ^ E_WARNING);
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, Y', strtotime($row['date']));
             $pfp = idFromUser($row['author']);
@@ -86,7 +87,10 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         $stmt->bind_param("s", $_GET['v']);
         $stmt->execute();
         $result = $stmt->get_result();
-        if($result->num_rows === 0) echo('No comments.');
+        if($result->num_rows === 0) {
+          //echo('No comments.');
+          $count = "0";
+        }
         while($row = $result->fetch_assoc()) {
           $count = $result->num_rows;
         }

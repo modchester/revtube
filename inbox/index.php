@@ -48,11 +48,12 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
+                        $out = strlen($row['content']) > 25 ? mb_substr($row['content'],0,25)."..." : $row['content'];
                         echo '
                           <tr>
                             <td>'.$row['sender'].'</td>
                             <td>'.$row['subject'].'</td>
-                            <td>'.$row['content'].'</td>
+                            <td>'.$out.'</td>
                             <td><a href="view?id='.$row['id'].'">View</a></td>
                           </tr>
                           <tr>

@@ -23,8 +23,8 @@
                 $statement->execute();
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
+                  include("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
-                      include("assets/lib/profile.php");
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
     $views = getViews($row['vid'], $mysqli); 
