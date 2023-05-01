@@ -11,7 +11,7 @@
     if (isset($_POST['submit'])){
         if(!isset($_SESSION['profileuser3'])) {
             die("Login to report....");
-        } ?>
+        }} ?>
     <?php include("./assets/mod/header.php");?>
     <div class="container-flex"> 
     <?php
@@ -36,6 +36,9 @@ if(isset($_POST["submit"])){
     ->setTimestamp()
     ->setUsername($username)
     ->send(); 
+    echo('<script>
+              window.location.href = "index?err=Your report has been submitted successfully!";
+              </script>');
 }
 ?>
         <div class="col-1-2">
@@ -45,6 +48,16 @@ if(isset($_POST["submit"])){
             <br>
             <center><h3>Report a video</h3>
             <br>
+            <?php 
+            if (isset($_GET['v'])) {
+                $video = $_GET['v'];
+                $disabled = 'disabled';
+            }
+            if (isset($_GET['offender'])) {
+                $offender = $_GET['offender'];
+                $disableda = 'disabled';
+            }
+            ?>
             <div class="card blue">
                 <form method="post" action="">
                     <div class="input-group">
@@ -52,11 +65,11 @@ if(isset($_POST["submit"])){
                     </div>
                     <br>
                     <div class="input-group">
-                        <input type="text" name="sitelink" placeholder="Offending Video" required>
+                        <input type="text" name="sitelink" value="<?php echo $video;?>" placeholder="Offending Video" required <?php echo $disabled;?>>
                     </div>
                     <br>
                     <div class="input-group">
-                    <input type="text" name="username" placeholder="Name of Channel with Video" required>
+                    <input type="text" name="username" value="<?php echo $offender;?>" placeholder="Uploader" required <?php echo $disableda;?>>
                     </div>
                     <br>                   
                     <div class="input-group">

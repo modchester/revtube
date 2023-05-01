@@ -71,7 +71,7 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         }
            echo '</div>
             <div class="rewatch-buttons">
-            <a class="yt-button" href="/like?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button" href="/dislike?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a>
+            <a class="yt-button" href="/like?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button" href="/dislike?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a> <a style="margin-left:0px;float:right;" class="yt-button" href="/report?v=' . $row['vid'] . '&offender=' . $row['author'] . '"><i class="bi bi-flag-fill"></i> Report</a>
             </div>
             </div>
             <div class="rewatch-content">

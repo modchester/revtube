@@ -16,64 +16,40 @@
         <div class="row">
           <div class="span10">
 		    <h3>Terms of Service Strikes</h3>
-			<form action="" method="post" enctype="multipart/form-data">
-				<div class="input-group">
-				    <label for="new_pic">Set a new picture: </label>
-				    <input type="file" name="new_pic" id="new_pic">
-				</div>
-				<div class="input-group">
-				    <label for="description">Description: </label>
-				    <textarea class="yt-search-input" name="description" rows="4" cols="50"></textarea>
-				</div>
-				<div class="input-group">
-					<div></div>
-					<div><input style="float:right;margin-right:159px;" class="yt-button" type="submit" value="Update" name="submit"></div>
-				</div>
-				<div class="input-group">
-					<div></div>
-					<div class="red"><?php
-				if (isset($_POST["submit"])){
-					if(isset($_FILES["new_pic"]) && is_uploaded_file($_FILES["new_pic"]["tmp_name"])){
-						$supportedFormats = [
-							"image/jpeg",
-							"image/png",
-							"image/gif",
-						];
-					    $uid = 0;
-					    try{
-					    	$uid = idFromUser($_SESSION["profileuser3"]);
-						    $target_file = "./content/pfp/".$uid;
-						    $supported = false;
-						    foreach($supportedFormats as $value){
-						    	if($value === mime_content_type($_FILES["new_pic"]["tmp_name"])){
-						    		$supported = true;
-						    	}
-						    }
-						    if($supported === true && $_FILES["new_pic"]["size"] < 5000000){
-						    	file_put_contents($target_file, file_get_contents($_FILES["new_pic"]["tmp_name"]));
-						    }
-						    else{
-						    	if(!$supported){
-						    		echo "Image not supported (jpg, png or gif)";
-						    	}
-						    	else{
-							    	echo "Image is too large";
-						    	}
-						    }
-					    }
-					    catch(Exception $e){
-					    	echo "Something happened: ".$e;
-					    }
+			<?php
+			if(isset($_SESSION['profileuser3'])){
+			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+			    $statement->bind_param("s", $_SESSION['profileuser3']);
+			    $statement->execute();
+			    $result = $statement->get_result();
+			    if($result->num_rows === 0) exit('No rows');
+			    while($row = $result->fetch_assoc()) {
+					if($row['strikes'] == 0) {
+						$strikestyle = "color: green; font-weight: bold;";
+						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
+						$etc = "strikes";
 					}
-					if(!empty($_POST['description'])){
-						$statement = $mysqli->prepare("UPDATE `users` SET `description` = ? WHERE `username` = '" . $_SESSION["profileuser3"] . "'");
-					    $statement->bind_param("s", $description);
-					    $description = str_replace(PHP_EOL, "<br>", htmlspecialchars($_POST['description']));
-					    $statement->execute();
-					    $statement->close();
+					if($row['strikes'] == 1) {
+						$strikestyle = "color: orange; font-weight: bold;";
+						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
+						$etc = "strike";
 					}
-				}
-			?></div></div></div><div class="span4">
+					if($row['strikes'] == 2) {
+						$strikestyle = "color: red; font-weight: bold;";
+						$msg = "You are <b>NOT</b> eligible to apply for the Partner Program.";
+						$etc = "strikes";
+					}
+					if($row['strikes'] == 3) {
+						$strikestyle = "color: red; font-weight: bold;";
+						$msg = "Your account has been terminated.";
+						$etc = "strikes";
+					}
+			        echo 'You currently have <span style="'.$strikestyle.'">'.$row['strikes'].' '.$etc.'</span><h3>Partner Program</h3>'.$msg.'';
+			    }
+			    $statement->close();
+			}
+			?>
+				</div><div class="span4">
 			<h3>Your Account Details</h3>
 			<?php
 			if(isset($_SESSION['profileuser3'])){
