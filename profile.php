@@ -52,8 +52,8 @@
                     $result = $statement->get_result();
                     echo "<h3>Videos</h3>";
                     if($result->num_rows !== 0){
-                    while($row = $result->fetch_assoc()) {
                       include("assets/lib/profile.php");
+                    while($row = $result->fetch_assoc()) {
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
     $views = getViews($row['vid'], $mysqli); 

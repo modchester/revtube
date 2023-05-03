@@ -49,7 +49,7 @@
                             echo '
                             <div class="featured-video col-generic">
                                 <div class="video-thumbnail">
-                                    <a href="watch.php?v=' . $row['vid'] . '">
+                                    <a href="watch?v=' . $row['vid'] . '">
                                     <img src="content/thumb/' . $row['thumb'] . '">
                                     </a>
                                 </div>
@@ -88,7 +88,7 @@
                         echo '
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
-                                <a href="watch.php?v='.$row['vid'].'">
+                                <a href="watch?v='.$row['vid'].'">
                                 <img height="70px" width="120px" src="content/thumb/' . $row['thumb'] . '">
                                 </a>
                                 </div>
