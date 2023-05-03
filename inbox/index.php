@@ -30,16 +30,8 @@
         <div class="row">
         <?php //include './assets/mod/guide.php';?>
           <div class="span10">
-            <h2>Latest Mail</h2>
-            <?php
-                    $statement = $mysqli->prepare("SELECT * FROM videos ORDER BY date DESC");
-                //$statement->bind_param("s", $_POST['fr']); i have no idea what this is but we don't need it
-                $statement->execute();
-                $result = $statement->get_result();
-                if($result->num_rows !== 0){
-                    while($row = $result->fetch_assoc()) {
-                        echo '
-                        <table class="condensed-table">
+            <h2></h2>
+            <table class="condensed-table">
                         <thead>
                           <tr>
                             <th>From</th>
@@ -49,26 +41,23 @@
                           </tr>
                         </thead>
                         <tbody>
+            <?php
+                    $statement = $mysqli->prepare("SELECT * FROM inbox WHERE reciever = ? ORDER BY id DESC");
+                $statement->bind_param("s", $_SESSION['profileuser3']);
+                $statement->execute();
+                $result = $statement->get_result();
+                if($result->num_rows !== 0){
+                    while($row = $result->fetch_assoc()) {
+                        $out = strlen($row['content']) > 25 ? mb_substr($row['content'],0,25)."..." : $row['content'];
+                        echo '
                           <tr>
-                            <td>redst0ne</td>
-                            <td>Sup brother</td>
-                            <td>RESPOND TO MY MESSAGES!!!</td>
-                            <td><a href="#">View</a></td>
+                            <td>'.$row['sender'].'</td>
+                            <td>'.$row['subject'].'</td>
+                            <td>'.$out.'</td>
+                            <td><a href="view?id='.$row['id'].'">View</a></td>
                           </tr>
                           <tr>
-                            <td>redst0ne</td>
-                            <td>Hi!!!!!</td>
-                            <td>hello sir</td>
-                            <td><a href="#">View</a></td>
-                          </tr>
-                          <tr>
-                            <td>redst0ne</td>
-                            <td>kys</td>
-                            <td>kys NOW!</td>
-                            <td><a href="#">View</a></td>
-                          </tr>
-                        </tbody>
-                      </table>';
+                        ';
                     }
                 }
                 else{
@@ -76,6 +65,8 @@
                 }
                 $statement->close();
             ?>
+            </tbody>
+                      </table>
             <ul class="unstyled">
 
             </ul>

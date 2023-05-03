@@ -293,8 +293,15 @@ a.menu::after, .dropdown-toggle::after {
 /* .comment shit */
 .cmn {
   float: left;
-  margin-right: 2px;
+  margin-right: 3px;
 }
 .cmntxt {
   display: block;
+}
+.comment {
+  padding:5px;
+}
+.indexdivider {
+  border: 1px solid #FFF;
+  opacity: 0;
 }

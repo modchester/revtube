@@ -20,7 +20,7 @@
         <div class="container-flex">
             <div class="col-2-3">
                 <?php
-                    $statement = $mysqli->prepare("SELECT `username`, `id`, `subscribers` FROM `users` WHERE `username` = ? LIMIT 1");
+                    $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
                     $statement->bind_param("s", $_GET['user']);
                     $statement->execute();
                     $result = $statement->get_result();
@@ -52,8 +52,8 @@
                     $result = $statement->get_result();
                     echo "<h3>Videos</h3>";
                     if($result->num_rows !== 0){
-                    while($row = $result->fetch_assoc()) {
                       include("assets/lib/profile.php");
+                    while($row = $result->fetch_assoc()) {
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
     $views = getViews($row['vid'], $mysqli); 

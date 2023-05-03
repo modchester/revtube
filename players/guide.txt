@@ -1,0 +1,15 @@
+2014 player patch, by genosmrpg7899#4308, modifications and guide by «John»#1234
+
+player files are mostly hosted locally but you still need an internet connection for the player to work.
+
+load a video by opening embed.php?v=<video filename without extension> in your browser
+
+you can edit get_video_info.php to manually load files. it's human readable and formatted.
+
+make sure html5_player_template is in the same directory as the player itself, along with get_video_info.
+
+video files are placed in /videos.
+thumbnails are placed in /thumbs.
+the thumbnail and video file names must be the same, and thumbnails must be in PNG format, or the player won't find them.
+
+this version of the player was designed to work on macOS, and should work on linux. windows support is not guaranteed.

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2023 at 11:23 PM
+-- Generation Time: May 03, 2023 at 05:23 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,7 +41,7 @@ CREATE TABLE `announcements` (
 --
 
 CREATE TABLE `comments` (
-  `tovideoid` int(11) NOT NULL,
+  `tovideoid` varchar(11) NOT NULL,
   `id` int(11) NOT NULL,
   `author` varchar(255) NOT NULL,
   `comment` varchar(255) NOT NULL,
@@ -58,8 +58,9 @@ CREATE TABLE `inbox` (
   `sender` varchar(255) NOT NULL,
   `reciever` varchar(255) NOT NULL,
   `subject` varchar(50) NOT NULL,
-  `content` varchar(512) NOT NULL,
-  `id` int(11) NOT NULL
+  `content` varchar(1000) NOT NULL,
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -96,7 +97,7 @@ CREATE TABLE `subscribers` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL,
-  `subscribers` int(11) NOT NULL DEFAULT 0,
+  `strikes` int(11) NOT NULL DEFAULT 0,
   `username` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT 'No description.',
   `email` varchar(255) NOT NULL,
@@ -153,6 +154,13 @@ ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `inbox`
+--
+ALTER TABLE `inbox`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `subscribers`
 --
 ALTER TABLE `subscribers`
@@ -184,6 +192,12 @@ ALTER TABLE `announcements`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `inbox`
+--
+ALTER TABLE `inbox`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

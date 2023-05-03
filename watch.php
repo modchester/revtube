@@ -30,12 +30,14 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) exit('No rows');
+        error_reporting(E_ALL ^ E_WARNING);
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, Y', strtotime($row['date']));
             $pfp = idFromUser($row['author']);
             echo '
             <div class="rewatch">
-            <iframe height="360px" width="640px" src="/embed?v=' . $row["filename"] . '" style="border: none;"></iframe>
+            <!--<iframe height="360px" width="640px" src="/embed?v=' . $row["filename"] . '" style="border: none;"></iframe>-->
+            <video height="360px" width="640px" src="content/video/' . $row["filename"] . '" controls>No HTML5?</video>
             <div class="rewatch-content rewatch-main">
              <h1 id="rewatch-title">
                <span id="title">' . $row['videotitle'] . '</span>
@@ -69,7 +71,7 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         }
            echo '</div>
             <div class="rewatch-buttons">
-            <a class="yt-button" href="/like?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button" href="/dislike?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a>
+            <a class="yt-button" href="/like?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button" href="/dislike?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a> <a style="margin-left:0px;float:right;" class="yt-button" href="/report?v=' . $row['vid'] . '&offender=' . $row['author'] . '"><i class="bi bi-flag-fill"></i> Report</a>
             </div>
             </div>
             <div class="rewatch-content">
@@ -85,7 +87,10 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         $stmt->bind_param("s", $_GET['v']);
         $stmt->execute();
         $result = $stmt->get_result();
-        if($result->num_rows === 0) echo('No comments.');
+        if($result->num_rows === 0) {
+          //echo('No comments.');
+          $count = "0";
+        }
         while($row = $result->fetch_assoc()) {
           $count = $result->num_rows;
         }

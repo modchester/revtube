@@ -12,6 +12,7 @@
 *       large: 480p
 *       hd720: 720p
 *       hd1080: 1080p
+*       ultrares: 4k
 *
 *   You also change the author by editing line 68
 */
@@ -22,7 +23,31 @@ $fmt_stream_map = [
         "url" => "/content/video/".$_GET['video_id'],
         "sig" => "revoozieisacutecatfoundoncatbouncedotcom",
         "fallback_host" => "tc.v14.cache3.c.youtube.com",
+        "quality" => "medium",
+        "type" => "video/mp4; codecs=\"avc1.4d002a\""
+    ],
+    [
+        "itag" => "43",
+        "url" => "/content/video/".$_GET['video_id'],
+        "sig" => "revoozieisacutecatfoundoncatbouncedotcom",
+        "fallback_host" => "tc.v14.cache3.c.youtube.com",
+        "quality" => "large",
+        "type" => "video/mp4; codecs=\"avc1.4d002a\""
+    ],
+    [
+        "itag" => "43",
+        "url" => "/content/video/".$_GET['video_id'],
+        "sig" => "revoozieisacutecatfoundoncatbouncedotcom",
+        "fallback_host" => "tc.v14.cache3.c.youtube.com",
         "quality" => "hd720",
+        "type" => "video/mp4; codecs=\"avc1.4d002a\""
+    ],
+    [
+        "itag" => "43",
+        "url" => "/content/video/".$_GET['video_id'],
+        "sig" => "revoozieisacutecatfoundoncatbouncedotcom",
+        "fallback_host" => "tc.v14.cache3.c.youtube.com",
+        "quality" => "hd1080",
         "type" => "video/mp4; codecs=\"avc1.4d002a\""
     ],
 ];
@@ -65,7 +90,7 @@ $data = array(
     "ccfont" => "Arial Unicode MS, arial, verdana, _sans",
     "pltype" => "contentugc",
     "allow_embed" => "1",
-    "author" => "Revista",
+    "author" => "Catrill",
     "length_seconds" => "0",
     "storyboard_spec" => "",
     "abd" => "1",

@@ -17,7 +17,7 @@
         <div class="row">
           <div class="span10">
 			<?php
-			$statement = $mysqli->prepare("SELECT * FROM users ORDER BY subscribers DESC");
+			$statement = $mysqli->prepare("SELECT * FROM users ORDER BY username DESC");
 			$statement->execute();
 			$result = $statement->get_result();
 			if($result->num_rows !== 0){
