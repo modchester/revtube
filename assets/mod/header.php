@@ -1,7 +1,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="/"><strong>Catrill</strong></a>
+          <a class="brand logost" href="/"><!--<strong>Catrill</strong>--></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/videos">Videos</a></li>

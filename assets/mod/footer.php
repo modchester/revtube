@@ -1,5 +1,5 @@
 <footer class="yt-footer">
-    <h3><a class="logost" href="/"><strong>Catrill</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
+    <h3><a class="logost" href="/"><strong>clipIt</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
     <?php
             $sql = "SELECT COUNT(*) FROM users";
             $result = mysqli_query($mysqli, $sql);

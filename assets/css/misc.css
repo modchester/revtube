@@ -49,6 +49,9 @@
                 /* font-family: 'Red Hat Display', sans-serif; */
                 /* color: rgb(43, 17, 196)!important; */
                 font-style: italic;
+                content: url('/assets/img/clipIt.png');
+                height: 20px;
+                margin-top:2px;
       }
       
       .video-thumbnail{
