@@ -39,7 +39,7 @@
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
                         if ($row['sender'] == "system") {
-                            $official = '<i title="This is an official message from the Catrill team." class="bi bi-patch-check-fill"></i>';
+                            $official = '<i title="This is an official message from the clipIt team." class="bi bi-patch-check-fill"></i>';
                         } else {
                             $official = "";
                         }
