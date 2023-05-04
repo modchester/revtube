@@ -151,10 +151,13 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) echo('No comments.');
+        error_reporting(E_ALL & ~E_DEPRECATED);
+        include("assets/lib/time.php");
         while($row = $result->fetch_assoc()) {
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
-            echo "<div class='comment'><img class='cmn' height='32px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'>" . $row['author'] . " (" . $row['date'] . ")</div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
+          $time = time_elapsed_string($row['date']);
+            echo "<div class='comment'><img class='cmn' height='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . "</a> <span title='".$row["date"]."'>(" . $time . ")</span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
         }
         $stmt->close();
     ?>

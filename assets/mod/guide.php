@@ -29,7 +29,6 @@
 			    $statement->close();
       }
     ?>
-    <span>Your subscriptions</span>
    <?php include("getsubs.php"); ?><hr>
         <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
     </ul>

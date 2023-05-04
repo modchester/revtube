@@ -17,6 +17,7 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo '
                     <a href="/inbox/index"><li class="guide-item"><i class="bi bi-envelope-fill"></i> Inbox</li></a>
+                    <a href="/inbox/sent"><li class="guide-item"><i class="bi bi-send-fill"></i> Sent</li></a>
                     <a href="/inbox/contacts"><li class="guide-item"><i class="bi bi-people-fill"></i> Contacts</li></a>';
 			    }
 			    $statement->close();
