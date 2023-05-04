@@ -1,3 +1,3 @@
 <div class="alert-message warning">
-  <p><strong>Catrill semi-2013 is in development. </strong>Please note, this is still unfinished.</p>
+  <p><strong>Catrill's user interface <!--semi-2013--> is currently in development. </strong>Please note, it is still unfinished.</p>
 </div>

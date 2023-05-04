@@ -5,7 +5,8 @@
                                           $stmt->bind_param("s", $_SESSION['profileuser3']);
                                           $stmt->execute();
                                           $result = $stmt->get_result();
-                                          if($result->num_rows == 0){ echo 'You are not subscribed to any channels.'; }
+                                          if($result->num_rows !== 0){ echo "<span>Your subscriptions</span>"; }
+                                          
                                           while($row = $result->fetch_assoc()) {
                                             $pid = idFromUser($row['receiver']);
                                             $rows = getSubscribers($row['receiver'], $mysqli);
