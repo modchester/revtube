@@ -1,4 +1,10 @@
-    <div class="topbar">
+<?php
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$start = $time;
+?>
+<div class="topbar">
       <div class="fill">
         <div class="container">
           <a class="brand logost" href="/"><!--<strong>Catrill</strong>--></a>
@@ -29,7 +35,7 @@
                 <li><a href=\"upload\">Upload</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"logout\">Logout ".$row["username"]."</a></li>
-                <li><a href='/inbox/index'>Catmail</a></li>
+                <li><a href='/inbox/index'>sendIt</a></li>
               </ul>
             </li>
           </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".$row["username"]."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";

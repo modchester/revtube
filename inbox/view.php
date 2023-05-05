@@ -43,11 +43,8 @@
                         } else {
                             $official = "";
                         }
-                        if ($_SESSION['profileuser3'] !== $row['reciever']) {
-                            echo '
-        <script>
-             window.location.href = "../index?err=Forbidden.";
-             </script>';
+                        if ($_SESSION['profileuser3'] != $row['reciever']) {
+                            echo '<script>window.location.href = "../index?err=Forbidden.";</script>';
                         }
                         echo '<h2>'.$row['subject'].'</h2>
 <em>From: '.$row['sender'].' '.$official.'<br>
