@@ -4,7 +4,7 @@
     <?php include './assets/mod/meta.php';?>
     <?php include './assets/mod/db.php';?>
     <style>
-      @media(max-width: 1156px) {
+      @media(max-width: 1357px) {
   .guide {
     display: none;
   }

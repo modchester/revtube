@@ -3,7 +3,7 @@
     $webhook = "";
     
     // debug mode
-    $debug = "false";
+    $debug = "true";
 
     // ffmpeg
     $ffmpeg = 'C:\ffmpeg.exe';
@@ -49,7 +49,7 @@
    $result3 = mysqli_query($mysqli, $sql3);
    $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
    $phpver = phpversion();
-   echo "<center>DEBUG ONLY <span style='color: red;'>DO NOT USE IN PRODUCTION ENVIRONMENT</span> - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
+   $debugmsg = "<center><span style='color: white;'>[DEBUG]</span> Logged in as ".$_SESSION["profileuser3"]." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
 	//echo '<br>revista is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    }
 
