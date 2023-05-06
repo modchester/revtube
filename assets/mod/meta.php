@@ -21,3 +21,4 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://s.imon.fr/css3-youtube-buttons/yt-buttons.css" rel="stylesheet">
 	<link href="/assets/css/misc.css" rel="stylesheet">
+  <?php error_reporting(0); ?>
