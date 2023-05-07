@@ -75,7 +75,7 @@
             <br>
             <h2>Latest Uploads</h2>
             <?php
-                    $statement = $mysqli->prepare("SELECT * FROM videos ORDER BY date DESC");
+                    $statement = $mysqli->prepare("SELECT * FROM videos ORDER BY date DESC LIMIT 4");
                 //$statement->bind_param("s", $_POST['fr']); i have no idea what this is but we don't need it
                 $statement->execute();
                 $result = $statement->get_result();
