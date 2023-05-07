@@ -36,9 +36,9 @@ if(isset($_POST["submit"])){
     ->setTimestamp()
     ->setUsername($username)
     ->send(); 
-    echo('<script>
-              window.location.href = "index?err=Your report has been submitted successfully!";
-              </script>');
+    // echo('<script>
+    //           window.location.href = "index?err=Your report has been submitted successfully!";
+    //           </script>');
 }
 ?>
         <div class="col-1-2">
