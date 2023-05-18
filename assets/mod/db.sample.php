@@ -8,7 +8,7 @@
     // ffmpeg
     $ffmpeg = 'C:\ffmpeg.exe';
     
-    $mysqli = new mysqli("localhost", "root", "", "skycube");
+    $mysqli = new mysqli("localhost", "root", "", "clipit");
     session_start();
 
     function idFromUser($nameuser){
