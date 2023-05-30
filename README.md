@@ -1,3 +1,4 @@
+## THIS WILL LIKELY BE REWRITTEN
 # clipIt: semi-2013 edition
 *UI formerly maintaned by Cattskit, now maintained by jkosixtyfour/ky-1.*
 
