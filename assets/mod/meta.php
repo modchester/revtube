@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <meta charset="utf-8">
     <title>clipIt</title>
-	  <link rel="icon" type="image/x-icon" href="/assets/img/clipfavi.png">
-    <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/biggerfavicon.png">
+	  <link rel="icon" type="image/x-icon" href="/assets/img/johnfavi.png">
+    <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/johnfavicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-dropdown.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,4 +21,15 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://s.imon.fr/css3-youtube-buttons/yt-buttons.css" rel="stylesheet">
 	<link href="/assets/css/misc.css" rel="stylesheet">
-  <?php error_reporting(0); ?>
+  <script>
+    const fluentUIeligibility = localStorage.getItem("fluentUIenabled");
+     if (fluentUIeligibility !== "true") {
+    localStorage.setItem("fluentUIenabled", "false");
+     }
+     if (fluentUIeligibility == "true") {
+      document.write('<link href="/assets/css/fluent.css" rel="stylesheet">');
+     }
+</script>
+<?php
+  error_reporting(0); 
+  ?>

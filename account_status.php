@@ -11,12 +11,7 @@
  <div class="content">
         <div class="page-header">
         <?php include './assets/mod/alert.php';?>
-          <h1>Account Status <small>BETA</small></h1>
-        </div>
-        <div class="row">
-          <div class="span10">
-		    <h3>Terms of Service Strikes</h3>
-			<?php
+		<?php
 			if(isset($_SESSION['profileuser3'])){
 			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
 			    $statement->bind_param("s", $_SESSION['profileuser3']);
@@ -25,30 +20,43 @@
 			    if($result->num_rows === 0) exit('No rows');
 			    while($row = $result->fetch_assoc()) {
 					if($row['strikes'] == 0) {
+						$strikenum = 0;
 						$strikestyle = "color: green; font-weight: bold;";
 						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
 						$etc = "strikes";
+						$icon = "good";
 					}
 					if($row['strikes'] == 1) {
+						$strikenum = 1;
 						$strikestyle = "color: orange; font-weight: bold;";
 						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
 						$etc = "strike";
+						$icon = "warn";
 					}
 					if($row['strikes'] == 2) {
+						$strikenum = 2;
 						$strikestyle = "color: red; font-weight: bold;";
 						$msg = "You are <b>NOT</b> eligible to apply for the Partner Program.";
 						$etc = "strikes";
+						$icon = "bad";
 					}
 					if($row['strikes'] == 3) {
+						$strikenum = 3;
 						$strikestyle = "color: red; font-weight: bold;";
 						$msg = "Your account has been terminated.";
 						$etc = "strikes";
+						$icon = "bad";
 					}
-			        echo 'You currently have <span style="'.$strikestyle.'">'.$row['strikes'].' '.$etc.'</span><h3>Partner Program</h3>'.$msg.'';
 			    }
-			    $statement->close();
+$strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$etc.'</span><h3>Partner Program</h3>'.$msg.'';
 			}
 			?>
+          <h1>Account Status <img style="margin-top:2px !Important;" height="24" src="./assets/img/accstatus/<?php echo $icon;?>.png"><!--<small>BETA</small>--></h1>
+        </div>
+        <div class="row">
+          <div class="span10">
+		    <h3>Terms of Service Strikes</h3>
+<?php echo $strike; ?>
 				</div><div class="span4">
 			<h3>Your Account Details</h3>
 			<?php

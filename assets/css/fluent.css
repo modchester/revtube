@@ -1,0 +1,57 @@
+.yt-button {
+    vertical-align: middle;
+    padding-top: 4px !Important;
+    padding-bottom: 7px !Important;
+    background: #4CC2FF !important;
+/*     background: #515151 !important; */
+    border: none;
+    border-radius: 6px;
+    text-shadow: none !important;
+    transition: 0.3s;
+    font-weight: normal;
+    color: #000 !Important;
+    text-decoration: none !important;
+}
+.nav-buttons {
+    margin-right: 3px;
+     margin-top: 8px;
+    height: 15px;
+}
+.ok {
+    color: #000;
+}
+.yt-button:hover {
+/*     color: #FFF !important; */
+    background: #47B1E9 !Important;
+    box-shadow: none !important;
+}
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",sans-serif !important;
+}
+h1 {
+    margin-top: -5px;
+        margin-bottom: 10px;
+}
+.cmn, .rewatch-pfp {
+    border-radius: 100%;
+}
+.alert-message {
+    border-radius: 7px;
+}
+.fill {
+    background:rgba(241,241,241, 0.2) !important;
+    backdrop-filter: blur(25px);
+    border: none !important;
+}
+.dropdown-menu {
+/*      background:rgba(241,241,241, 0.2) !important;
+     backdrop-filter: blur(45px); */
+    margin-top: 4px;
+    border-radius: 9px;
+    padding: 0;
+}
+.dropdown-menu > li > a {
+    margin: 5px;
+    border-radius: 7px !Important;
+    border-collapse: separate; 
+}

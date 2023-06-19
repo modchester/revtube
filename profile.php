@@ -95,7 +95,7 @@
                   $rows = getSubscribers($_GET['user'], $mysqli);
                   echo('
             <h3><h2>'.$row["username"].'</h2></h3>
-            <img style="width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
+            <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
             if($row['username'] == $_SESSION['profileuser3']) {
               echo '

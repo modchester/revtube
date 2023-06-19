@@ -27,7 +27,7 @@ $start = $time;
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]." <img style='margin-bottom:-2px;' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
+              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]." <img style='margin-bottom:-2px;' height='12px' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
               <ul class=\"dropdown-menu\">
               <li></li>
                 <li><a href=\"./profile?user=".$row["username"]."\">Your Channel</a></li>

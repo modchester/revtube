@@ -47,7 +47,7 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
                <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</span>
              </div>
              <div id="rewatch-author">
-              <img class="rewatch-pfp" src="content/pfp/' .getUserPic($pfp). '" height="48">
+              <img class="rewatch-pfp" src="content/pfp/' .getUserPic($pfp). '" width="48" height="48">
               <span class="rewatch-name">' . $row['author'] . '</span>';
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
@@ -157,7 +157,7 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
-            echo "<div class='comment'><img class='cmn' height='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . "</a> <span title='".$row["date"]."'>(" . $time . ")</span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
+            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . "</a> <span title='".$row["date"]."'>(" . $time . ")</span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
         }
         $stmt->close();
     ?>
