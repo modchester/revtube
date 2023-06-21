@@ -135,7 +135,8 @@
                     <hr>
                     <h3>Statistics</h3>
                     <div class='card message'>
-                    Joined ".$row["date"]."
+                    Joined ".$row["date"]."<br>
+                    ".$rows." subscribers
                     ";
                 }
                 $statement->close();
