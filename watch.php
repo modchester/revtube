@@ -142,7 +142,7 @@ addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
         <input class="yt-button primary" type="submit" value="Comment" name="submit" style="float: right;">
         <br>
         <br>
-        <small>Make sure to follow our <a href="/tos">Terms of Service</a>!</small>
+        <small>Make sure to follow our <a href="/guidelines">Community Guidelines</a>!</small>
     </form>
     <hr>
     <?php

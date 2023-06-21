@@ -19,6 +19,7 @@
           <div class="span10">
         <div class="container-flex">
             <div class="col-2-3">
+              <img class="profilebanner" src="content/banners/default.png">
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
                     $statement->bind_param("s", $_GET['user']);
@@ -148,9 +149,7 @@
         </div>
       </div>
 
-            <?php include './assets/mod/footer.php'; ?>
-
-    </div> <!-- /container -->
-
+    </div></div> <!-- /container -->
+    <?php include './assets/mod/footer.php'; ?>
   </body>
 </html>
