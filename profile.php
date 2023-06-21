@@ -97,11 +97,11 @@
             <h3><h2>'.$row["username"].'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
-            if($row['username'] == $_SESSION['profileuser3']) {
-              echo '
-              <a href="account" id="editprof" class="yt-button primary" type="button">Manage Account</a>';
-          } else {
       if(isset($_SESSION['profileuser3'])) {
+        if($row['username'] == $_SESSION['profileuser3']) {
+          echo '
+          <a href="account" id="editprof" class="yt-button primary" type="button">Manage Account</a>';
+      } else {
           if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
          echo '
          <a class="yt-button danger" href="/subscribe?name=' . $row['username'] . '">Subscribe ('.$rows.')</a>
@@ -110,13 +110,14 @@
           echo '
           <a class="yt-button" href="/unsubscribe?name=' . $row['username'] . '">Unsubscribe ('.$rows.')</a>
       ';
-           } 
+           }}
           } else {
               echo'
               <a class="yt-button danger disabled">Subscribe ('.$rows.')</a>
           ';
           }
-      }}
+        }
+      //}}
             echo '';
             ?>
             <hr>

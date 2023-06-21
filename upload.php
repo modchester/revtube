@@ -135,7 +135,7 @@
           }
           ?>
           <div class="uploadpage">
-                <h3>Upload Video</h3>
+                <h1>Upload Video</h1>
                <!-- <h3><i>Please check if you're logged in, if you're not, you need to sign in to upload videos.</i></h3>
                 <small>This will be fixed in a later update.</small> -->
                 <br>
