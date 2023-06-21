@@ -7,7 +7,24 @@
   <body>
 <?php include './assets/mod/db.php';?>
     <?php include("./assets/mod/header.php"); ?>
-<div class="container-flex">
+<div class="container">
+<div class="content">
+<div class="page-header">
+          <?php
+      if(empty($_GET["msg"])) {
+        echo "<p style='display:none;'>no</p>";
+      } else if($_GET["msg"] === " ") {
+        echo "<p style='display:none;'>no</p>";
+      } else { echo '
+          <div class="alert-message success">
+        <p>'.$_GET["msg"].'</p>
+      </div>';
+    }
+          ?>
+            <?php include './assets/mod/alert.php'?>
+          <h1>Upload your video <small><div id="clockbox"></div></small></h1>
+          <?php include './assets/mod/todaysdate.php'; ?>
+        </div>
 <?php
     if(!isset($_SESSION['profileuser3'])) {
         echo('<script>
@@ -120,13 +137,10 @@
        }
    }
    ?>
-    <center>
-        <div class="col-2-3">
-            <div class="card blue">
-                            <br>
+                            <!-- <br>
             <br>
             <br>
-            <br>
+            <br> -->
             <?php
             if(!isset($_SESSION['profileuser3'])) {
               echo('<script>
@@ -134,24 +148,25 @@
               </script>');
           }
           ?>
-          <div class="uploadpage">
-                <h1>Upload Video</h1>
+          <div class="row">
+          <div class="span10">
+                <!-- <h1>Upload Video</h1> -->
                <!-- <h3><i>Please check if you're logged in, if you're not, you need to sign in to upload videos.</i></h3>
                 <small>This will be fixed in a later update.</small> -->
                 <br>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="input-group">
-                       <!-- <label for="videofile">File </label>-->
+                       <label for="videofile">File (.mp4 only) </label>
                         <input type="file" accept=".mp4" name="fileToUpload" id="fileToUpload">
                     </div>
                      <br>
                     <div class="input-group">
-                       <!-- <label for="videotitle">Title </label>-->
+                       <label for="videotitle">Title </label>
                         <input class="yt-search-input" type="text" id="videotitle" placeholder="Title" name="videotitle">
                     </div>
                      <br>
                     <div class="input-group">
-                 <!--       <label for="bio">Description </label> -->
+                  <label for="bio">Description </label> 
                         <textarea class="yt-search-input" style="background-color: var(--inputlol);" name="bio" placeholder="Enter a description for your video here" rows="4" cols="50" required="required"></textarea>
                     </div>
                     <div class="input-group">
@@ -161,9 +176,15 @@
                     </div>
                 </form>
         </div>
+        <div class="span4">
+            <h1>New Upload</h1>
+            <p>We're currently working on a new design for the upload page, one which matches with most of the other pages on the site. <br> Keep in mind that currently we only support .mp4 files. This may change in the future though.<br>Remember to read the <a href="guidelines">Community Guidelines</a> before you upload.
+            <!-- <div class="banner">UPLOAD IS UNDER MAINTENANCE PLEASE WAIT</div> -->
+
+        </div>
+        </div>
             </div>
         </div>
-    </div> </center>
     <hr>
     <?php include("./assets/mod/footer.php") ?>
 </body>
