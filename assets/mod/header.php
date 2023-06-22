@@ -57,3 +57,4 @@ $start = $time;
       $('#topbar').dropdown()
    }); 
 </script>
+<!-- <div class="stickybanner">clipIt will</div> -->
