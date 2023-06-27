@@ -45,14 +45,23 @@
         border: 0;
       }
       
-      .logost {
+      /* .logost {
                 /* font-family: 'Red Hat Display', sans-serif; */
                 /* color: rgb(43, 17, 196)!important; */
-                font-style: italic;
+             /*   font-style: italic;
                 content: url('/assets/img/clipItnew.png');
                 height: 20px;
                 margin-top:2px;
-      }
+      } */
+      .logost {
+        content: url('/assets/img/logo.png') !important;
+        /* thanks to «John» for the logo */
+        height: 23px;
+        margin-top: -2px !important;
+        margin-right: -13px !important;
+        margin-bottom: -1px;
+        filter: invert(1);
+    }
       
       .video-thumbnail{
     flex: 0 0 120px;
@@ -280,7 +289,7 @@ a.menu::after, .dropdown-toggle::after {
   _position: absolute;
   _left: 0;
   _width: 100%;
-  *padding: 0;
+  /* *padding: 0; */
   zoom: 1;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
