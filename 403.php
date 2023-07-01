@@ -12,7 +12,8 @@
     <main class="yt-main">
 <div class="not-found">
   <div class="not-found-content">
-    <img class="not-found-content__image" src="/assets/img/404/<?php echo rand(1, 5) ?>.png" alt="It's Revoozie!">
+    <!-- <img class="not-found-content__image" src="/assets/img/404/<?php echo rand(1, 5) ?>.png" alt="It's Revoozie!"> -->
+    <img class="not-found-content__image" src="/assets/img/404/6.png" alt="It's Lana!">
 
       <p class="not-found-content__paragraph">403: Forbidden</p>
       <p class="not-found-content__paragraph">Should have access but you don't? Contact us for help.</p>

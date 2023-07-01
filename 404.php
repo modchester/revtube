@@ -13,14 +13,15 @@
 <div class="not-found">
   <div class="not-found-content">
     <!-- janky ig? -->
-    <img class="not-found-content__image" src="/assets/img/404/<?php echo rand(1, 5) ?>.png" alt="It's Revoozie!">
+    <!-- <img class="not-found-content__image" src="/assets/img/404/<?php echo rand(1, 5) ?>.png" alt="It's Revoozie!"> -->
+    <img class="not-found-content__image" src="/assets/img/404/6.png" alt="It's Lana!">
 
       <p class="not-found-content__paragraph">This page isn't available. Sorry about that.</p>
       <p class="not-found-content__paragraph">Try searching for something else.</p>
 
     <div class="not-found-search">
       <a class="not-found-search__container" href="/" title="clipIt">
-		<img class="logost not-found-search__logo" src="/assets/img/clipItnew.png">
+		<img class="arson not-found-search__logo" src="/assets/img/iconblack.png">
       </a>
 
       <form id="search-form" lb-auto-init="NotFoundSearchForm" class="not-found-search__form js-search-form lb--initialized" action="javascript:void(0);">

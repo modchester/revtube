@@ -122,6 +122,20 @@
             echo '';
             ?>
             <hr>
+            <?php 
+            // this doesnt work because i forgot views have their own table not including author names
+            // $statement = $mysqli->prepare("SELECT SUM(views) FROM videos WHERE author = ?");
+            // $statement->bind_param("i", $_GET['user']);
+            // $statement->execute();
+            // $totalviews = $statement->fetch();
+            // $statement->close();
+            // can still use basically the same thing for video count
+             $statement = $mysqli->prepare("SELECT vid, count(*) as author FROM videos WHERE author = ? GROUP BY vid");
+             $statement->bind_param("i", $_GET['user']);
+             $statement->execute();
+             $totalviews = $statement->fetch();
+             $statement->close();
+            ?>
             <h3>Bio</h3>
                             <?php
                 $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -129,14 +143,18 @@
                 $statement->execute();
                 $result = $statement->get_result();
                 while($row = $result->fetch_assoc()) {
+                  $join = strtotime($row["date"]);
+                  $join2 = date('F d, Y',$join);
                     echo "<div class='card message'>
                     ".$row["description"]."
                     </div>
                     <hr>
                     <h3>Statistics</h3>
                     <div class='card message'>
-                    Joined ".$row["date"]."<br>
-                    ".$rows." subscribers
+                    Joined ".$join2."<br>
+                    <span class='stat'>".$rows."</span> subscribers
+                    <br>
+                    <span class='stat'>".$totalviews."</span> views
                     ";
                 }
                 $statement->close();

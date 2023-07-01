@@ -1,5 +1,5 @@
 <h3>What's New</h3>
-clipIt's source code has finally left beta! This means all core features have been implemented.<br>
+Arson's source code has finally left beta! This means all core features have been implemented.<br>
 <br>And, the new to-do list:       
 <ul>
     <li>Better player</li>

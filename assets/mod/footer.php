@@ -1,5 +1,5 @@
 <footer class="yt-footer">
-    <h3><a class="logost" href="/"><strong>clipIt</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
+    <h3><a class="logost" href="/"><strong>Arson</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
     <?php
 $time = microtime();
 $time = explode(' ', $time);
@@ -19,7 +19,7 @@ $total_time = round(($finish - $start), 4);
             $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
             $phpver = phpversion();
             ?>
-    <p><abbr title="semi-2013 made by Cattskit and redst0ne, name by nomax">&copy; clipIt 2012-2023</abbr> <?php if ($debug == "true") { echo '&bull; <span style="color:red;">[DEBUG]</span> Running PHP '.$phpver.' | Users: '.$usercount.' | Videos: '.$videocount.' | Comments:'.$commentcount.' | Page loaded in '.$total_time.' seconds';}?></p>
+    <p><abbr title="semi-2013 made by Cattskit and redst0ne, name by nomax">&copy; ars0n.xyz 2012-2023</abbr> <?php if ($debug == "true") { echo '&bull; <span style="color:red;">[DEBUG]</span> Running PHP '.$phpver.' | Users: '.$usercount.' | Videos: '.$videocount.' | Comments:'.$commentcount.' | Page loaded in '.$total_time.' seconds';}?></p>
     <!-- almost ready for launch i guess -redst0ne 05/04/23 -->
     <!-- will people ever be willing to actually use this? -redst0ne 06/17/23 -->
 </footer>
