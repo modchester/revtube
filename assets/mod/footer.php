@@ -1,5 +1,5 @@
 <footer class="yt-footer">
-    <h3><a class="logost" href="/"><strong>Arson</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
+    <h3><a class="logost" href="/"><strong>VistaTube</strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
     <?php
 $time = microtime();
 $time = explode(' ', $time);

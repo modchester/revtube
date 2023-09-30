@@ -23,7 +23,7 @@
     $dislikec = getDislikes($_GET['v'], $mysqli);
     $views = getViews($_GET['v'], $mysqli); 
 if(isset($_SESSION["profileuser3"])) {
-addView($_GET['v'], @$_SESSION['profileuser3'], $mysqli);
+addView($_GET['v'], session_id(), $mysqli);
 }
         $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
         $stmt->bind_param("s", $_GET['v']);

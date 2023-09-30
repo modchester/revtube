@@ -54,13 +54,13 @@
                 margin-top:2px;
       } */
       .logost {
-        content: url('/assets/img/logo.png') !important;
+        content: url('/assets/img/vista.png') !important;
         /* thanks to «John» for the logo */
         height: 23px;
         margin-top: -2px !important;
         margin-right: -13px !important;
         margin-bottom: -1px;
-        filter: invert(1);
+        /* filter: invert(1); */
     }
       
       .video-thumbnail{
