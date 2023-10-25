@@ -23,7 +23,7 @@
                     <span>My channel</span>
                         <a href="/account"><li class="guide-item"><i class="bi bi-gear-fill"></i> Settings</li></a>
                         <a href="/upload"><li class="guide-item"><i class="bi bi-file-earmark-arrow-up-fill"></i> Upload</li></a>
-                        <a href="/inbox/index"><li class="guide-item"><i class="bi bi-envelope-fill"></i> sendIt</li></a>
+                        <a href="/inbox/index"><li class="guide-item"><i class="bi bi-envelope-fill"></i> Inbox</li></a>
                         <a href="/account_status"><li class="guide-item"><i class="bi bi-activity"></i> Account Status</li></a>';
 			    }
 			    $statement->close();

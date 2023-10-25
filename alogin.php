@@ -27,7 +27,7 @@
                                             }
                                             else {
                                                 echo '
-                                                <div class="alert-message error page-alert">
+                                                <div class="alert-message error loginerror page-alert">
                                                   <p>Username and password combo do not match our records.</p>
                                                 </div>';
                                             }
@@ -35,7 +35,7 @@
                                     }
                                     else{
                                         echo '
-                                        <div class="alert-message error page-alert">
+                                        <div class="alert-message error loginerror page-alert">
                                         <p>Username and password combo do not match our records.</p>
                                       </div>';
                                     }

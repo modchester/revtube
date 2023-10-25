@@ -54,7 +54,7 @@
                 margin-top:2px;
       } */
       .logost {
-        content: url('/assets/img/vista.png') !important;
+        content: url('/assets/img/vistared.png') !important;
         /* thanks to «John» for the logo */
         height: 23px;
         margin-top: -2px !important;
@@ -317,3 +317,128 @@ a.menu::after, .dropdown-toggle::after {
   border: 1px solid #FFF;
   opacity: 0;
 }
+/* hitchhiker shit below */
+:root {
+  /*     --accent-color: #7800d7;  */
+      --accent-color: #f8f8f8;
+  }
+  .yt-alert {
+      color: #333;
+          text-align: left;
+      word-wrap: break-word;
+      font: 12px arial,sans-serif;
+      font-size: 100%;
+  /*     border-radius: 5px; */
+      position: relative;
+      margin: 5px 0;
+      padding: 2px 24px 2px 4px;
+      overflow: hidden;
+      zoom: 1;
+      background: #f0f0f0;
+      background:var(--accent-color) !important;
+  /*     box-shadow: 0 1px 2px #838383; */
+      border-radius: 2px;
+      border: 1px solid #d3d3d3;
+  }
+  .yt-alert a {
+      color: #FFF;
+  }
+  .yt-uix-button, .yt-button {
+  -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      border: 1px solid;
+      cursor: pointer;
+      font: 11px arial,sans-serif;
+      font-weight: bold;
+      outline: 0 none;
+      padding: 0.5em 0.91em !important;
+      margin: 0;
+  /*     vertical-align: top; */
+      white-space: nowrap;
+      word-wrap: normal;
+      text-decoration: none;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.05) !important;
+      border-color: #d3d3d3 !important;
+      background: #f8f8f8 !important;
+      color: #333 !important;
+      text-shadow: none !important;
+  }
+  .yt-uix-button:hover, .yt-button:hover {
+      border-color: #c6c6c6;
+      background: #f0f0f0;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+  }
+  #signup-promo-links {
+          text-align: left;
+      word-wrap: break-word;
+      font: 12px arial,sans-serif;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      background: transparent;
+  }
+  #signup-promo-links > a {
+      color: #333;
+  }
+  #signup-promo-message {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+  }
+  .yt-alert .yt-alert-content {
+      font-weight: bold;
+      font-size: 13px;
+      padding: 7px 5px;
+      overflow: hidden;
+  }
+  #signup-promo-have-account {
+          text-align: left;
+      word-wrap: break-word;
+      font: 12px arial,sans-serif;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      background: transparent;
+      font-weight: normal;
+      margin: 0 4px 0 8px;
+  }
+  .nav-buttons {
+          margin-right: 3px;
+       margin-top: 4px;
+  }
+  .guide span {
+      color: #cc181e;
+  }
+  .pull-left > input {
+          border: 1px solid #ccc !important;
+      box-shadow: inset 0 1px 2px #eee !important;
+      border-radius: 0px;
+          width: 310px;
+  }
+  .pull-left > input:focus {
+      border:1px solid #1c62b9 !important;
+      box-shadow:inset 0 1px 2px rgba(0,0,0,0.3) !important;
+      -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3) !important;
+      outline:none;
+  }
+  .stat {
+          font-weight: bold;
+      font-size: 15px;
+  }
+  h1 {
+      margin-top: -5px;
+          margin-bottom: 10px;
+  }
+  #title {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000;
+  }
+  .loginerror {
+    margin: auto !important;
+  }
+  * {
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  }

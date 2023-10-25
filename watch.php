@@ -22,8 +22,18 @@
     $likec = getLikes($_GET['v'], $mysqli);
     $dislikec = getDislikes($_GET['v'], $mysqli);
     $views = getViews($_GET['v'], $mysqli); 
-if(isset($_SESSION["profileuser3"])) {
-addView($_GET['v'], session_id(), $mysqli);
+// if(isset($_SESSION["profileuser3"])) {
+// addView($_GET['v'], session_id(), $mysqli);
+// }
+if(isset($_SESSION['views'.$_GET['v'].'']))
+$_SESSION['views'.$_GET['v'].''] = $_SESSION['views'.$_GET['v'].'']+1;
+else
+$_SESSION['views'.$_GET['v'].'']=1;
+//check if the user has already viewed the video
+if ($_SESSION['views'.$_GET['v'].''] > 1) {
+echo "";
+} else {
+mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v']."'");
 }
         $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
         $stmt->bind_param("s", $_GET['v']);
@@ -43,7 +53,7 @@ addView($_GET['v'], session_id(), $mysqli);
                <span id="title">' . $row['videotitle'] . '</span>
              </h1>
              <div class="rewatch-views">
-               <span class="rewatch-views-text">'.$views.'</span><br>
+               <span class="rewatch-views-text">'.$row['views'].'</span><br>
                <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</span>
              </div>
              <div id="rewatch-author">
@@ -75,7 +85,7 @@ addView($_GET['v'], session_id(), $mysqli);
             </div>
             </div>
             <div class="rewatch-content">
-            <p id="rewatch-date"><strong>Uploaded on ' . $uploaddate . '</strong></p>
+            <p id="rewatch-date"><strong>Published on ' . $uploaddate . '</strong></p>
                <span id="description">' . $row['description'] . '</span>
            <hr>         
                 ';

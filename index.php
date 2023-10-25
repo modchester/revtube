@@ -104,7 +104,7 @@
                                 <div class="col-1-3 video-title"><a href="watch.php?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
                                     <div><a href="profile.php?user='.$row['author'].'">'.$row['author'].'</a></div>
-                                    <div>'.$views.' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div>'.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                 </div>
                             </div>
                             <hr class="indexdivider">';

@@ -1,6 +1,7 @@
 <h3>What's New</h3>
-VistaTube's source code has finally left beta! This means all core features have been implemented.<br>
-<br>And, the new to-do list:       
+Almost 2 years later, this is still not done. Don't ask me why.<br>
+<!-- VistaTube's source code has finally left beta! This means all core features have been implemented.<br> -->
+<br>The current to-do list:       
 <ul>
     <li>Better player</li>
     <li>New highlights page</li>

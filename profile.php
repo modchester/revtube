@@ -19,7 +19,13 @@
           <div class="span10">
         <div class="container-flex">
             <div class="col-2-3">
-              <img class="profilebanner" src="content/banners/default.png">
+              <!-- <img class="profilebanner" src="content/banners/default.png"> -->
+              <ul class="tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">All Videos</a></li>
+  <li><a href="#">Subscribers</a></li>
+  <li><a href="#">Subscriptions</a></li>
+</ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
                     $statement->bind_param("s", $_GET['user']);
@@ -62,15 +68,12 @@
                         <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
                                 <a href="/watch?v='.$row['vid'].'">
-                                    <video>
-                                        <source src="/content/video/'.$row['filename'].'" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video> 
+                                    <img height="70px" width="120px" src="content/thumb/'.$row['vid'].'.jpg">
                                 </a>
                                 </div>
                                 <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
-                                    <div>'.$views.' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div>'.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                     <div><em>'.$row['description'].'</em></div>
                                 </div>
                             </div>
@@ -124,17 +127,23 @@
             <hr>
             <?php 
             // this doesnt work because i forgot views have their own table not including author names
-            // $statement = $mysqli->prepare("SELECT SUM(views) FROM videos WHERE author = ?");
-            // $statement->bind_param("i", $_GET['user']);
-            // $statement->execute();
-            // $totalviews = $statement->fetch();
-            // $statement->close();
+            // never mind i fixed
+            $statement = $mysqli->prepare("SELECT SUM(views) AS total FROM videos WHERE author = ?");
+            $statement->bind_param("s", $_GET['user']);
+            $statement->execute();
+            $result = $statement->get_result();
+            if($result->num_rows == 0) {
+                $totalviews = 0;
+            }
+            while($row = $result->fetch_assoc()) {
+            $totalviews = $row["total"];
+            }
             // can still use basically the same thing for video count
-             $statement = $mysqli->prepare("SELECT vid, count(*) as author FROM videos WHERE author = ? GROUP BY vid");
-             $statement->bind_param("i", $_GET['user']);
-             $statement->execute();
-             $totalviews = $statement->fetch();
-             $statement->close();
+            //  $statement = $mysqli->prepare("SELECT vid, count(*) as author FROM videos WHERE author = ? GROUP BY vid");
+            //  $statement->bind_param("i", $_GET['user']);
+            //  $statement->execute();
+            //  $totalviews = $statement->fetch();
+            //  $statement->close();
             ?>
             <h3>Bio</h3>
                             <?php
