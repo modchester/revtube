@@ -15,6 +15,10 @@
         </div>
         <div class="row">
           <div class="span10">
+		  <ul class="yt-navigation-dark">
+	<li class="selected">Edit Profile</li>
+	<a href="/account_status"><li>Status</li></a>
+</ul>
 		    <h3>Edit your settings</h3>
 			<form action="" method="post" enctype="multipart/form-data">
 				<div class="input-group">

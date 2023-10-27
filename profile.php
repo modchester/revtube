@@ -20,12 +20,18 @@
         <div class="container-flex">
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
-              <ul class="tabs">
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">All Videos</a></li>
-  <li><a href="#">Subscribers</a></li>
-  <li><a href="#">Subscriptions</a></li>
+              <ul class="tabs" data-tabs="tabs">
+  <li class="active"><a href="#home">Home</a></li>
+  <li><a href="#videos">All Videos</a></li>
+  <li><a href="#subs">Subscribers</a></li>
+  <li><a href="#subscriptions">Subscriptions</a></li>
 </ul>
+<div class="pill-content">
+  <div class="active" id="home">...</div>
+  <div id="profile">...</div>
+  <div id="messages">...</div>
+  <div id="settings">...</div>
+</div>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
                     $statement->bind_param("s", $_GET['user']);

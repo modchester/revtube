@@ -25,6 +25,7 @@
 						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
 						$etc = "strikes";
 						$icon = "good";
+						$standing = " Good standing";
 					}
 					if($row['strikes'] == 1) {
 						$strikenum = 1;
@@ -32,6 +33,7 @@
 						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
 						$etc = "strike";
 						$icon = "warn";
+						$standing = " Middling standing";
 					}
 					if($row['strikes'] == 2) {
 						$strikenum = 2;
@@ -39,6 +41,7 @@
 						$msg = "You are <b>NOT</b> eligible to apply for the Partner Program.";
 						$etc = "strikes";
 						$icon = "bad";
+						$standing = " Bad standing";
 					}
 					if($row['strikes'] == 3) {
 						$strikenum = 3;
@@ -46,6 +49,7 @@
 						$msg = "Your account has been terminated.";
 						$etc = "strikes";
 						$icon = "bad";
+						$standing = " Bad standing";
 					}
 			    }
 $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$etc.'</span><h3>Partner Program</h3>'.$msg.'';
@@ -55,7 +59,12 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
         </div>
         <div class="row">
           <div class="span10">
-		    <h3>Terms of Service Strikes</h3>
+		  <ul class="yt-navigation-dark">
+	<a href="/account"><li>Edit Profile</li></a>
+	<li class="selected">Status</li>
+</ul>
+		    <h3>Account Status</h3>
+			Community guidelines: <img style="margin-top:2px !Important;" height="12" src="./assets/img/accstatus/<?php echo $icon;?>.png"> <?php echo $standing;?><br>
 <?php echo $strike; ?>
 				</div><div class="span4">
 			<h3>Your Account Details</h3>

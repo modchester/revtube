@@ -40,9 +40,9 @@
             echo '
           <div class="yt-alert yt-alert-promo yt-rounded "><div class="yt-alert-content">        <div id="signup-promo-message">Join the smallest worldwide video-sharing community!</div>
   <div id="signup-promo-links">
-    <button href="/signup?feature=idx_promo_std&amp;next=" type="button" class=" yt-uix-button" role="button" aria-pressed="false" fdprocessedid="mkys6"><span class="yt-uix-button-content">Create Account ›</span></button>
+    <button href="/aregister" type="button" class=" yt-uix-button" role="button" aria-pressed="false" fdprocessedid="mkys6"><span class="yt-uix-button-content">Create Account ›</span></button>
     <span id="signup-promo-have-account">Already have an account? </span>
-    <a href="http://web.archive.org/web/20110506011631/https://www.google.com/accounts/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Den_US%26next%3D%252F&amp;hl=en_US&amp;ltmpl=sso">Sign In</a>
+    <a href="/alogin">Sign In</a>
   </div>
 </div></div>';}?>
           <!-- <h3>Featured Videos</h3>

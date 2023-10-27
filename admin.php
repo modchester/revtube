@@ -7,6 +7,24 @@
   <body>
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
+<?php
+                    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? ");
+                    $statement->bind_param("s", $_SESSION['profileuser3']);
+                    $statement->execute();
+                    $result = $statement->get_result();
+                    if($result->num_rows !== 0){
+                        while($row = $result->fetch_assoc()) {
+                        if ($row["is_admin"] !== 1) {
+                          echo('<script>
+      window.location.href = "index.php?msg=You are not allowed to view that page.";
+      </script>');
+                        }  
+                        }
+                    }
+                    else{
+                        echo "";
+                    }
+                ?>
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -35,6 +53,7 @@
             <th>Username</th>
             <th>Email</th>
             <th>Joined</th>
+            <th>Verified</th>
           </tr>
         </thead>
         <tbody>
@@ -45,6 +64,11 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
+                      if($row['is_verified'] == 1) {
+                        $verified = '<img style="width:22.7px;margin-left:10px;" src="/assets/img/verified.png">';
+                      } else {
+                        $verified = '';
+                      }
                         echo '
                         
         
@@ -52,6 +76,7 @@
             <td>'.$row['username'].'</td>
             <td>'.$row['email'].'</td>
             <td>'.$row['date'].'</td>
+            <td>'.$verified.'</td>
           </tr>
                         ';
                     }
@@ -66,10 +91,10 @@
       <hr>
       <h2>Announcements</h2>
       <p>This will put an alert on the frontpage. Friendly reminder that everyone can see what you say here.</p>
-     <form action="admin.php" enctype="multipart/form-data">
+     <form action="post" method="post" enctype="multipart/form-data">
       <textarea class="xxlarge" id="textarea2" name="textarea2" rows="3"></textarea>
       <br>
-      <input type="submit" class="btn primary" value="Post announcement">
+      <input type="submit" class="yt-button primary" value="Post announcement">
             </form>
             <?php
     if (isset($_POST['submit'])){
@@ -92,7 +117,20 @@
     ?>
       <p>Last 5 announcements</p>
             <ul class="unstyled">
-<li>ipod &bull; hello everyone i am your mother &bull; 2022-09-17 00:00:00
+<!-- <li>ipod &bull; hello everyone i am your mother &bull; 2022-09-17 00:00:00 -->
+<?php
+                    $statement = $mysqli->prepare("SELECT * FROM announcements ORDER BY date DESC LIMIT 5");
+                    $statement->execute();
+                    $result = $statement->get_result();
+                    if($result->num_rows !== 0){
+                        while($row = $result->fetch_assoc()) {
+                            echo '<li>' . $row['author'] . ' &bull; ' . $row['content'] . ' &bull; ' . $row['date'] . '</li>';
+                        }
+                    }
+                    else{
+                        echo "No announcements have been posted.";
+                    }
+                ?>
             </ul>
           </div>
           <div class="span4">
