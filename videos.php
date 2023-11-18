@@ -28,6 +28,11 @@
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
     $views = getViews($row['vid'], $mysqli); 
+    if($row['duration'] > 3600) {
+      $lengthlist = floor($row['duration'] / 3600) . ":" . gmdate("i:s", $row['duration'] % 3600);
+    } else { 
+      $lengthlist = gmdate("i:s", $row['duration'] % 3600) ;
+    };
                         echo '
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
@@ -38,7 +43,7 @@
                                 <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
                                     <div><a href="profile?user='.$row['author'].'">'.$row['author'].'</a></div>
-                                    <div>'.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                     <div><em>'.$row['description'].'</em></div>
                                 </div>
                             </div>

@@ -61,21 +61,21 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
               <span class="rewatch-name">' . $row['author'] . '</span>';
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
-                <a href="account" id="editprof" style="margin-left: 44px; margin-top: 4px;" class="yt-button" type="button">Manage Account</a> <a href="deletevideo?v='.$_GET['v'].'" id="editprof" style="margin-left:0px;margin-top: 4px;" class="yt-button delete" type="button"><i class="bi bi-trash3"></i> Delete</a>';
+                <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button">Manage Account</a> <a href="deletevideo?v='.$_GET['v'].'" id="editprof" style="margin-left:0px;margin-top: 8px;" class="yt-button delete" type="button"><i class="bi bi-trash3"></i> Delete</a>';
             } else {
         if(isset($_SESSION['profileuser3'])) {
             if(ifSubscribed($_SESSION['profileuser3'], $row['author'], $mysqli) == false) {
            echo '
-           <a class="yt-button danger" style="margin-left: 44px; margin-top: 4px;" href="/subscribe?name=' . $row['author'] . '">Subscribe</a>
+           <a class="yt-button danger" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . $row['author'] . '">Subscribe</a>
            ';
            } else { 
             echo '
-            <a class="yt-button" style="margin-left: 44px; margin-top: 4px;" href="/unsubscribe?name=' . $row['author'] . '">Unsubscribe</a>
+            <a class="yt-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . $row['author'] . '">Unsubscribe</a>
         ';
              } 
             } else {
                 echo'
-                <a class="yt-button danger disabled" style="margin-left: 44px; margin-top: 4px;">Subscribe</a>
+                <a class="yt-button danger disabled" style="margin-left: 44px; margin-top: 8px;">Subscribe</a>
             ';
             }
         }

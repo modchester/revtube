@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
   <?php include './assets/mod/meta.php';?>      
@@ -25,9 +25,9 @@
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
               <ul class="tabs" data-tabs="tabs">
-  <li class="active"><a href="profile?user=<?php echo $_GET['user']; ?>">Home</a></li>
+  <li><a href="profile?user=<?php echo $_GET['user']; ?>">Home</a></li>
   <li><a href="all_videos?user=<?php echo $_GET['user']; ?>">All Videos</a></li>
-  <li><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
+  <li class="active"><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
   <li><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
 </ul>
                 <?php
@@ -57,36 +57,24 @@
                        // echo $finalstring;
                         $username = $row["username"];
                     }
-                    $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `author` = ?");
-                    $statement->bind_param("s", $username);
+                    $statement = $mysqli->prepare("SELECT * FROM subscribers WHERE receiver = ?");
+                    $statement->bind_param("s", $_GET['user']);
                     $statement->execute();
                     $result = $statement->get_result();
-                    echo "<h3>Videos</h3>";
+                    echo "<h3>".$_GET['user']."'s subscribers</h3>";
                     if($result->num_rows !== 0){
-                      include("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
-                      $likec = getLikes($row['vid'], $mysqli);
-    $dislikec = getDislikes($row['vid'], $mysqli);
-    $views = getViews($row['vid'], $mysqli); 
-    if($row['duration'] > 3600) {
-      $lengthlist = floor($row['duration'] / 3600) . ":" . gmdate("i:s", $row['duration'] % 3600);
-    } else { 
-      $lengthlist = gmdate("i:s", $row['duration'] % 3600) ;
-    };
-                        echo '
-                        <div class="video container-flex">
-                                <div class="col-1-3 video-thumbnail">
-                                <a href="/watch?v='.$row['vid'].'">
-                                    <img height="70px" width="120px" src="content/thumb/'.$row['vid'].'.jpg">
-                                </a>
-                                </div>
-                                <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
-                                <div class="col-1-3 video-info">
-                                    <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
-                                    <div><em>'.$row['description'].'</em></div>
-                                </div>
-                            </div>
-                            <hr>';
+                        $pid = idFromUser($row['sender']);
+                        $rows = getSubscribers($row['sender'], $mysqli);
+                        $name = htmlspecialchars($row['sender']);
+                        echo "<div class='user'>
+				    	<div class='user-info'>
+						    <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".$name."</b></a> (".$rows." subscribers)</div>
+						    <!-- <div><span class='black'>".$rows."</span> subscribers</div> -->
+					    </div>
+					  <!-- <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' src='content/pfp/".getUserPic($pid)."'></a></div> -->
+				    </div>
+				    <hr>";
                     }
                     }
                     else{

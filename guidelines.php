@@ -17,7 +17,7 @@
           <div class="span10">
             <h2>General Guidelines</h2>
             <ul class="unstyled">
-            <li>Harassment will <b><em>not</em></b> be tolerated in any way. If you are found harassing people, we reserve the right to delete your video or comment, and if it continues, your account can be deleted.</li>
+            <li>Harassment will <b><em>not</em></b> be tolerated in any way. If you are found harassing people (including doxxing, this is a common issue on other sites), we reserve the right to delete your video or comment, and if it continues, your account can be deleted.</li>
 <br>
 <li>You <b>MUST</b> be at least 13 years of age to use this website. If you are found to be under that age, we will delete your account and all associated data regardless of how many strikes you have.</li>
 </ul>            

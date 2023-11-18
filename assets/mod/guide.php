@@ -1,7 +1,7 @@
 <div class="guide">
     <ul>
         <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>    
-    <span>Most of VistaTube</span>
+    <span>Most of <?php echo $sitename; ?></span>
         <a href="/videos"><li class="guide-item"><i class="bi bi-camera-video-fill"></i> Videos</li></a>
         <a href="/community"><li class="guide-item"><i class="bi bi-people-fill"></i> Community</li></a>
     <?php

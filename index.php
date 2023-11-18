@@ -40,7 +40,7 @@
             echo '
           <div class="yt-alert yt-alert-promo yt-rounded "><div class="yt-alert-content">        <div id="signup-promo-message">Join the smallest worldwide video-sharing community!</div>
   <div id="signup-promo-links">
-    <button href="/aregister" type="button" class=" yt-uix-button" role="button" aria-pressed="false" fdprocessedid="mkys6"><span class="yt-uix-button-content">Create Account ›</span></button>
+    <button href="/aregister" type="button" class=" yt-uix-button" onclick=";window.location.href=this.getAttribute(\'href\');return false;" role="button" aria-pressed="false" fdprocessedid="mkys6"><span class="yt-uix-button-content">Create Account ›</span></button>
     <span id="signup-promo-have-account">Already have an account? </span>
     <a href="/alogin">Sign In</a>
   </div>
@@ -94,6 +94,11 @@
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
     $views = getViews($row['vid'], $mysqli); 
+    if($row['duration'] > 3600) {
+      $lengthlist = floor($row['duration'] / 3600) . ":" . gmdate("i:s", $row['duration'] % 3600);
+    } else { 
+      $lengthlist = gmdate("i:s", $row['duration'] % 3600) ;
+    };
                         echo '
                             <div class="video container-flex">
                                 <div class="col-1-3 video-thumbnail">
@@ -104,7 +109,7 @@
                                 <div class="col-1-3 video-title"><a href="watch.php?v='.$row['vid'].'"><b>'.$row['videotitle'].'</b></a></div>
                                 <div class="col-1-3 video-info">
                                     <div><a href="profile.php?user='.$row['author'].'">'.$row['author'].'</a></div>
-                                    <div>'.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                 </div>
                             </div>
                             <hr class="indexdivider">';

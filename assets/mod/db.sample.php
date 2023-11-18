@@ -7,6 +7,7 @@
 
     // ffmpeg
     $ffmpeg = 'C:\ffmpeg.exe';
+    $ffprobe = 'C:\ffprobe.exe';
     
     $mysqli = new mysqli("localhost", "root", "", "clipit");
     session_start();
@@ -34,6 +35,13 @@
 		return $userpic;
     }
     
+    function getBackground($uid){
+      $backg = (string)$uid;
+     if(file_exists("content/background/".$backg) !== TRUE){
+        $backg = "default";
+     }
+     return $backg;
+   }
     
    $loggedIn = isset($_SESSION['profileuser3']);
 
