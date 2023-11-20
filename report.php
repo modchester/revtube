@@ -7,14 +7,60 @@
 
   <body>
 <?php include './assets/mod/db.php';?>
-<?php
+    <?php include("./assets/mod/header.php");?>
+    <center>
+    <?php
     if (isset($_POST['submit'])){
         if(!isset($_SESSION['profileuser3'])) {
-            die("Login to report....");
-        }} ?>
-    <?php include("./assets/mod/header.php");?>
+            die("<br>Login to report....");
+        }} 
+        if(!isset($webhook)) {
+            die("<br><h2>Video reporting isn't enabled on this instance.</h2>");
+        }
+        if(empty($webhook)) {
+            die("<br><h2>Video reporting isn't enabled on this instance.</h2>");
+        }
+        ?>
+        </center>
     <div class="container-flex"> 
+    <?php 
+            if (isset($_GET['v'])) {
+                $video = $_GET['v'];
+                $disabled = 'disabled';
+            }
+            if (isset($_GET['offender'])) {
+                $offender = $_GET['offender'];
+                $disableda = 'disabled';
+            }
+            ?>
     <?php
+    if(isset($_POST["submit"])){
+        if(!isset($video)) {
+            $link = @$_POST["sitelink"];
+        } else {
+            $link = $video;
+        }
+        if(!isset($offender)){
+            $user = @$_POST["username"];
+        } else {
+            $user = $offender;
+        }
+    $proname = @$_POST["reason"];
+    $username = $_SESSION['profileuser3'];
+
+    $msg = "### New report by $username:\nReason: $proname\nVideo ID: $link\nUploader: $user";
+    $json_data = array ('content'=>"$msg");
+    $make_json = json_encode($json_data);
+    $ch = curl_init( $webhook );
+    curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+    curl_setopt( $ch, CURLOPT_POST, 1);
+    curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
+    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt( $ch, CURLOPT_HEADER, 0);
+    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+    $response = curl_exec( $ch );
+    }
+/* old report system isnt working?
 $proname = @$_POST["reason"];
 $link = @$_POST["sitelink"];
 $user = @$_POST["username"];
@@ -36,10 +82,10 @@ if(isset($_POST["submit"])){
     ->setTimestamp()
     ->setUsername($username)
     ->send(); 
-    // echo('<script>
-    //           window.location.href = "index?err=Your report has been submitted successfully!";
-    //           </script>');
-}
+     echo('<script>
+               window.location.href = "index?err=Your report has been submitted successfully!";
+               </script>');
+}*/
 ?>
         <div class="col-1-2">
             <br>
@@ -48,16 +94,6 @@ if(isset($_POST["submit"])){
             <br>
             <center><h3>Report a video</h3>
             <br>
-            <?php 
-            if (isset($_GET['v'])) {
-                $video = $_GET['v'];
-                $disabled = 'disabled';
-            }
-            if (isset($_GET['offender'])) {
-                $offender = $_GET['offender'];
-                $disableda = 'disabled';
-            }
-            ?>
             <div class="card blue">
                 <form method="post" action="">
                     <div class="input-group">

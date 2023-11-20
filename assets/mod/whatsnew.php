@@ -1,7 +1,14 @@
 <h3>What's New</h3>
-Almost 2 years later, this is still not done. Don't ask me why.<br>
+I started this project in 2021. It's almost 2024, so for now, the current to-do list is being scrapped, and we now have a list of things to finish ASAP.<br>
 <!-- VistaTube's source code has finally left beta! This means all core features have been implemented.<br> -->
-<br>The current to-do list:       
+<br> Biggest priorities:
+<ul>
+    <li>Search</li>
+    <li>Video manager (list all videos from you)</li>
+    <li>Edit video details</li>
+    <li>Video privacy options</li>
+</ul>
+<!-- <br>The current to-do list:       
 <ul>
     <li>Better player</li>
     <li>New highlights page</li>
@@ -10,7 +17,8 @@ Almost 2 years later, this is still not done. Don't ask me why.<br>
     <li>(possibly?) Translations</li>
     <li>Community page</li>
     <li>Mobile site</li>
-</ul>
+    <li>All Videos tab on channels</li>
+</ul> -->
 Suggest more features in our Discord server!
 <!-- <ul class="unstyled">
 <li>account dropdown has been fixed</li>

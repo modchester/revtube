@@ -11,7 +11,7 @@
  <div class="content">
         <div class="page-header">
         <?php include './assets/mod/alert.php';?>
-          <h1>Community Guidelines <small>Last updated June 21, 2023</small></h1>
+          <h1>Community Guidelines <small>Last updated November 20, 2023</small></h1>
         </div>
         <div class="row">
           <div class="span10">
@@ -19,7 +19,24 @@
             <ul class="unstyled">
             <li>Harassment will <b><em>not</em></b> be tolerated in any way. If you are found harassing people (including doxxing, this is a common issue on other sites), we reserve the right to delete your video or comment, and if it continues, your account can be deleted.</li>
 <br>
-<li>You <b>MUST</b> be at least 13 years of age to use this website. If you are found to be under that age, we will delete your account and all associated data regardless of how many strikes you have.</li>
+<li>You <b>MUST</b> be at least 13* years of age to use this website. If you are found to be under that age (or age otherwise stated below), we will delete your account and all associated data regardless of how many strikes you have.</li>
+<br><li><details>
+    <summary>*In the following countries, it's not 13:</summary>
+<br>
+    <ul>
+      <h4>Asia</h4>
+      <li>South Korea: <b>14+</b></li>
+      <li>Vietnam: <b>15+</b></li>
+      <h4>Caribbean</h4>
+      <li>Aruba, Caribbean Netherlands, Curaçao, Sint Maarten: <b>16+</b></li>
+      <h4>Europe</h4>
+      <li>Austria, Bulgaria, Cyprus, Italy, Lithuania, Spain: <b>14+</b></li>
+      <li>Czechia, France, Greece, Serbia: <b>15+</b></li>
+      <li>Croatia, Germany, Hungary, Iceland, Luxembourg, Netherlands, Poland, Romania, San Marino, Slovakia, Slovenia: <b>16+</b></li>
+      <h4>South America</h4>
+      <li>Chile, Colombia, Peru, Venezuela: <b>14+</b></li>
+</ul>
+</details></li>
 </ul>            
 <h2>Uploading Guidelines</h2>
             <ul class="unstyled">
