@@ -1,7 +1,7 @@
 # RevTube: PHP video sharing software
 ## DO NOT USE THIS RIGHT NOW, THE CURRENT VERSION IS BROKEN WITH THE CURRENT SQL FILE AND IS MISSING CSS
 
-## If you are looking to host this yourself, and you do not want the UI changes, commit [6c606d8](https://github.com/catrilldev/revtube/commit/6c606d8010515ab18c560225570d544bcfdd9677) is the last to not have these changes. If you do want the UI changes, ignore this.
+## If you are looking to host this yourself, and you do not want the UI changes, commit [6c606d8](https://github.com/catrilldev/revtube/commit/6c606d8010515ab18c560225570d544bcfdd9677) is the last to not have these changes. If you do want the UI changes (mainly to the uploader), ignore this.
 
 *UI formerly maintaned by Cattskit, now maintained by kylarz/ky-1.*
 
