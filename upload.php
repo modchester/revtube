@@ -167,7 +167,7 @@
                     </div>
                      <br>
                     <div class="input-group">
-                  <label for="bio">Description </label> 
+                  <label for="bio">Description (required)</label> 
                         <textarea class="yt-search-input" style="background-color: var(--inputlol);" name="bio" placeholder="Enter a description for your video here" rows="4" cols="50" required="required"></textarea>
                     </div>
                     <div class="input-group">
