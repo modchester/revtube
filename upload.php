@@ -173,7 +173,7 @@
                     <div class="input-group">
                          <br>
                         <div></div>
-                        <div><input type="submit" class="yt-button primary" value="Upload" name="submit"></div>
+                        <div><input type="submit" style="margin-left: 363px !important;" class="yt-button primary" value="Upload" name="submit"></div>
                     </div>
                 </form>
         </div>
