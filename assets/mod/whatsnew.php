@@ -1,12 +1,13 @@
 <h3>What's New</h3>
-I started this project in 2021. It's almost 2024, so for now, the current to-do list is being scrapped, and we now have a list of things to finish ASAP.<br>
+The to-do list was scrapped, and replaced with a new one. But, the new one is finished. So we might bring the old to-do list back.
+<br><br>The current to-do list:
+<!-- I started this project in 2021. It's almost 2024, so for now, the current to-do list is being scrapped, and we now have a list of things to finish ASAP.<br> -->
 <!-- VistaTube's source code has finally left beta! This means all core features have been implemented.<br> -->
-<br> Biggest priorities:
 <ul>
-    <li>Search</li>
-    <li>Video manager (list all videos from you)</li>
+    <del><li>Search</li></del>
+    <del><li>Video manager (list all videos from you)</li></del>
     <del><li>Edit video details</li></del>
-    <li>Video privacy options</li>
+    <!-- <li>Video privacy options</li> -->
 </ul>
 <!-- <br>The current to-do list:       
 <ul>
