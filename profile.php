@@ -107,8 +107,13 @@
                 while($row = $result->fetch_assoc()) {
                   $pfp = idFromUser($_GET['user']);
                   $rows = getSubscribers($_GET['user'], $mysqli);
+                  if($row['is_admin'] == 1) {
+                    $staff = '<i class="bi bi-shield-fill"></i>';
+                  } else {
+                    $staff = '';
+                  }
                   echo('
-            <h3><h2>'.$row["username"].'</h2></h3>
+            <h3><h2>'.$row["username"].' '.$staff.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
       if(isset($_SESSION['profileuser3'])) {

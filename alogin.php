@@ -52,6 +52,7 @@
             <br>
             <br>
             <br>
+            <!-- fun fact: the design of this login page hasn't changed since december 29, 2021 -->
             <center><h3>User Login</h3>
             <br>
             <div class="card blue">
