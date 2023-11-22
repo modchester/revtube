@@ -40,7 +40,7 @@ $start = $time;
               <li></li>
                 <li><a href=\"./profile?user=".$row["username"]."\">Your Channel</a></li>
                 <li><a href=\"upload\">Upload</a></li>
-                <li><a href='/inbox/index'>Inbox</a></li>
+                <li><a href='my_videos'>Studio</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"account\">Settings</a></li>
                 ".$adminlink."
