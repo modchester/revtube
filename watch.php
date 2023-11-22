@@ -53,7 +53,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                <span id="title">' . $row['videotitle'] . '</span>
              </h1>
              <div class="rewatch-views">
-               <span class="rewatch-views-text">'.$row['views'].'</span><br>
+               <span class="rewatch-views-text" style="width: 47px;display: inline-block;padding-bottom: 3px;">'.$row['views'].'</span><br>
                <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</span>
              </div>
              <div id="rewatch-author">
