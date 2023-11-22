@@ -57,7 +57,7 @@
           ?>
           <div class="row">
           <div class="span9">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form class="form-stacked" action="" method="post" enctype="multipart/form-data">
                      <br>
                     <div class="input-group">
                        <label for="videotitle">Title </label>
@@ -71,7 +71,7 @@
                     <div class="input-group">
                          <br>
                         <div></div>
-                        <div><input type="submit" style="margin-left: 346px !important;" class="yt-button primary" value="Save" name="submit"></div>
+                        <div><input type="submit" class="yt-button primary" value="Save" name="submit"></div>
                     </div>
                 </form>
                 <?php

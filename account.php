@@ -26,7 +26,7 @@
 				    <input type="file" name="new_pic" id="new_pic">
 				</div>
 				<div class="input-group">
-				    <label for="new_bck"> Channel background: </label>
+				    <label for="new_bck">Profile background: </label>
 				    <input type="file" name="new_bck" id="new_bck">
 				</div>
 				<div class="input-group">

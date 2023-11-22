@@ -155,7 +155,7 @@
                <!-- <h3><i>Please check if you're logged in, if you're not, you need to sign in to upload videos.</i></h3>
                 <small>This will be fixed in a later update.</small> -->
                 <br>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form class="form-stacked" action="" method="post" enctype="multipart/form-data">
                     <div class="input-group">
                        <label for="videofile">File (.mp4 only) </label>
                         <input type="file" accept=".mp4" name="fileToUpload" id="fileToUpload">
@@ -173,7 +173,7 @@
                     <div class="input-group">
                          <br>
                         <div></div>
-                        <div><input type="submit" style="margin-left: 363px !important;" class="yt-button primary" value="Upload" name="submit"></div>
+                        <div><input type="submit" class="yt-button primary" value="Upload" name="submit"></div>
                     </div>
                 </form>
         </div>

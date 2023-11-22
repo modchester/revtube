@@ -142,6 +142,16 @@
             //  $totalviews = $statement->fetch();
             //  $statement->close();
             ?>
+             <?php 
+            // omg
+            $statement = $mysqli->prepare("SELECT * FROM videos WHERE author = ?");
+            $statement->bind_param("s", $_GET['user']);
+            $statement->execute();
+            $result = $statement->get_result();
+            if($result->num_rows == 0) {
+              $totalviews = 0;
+          }
+          ?>
             <h3>Bio</h3>
                             <?php
                 $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `username` = ? LIMIT 1");
