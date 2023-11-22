@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <?php include './assets/mod/db.php';?>
     <?php include './assets/mod/meta.php';?>
     </head>
 <?php include './assets/mod/guide.php';?>
   <body>
-<?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
 <?php
                     $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? ");
@@ -90,11 +90,11 @@
       </table>
       <hr>
       <h2>Announcements</h2>
-      <p>This will put an alert on the frontpage. Friendly reminder that everyone can see what you say here.</p>
+      <p>This will put an alert on the top of most pages. Friendly reminder that everyone can see what you say here.</p>
      <form action="post" method="post" enctype="multipart/form-data">
       <textarea class="xxlarge" id="textarea2" name="textarea2" rows="3"></textarea>
       <br>
-      <input type="submit" class="yt-button primary" value="Post announcement">
+      <input style="margin-top:5px;" type="submit" class="yt-button primary" value="Post announcement">
             </form>
             <?php
     if (isset($_POST['submit'])){
@@ -140,14 +140,12 @@
             <ul>
                 <li>Please <b>DO NOT</b> leak user data</li>
                 <li>No leaking the admin panel</li>
-                <li>Don't abuse the announcements</li>
+                <li>Don't abuse the announcements <ul><li>Doing so will result in demotion, depending on the severity of the abuse</li></ul></li>
           </div>
         </div>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
-
     </div> <!-- /container -->
-
+    <?php include './assets/mod/footer.php'; ?>
   </body>
 </html>

@@ -13,7 +13,7 @@
                     if($result->num_rows !== 0){
                         while($row = $result->fetch_assoc()) {
                           $humandate = time_elapsed_string(''.$row['date'].'');
-                            echo '<div class="alert-message info"><p><b>' . $row['author'] . ' said:</b> ' . $row['content'] . ' ('.$humandate.')</p></div>';
+                            echo '<div class="alert-message info"><p>From <b>' . $row['author'] . ':</b> ' . $row['content'] . ' ('.$humandate.')</p></div>';
                         }
                     }
                     else{

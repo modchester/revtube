@@ -58,7 +58,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
              </div>
              <div id="rewatch-author">
               <img class="rewatch-pfp" src="content/pfp/' .getUserPic($pfp). '" width="48" height="48">
-              <span class="rewatch-name">' . $row['author'] . '</span>';
+              <a style="color:#333;text-decoration:none;" href="profile?user='.$row['author'].'"><span class="rewatch-name">' . $row['author'] . '</span></a>';
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
                 <a href="editvideo?v='.$_GET['v'].'" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button primary" type="button"><i class="bi bi-pencil-fill"></i> Edit</a> <a href="deletevideo?v='.$_GET['v'].'" id="editprof" style="margin-left:0px;margin-top: 8px;" class="yt-button delete danger" type="button"><i class="bi bi-trash3-fill"></i> Delete</a>';
@@ -122,7 +122,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                 }
             }
 
-        echo '<h4><strong><a href="/all_comments?id='.$_GET['v'].'">All comments ('.$count.')</a></strong></h4>';
+        echo '<h4><strong><a href="/all_comments?v='.$_GET['v'].'">All comments ('.$count.')</a></strong></h4>';
 ?>
 
 

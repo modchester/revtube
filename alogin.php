@@ -11,7 +11,7 @@
                             <?php
                                 if(!empty($_POST)){
                                     $username = htmlspecialchars($_POST['name']);
-                                    $statement = $mysqli->prepare("SELECT `password` FROM `users` WHERE `username` = ? LIMIT 1");
+                                    $statement = $mysqli->prepare("SELECT `password`, `strikes` FROM `users` WHERE `username` = ? LIMIT 1");
                                     $statement->bind_param("s", $username);
                                     $statement->execute();
                                     $result = $statement->get_result();
@@ -19,6 +19,12 @@
                                     while($row = $result->fetch_assoc()){
                                             $hash = $row['password'];
                                             if(password_verify($_POST['password'], $hash)){
+                                                if ($row['strikes'] == 3) {
+                                                    echo('<script>
+                                         window.location.href = "index.php?err=Your account has been terminated due to too many violations of the <a href=guidelines>Community Guidelines</a>.";
+                                         </script>');
+                                         die();
+                                                }
                                                 session_start();
                                                 $_SESSION["profileuser3"] = htmlspecialchars($_POST['name']);
                                                 echo('<script>

@@ -5,7 +5,7 @@ I started this project in 2021. It's almost 2024, so for now, the current to-do 
 <ul>
     <li>Search</li>
     <li>Video manager (list all videos from you)</li>
-    <li>Edit video details</li>
+    <del><li>Edit video details</li></del>
     <li>Video privacy options</li>
 </ul>
 <!-- <br>The current to-do list:       
