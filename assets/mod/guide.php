@@ -8,7 +8,7 @@
       if(!isset($_SESSION['profileuser3'])) {
         echo '
         <div class="sign-in-box">
-        Yo, you are not signed in. By signing in, you will enjoy clipIt more.
+        Yo, you are not signed in. By signing in, you will enjoy '.$sitename.' more.
         <br>
         <a class="yt-button primary" href="/alogin">Sign in</a>
         </div>';
@@ -31,6 +31,6 @@
     ?>
    <?php include("getsubs.php"); ?><hr>
         <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
-        <a href="https://discord.gg/JcEBmrVNpZ"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
+        <a href="https://discord.gg/GbbQBsWXPK"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
     </ul>
 </div>
