@@ -54,7 +54,8 @@
                     }
                 }
                 else{
-                    echo "There are no videos matching your search.";
+                    $randnm = rand(1, 5);
+                    echo "<center><img width='300px' src='/assets/img/404/".$randnm.".png'><br> There are no videos matching your search. Maybe you could <a href='upload'>upload</a> one.</center>";
                 }
                 $statement->close();
             ?>
