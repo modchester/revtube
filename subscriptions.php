@@ -105,7 +105,7 @@
                     $verified = '';
                   }
                   echo('
-            <h3><h2>'.$row["username"].'</h2></h3>
+            <h3><h2>'.$row["username"].' '.$staff.' '.$verified.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
       if(isset($_SESSION['profileuser3'])) {
