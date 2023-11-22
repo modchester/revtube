@@ -112,8 +112,13 @@
                   } else {
                     $staff = '';
                   }
+                  if($row['is_verified'] == 1) {
+                    $verified = '<img style="margin-bottom:-3px;" height="24px" src="/assets/img/verified_dark.png">';
+                  } else {
+                    $verified = '';
+                  }
                   echo('
-            <h3><h2>'.$row["username"].' '.$staff.'</h2></h3>
+            <h3><h2>'.$row["username"].' '.$staff.' '.$verified.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
       if(isset($_SESSION['profileuser3'])) {
