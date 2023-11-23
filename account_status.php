@@ -52,7 +52,7 @@
 						$standing = " Bad standing";
 					}
 			    }
-$strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$etc.'</span><h3>Partner Program</h3>'.$msg.'';
+$strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$etc.'</span><!--<h3>Partner Program</h3>'.$msg.'-->';
 			}
 			?>
           <h1>Account Status <img style="margin-top:2px !Important;" height="24" src="./assets/img/accstatus/<?php echo $icon;?>.png"><!--<small>BETA</small>--></h1>
