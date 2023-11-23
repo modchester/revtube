@@ -30,6 +30,7 @@
             <h2>Registered Users: <?php echo $usercount;?></h2>
             <h2>Submissions: <?php echo $videocount;?></h2>
             <h2>Comments: <?php echo $commentcount;?></h2>
+            <p>More stats later</p>
             <hr>
 <h3>Server info</h3>
 <p>OS: <?php echo php_uname() ?></p>

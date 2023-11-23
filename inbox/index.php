@@ -32,6 +32,7 @@
           <div class="span10">
             <h2></h2>
             <table class="condensed-table">
+              <!-- why did glass beach make a cover of welcome to the black parade -->
                         <thead>
                           <tr>
                             <th>From</th>
@@ -61,7 +62,7 @@
                     }
                 }
                 else{
-                    echo "You have no mail.";
+                    echo "You have no messages.";
                 }
                 $statement->close();
             ?>
