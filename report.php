@@ -59,6 +59,9 @@
     curl_setopt( $ch, CURLOPT_HEADER, 0);
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
     $response = curl_exec( $ch );
+    echo('<script>
+               window.location.href = "index?msg=Your report has been submitted successfully!";
+               </script>');
     }
 /* old report system isnt working?
 $proname = @$_POST["reason"];
