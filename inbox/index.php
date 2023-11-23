@@ -62,7 +62,7 @@
                     }
                 }
                 else{
-                    echo "You have no messages.";
+                    echo "You have no messages. Check back later.";
                 }
                 $statement->close();
             ?>
