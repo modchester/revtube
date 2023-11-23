@@ -30,6 +30,19 @@
             <h2>Registered Users: <?php echo $usercount;?></h2>
             <h2>Submissions: <?php echo $videocount;?></h2>
             <h2>Comments: <?php echo $commentcount;?></h2>
+            <hr>
+            <?php include("/assets/lib/sysinfo.php"); ?>
+            <?php
+// Example
+$system = new SystemInfo();
+
+echo "CPU usage: " . $system->getCpuLoadPercentage() . "%\n";
+echo "Disc: \n";
+print_r($system->getDiskSize(PHP_OS == 'WINNT' ? 'C:' : '/'));
+echo "\n\n";
+echo "RAM total: " . round($system->getRamTotal() / 1024 / 1024) . " MB \n";
+echo "RAM free: " . round($system->getRamFree() / 1024 / 1024) . " MB \n";
+?>
           </div>
           <div class="span4">
 <?php include './assets/mod/whatsnew.php'; ?>
