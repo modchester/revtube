@@ -31,7 +31,9 @@
             <h2>Submissions: <?php echo $videocount;?></h2>
             <h2>Comments: <?php echo $commentcount;?></h2>
             <hr>
-
+<h3>Server info</h3>
+<p>OS: <?php echo php_uname() ?></p>
+<!--<p>CPU: <?php //exec('wmic cpu get name | find /v "Name"', $cpuname); //print_r($cpuname); ?></p>-->
           </div>
           <div class="span4">
 <?php include './assets/mod/whatsnew.php'; ?>
