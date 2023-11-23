@@ -15,7 +15,7 @@ $start = $time;
             <li><a href="/explore">Explore</a></li>
            <!-- <li><a href="/upload">Upload</a></li> -->
           </ul>
-          <form class="pull-left" action="results.php">
+          <form class="pull-left" action="results">
             <input name="q" type="text" placeholder="Search" fdprocessedid="1r3x">
           </form>
           	<?php
