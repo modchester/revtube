@@ -10,14 +10,10 @@
 <?php include './assets/lib/profile.php';?>
 <!-- guide -->
 <?php include './assets/mod/guide.php';?>
-<?php if($debug == 'true') { ?>
-<div class="alert-message warning page-alert">
-    <?php echo "<p><strong>Current video ID:</strong>";
-    echo var_dump($_GET['v']);
-    echo "</p>";
-    ?>
-    </div>
-    <?php } ?>
+<?php if($debug == 'true') { 
+    $omid = $_GET['v'];
+    $debugmsg1 = '<div class="alert-message warning debug-alert"><p><strong>Current video ID:</strong> '.$omid.' </p></div>'; 
+     } ?>
     <?php
     $likec = getLikes($_GET['v'], $mysqli);
     $dislikec = getDislikes($_GET['v'], $mysqli);
@@ -48,6 +44,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
             <div class="rewatch">
             <iframe height="360px" width="640px" src="/funplr/index?v=//'.$_SERVER["SERVER_NAME"].'/content/video/' . $row["filename"] . '&vid='.$row['vid'].'" style="border: none;"></iframe>
             <!--<video height="360px" width="640px" src="content/video/' . $row["filename"] . '" controls>No HTML5?</video>-->
+            '.$debugmsg1.'
             <div class="rewatch-content rewatch-main">
              <h1 id="rewatch-title">
                <span id="title">' . $row['videotitle'] . '</span>
