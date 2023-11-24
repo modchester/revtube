@@ -74,7 +74,7 @@
        if (file_exists($target_file)) {
            echo "
            <div class='alert-message error page-alert'>
-           Video with the same filename already exists.
+           Video with the same filename already exists. That's.....interesting.
            </div>
            ";
            $uploadOk = 0;
@@ -82,7 +82,7 @@
        if($imageFileType != "mp4" && $imageFileType != "avi") {
            echo "
            <div class='alert-message error page-alert'>
-           MP4 files only.
+           Only MP4 files are allowed.
            </div>
            ";
            $uploadOk = 0;
@@ -116,18 +116,18 @@
                exec($thumbcmd);
                $statement->execute();
                $statement->close();
-            //    $webhookurl = $webhook;
-            //    $msg = "**$user** just uploaded **$video** => uploaded to a private test instance";
-            //    $json_data = array ('content'=>"$msg");
-            //    $make_json = json_encode($json_data);
-            //    $ch = curl_init( $webhookurl );
-            //    curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-            //    curl_setopt( $ch, CURLOPT_POST, 1);
-            //    curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
-            //    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-            //    curl_setopt( $ch, CURLOPT_HEADER, 0);
-            //    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-            //    $response = curl_exec( $ch );
+                $webhookurl = $webhook;
+                $msg = "**$user** just uploaded **$video** => https://".$_SERVER["SERVER_NAME"]."/watch.php?v=".$v_id."";
+                $json_data = array ('content'=>"$msg");
+                $make_json = json_encode($json_data);
+                $ch = curl_init( $webhookurl );
+                curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+                curl_setopt( $ch, CURLOPT_POST, 1);
+                curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
+                curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+                curl_setopt( $ch, CURLOPT_HEADER, 0);
+                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+                $response = curl_exec( $ch );
                echo('<script>
              window.location.href = "index.php?msg=Your video has been uploaded!";
              </script>');
