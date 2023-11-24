@@ -82,7 +82,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
               <a style="color:#333;text-decoration:none;" href="profile?user='.$row['author'].'"><span class="rewatch-name">' . $row['author'] . ' '.$verified.'</span></a>';
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
-                <a href="editvideo?v='.$_GET['v'].'" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
+                <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
             } else {
         if(isset($_SESSION['profileuser3'])) {
             if(ifSubscribed($_SESSION['profileuser3'], $row['author'], $mysqli) == false) {
