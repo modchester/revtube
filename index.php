@@ -33,7 +33,7 @@
       echo "<p style='display:none;'>no</p>";
     } else { echo '
         <div class="alert-message danger">
-      <p>'.$_GET["err"].'</p>
+ <p>'.$_GET["err"].'</p>
     </div>';
   }
           ?>

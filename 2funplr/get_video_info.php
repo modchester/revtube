@@ -11,8 +11,10 @@ if ($vid == null) {
 die();
 }
 
-$name = $_GET['title'];
-$author = $_GET['author'];
+// $name = $_GET['title'];
+// $author = $_GET['author'];
+$name = "test";
+$author = "test";
 
 // 2012 fixed player, get_video_info.php, crazy frog#8833
 ?>
@@ -44,7 +46,7 @@ https://gist.github.com/sidneys/7095afe4da4ae58694d128b1034e01e2
 $fmt_stream_map = [
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "tiny",
@@ -52,7 +54,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "small",
@@ -60,7 +62,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "medium",
@@ -68,7 +70,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "large",
@@ -76,7 +78,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "hd720",
@@ -84,7 +86,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "hd1080",
@@ -92,7 +94,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "hd1440",
@@ -100,7 +102,7 @@ $fmt_stream_map = [
 	],
 	[
 	"itag" => "43",
-    "url" => "".$vid."",
+    "url" => $vid,
     "sig" => "21EDBD12A97AC6CFE5B49224A5AD622895FFADEB.913D0D8ADC3EB8203CA6E08F616AC4B63156EC64",
     "fallback_host" => "tc.v14.cache3.c.youtube.com",
     "quality" => "highres",

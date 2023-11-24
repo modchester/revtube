@@ -362,3 +362,16 @@ a.menu::after, .dropdown-toggle::after {
   .topbar div > ul .menu-dropdown .divider, .nav .menu-dropdown .divider, .topbar div > ul .dropdown-menu .divider, .nav .dropdown-menu .divider {
     border-color: #000;
   }
+  label {
+    margin-right: 3px;
+    font-weight: bold;
+}
+.editoptions {
+    float: right;
+    margin-top: -4px !important;
+    margin-right: 5px; 
+}
+.debug-alert {
+    margin-top: -5px !important;
+    margin-bottom: 0;
+}
