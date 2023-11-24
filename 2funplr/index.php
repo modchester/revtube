@@ -26,6 +26,24 @@ die();
 .ytp-button-fullscreen-enter {
     display: block!important;
 }
+.ytp-play-progress {
+background: #7F13E1 !important;
+}
+.seeking-mode .html5-scrubber-button, .html5-scrubber-button:focus, .html5-scrubber-button:active, .html5-scrubber-button:hover {
+    background: #7F13E1 !important;
+}
+.html5-volume-slider-foreground:before {
+  background: #7F13E1 !important;
+}
+.ytp-large-play-button-image {
+background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAA8CAYAAAAXDvbIAAAAAXNSR0IArs4c6QAABClJREFUeF7tnM9PE0EUx7+zW39ED5IYDiqVGr1b/wLLH2DAkzflDzCWCKgnqPEiv4QY72A8G2tMPBaMEE5ojdGTxkKrJppIaakp0O6YWZh1aUvptkt3djubkJDmzduZz76dee/tzCOweD3Bj85NkICGYoCABEqbU9AA9L/9ryK0NgVKcH/J2iU0aHEVSrqWFkXQuA9qmSwFTShQE4dBEzdxerkWXWYZUq0BA5hDoU8F0QdOgZDVG3hBngBzbBwaENWwOXMP59eqjasiVAbzL4pTBOjxAhQ7x0CBNAWdodiK7AW3DOoj/LxcQCFKgDY7O+M1XWyaOY5DPZWmh11QJ5C6WASdk0BrMwEGlqIQKrXYXVBHsPze7oWjtu65V4oC0TvwX624UI0jdYPNFe4dnpM9pz2DOPuS98Cw1HGkvm27Q/KySoCAJAbQcW4XVDaXaqBxq8qk/H8CCkiwHx0f2C+6pU7g+7AGLSIh1U9AgRLpx5n7BtRRJF9In7R+oDsg5wbg7zJDXZVuVGNQWetB+PU3n8j5tHGYXIMKX+g2Tr0hLIIqoqDHtvJqjIABVS5SjYE0t5ZQ7WNpaOIeABlHcrZVU3p2c5VQ7SYKQCio3c9P4ld8C++m1rGR1Q5guM1RyZMrQrz+12Lt8HcdQX61iKXJHBYfZJpDwea7sC8ELAAgY0hSm3VbVseh8oaZRAHzQ1l8fpazrMvJBkJDdStclrS+i85LQlpqqbW5yXJZqOoKqGbLjd1K48urvJNvedV7uw4qH01ydgMLw2tIvd0UDq5roYoM1/VQRYTrGahmuLFwGr8/bjk2LXgOKif5aTqH+aEMsqli0+F6FionuTCUaXp05lmoLNyNhTOORGSeg8pzB04mZjwDVQSYfMrxBFS2KMXCa8KkDF0N1ckVvppL4UqoLER9ff2PI+5SLf6Zq6CKHO+bYetQRdjtV5qkNnfSLTBZn418qghfUytBdVMOlRuBkfkXDaobYQoLtT3ow2Iki6XH67WsB0LKCPU19cKVo0jObQrja9b7xIT67l/vIERrZ0AdwcqkAtInWgfd2B8Dqtz1Z9/jM73+8qiPfVi3j/7IndT2EYWxP5XpFGHrj41jc0yVseef9UCEUNUxEjbdmEdTTJ1+mmIcqWkK2muT/pZUU3aOSp5QadwOyk78ySmgMag8O2XKAWz/O4pkmABTjalvzdYEpHcAHU/LoD7E1xMKDifkyT9rhlFqpcZCxdXIg2rWgLJ6KipIiJ+eLrNU/sMYVropyIy02OqAmYX6oPaWAi2zVK6GVfvJQ4tIN6syWOY+bSE/VXO1H7OanVJKrIxSiLkMrVy5gjn3rC7VMajR/QqAVS32VfqcePW0AgpBFYpeYqlSxbSDqIxmbbbbW5oX7iqVqFRNjVdSYyejrdzfElQriltZ9h/f+z5bww9mhAAAAABJRU5ErkJggg==') !important;
+}
+.ytp-thumbnail {
+	background-image: url('/content/thumb/<?php echo $_GET['vid']; ?>.jpg') !important;
+background-size: cover;
+  /* height: 360px !important;
+width: 640px !important; */
+}
 </style>
 
 <!DOCTYPE html>  <html lang="en" dir="ltr"  data-cast-api-enabled="true">
