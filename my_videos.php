@@ -53,7 +53,7 @@
                     }
                 }
                 else{
-                    echo "Hm. Interesting. Either nobody has uploaded yet or we have a serious problem o_o";
+                    echo "You haven't uploaded anything yet. This area will populate once you <a href='upload'>upload</a> some videos.";
                 }
                 $statement->close();
             ?>
