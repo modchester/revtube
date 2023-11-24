@@ -18,6 +18,7 @@
 	  <link rel="icon" type="image/x-icon" href="/assets/img/johnfavi.png">
     <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/johnfavicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-twipsy.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-tabs.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">

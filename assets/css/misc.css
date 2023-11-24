@@ -375,3 +375,178 @@ a.menu::after, .dropdown-toggle::after {
     margin-top: -5px !important;
     margin-bottom: 0;
 }
+.yt-navigation-list {
+  border: 1px solid rgb(222, 222, 222);
+  font-family: Arial;
+  background-color: rgb(251, 251, 251);
+  width: 200px;
+  padding: 0;
+  list-style: none;
+  float: left;
+  margin-left: -10px;
+}
+.yt-navigation-list li.yt-nav-list-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(34, 34, 34) !important;
+  background: none !important;
+  filter: none !important;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -o-user-select: text;
+  -ms-user-select: text;
+}
+.yt-navigation-list li {
+  display: block;
+  line-height: 24px;
+  font-size: 11px;
+  color: #555;
+  padding: 0px 0px 0px 5px;
+  text-decoration: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+}
+.yt-navigation-list li.selected, .yt-navigation-list li.selected:hover {
+  color: #fff;
+  font-weight: bold;
+  background: #af2b26;
+  background-image: -moz-linear-gradient(top,#af2b26 0,#942422 100%);
+  background-image: -ms-linear-gradient(top,#af2b26 0,#942422 100%);
+  background-image: -o-linear-gradient(top,#af2b26 0,#942422 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#af2b26),color-stop(100%,#942422));
+  background-image: -webkit-linear-gradient(top,#af2b26 0,#942422 100%);
+  background-image: linear-gradient(to bottom,#af2b26 0,#942422 100%);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#00af2b26,EndColorStr=#dd942422);
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.25);
+}
+.yt-notification {
+border:1px solid #6e8bba;
+border-radius:2px;
+padding:10px 0 10px 50px;
+color:#FFF;
+font-family:Arial;
+font-size:13px;
+font-weight: bold;
+display:inline-block;
+/* 	*display:inline;
+*zoom:1; */
+width:785px;
+margin:5px 0;
+position:relative;
+}
+.yt-notification span {
+color:#FFF;
+font-family:Arial;
+font-size:13px;
+vertical-align: middle;
+}
+.yt-notification .yt-notification-close {
+float:right;
+background-image: url('/assets/img/notification-sprite.png');
+background-repeat:no-repeat;
+background-position: 0px -140px;
+margin-right:6px;
+width:22px;
+height:22px;
+position:absolute;
+top:25%;
+right:0;
+margin-top:-2px;
+cursor:pointer;
+}
+.yt-notification .yt-notification-close:hover {
+background-color: rgba(0, 0, 0, 0.15);
+border-radius: 3px 3px 3px 3px;
+}
+.yt-notification-icon {
+display:inline-block;
+/* 	*display:inline;
+*zoom:1; */
+width:40px;
+height:32px;
+background-image:url('/assets/img/notification-sprite.png');
+background-repeat: no-repeat;
+position:absolute;
+top: 0;
+left:0;
+}
+.yt-notification.info {
+background-color:#518dc2;
+border-color:#6e8bba;
+}
+.yt-notification.info .yt-notification-icon {
+background-position:0px 2px;
+}
+.yt-notification.success {
+  background-color: #829e48;
+  border-color: #618a3b;
+}
+.yt-notification.success .yt-notification-icon {
+  background-position: 0px -62px;
+}
+.yt-notification.warning {
+background-color: #c67b36;
+  border-color: #b86a1d;
+}
+.yt-notification.warning .yt-notification-icon {
+  background-position: 0px -94px;
+}
+.yt-notification.important {
+  background-color: #a93630;
+  border-color: #a11b1b;
+}
+.yt-notification.important .yt-notification-icon {
+  background-position: 0px -30px;
+}
+/* Dark style*/
+.yt-navigation-dark {
+background:#535353;
+text-shadow:0 -1px 1px #000;
+list-style: none;
+font-family:Arial;
+font-size: 13px;
+font-weight: bold;
+color:#FFF;
+padding: 0px;
+margin:0;
+outline:none;
+text-decoration:none;
+}
+.yt-navigation-dark li {
+color:#FFF;
+padding:0 25px;
+outline:none;
+font-size:13px;
+font-weight:bold;
+line-height:40px;
+text-decoration:none;
+vertical-align:top;
+white-space:nowrap;
+display:inline-block;
+margin:0;
+outline:none;
+user-select:none;
+-moz-user-select:none;
+-webkit-user-select:none;
+-o-user-select:none;
+-ms-user-select:none;
+}
+.yt-navigation-dark li:hover{
+background:#666
+}
+
+.yt-navigation-dark li:active,.yt-navigation-dark li:focus,.yt-navigation-dark li.selected{
+background:#343434
+}
+.yt-navigation-dark li a {
+color:inherit;
+width:100%;
+height:100%;
+display:inline-block;
+/* 	*display:inline;
+*zoom:1; */
+}
