@@ -85,5 +85,5 @@
     box-shadow: 0 0 5px rgba(63,118,183,.5), inset 0 0 10px #fff;
 }
 .verihover:hover {
-    content: url('assets/img/verified-hov.png') !important;
+    content: url('/assets/img/verified-hov.png') !important;
 }
