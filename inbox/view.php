@@ -38,12 +38,12 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
-                        if ($row['sender'] == "system") {
-                            $official = '<i title="This is an official message from the clipIt team." class="bi bi-patch-check-fill"></i>';
+                        if ($row['sender'] == "redst0ne") {
+                            $official = '<i title="This is an official message from the '.$sitename.' team." class="bi bi-patch-check-fill"></i>';
                         } else {
                             $official = "";
                         }
-                        if ($_SESSION['profileuser3'] != $row['reciever'] OR $_SESSION['profileuser3'] != $row['sender']) {
+                        if ($_SESSION['profileuser3'] !== $row['reciever'] OR $_SESSION['profileuser3'] !== $row['sender']) {
                             echo '<script>window.location.href = "../index?err=Forbidden.";</script>';
                         }
                         echo '<h2>'.$row['subject'].'</h2>
