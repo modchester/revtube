@@ -51,6 +51,11 @@
             <input class="large" id="banusern" name="banusern"></input>
       <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button primary" value="Ban User">
             </form>
+            <form class="form-stacked" action="unbanuser" method="post" enctype="multipart/form-data">
+            <label for="unbanuser">Unban user </label>
+            <input class="large" id="unbanuser" name="unbanuser"></input>
+      <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button primary" value="Unban User">
+            </form>
             <hr>
             <h2>Users</h2>
             <table class="condensed-table">
