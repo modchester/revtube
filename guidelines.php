@@ -11,7 +11,7 @@
  <div class="content">
         <div class="page-header">
         <?php include './assets/mod/alert.php';?>
-          <h1>Community Guidelines <small>Last updated November 20, 2023</small></h1>
+          <h1>Community Guidelines <small>Last updated November 25, 2023</small></h1>
         </div>
         <div class="row">
           <div class="span10">
@@ -55,7 +55,7 @@
         </ul>
         <h2>Strike System</h2>
         <ul class="unstyled">
-            <li>Generally, an infraction (instance of breaking one of these rules) will give you 1 strike.</li><br><li> Unless it's something more severe (illegal content for example), you'll only get one strike for every infraction.</li><br><li> If you have 2 strikes, you lose your ability to upload/comment (depending on which rules you broke).</li><br><li>When your account reaches 3 strikes, it will be deleted along with all your videos and comments.</li><br><li> We cannot (and probably wouldn't even if we could) undo this so try not to get that far.</li<br>
+            <li>Generally, an infraction (instance of breaking one of these rules) will give you 1 strike.</li><br><li> Unless it's something more severe (illegal content for example), you'll only get one strike for every infraction.</li><br><li> If you have 2 strikes, you lose your ability to upload/comment (depending on which rules you broke).</li><br><li>When your account reaches 3 strikes, it will be deactivated (meaning you will no longer be able to login), and all your videos will be hidden (or deleted, if they violated these guidelines)<!--deleted along with all your videos and comments-->.</li><br><li> Generally you can appeal these decisions. But depending on what you did and the severity of it, appeals may not be accepted.</li<br>
 </ul>
           </div>
           <div class="span4">
