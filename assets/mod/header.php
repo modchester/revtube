@@ -28,6 +28,9 @@ $start = $time;
 			    $result = $statement->get_result();
 			    if($result->num_rows === 0) exit('No rows');
 			    while($row = $result->fetch_assoc()) {
+            if($row['strikes'] = "3") {
+              echo('<script>window.location.href = "logout";</script>');
+    }
             if ($row["is_admin"] == 1) {
               $adminlink = "<li><a href=\"admin\">Admin Panel</a></li>";
             } else {

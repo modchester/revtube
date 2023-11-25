@@ -54,7 +54,8 @@
             $statement->execute();
             $result = $statement->get_result();
             while($row = $result->fetch_assoc()) {
-                if($row['strikes'] == 3) {
+                if($row['strikes'] = 3) {
+                  echo("Hi!");
                   echo('<script>window.location.href = "logout";</script>');
 				}
 			}
