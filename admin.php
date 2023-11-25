@@ -67,7 +67,7 @@
       <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button primary" value="Unverify User">
             </form>
             <form class="form-stacked" action="makeadmin" method="post" enctype="multipart/form-data">
-            <label style="color:red;" for="user">Make user admin </label>
+            <label style="color:red;" for="user">Make user admin (not recommended)</label>
             <input class="large" id="user" name="user"></input>
       <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button danger" value="Make Admin">
             </form>
