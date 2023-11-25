@@ -1,5 +1,5 @@
 <?php
-/* admin functions for tictac */
+/* admin functions for tictac and other catrilldev projects */
 function banUser($username, $mysqli) {
     // $stmt = $mysqli->prepare("UPDATE videos SET privacy = 'private' WHERE author = ?");
     // $stmt->bind_param("s", $username);

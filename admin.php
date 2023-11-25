@@ -61,6 +61,11 @@
             <input class="large" id="verifyuser" name="verifyuser"></input>
       <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button primary" value="Verify User">
             </form>
+            <form class="form-stacked" action="unverifyuser" method="post" enctype="multipart/form-data">
+            <label for="unverifyuser">Unverify user </label>
+            <input class="large" id="unverifyuser" name="unverifyuser"></input>
+      <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button primary" value="Unverify User">
+            </form>
             <hr>
             <h2>Users</h2>
             <table class="condensed-table">
