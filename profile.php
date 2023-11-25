@@ -29,6 +29,7 @@
   <li><a href="all_videos?user=<?php echo $_GET['user']; ?>">All Videos</a></li>
   <li><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
   <li><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
+  <li><a href="community?user=<?php echo $_GET['user']; ?>">Community</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");

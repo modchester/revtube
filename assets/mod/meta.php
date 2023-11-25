@@ -47,3 +47,16 @@
 <?php
   error_reporting(0); 
   ?>
+  <?php 
+  if(isset($_SESSION['profileuser3'])) {
+            $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+            $statement->bind_param("s", $_SESSION['profileuser3']);
+            $statement->execute();
+            $result = $statement->get_result();
+            while($row = $result->fetch_assoc()) {
+                if($row['strikes'] == 3) {
+                  echo('<script>window.location.href = "logout";</script>');
+				}
+			}
+    }
+    ?>

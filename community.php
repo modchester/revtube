@@ -28,8 +28,8 @@
   <li><a href="profile?user=<?php echo $_GET['user']; ?>">Home</a></li>
   <li><a href="all_videos?user=<?php echo $_GET['user']; ?>">All Videos</a></li>
   <li><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
-  <li class="active"><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
-  <li><a href="community?user=<?php echo $_GET['user']; ?>">Community</a></li>
+  <li><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
+  <li class="active"><a href="community?user=<?php echo $_GET['user']; ?>">Community</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -58,28 +58,23 @@
                        // echo $finalstring;
                         $username = $row["username"];
                     }
-                    $statement = $mysqli->prepare("SELECT * FROM subscribers WHERE sender = ?");
-                    $statement->bind_param("s", $_GET['user']);
+                    $statement = $mysqli->prepare("SELECT * FROM `community` WHERE `author` = ?");
+                    $statement->bind_param("s", $username);
                     $statement->execute();
                     $result = $statement->get_result();
-                    echo "<h3>".$_GET['user']."'s subscriptions</h3>";
+                    echo "<h3>$username's posts</h3>";
                     if($result->num_rows !== 0){
+                      include("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
-                        $pid = idFromUser($row['receiver']);
-                        $rows = getSubscribers($row['receiver'], $mysqli);
-                        $name = htmlspecialchars($row['receiver']);
-                        echo "<div class='user'>
-				    	<div class='user-info'>
-						    <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".$name."</b></a> (".$rows." subscribers)</div>
-						    <!-- <div><span class='black'>".$rows."</span> subscribers</div> -->
-					    </div>
-					  <!-- <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' src='content/pfp/".getUserPic($pid)."'></a></div> -->
-				    </div>
-				    <hr>";
+                        error_reporting(~E_ALL & ~E_DEPRECATED);
+                        $pfp = idFromUser($row['author']);
+                        $time = time_elapsed_string($row['date']);
+                        echo '<div class="comment"><img class="cmn" height="34px" width="34px" src="content/pfp/'.getUserPic($pfp).'"><div class="commenttitle"><a style="font-weight:bold;" href="profile?user='.$row['author'].'">'.$row['author'].'</a> <span title="'.$row['date'].'">('.$time.')</span></div><div class="cmntxt">'.$row['content'].'</div></div>';
                     }
                     }
                     else{
-                        echo("This user has no subscriptions.");
+                        echo("This channel has no posts.");
+                        $totalviews = "0";
                     }
                     $statement->close();
                 ?>
@@ -140,9 +135,6 @@
             $statement->bind_param("s", $_GET['user']);
             $statement->execute();
             $result = $statement->get_result();
-            if($result->num_rows == 0) {
-                $totalviews = 0;
-            }
             while($row = $result->fetch_assoc()) {
             $totalviews = $row["total"];
             }
@@ -153,7 +145,7 @@
             //  $totalviews = $statement->fetch();
             //  $statement->close();
             ?>
-             <?php 
+            <?php 
             // omg
             $statement = $mysqli->prepare("SELECT * FROM videos WHERE author = ?");
             $statement->bind_param("s", $_GET['user']);
