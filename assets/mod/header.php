@@ -30,6 +30,8 @@ $start = $time;
 			    while($row = $result->fetch_assoc()) {
             if($row['strikes'] = 3) {
               echo('<script>window.location.href = "logout";</script>');
+    } else {
+      echo "";
     }
             if ($row["is_admin"] == 1) {
               $adminlink = "<li><a href=\"admin\">Admin Panel</a></li>";
