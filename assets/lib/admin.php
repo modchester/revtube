@@ -1,6 +1,6 @@
 <?php
 /* admin functions for tictac */
-function banUser($username, $reason, $mysqli) {
+function banUser($username, $mysqli) {
     // $stmt = $mysqli->prepare("UPDATE videos SET privacy = 'private' WHERE author = ?");
     // $stmt->bind_param("s", $username);
     // $stmt->execute();

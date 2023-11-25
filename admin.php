@@ -45,6 +45,13 @@
         </div>
         <div class="row">
           <div class="span10">
+            <h2>Moderation</h2>
+            <form class="form-stacked" action="banuser" method="post" enctype="multipart/form-data">
+            <label for="banusern">Ban user </label>
+            <input class="large" id="banusern" name="banusern"></input>
+      <input style="margin-left:5px;margin-top:1px;" type="submit" name="submit" class="yt-button primary" value="Ban User">
+            </form>
+            <hr>
             <h2>Users</h2>
             <table class="condensed-table">
             <thead>

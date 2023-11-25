@@ -1,3 +1,4 @@
+<script>window.location.href = "login";</script>
 <!DOCTYPE html>
 <html lang="en">
   <head>
