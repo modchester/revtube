@@ -47,9 +47,7 @@
         </div>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
-
     </div></div></div> <!-- /container -->
-
+	<?php include './assets/mod/footer.php'; ?>
   </body>
 </html>

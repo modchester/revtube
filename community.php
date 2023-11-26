@@ -58,7 +58,7 @@
                        // echo $finalstring;
                         $username = $row["username"];
                     }
-                    $statement = $mysqli->prepare("SELECT * FROM `community` WHERE `author` = ?");
+                    $statement = $mysqli->prepare("SELECT * FROM `community` WHERE `author` = ? ORDER BY date DESC");
                     $statement->bind_param("s", $username);
                     $statement->execute();
                     $result = $statement->get_result();
