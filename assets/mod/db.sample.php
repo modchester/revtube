@@ -42,6 +42,24 @@
      }
      return $backg;
    }
+
+   function getVerified($name){
+      global $mysqli;
+      $stmt = $mysqli->prepare("SELECT * FROM users WHERE username = ?");
+      $stmt->bind_param("s", $name);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      if($result->num_rows === 0) exit('No rows');
+      error_reporting(E_ALL ^ E_WARNING);
+      while($row = $result->fetch_assoc()) {
+       if($row['is_verified'] == 1) {
+         $verified = '<img rel="twipsy" id="vfb" title="Verified" class="verihover" src="assets/img/verified_small.png">';
+       } else {
+         $verified = '';
+       }
+      }
+      return $verified;
+   }   
     
    $loggedIn = isset($_SESSION['profileuser3']);
 
