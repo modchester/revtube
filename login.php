@@ -69,7 +69,7 @@
                         <label>Password</label>
                       </div>
                       <center>
-                  <input class="yt-button primary" type="submit" name="submit" value="Login"> <a class="yt-button danger" onclick="alert('Contact the team with proof that you own the channel.')">Forgot your password?</a>
+                  <input class="yt-button primary" type="submit" name="submit" value="Login"> <a href="passwordresets" class="yt-button danger" onclick="//alert('Contact the team with proof that you own the channel.')">Forgot your password?</a>
                               </center>
                 </form>
               </div>
