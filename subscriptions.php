@@ -7,6 +7,20 @@
   <body>
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
+<?php 
+            $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+            $statement->bind_param("s", $_GET['user']);
+            $statement->execute();
+            $result = $statement->get_result();
+            while($row = $result->fetch_assoc()) {
+                if ($row['strikes'] == 3) {
+                  echo('<script>
+             window.location.href = "index.php?err=This account has been terminated for a violation of '.$sitename.'\'s Community Guidelines.";
+             </script>');
+                  }
+            }
+            $statement->close();
+        ?>
 <style>
             body {
                 background: url('/content/background/<?php $id = idFromUser($_GET['user']); echo getBackground($id);?>') !important;
