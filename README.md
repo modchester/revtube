@@ -13,7 +13,6 @@ For the current "skeuo" layout, the link is https://rev.yoretude.com.
 -->
 RevTube is currently in development, so we do not have a public instance at this time.
 # Changelog (only shows latest major update)
-## June 19, 2023
-The upload page has been redesigned to match with the rest of the site. Additionally, we have finally updated our guidelines!
-
+## January 12, 2024
+The RevTube branding has been restored. (Also it's been a little over 2 years since this project started so that's neat, I guess.)
 *To see every update, view the full [changelog](https://github.com/cosmixcode/revtube/blob/semi-2013/changelog.md).*
