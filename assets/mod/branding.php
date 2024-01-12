@@ -1,4 +1,4 @@
 <?php
-$sitename = "VidFusion";
-$logosrc = "/assets/img/vfcrop.png";
+$sitename = "RevTube";
+$logosrc = "/assets/img/revtube.png";
 ?>

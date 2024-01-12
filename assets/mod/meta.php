@@ -7,11 +7,10 @@
     <title><?php echo $sitename; ?></title>
     <style>      .logost {
         content: url('<?php echo $logosrc; ?>') !important;
-        /* thanks to «John» for the logo */
         height: 23px;
         margin-top: -2px !important;
         margin-right: -13px !important;
-        margin-left: -35px !important;
+        /* margin-left: -35px !important; */
         margin-bottom: -1px;
         /* filter: invert(1); */
     } </style>
