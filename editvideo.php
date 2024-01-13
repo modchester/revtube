@@ -30,7 +30,7 @@
                                         $title = $row['videotitle'];
                                         $desc = $row['description'];
                                     if ($_SESSION['profileuser3'] !== $row['author']) {
-                                        echo('<script>window.location.href = "/?err=This is not your video!";</script>');
+                                        echo('<script>window.location.href = "index.php?err=This is not your video!";</script>');
                                     }
                                 }
                                 ?>

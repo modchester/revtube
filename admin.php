@@ -16,7 +16,7 @@
                         while($row = $result->fetch_assoc()) {
                         if ($row["is_admin"] !== 1) {
                           echo('<script>
-      window.location.href = "/?msg=You are not allowed to view that page.";
+      window.location.href = "index.php?msg=You are not allowed to view that page.";
       </script>');
                         }  
                         }
@@ -127,7 +127,7 @@
         $statement->execute();
         $statement->close();
         echo('<script>
-      window.location.href = "/?msg=Your announcement has been posted!";
+      window.location.href = "index.php?msg=Your announcement has been posted!";
       </script>');
     } 
      } 

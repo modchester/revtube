@@ -11,7 +11,7 @@ error_reporting(5);
                         if ($row["is_admin"] == 1) {
                             if (isset($_POST["submit"])){
                                 banUser($_POST['banusern'], $mysqli);
-                                echo('<script>window.location.href = "/?msg='.$_POST['banusern'].' banned successfully!";</script>');
+                                echo('<script>window.location.href = "index.php?msg='.$_POST['banusern'].' banned successfully!";</script>');
                             }
                         }
                     }

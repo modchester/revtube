@@ -25,7 +25,7 @@
             <?php
     if(!isset($_SESSION['profileuser3'])) {
         echo('<script>
-             window.location.href = "/";
+             window.location.href = "index.php";
              </script>');
     }
    if (isset($_POST['submit'])){
@@ -33,33 +33,33 @@
 //         error_reporting(E_ALL);
 //  ini_set('display_errors', '1');
 //         echo('<script>
-//         window.location.href = "/?err=No video file.";
+//         window.location.href = "index.php?err=No video file.";
 //         </script>');
 //     }
     if(empty($_POST['reciever'])) {
         echo('<script>
-        window.location.href = "/?err=No reciever.";
+        window.location.href = "index.php?err=No reciever.";
         </script>');
     }
     if(empty($_POST['content'])) {
         echo('<script>
-        window.location.href = "/?err=No content.";
+        window.location.href = "index.php?err=No content.";
         </script>');
     }
     if(empty($_POST['subject'])) {
         echo('<script>
-        window.location.href = "/?err=No subject.";
+        window.location.href = "index.php?err=No subject.";
         </script>');
     }
     // if (strlen($_POST['subject']) > 21) {
     //     echo('<script>
-    //     window.location.href = "/?err=subject";
+    //     window.location.href = "index.php?err=subject";
     //     </script>');
     //     exit();
     // }
        if(!isset($_SESSION['profileuser3'])) {
         echo '<script>
-        window.location.href = "../alogin";
+        window.location.href = "../alogin.php";
         </script>';
        }
                $statement = $mysqli->prepare("INSERT INTO inbox (sender, reciever, subject, content, date) VALUES (?, ?, ?, ?, now())");
@@ -71,7 +71,7 @@
                $statement->execute();
                $statement->close();
                echo('<script>
-             window.location.href = "/";
+             window.location.href = "index";
              </script>');
        }
    ?>
