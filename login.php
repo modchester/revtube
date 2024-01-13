@@ -57,7 +57,7 @@
                                 }
                             ?>
         <div class="box">
-                <div class="divimg"><img height="60px" src="assets/img/xyzlogo.png"></div>
+                <div class="divimg"><img height="76px" style="filter:invert(1);" src="assets/img/logo.png"></div>
                 <p>Use your <?php echo $sitename; ?> Account</p>
                 <form action="" method="POST">
                   <div class="inputBox">
