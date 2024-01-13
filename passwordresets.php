@@ -11,7 +11,7 @@
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include '../assets/mod/alert.php';?>
+        <?php include './assets/mod/alert.php';?>
           <h1><small style="font-size:30px;">Help / </small>Password Resets <small>Last updated November 25, 2023</small></h1>
         </div>
         <div class="row">
