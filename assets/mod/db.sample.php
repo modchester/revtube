@@ -81,6 +81,8 @@
       $phpver = phpversion();
       $debugmsg = "<center><span style='color: white;'>[DEBUG]</span> Logged in as ".$_SESSION["profileuser3"]." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
 	   //echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
+   } else {
+      error_reporting(0); 
    }
 
       // get subs
