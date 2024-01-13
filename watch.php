@@ -10,7 +10,7 @@
 <?php include './assets/lib/profile.php';?>
 <!-- guide -->
 <?php include './assets/mod/guide.php';?>
-<?php if($debug == 'true') { 
+<?php if($debug) { 
     $omid = $_GET['v'];
     $debugmsg1 = '<div class="alert-message warning debug-alert"><p><strong>Current video ID:</strong> '.$omid.' </p></div>'; 
      } ?>
