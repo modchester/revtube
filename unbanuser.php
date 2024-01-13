@@ -10,7 +10,7 @@ include("assets/mod/db.php");
                         if ($row["is_admin"] == 1) {
                             if (isset($_POST["submit"])){
                                 unbanUser($_POST['unbanuser'], $mysqli);
-                                echo('<script>window.location.href = "index.php?msg='.$_POST['unbanuser'].' unbanned successfully!";</script>');
+                                echo('<script>window.location.href = "/?msg='.$_POST['unbanuser'].' unbanned successfully!";</script>');
                             }
                         }
                     }
