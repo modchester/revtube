@@ -18,7 +18,7 @@
 <?php
     if(!isset($_SESSION['profileuser3'])) {
         echo('<script>
-             window.location.href = "index.php";
+             window.location.href = "/";
              </script>');
     }
    if (isset($_POST['submit'])){
@@ -26,22 +26,22 @@
 //         error_reporting(E_ALL);
 // ini_set('display_errors', '1');
 //         echo('<script>
-//         window.location.href = "index.php?err=No video file.";
+//         window.location.href = "/?err=No video file.";
 //         </script>');
 //     }
     if(empty($_POST['videotitle'])) {
         echo('<script>
-        window.location.href = "index.php?err=No title.";
+        window.location.href = "/?err=No title.";
         </script>');
     }
     if(empty($_POST['bio'])) {
         echo('<script>
-        window.location.href = "index.php?err=No description.";
+        window.location.href = "/?err=No description.";
         </script>');
     }
     if (strlen($_POST['videotitle']) > 50) {
         echo('<script>
-        window.location.href = "index.php?err=Video title too long.";
+        window.location.href = "/?err=Video title too long.";
         </script>');
         exit();
     }
@@ -107,7 +107,7 @@
                $statement->execute();
                $statement->close();
                 $webhookurl = $webhook;
-                $msg = "**$user** just uploaded **$video** => https://".$_SERVER["SERVER_NAME"]."/watch.php?v=".$v_id."";
+                $msg = "**$user** just uploaded **$video** => https://".$_SERVER["SERVER_NAME"]."/watch?v=".$v_id."";
                 $json_data = array ('content'=>"$msg");
                 $make_json = json_encode($json_data);
                 $ch = curl_init( $webhookurl );
@@ -119,7 +119,7 @@
                 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
                 $response = curl_exec( $ch );
                echo('<script>
-             window.location.href = "index.php?msg=Your video has been uploaded!";
+             window.location.href = "/?msg=Your video has been uploaded!";
              </script>');
            } else {
                echo "The upload failed. Error code: ";
