@@ -30,7 +30,7 @@
                     //        </div>';
                     $_SESSION['profileuser3'] = $username;
                     echo('<script>
-             window.location.href = "index.php?msg=Your account was successfully created!";
+             window.location.href = "/?msg=Your account was successfully created!";
              </script>');
                 }
             }

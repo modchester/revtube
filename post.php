@@ -11,7 +11,7 @@ include("./assets/mod/db.php");
         $statement->execute();
         $statement->close();
         echo('<script>
-      window.location.href = "index.php?msg=Your announcement has been posted!";
+      window.location.href = "/?msg=Your announcement has been posted!";
       </script>');
     } 
      } 
