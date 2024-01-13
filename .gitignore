@@ -6,6 +6,7 @@ content/thumb/
 *.mp4
 *.db
 content/pfp/
+content/background/
 !*content/pfp/default
 assets/mod/db.php
 assets/mod/db.php
