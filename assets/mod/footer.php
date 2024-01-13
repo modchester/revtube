@@ -27,7 +27,7 @@ $total_time = round(($finish - $start), 4);
             $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
             $phpver = phpversion();
             ?>
-    <p><abbr title="semi-2011 made by Cattskit and redst0ne">&copy; <?php echo $sitename; ?> 2021-<?php echo date("Y"); ?></abbr> <?php if ($debug == "true") { echo '&bull; <span style="color:red;">[DEBUG]</span> Running PHP '.$phpver.' | Users: '.$usercount.' | Videos: '.$videocount.' | Comments:'.$commentcount.' | Page rendered in '.$total_time.' seconds';}?></p>
+    <p><abbr title="semi-2011 made by Cattskit and redst0ne">&copy; <?php echo $sitename; ?> 2021-<?php echo date("Y"); ?></abbr> <?php if(isset($debugmsg)) { echo $debugmsg; } ?></p>
     <!-- almost ready for launch i guess -redst0ne 05/04/23 -->
     <!-- will people ever be willing to actually use this? -redst0ne 06/17/23 -->
     <!-- maybe? -redst0ne 11/22/23 -->
