@@ -14,15 +14,15 @@
         margin-bottom: -1px;
         /* filter: invert(1); */
     } </style>
-	  <link rel="icon" type="image/x-icon" href="/assets/img/johnfavi.png">
-    <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/johnfavicon.png">
+	  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-twipsy.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-tabs.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="upload your funny video">
-    <meta name="author" content="Redst0neTech, Cattskit">
+    <meta name="author" content="Redst0neTech, Kai">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -43,6 +43,3 @@
       document.write('<link href="/assets/css/fluent.css" rel="stylesheet">');
      }
 </script>
-<?php
-  error_reporting(0); 
-  ?>
