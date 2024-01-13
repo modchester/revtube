@@ -3,13 +3,13 @@
     $webhook = "";
     
     // debug mode
-    $debug = "true";
+    $debug = true;
 
     // ffmpeg
     $ffmpeg = 'C:\ffmpeg.exe';
     $ffprobe = 'C:\ffprobe.exe';
     
-    $mysqli = new mysqli("localhost", "root", "", "clipit");
+    $mysqli = new mysqli("localhost", "root", "", "revtube");
     session_start();
 
     function idFromUser($nameuser){
@@ -63,20 +63,24 @@
     
    $loggedIn = isset($_SESSION['profileuser3']);
 
-   if($debug == 'true') {
-   //  Debug mode
-   $sql = "SELECT COUNT(*) FROM users";
-   $result = mysqli_query($mysqli, $sql);
-   $usercount = mysqli_fetch_assoc($result)['COUNT(*)'];
-   $sql2 = "SELECT COUNT(*) FROM videos";
-   $result2 = mysqli_query($mysqli, $sql2);
-   $videocount = mysqli_fetch_assoc($result2)['COUNT(*)'];
-   $sql3 = "SELECT COUNT(*) FROM comments";
-   $result3 = mysqli_query($mysqli, $sql3);
-   $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
-   $phpver = phpversion();
-   $debugmsg = "<center><span style='color: white;'>[DEBUG]</span> Logged in as ".$_SESSION["profileuser3"]." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
-	//echo '<br>revista is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
+   if($debug) {
+      // Debug mode
+      ini_set('display_errors', '1');
+      ini_set('display_startup_errors', '1');
+      error_reporting(E_ALL);
+
+      $sql = "SELECT COUNT(*) FROM users";
+      $result = mysqli_query($mysqli, $sql);
+      $usercount = mysqli_fetch_assoc($result)['COUNT(*)'];
+      $sql2 = "SELECT COUNT(*) FROM videos";
+      $result2 = mysqli_query($mysqli, $sql2);
+      $videocount = mysqli_fetch_assoc($result2)['COUNT(*)'];
+      $sql3 = "SELECT COUNT(*) FROM comments";
+      $result3 = mysqli_query($mysqli, $sql3);
+      $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
+      $phpver = phpversion();
+      $debugmsg = "<center><span style='color: white;'>[DEBUG]</span> Logged in as ".$_SESSION["profileuser3"]." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
+	   //echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    }
 
       // get subs
@@ -95,10 +99,10 @@
           $stmt = $mysqli->prepare("SELECT * FROM subscribers WHERE sender = ? AND receiver = ?");
           $stmt->bind_param("ss", $user, $reciever);
           $stmt->execute();
-      $result = $stmt->get_result();
-      $user = $result->fetch_assoc();
-      if($result->num_rows === 1) { return true; } else { return false; }
-      $stmt->close();
+         $result = $stmt->get_result();
+         $user = $result->fetch_assoc();
+         if($result->num_rows === 1) { return true; } else { return false; }
+         $stmt->close();
       
       return $user;
       }
