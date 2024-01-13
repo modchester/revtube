@@ -117,9 +117,6 @@ if(isset($_POST["submit"])){
                 </form>
             </div>
         </div>
-        <!--<div class="col-1-2">
-            <h2>Welcome to SkyTube!</h2>
-        </div>-->
     </div>
     <hr>
     <?php include("./assets/mod/footer.php") ?>
