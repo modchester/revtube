@@ -1,9 +1,8 @@
 # RevTube: PHP video sharing software
-## DO NOT USE THIS RIGHT NOW, IT'S CURRENTLY INCOMPATIBLE WITH THE PROVIDED SQL FILE
 
 ## If you are looking to host this yourself, and you do not want the UI changes, commit [6c606d8](https://github.com/catrilldev/revtube/commit/6c606d8010515ab18c560225570d544bcfdd9677) is the last to not have these changes. If you do want the UI changes (mainly to the uploader), ignore this.
 
-*UI formerly maintaned by Cattskit, now maintained by kylarz/ky-1.*
+*UI formerly maintaned by Kaisiece/[skyiebox](https://github.com/skyiebox), now maintained by kylarz/ky-1.*
 
 RevTube is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
 # Access the site 
