@@ -10,7 +10,7 @@ include("assets/mod/db.php");
                         if ($row["is_admin"] == 1) {
                             if (isset($_POST["submit"])){
                                 verifyUser($_POST['verifyuser'], $mysqli);
-                                echo('<script>window.location.href = "/?msg='.$_POST['verifyuser'].' verified successfully!";</script>');
+                                echo('<script>window.location.href = "index.php?msg='.$_POST['verifyuser'].' verified successfully!";</script>');
                             }
                         }
                     }

@@ -14,7 +14,7 @@
             while($row = $result->fetch_assoc()) {
                 if ($row['strikes'] == 3) {
                   echo('<script>
-             window.location.href = "/?err=This account has been terminated for a violation of '.$sitename.'\'s Community Guidelines.";
+             window.location.href = "index.php?err=This account has been terminated for a violation of '.$sitename.'\'s Community Guidelines.";
              </script>');
                   }
             }

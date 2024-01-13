@@ -5,7 +5,7 @@ $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");
 $stmt->bind_param("s", $_GET['v']);
 $stmt->execute();
 $result = $stmt->get_result();
-if($result->num_rows === 0) echo('<script>window.location.href = "/?err=Video ID '.$_GET['v'].' not found!";</script>');
+if($result->num_rows === 0) echo('<script>window.location.href = "index.php?err=Video ID '.$_GET['v'].' not found!";</script>');
 while($row = $result->fetch_assoc()) {
 if($row['author'] == $_SESSION['profileuser3']) {
     $vtitle = $row['videotitle'];
