@@ -63,6 +63,12 @@
     
    $loggedIn = isset($_SESSION['profileuser3']);
 
+   if(!isset($_SESSION["profileuser3"])) {
+      $profileUser3 = null;
+   }  else {
+      $profileUser3 = $_SESSION["profileuser3"];
+   }
+   
    if($debug) {
       // Debug mode
       ini_set('display_errors', '1');
@@ -79,7 +85,14 @@
       $result3 = mysqli_query($mysqli, $sql3);
       $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
       $phpver = phpversion();
-      $debugmsg = "<center><span style='color: white;'>[DEBUG]</span> Logged in as ".$_SESSION["profileuser3"]." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
+      
+      if(!$profileUser3 == null) {
+         $signedInMessage = "Logged in as ".$profileUser3;
+      } else {
+         $signedInMessage = "Logged out";
+      }
+
+      $debugmsg = "<center><span style='color: red;'>[DEBUG]</span> ".$signedInMessage." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
 	   //echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    } else {
       error_reporting(0); 

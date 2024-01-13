@@ -8,9 +8,10 @@
       if(!isset($_SESSION['profileuser3'])) {
         echo '
         <div class="sign-in-box">
-        Yo, you are not signed in. By signing in, you will enjoy '.$sitename.' more.
-        <br>
-        <a class="yt-button primary" href="/alogin">Sign in</a>
+          Sign in now to see your channels and recommendations!
+
+        <br><br>
+          <a class="yt-button primary" href="/alogin">Sign in</a>
         </div>';
       } else {
         $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
