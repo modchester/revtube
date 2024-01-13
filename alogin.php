@@ -22,7 +22,7 @@
                                             if(password_verify($_POST['password'], $hash)){
                                                 if ($row['strikes'] == 3) {
                                                     echo('<script>
-                                         window.location.href = "index.php?err=Your account has been terminated due to too many violations of the <a href=guidelines>Community Guidelines</a>.";
+                                         window.location.href = "/?err=Your account has been terminated due to too many violations of the <a href=guidelines>Community Guidelines</a>.";
                                          </script>');
                                          die();
                                                 }
