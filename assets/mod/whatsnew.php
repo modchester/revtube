@@ -1,14 +1,5 @@
 <h3>What's New</h3>
-The to-do list was scrapped, and replaced with a new one. But, the new one is finished. So we might bring the old to-do list back.
-<br><br>The current to-do list:
-<!-- I started this project in 2021. It's almost 2024, so for now, the current to-do list is being scrapped, and we now have a list of things to finish ASAP.<br> -->
-<!-- VistaTube's source code has finally left beta! This means all core features have been implemented.<br> -->
-<ul>
-    <del><li>Search</li></del>
-    <del><li>Video manager (list all videos from you)</li></del>
-    <del><li>Edit video details</li></del>
-    <!-- <li>Video privacy options</li> -->
-</ul>
+Nothing much. I might add community post posting soon though, since squareBracket(.pw) is basically dead now.
 <!-- <br>The current to-do list:       
 <ul>
     <li>Better player</li>
@@ -20,7 +11,7 @@ The to-do list was scrapped, and replaced with a new one. But, the new one is fi
     <li>Mobile site</li>
     <li>All Videos tab on channels</li>
 </ul> -->
-Suggest more features in our Discord server!
+<!-- Suggest more features in our Discord server! -->
 <!-- <ul class="unstyled">
 <li>account dropdown has been fixed</li>
 <li>featured videos added</li>

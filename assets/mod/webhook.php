@@ -1,5 +1,5 @@
 <?php
-
+# this shit doesnt work as of jan 12 2024 so uhh no more webhook embeds
 class DiscordWebhook {
   
   
