@@ -10,17 +10,7 @@
 <div class="container">
 <div class="content">
 <div class="page-header">
-          <?php
-      if(empty($_GET["msg"])) {
-        echo "<p style='display:none;'>no</p>";
-      } else if($_GET["msg"] === " ") {
-        echo "<p style='display:none;'>no</p>";
-      } else { echo '
-          <div class="alert-message success">
-        <p>'.$_GET["msg"].'</p>
-      </div>';
-    }
-          ?>
+            <?php include './assets/mod/msg.php'; ?>
             <?php include './assets/mod/alert.php'?>
           <h1>Upload your video <small><div id="clockbox"></div></small></h1>
           <?php include './assets/mod/todaysdate.php'; ?>

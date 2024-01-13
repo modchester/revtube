@@ -17,26 +17,8 @@
     <div class="container">
  <div class="content">
         <div class="page-header">
-          <?php
-      if(empty($_GET["msg"])) {
-        echo "<p style='display:none;'>no</p>";
-      } else if($_GET["msg"] === " ") {
-        echo "<p style='display:none;'>no</p>";
-      } else { echo '
-          <div class="alert-message success">
-        <p>'.$_GET["msg"].'</p>
-      </div>';
-    }
-    if(empty($_GET["err"])) {
-      echo "<p style='display:none;'>no</p>";
-    } else if($_GET["err"] === " ") {
-      echo "<p style='display:none;'>no</p>";
-    } else { echo '
-        <div class="alert-message danger">
- <p>'.$_GET["err"].'</p>
-    </div>';
-  }
-          ?>
+        <?php include './assets/mod/msg.php'; ?>
+        <?php include './assets/mod/err.php'; ?>
             <?php include './assets/mod/alert.php'?>
           <h1>Uploads <small><div id="clockbox"></div></small></h1>
           <?php include './assets/mod/todaysdate.php'; ?>
