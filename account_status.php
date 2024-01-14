@@ -62,6 +62,7 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 		  <ul class="yt-navigation-dark">
 	<a href="/account"><li>Edit Profile</li></a>
 	<li class="selected">Status</li>
+	<a href="/site_style"><li>Style</li></a>
 </ul>
 		    <h3>Account Status</h3>
 			Community guidelines: <img style="margin-top:2px !Important;" height="12" src="./assets/img/accstatus/<?php echo $icon;?>.png"> <?php echo $standing;?><br>

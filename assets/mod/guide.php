@@ -1,7 +1,8 @@
+<?php include("branding.php"); ?>
 <div class="guide">
     <ul>
         <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>    
-    <span>Most of <?php echo $sitename; ?></span>
+    <span>Most of <?php echo $site['name']; ?></span>
         <a href="/videos"><li class="guide-item"><i class="bi bi-camera-video-fill"></i> Videos</li></a>
         <a href="/explore"><li class="guide-item"><i class="bi bi-compass-fill"></i> Explore</li></a>
     <?php

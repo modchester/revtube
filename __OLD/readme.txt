@@ -4,7 +4,6 @@ It is not recommended to use files from here.
 
 Included:
 Broken players (2009, 2011, 2014) (we don't know why they don't work)
-2016 player (works but we don't need it)
 More players, probably
 Old 404 page
 Isolated webhook portion of uploader (February 2022?)

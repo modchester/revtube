@@ -35,8 +35,8 @@ a.ytp-youtube-button.ytp-button {
 </style>
   <body id="" class="date-20160613 en_US ltr  exp-responsive exp-scrollable-guide   site-center-aligned site-as-giant-card  not-yt-legacy-css " dir="ltr">
 <div id="player" class="full-frame"></div><div id="player-unavailable" class="ytp-error"><div id="unavailable-submessage" class="ytp-error-content"></div></div>  
-<script src="www-embed-player.js?<?php echo rand(1, 9999); ?>" type="text/javascript" name="www-embed-player/www-embed-player"></script>
-  <script src="base.js?<?php echo rand(1, 9999); ?>" name="player/base"></script>
+<script src="./2016/www-embed-player.js?<?php echo rand(1, 9999); ?>" type="text/javascript" name="www-embed-player/www-embed-player"></script>
+  <script src="./2016/base.js?<?php echo rand(1, 9999); ?>" name="player/base"></script>
 <script>yt.setConfig({
 	'EVENT_ID': "YSZgV-bRBqSH_AOkhIWYDQ",
 	'VIDEO_ID': "test",
