@@ -2,7 +2,7 @@
 <div class="guide">
     <ul>
         <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>    
-    <span>Most of <?php echo $site['name']; ?></span>
+        <!--<span>Most of <?php echo $site['name']; ?></span>-->
         <a href="/videos"><li class="guide-item"><i class="bi bi-camera-video-fill"></i> Videos</li></a>
         <a href="/explore"><li class="guide-item"><i class="bi bi-compass-fill"></i> Explore</li></a>
     <?php
@@ -32,7 +32,7 @@
       }
     ?>
    <?php include("getsubs.php"); ?><hr>
-        <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
         <a href="https://discord.gg/GbbQBsWXPK"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
+        <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
     </ul>
 </div>
