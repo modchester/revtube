@@ -27,7 +27,7 @@
                                     while($row = $result->fetch_assoc()) {
                                         $idk = strtotime($row['date']);
                                         $upload = date("F d, Y", $idk);
-                                        $title = $row['videotitle'];
+                                        $title = htmlspecialchars($row['videotitle']);
                                         $desc = $row['description'];
                                     if ($_SESSION['profileuser3'] !== $row['author']) {
                                         echo('<script>window.location.href = "/?err=This is not your video!";</script>');

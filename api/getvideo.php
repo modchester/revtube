@@ -8,7 +8,7 @@ if (isset($_GET['id']) && $_GET['id']!="") {
 	"SELECT * FROM `videos` WHERE vid='$id'");
 	if(mysqli_num_rows($result)>0){
 	$row = mysqli_fetch_array($result);
-    $title = $row['videotitle'];
+    $title = htmlspecialchars($row['videotitle']);
 	$vid = $row['vid'];
     $description = $row['description'];
 	$author = $row['author'];
