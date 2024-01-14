@@ -34,7 +34,7 @@
     
     .yt-footer { background-color: #0d0d0d; border-top: 1px solid #1d1d1d; }
     
-    .yt-alert-promo { background: transparent; box-shadow: none; }
+    .yt-alert-promo { background: #0a0a0a!important; box-shadow: none; color: white; border-color:#222!important; }
     
     .yt-uix-button { border: none; }
     
