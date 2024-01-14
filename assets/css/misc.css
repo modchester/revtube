@@ -119,9 +119,20 @@ a.menu::after, .dropdown-toggle::after {
 .guide ul {
   list-style-type: none;
 }
+.topbar .container {
+  margin: 0px!important;
+  padding-left: 55px;
+  width: 100%;
+}
+
+.topbar div > ul.secondary-nav, .nav.secondary-nav {
+margin-right: 5%;
+}
+
 .guide .guide-item {
   padding: 5px;
-  color: #333;
+  color: #555;
+  font-size: 11px;
 }
 .guide a {
   text-decoration: none;
@@ -130,8 +141,25 @@ a.menu::after, .dropdown-toggle::after {
   color: #fff;
 }
 .guide .guide-item:hover {
-  background: rgb(49, 49, 49);
+  background-image: linear-gradient(to bottom,#444 0,#333 100%);
 }
+
+
+
+.guide .guide-item i {
+    color: white;
+    background-image: linear-gradient(to bottom,#493bb9 0,#223794 100%);
+    padding: 3px;
+    font-size: 13px;
+    line-height: 2px;
+}
+
+.bi-plus-circle-fill {
+  border-radius: 2px;
+  background: #b3b3b3!important;
+  font-weight: bold;
+}
+
 .guide .guide-item-active {
   background: rgb(43, 17, 196);
 }
