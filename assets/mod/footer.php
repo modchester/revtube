@@ -1,3 +1,4 @@
+<?php include("branding.php"); ?>
 <footer class="yt-footer">
 <style>      .footerlogost {
         content: url('<?php echo $site['logo_source']; ?>') !important;
