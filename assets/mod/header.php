@@ -20,7 +20,9 @@ $start = $time;
           </ul>
           <form class="pull-left" action="results">
             <input name="q" type="text" placeholder="Search">
+            <button type="submit" class="yt-button searchbtn"><i class="bi bi-search"></i></button>
           </form>
+          <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
           	<?php
       if(!$loggedIn) {
         echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/alogin">Sign in</a></li><li><a class="nav-buttons yt-button primary" href="/aregister">Register</a></li></ul>';
@@ -47,7 +49,7 @@ $start = $time;
               <ul class=\"dropdown-menu\">
               <li></li>
                 <li><a href=\"./profile?user=".$row["username"]."\">Your Channel</a></li>
-                <li><a href=\"upload\">Upload</a></li>
+                <!--<li><a href=\"upload\">Upload</a></li>-->
                 <li><a href='my_videos'>Studio</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"account\">Settings</a></li>
