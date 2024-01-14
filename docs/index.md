@@ -1,7 +1,7 @@
 # RevTube Documentation
 ## Section 1 - How to install & basic setup
 To setup RevTube:
-- Clone the [Github Repo](https://github.com/cosmixcode/revtube) into your webservers public_html or htdocs folder (on Linux, it's usually /var/www/html, but it could be something different)
+- Clone the [Github Repo](https://github.com/ars0nstudios/revtube) into your webservers public_html or htdocs folder (on Linux, it's usually /var/www/html, but it could be something different)
 - Make a new SQL database
 - Import the SQL file located at `sql/db.sql` into your database
 - Edit the file `assets/mod/db.sample.php` to include your database credentials, ffmpeg/ffprobe path, and Discord webhook (optional), then rename it to `db.php`
