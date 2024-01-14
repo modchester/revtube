@@ -68,7 +68,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
             $pfp = idFromUser($row['author']);
             echo '
             <div class="rewatch">
-            <iframe height="360px" width="640px" src="/2funplr/index?v=//'.$_SERVER["SERVER_NAME"].'/content/video/' . $row["filename"] . '&vid='.$row['vid'].'" style="border: none;"></iframe>
+            <iframe height="360px" width="640px" src="/player/index?v=//'.$_SERVER["SERVER_NAME"].'/content/video/' . $row["filename"] . '&vid='.$row['vid'].'" style="border: none;"></iframe>
             <!--<video height="360px" width="640px" src="content/video/' . $row["filename"] . '" controls>No HTML5?</video>-->
             '.$debugmsg1.'
             <div class="rewatch-content rewatch-main">
