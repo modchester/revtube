@@ -4,9 +4,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <meta charset="utf-8">
-    <title><?php echo $sitename; ?></title>
+    <title><?php echo $site['name']; ?></title>
     <style>      .logost {
-        content: url('<?php echo $logosrc; ?>') !important;
+        content: url('<?php echo $site['logo_source']; ?>') !important;
         height: 23px;
         margin-top: -2px !important;
         margin-right: -13px !important;
@@ -32,14 +32,11 @@
     <!-- Le styles -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://s.imon.fr/css3-youtube-buttons/yt-buttons.css" rel="stylesheet">
-	<link href="/assets/css/misc.css" rel="stylesheet">
-  <link href="/assets/css/2013.css" rel="stylesheet">
-  <script>
-    const fluentUIeligibility = localStorage.getItem("fluentUIenabled");
-     if (fluentUIeligibility !== "true") {
-    localStorage.setItem("fluentUIenabled", "false");
-     }
-     if (fluentUIeligibility == "true") {
-      document.write('<link href="/assets/css/fluent.css" rel="stylesheet">');
-     }
-</script>
+	  <link href="/assets/css/misc.css" rel="stylesheet">
+    <link href="/assets/css/2013.css" rel="stylesheet">
+    <?php if($site['siteTheme'] == 'fluent') { ?>
+    <link href="/assets/css/fluent.css" rel="stylesheet">
+    <?php } ?>
+    <?php if($site['siteTheme'] == 'dark') { ?>
+    <link href="/assets/css/dark.css" rel="stylesheet">
+    <?php } ?>

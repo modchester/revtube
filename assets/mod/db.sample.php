@@ -60,7 +60,7 @@
       }
       return $verified;
    }   
-    
+
    $loggedIn = isset($_SESSION['profileuser3']);
 
    if(!isset($_SESSION["profileuser3"])) {

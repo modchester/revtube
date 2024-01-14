@@ -7,7 +7,7 @@ $start = $time;
 <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand logost" href="/"><!--<strong><?php echo $sitename; ?></strong>--></a>
+          <a class="brand logost" href="/"><!--<strong><?php echo $site['name']; ?></strong>--></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/videos">Videos</a></li>
