@@ -632,3 +632,10 @@ display:inline-block;
 .alignR {
   text-align: right;
 }
+.gbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* margin-bottom: 30px; */
+  height: 30px;
+}

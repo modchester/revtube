@@ -1,3 +1,6 @@
+<!-- <div class="gbar">
+  test
+</div> -->
 <?php
 $time = microtime();
 $time = explode(' ', $time);
