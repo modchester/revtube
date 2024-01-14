@@ -73,7 +73,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
             '.$debugmsg1.'
             <div class="rewatch-content rewatch-main">
              <h1 id="rewatch-title">
-               <span id="title">' . $row['videotitle'] . '</span>
+               <span id="title">' . htmlspecialchars($row['videotitle']) . '</span>
              </h1>
              <div class="rewatch-views">
                <span class="rewatch-views-text" style="width: 47px;display: inline-block;padding-bottom: 3px;">'.$row['views'].'</span><br>
