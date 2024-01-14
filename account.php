@@ -18,6 +18,7 @@
 		  <ul class="yt-navigation-dark">
 	<li class="selected">Edit Profile</li>
 	<a href="/account_status"><li>Status</li></a>
+	<a href="/site_style"><li>Style</li></a>
 </ul>
 		    <h3>Edit your settings</h3>
 			<form action="" method="post" enctype="multipart/form-data">

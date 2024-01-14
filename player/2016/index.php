@@ -25,7 +25,7 @@ a.ytp-youtube-button.ytp-button {
     margin-left: -12px;
 } */
 @font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//web.archive.org/web/20160614154433im_/https://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//web.archive.org/web/20160614154433im_/https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//web.archive.org/web/20160614154433im_/https://fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Z0EAVxt0G0biEntp43Qt6E.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//web.archive.org/web/20160614154433im_/https://fonts.gstatic.com/s/roboto/v15/W4wDsBUluyw0tK3tykhXEfesZW2xOQ-xsNqO47m55DA.ttf)format('truetype');}</style><script name="www-roboto">if (document.fonts && document.fonts.load) {document.fonts.load("400 10pt Roboto", "");document.fonts.load("500 10pt Roboto", "");}</script>
-<link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-embed-player-vflboaRA4.css" name="www-embed-player">
+<link rel="stylesheet" href="./2016/www-embed-player-vflboaRA4.css" name="www-embed-player">
 <script>__yt_experimental_now = __spf_experimental_now = true;</script><script>var ytcsi = {gt: function(n) {n = (n || '') + 'data_';return ytcsi[n] || (ytcsi[n] = {tick: {},span: {},info: {}});},now: window.performance && window.performance.timing &&window.performance.now ? function() {return window.performance.timing.navigationStart + window.performance.now();} : function() {return (new Date()).getTime();},tick: function(l, t, n) {ytcsi.gt(n).tick[l] = t || ytcsi.now();},span: function(l, s, e, n) {ytcsi.gt(n).span[l] = (e ? e : ytcsi.now()) - ytcsi.gt(n).tick[s];},setSpan: function(l, s, n) {ytcsi.gt(n).span[l] = s;},info: function(k, v, n) {ytcsi.gt(n).info[k] = v;},setStart: function(s, t, n) {ytcsi.info('yt_sts', s, n);ytcsi.tick('_start', t, n);}};(function(w, d) {ytcsi.setStart('dhs', w.performance ? w.performance.timing.responseStart : null);var isPrerender = (d.visibilityState || d.webkitVisibilityState) == 'prerender';var vName = d.webkitVisibilityState ? 'webkitvisibilitychange' : 'visibilitychange';if (isPrerender) {ytcsi.info('prerender', 1);var startTick = function() {ytcsi.setStart('dhs');d.removeEventListener(vName, startTick);};d.addEventListener(vName, startTick, false);}if (d.addEventListener) {d.addEventListener(vName, function() {ytcsi.tick('vc');}, false);}})(window, document);</script></head>
 
 <style>
@@ -35,8 +35,8 @@ a.ytp-youtube-button.ytp-button {
 </style>
   <body id="" class="date-20160613 en_US ltr  exp-responsive exp-scrollable-guide   site-center-aligned site-as-giant-card  not-yt-legacy-css " dir="ltr">
 <div id="player" class="full-frame"></div><div id="player-unavailable" class="ytp-error"><div id="unavailable-submessage" class="ytp-error-content"></div></div>  
-<script src="www-embed-player.js?<?php echo rand(1, 9999); ?>" type="text/javascript" name="www-embed-player/www-embed-player"></script>
-  <script src="base.js?<?php echo rand(1, 9999); ?>" name="player/base"></script>
+<script src="./2016/www-embed-player.js?<?php echo rand(1, 9999); ?>" type="text/javascript" name="www-embed-player/www-embed-player"></script>
+  <script src="./2016/base.js?<?php echo rand(1, 9999); ?>" name="player/base"></script>
 <script>yt.setConfig({
 	'EVENT_ID': "YSZgV-bRBqSH_AOkhIWYDQ",
 	'VIDEO_ID': "test",

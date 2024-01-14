@@ -58,7 +58,7 @@
                             ?>
         <div class="box">
                 <div class="divimg"><img height="76px" style="filter:invert(1);" src="assets/img/logo.png"></div>
-                <p>Use your <?php echo $sitename; ?> Account</p>
+                <p>Use your <?php echo $site['name']; ?> Account</p>
                 <form action="" method="POST">
                   <div class="inputBox">
                     <input type="text" name="name" required onkeyup="this.setAttribute('value', this.value);"  value="">
@@ -73,6 +73,6 @@
                               </center>
                 </form>
               </div>
-              <p class="footer">&copy <?php echo date("Y"); echo " ".$sitename; ?></p>
+              <p class="footer">&copy <?php echo date("Y"); echo " ".$site['name']; ?></p>
 </body>
 </html>

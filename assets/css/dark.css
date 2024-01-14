@@ -1,0 +1,211 @@
+    /* magnum22 was here :) */
+    
+    body { background-color: #000 !important; color: #bfbfbf; }
+    
+    a { color: #248eff; }
+    
+    a:hover { color: #8ac2ff; }
+    
+    h1, h2, h3, h4, h5, h6 { color: #bfbfbf; }
+    
+    hr { border-bottom: 1px solid #222; }
+    
+    .topbar > .fill { background: #0e0e0e; border-bottom: 1px solid #171717; }
+    
+    .topbar div > ul a:hover, .nav a:hover { color: #fff; }
+    
+    .btn.info, .alert-message.info { background: #0c4169; border-color: #3a78ab; }
+    
+    .topbar a { color: #ccc; }
+    
+    .guide .guide-item:hover { background: #333; box-shadow: 0 0 0 1px #555 inset; transition: box-shadow 0.3s ease; }
+    
+    .guide .guide-item:hover, .guide .guide-item-active { color: #fff; }
+    
+    .guide .guide-item { color: #ccc; transition: box-shadow 0.3s ease; }
+    
+    .page-header { background-color: #0a0a0a; }
+    
+    .page-header { border-bottom: 0px solid #222; box-shadow: 0 1px 0 #333; }
+    
+    .container > .content { background-color: #000; }
+    
+    .content .span4 { border-left: 1px solid #333; }
+    
+    .yt-footer { background-color: #0d0d0d; border-top: 1px solid #1d1d1d; }
+    
+    .yt-alert-promo { background: transparent; box-shadow: none; }
+    
+    .yt-uix-button { border: none; }
+    
+    #signup-promo-links .yt-uix-button, #signup-promo-content .yt-uix-button { box-shadow: 0 0 0 1px #36c inset; border-radius: 2px; }
+    
+    .guide .sign-in-box {
+        border: 1px solid #555;
+        background: #222;
+        color: #fff;
+        margin: 10px;
+        box-shadow: none;
+    }
+    
+    .pull-left > input {
+        background: #222;
+        border: 1px solid #555 !important;
+        box-shadow: inset 0 1px 2px #000 !important;
+    }
+    
+    .pull-left > input:hover { background: #333; }
+    
+    .pull-left > input:focus {
+        background: #000;
+        color: white;
+        text-shadow: none;
+        border: 1px solid #3a78ab !important;
+    }
+    
+    .topbar h3 a, .topbar .brand, .topbar h3 a:hover, .topbar .brand:hover, .topbar div > ul a.menu:hover, .nav a.menu:hover, .topbar div > ul li.open .menu, .nav li.open .menu, .topbar div > ul .dropdown-toggle:hover, .nav .dropdown-toggle:hover, .topbar div > ul .dropdown.open .dropdown-toggle, .nav .dropdown.open .dropdown-toggle {
+        color: #fff;
+    }
+    
+    .topbar div > ul .menu-dropdown, .nav .menu-dropdown, .topbar div > ul .dropdown-menu, .nav .dropdown-menu {
+        background-color: hsla(0, 0%, 0%, .5);
+        color: #333;
+        backdrop-filter: blur(5px);
+    }
+    
+    .topbar div > ul .menu-dropdown li a:hover, .nav .menu-dropdown li a:hover, .topbar div > ul .dropdown-menu li a:hover, .nav .dropdown-menu li a:hover { background-color: #aaa; }
+    
+    .topbar div > ul .menu-dropdown li a, .nav .menu-dropdown li a, .topbar div > ul .dropdown-menu li a, .nav .dropdown-menu li a {
+        color: #ccc;
+        text-shadow: none;
+    }
+    
+    
+    
+    .rewatch-main { border-bottom: 1px solid #191919; }
+    
+    .rewatch-content {
+        background: #000;
+        border: 1px solid #191919;
+        border-top-color: #191919;
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-bottom-color: #191919;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        padding: 15px;
+        border-top: none;
+    }
+    
+    #title { color: #fff; }
+    
+    .yt-button:active {
+        box-shadow: none !important;
+        border-color: #777 !important;
+        color: #ccc;
+        background-image: linear-gradient(to bottom,#000 0,#222 100%) !important;
+    }
+    
+    .yt-button:hover {
+        box-shadow: none !important;
+        border-color: #393939 !important;
+        background-color: #393939 !important;
+        color: #ccc;
+        background-image: linear-gradient(to bottom,#222 0,#222 100%) !important;
+    }
+    
+    .yt-button {
+        box-shadow: none !important;
+        border-radius: 2px 2px 2px 2px;
+        color: #ccc;
+        text-shadow: none;
+        border-color: #2c2c2c;
+        background-color: #070707;
+        background-image: linear-gradient(to bottom,#1c1c1c 0,#070707 100%);
+    }
+    
+    span.rewatch-name { color: #ccc ; }
+    
+    .rewatch h4 a { color: #ccc; }
+    
+    .yt-search-input {
+        color: white;
+        background-color: #000;
+        box-shadow: inset 0 1px 2px #111;
+        border: 1px solid #333;
+    }
+    
+    .yt-search-input:hover {
+        border: 1px solid #464646;
+        box-shadow: none;
+    }
+    
+    
+    
+    .tabs .active > a, .tabs .active > a:hover {
+        color: #7f7f7f;
+        background-color: #000;
+        border: 1px solid #222;
+        border-bottom-color: #222;
+    }
+    
+    .tabs { border-color: #222; }
+    
+    .tabs > li > a:hover {
+        background-color: #111;
+        border-color: #111 #111 #222;
+    }
+    
+    label { color: #bfbfbf; }
+    
+    .not-found { background: #0e0e0e; }
+    
+    .not-found-content__paragraph { color: #dedede; text-shadow: 0 0 0 transparent, 0 1px 1px #000; }
+    
+    .not-found-search__field {
+        background: #222;
+        color: white;
+        border: 1px solid #555;
+        box-shadow: inset 0 1px 2px #000 !important;
+    }
+    
+    .not-found-search__input { color: white; }
+    
+    .not-found-search__search-button {
+        background: #060606;
+        border: 1px solid #555;
+        color: #dedede;
+    }
+    
+    .not-found-search__search-button:hover {
+      background: #0e0e0e;
+      border-color: #333;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+    }
+    
+    .not-found-search__search-icon { filter: invert(100%); }
+    
+    .box { background: #111; border: 1px solid #25231f; }
+    
+    .box .inputBox input { border: 1px solid #333; color: white; }
+    
+    .box .inputBox input:focus ~ label, .box .inputBox input:valid ~ label, .box .inputBox input:not([value=""]) ~ label {
+        color: hsl(214, 82%, 71%);
+        background-color: transparent;
+        text-shadow:  1px 0 0 black,
+                      0 1px 0 black,
+                     0 -1px 0 black,
+                     -1px 0 0 black,
+                     0 0 10px hsl(0, 0%, 100%);
+    }
+    
+    input[type="file"] { background-color: #000; }
+    
+    .yt-navigation-dark { background: #333; }
+    
+    .yt-navigation-dark li:active, .yt-navigation-dark li:focus, .yt-navigation-dark li.selected { background: #222; }
+    
+    input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+      background-color: #0a0a0a;
+      border-color: #222;
+    }

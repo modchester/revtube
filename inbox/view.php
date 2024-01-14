@@ -29,7 +29,7 @@
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
                         if ($row['sender'] == "redst0ne" OR $row['sender'] == "VidFusion") {
-                            $official = '<i title="This is an official message from the '.$sitename.' team." class="bi bi-patch-check-fill"></i>';
+                            $official = '<i title="This is an official message from the '.$site['name'].' team." class="bi bi-patch-check-fill"></i>';
                         } else {
                             $official = "";
                         }
