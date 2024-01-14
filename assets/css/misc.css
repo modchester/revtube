@@ -119,6 +119,16 @@ a.menu::after, .dropdown-toggle::after {
 .guide ul {
   list-style-type: none;
 }
+.topbar .container {
+  margin: 0px!important;
+  padding-left: 55px;
+  width: 100%;
+}
+
+.topbar div > ul.secondary-nav, .nav.secondary-nav {
+margin-right: 5%;
+}
+
 .guide .guide-item {
   padding: 5px;
   color: #555;
