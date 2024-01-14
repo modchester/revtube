@@ -19,7 +19,7 @@ $start = $time;
            <!-- <li><a href="/upload">Upload</a></li> -->
           </ul>
           <form class="pull-left" action="results">
-            <input name="q" type="text" placeholder="Search" fdprocessedid="1r3x">
+            <input name="q" type="text" placeholder="Search">
           </form>
           	<?php
       if(!$loggedIn) {
