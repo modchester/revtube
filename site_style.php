@@ -9,6 +9,18 @@
 			setrawcookie("videoPlayer", $_POST['player'], time() + 2000000, "/");
 		}
 	}
+
+	$theme = ucfirst($_COOKIE['siteTheme']) ?? 'Default';
+	$videoPlayer = $_COOKIE['videoPlayer'] ?? 'yt2013';
+
+	if($videoPlayer == 'yt2016') {
+		$videoPlayer = 'YouTube (2016)';
+	} elseif($videoPlayer == 'videotag') {
+		$videoPlayer = 'Browser Default';
+	} else {
+		$videoPlayer = 'YouTube (2013)';
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +58,7 @@
 		<select name="player">
   			<option value="yt2013"> YouTube (2013)</option>
 			<option value="yt2016"> YouTube (2016)</option>
-			<option value="videotag"> Browser Default</option>
+			<option value="videotag"> Browser Default </option>
 		</select>
 		<div class="input-group">
 			<br>
@@ -54,33 +66,13 @@
 		</div>
 	</form>	
 </div><div class="span4">
-			<h3>Your Account Details</h3>
-			<?php
-			if(isset($_SESSION['profileuser3'])){
-			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
-			    $statement->bind_param("s", $_SESSION['profileuser3']);
-			    $statement->execute();
-			    $result = $statement->get_result();
-			    if($result->num_rows === 0) exit('No rows');
-			    while($row = $result->fetch_assoc()) {
-					$rows = getSubscribers($_SESSION['profileuser3'], $mysqli);
-			        echo "
-			        <div class=\"user-info\">
-				        <a href=\"./profile?user=".$row["username"]."\"><img width=\"225px\" height=\"225px\" src=\"/content/pfp/".getUserPic($row["id"])."\"></a>
-				        <div class=\"user-stats\">
-					        <div class=\"username\"><a href=\"./profile?user=".$row["username"]."\">".$row["username"]."</a></div>
-					        <div><span class=\"subscribers black\">".$rows."</span> subscribers</div>
-					        <div>Your E-mail: <span class=\"black\">".$row["email"]."</span></div>
-					        <div>Joined: <span class=\"black\">".$row["date"]."</span></div>
-				        </div>
-			        </div>
-			        <hr>
-			        <h3>Your Current Description</h3>
-			        <textarea class=\"current-description\" readonly>".$row["description"]."</textarea>";
-			    }
-			    $statement->close();
-			}
-			?>
+			<h3>Selected Options</h3>
+			<p><i class="bi bi-brush"></i> Site Style</p>
+			<input type="text" disabled value="<?php echo htmlspecialchars($theme); ?>">
+			<br><br>
+			<p><i class="bi bi-play-btn"></i> Video Player</p>
+			<input type="text" disabled value="<?php echo htmlspecialchars($videoPlayer); ?>">
+
             </div>
         </div>
       </div>
