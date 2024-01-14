@@ -46,6 +46,7 @@
 		<select name="player">
   			<option value="yt2013"> YouTube (2013)</option>
 			<option value="yt2016"> YouTube (2016)</option>
+			<option value="videotag"> Browser Default</option>
 		</select>
 		<div class="input-group">
 			<br>
