@@ -7,7 +7,7 @@ if (isset($_GET['return']) && $_GET['return']!="") {
 	"SELECT * FROM `videos` ORDER BY RAND() LIMIT 1");
 	if(mysqli_num_rows($result)>0){
 	$row = mysqli_fetch_array($result);
-    $title = $row['videotitle'];
+    $title = htmlspecialchars($row['videotitle']);
 	$vid = $row['vid'];
     $description = $row['description'];
 	$author = $row['author'];
