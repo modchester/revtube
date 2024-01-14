@@ -80,7 +80,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
              </div>
              <div id="rewatch-author">
               <img class="rewatch-pfp" src="content/pfp/' .getUserPic($pfp). '" width="48" height="48">
-              <a style="color:#333;text-decoration:none;" href="profile?user='.$row['author'].'"><span class="rewatch-name">' . $row['author'] . ' '.$verified.'</span></a>';
+              <a style="color:#333;text-decoration:none;" href="profile?user='.$row['author'].'"><span class="rewatch-name">' . $row['author'] . ' '.$verified.'</a>';
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
                 <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
@@ -189,7 +189,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
-            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'>(" . $time . ")</span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
+            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
         }
         $stmt->close();
     ?>

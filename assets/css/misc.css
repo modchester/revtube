@@ -623,3 +623,9 @@ display:inline-block;
   font-weight: normal;
   margin: 0 4px 0 8px;
 }
+.cmt {
+  margin-left: 3px;
+  color: #999;
+  display: inline-block;
+  font-size: 11px;
+}
