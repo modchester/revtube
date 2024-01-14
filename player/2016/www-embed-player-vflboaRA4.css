@@ -602,7 +602,7 @@ h3 {
     right: 5px;
     height: 9px;
     width: 13px;
-    background-color: #f12b24;
+    background-color: #2454f1;
     border-radius: 1px;
     line-height: normal
 }
@@ -1024,7 +1024,7 @@ h3 {
 }
 
 .ytp-swatch-color {
-    color: #f12b24
+    color: #2454f1
 }
 
 .ytp-color-white .ytp-swatch-color {
@@ -5397,7 +5397,7 @@ a.ytp-ce-link:hover {
     -moz-transition: fill .1s cubic-bezier(0.0, 0.0, 0.2, 1), fill-opacity .1s cubic-bezier(0.0, 0.0, 0.2, 1);
     -webkit-transition: fill .1s cubic-bezier(0.0, 0.0, 0.2, 1), fill-opacity .1s cubic-bezier(0.0, 0.0, 0.2, 1);
     transition: fill .1s cubic-bezier(0.0, 0.0, 0.2, 1), fill-opacity .1s cubic-bezier(0.0, 0.0, 0.2, 1);
-    fill: #cc181e;
+    fill: #2454f1;
     fill-opacity: 1
 }
 
