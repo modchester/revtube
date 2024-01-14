@@ -21,8 +21,8 @@
     <script type="text/javascript" src="/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-tabs.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="upload your funny video">
-    <meta name="author" content="Redst0neTech, Kai">
+    <meta name="description" content="The world's smallest video sharing community">
+    <meta name="author" content="neroidev, Kai">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
