@@ -10,7 +10,7 @@
         height: 23px;
         margin-top: -2px !important;
         margin-right: -13px !important;
-         margin-left: -60px !important; 
+         margin-left: -45px !important; 
         margin-bottom: -1px;
         /* filter: invert(1); */
     } </style>

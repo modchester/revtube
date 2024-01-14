@@ -673,12 +673,18 @@ display:inline-block;
   border-bottom-left-radius: 0 !important;
     padding: 4px;
     height: 27.6px;
-    margin-left: -4px;
+    margin-left: -5px;
     width: 65px;
+}
+.searchbtn > .bi {
+  font-weight: 9px !important;
 }
 .uploadbtn {
   margin-left: 25px;
   margin-top: 5px;
   height: 15px;
   line-height: 15px;
+}
+.dropdown-toggle {
+  margin-right: 0 !important; 
 }
