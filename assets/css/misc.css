@@ -629,3 +629,6 @@ display:inline-block;
   display: inline-block;
   font-size: 11px;
 }
+.alignR {
+  text-align: right;
+}

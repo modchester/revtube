@@ -1,5 +1,10 @@
 <h3>What's New</h3>
-Nothing much. I might add community post posting soon though, since squareBracket(.pw) is basically dead now.
+<b>Themes & Players</b><br>
+You can now change your theme and what player you want to use in settings (added by kaisiece).
+<br><br>
+<p class="alignR">
+        <a href="blog">Read more in our Blog</a>
+      </p>
 <!-- <br>The current to-do list:       
 <ul>
     <li>Better player</li>
