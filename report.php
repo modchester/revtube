@@ -14,10 +14,10 @@
         if(!isset($_SESSION['profileuser3'])) {
             die("<br>Login to report....");
         }} 
-        if(!isset($webhook)) {
+        if(!isset($reports_webhook)) {
             die("<br><h2>Video reporting isn't enabled on this instance.</h2>");
         }
-        if(empty($webhook)) {
+        if(empty($reports_webhook)) {
             die("<br><h2>Video reporting isn't enabled on this instance.</h2>");
         }
         ?>
@@ -27,10 +27,16 @@
             if (isset($_GET['v'])) {
                 $video = $_GET['v'];
                 $disabled = 'disabled';
+            } else {
+                $video = "";
+                $disabled = "";
             }
             if (isset($_GET['offender'])) {
                 $offender = $_GET['offender'];
                 $disableda = 'disabled';
+            } else {
+                $offender = "";
+                $disableda = "";
             }
             ?>
     <?php
@@ -51,7 +57,7 @@
     $msg = "### New report by $username:\nReason: $proname\nVideo ID: $link\nUploader: $user";
     $json_data = array ('content'=>"$msg");
     $make_json = json_encode($json_data);
-    $ch = curl_init( $webhook );
+    $ch = curl_init( $reports_webhook );
     curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
     curl_setopt( $ch, CURLOPT_POST, 1);
     curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
@@ -70,7 +76,7 @@ $user = @$_POST["username"];
 
 if(isset($_POST["submit"])){
 
-    $dw = new DiscordWebhook($webhook);
+    $dw = new DiscordWebhook($reports_webhook);
     $username = $_SESSION['profileuser3'];
 
     $dw->newMessage()
@@ -88,7 +94,7 @@ if(isset($_POST["submit"])){
      echo('<script>
                window.location.href = "index?err=Your report has been submitted successfully!";
                </script>');
-}*/
+} */
 ?>
         <div class="col-1-2">
             <br>

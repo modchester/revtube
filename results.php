@@ -13,7 +13,32 @@
         <?php include './assets/mod/alert.php';?>
           <h1><?php
         $re = htmlspecialchars($_GET["q"]);
-    echo ("Search results for &quot;".$re."&quot;")
+    echo ("Search results for &quot;".$re."&quot;");
+    if($_GET['q'] == "do a barrel roll") {
+      echo ('<style>@-webkit-keyframes roll {
+        from { -webkit-transform: rotate(0deg) }
+        to   { -webkit-transform: rotate(360deg) }
+        }
+        
+        @-moz-keyframes roll {
+        from { -moz-transform: rotate(0deg) }
+        to   { -moz-transform: rotate(360deg) }
+        }
+        
+        @keyframes roll {
+        from { transform: rotate(0deg) }
+        to   { transform: rotate(360deg) }
+        }
+        
+        body {
+        -moz-animation-name: roll;
+        -moz-animation-duration: 4s;
+        -moz-animation-iteration-count: 1;
+        -webkit-animation-name: roll;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: 1;
+        }</style>');
+    }
     ?> <small><div id="clockbox"></div></small></h1>
           <?php include './assets/mod/todaysdate.php'; ?>
         </div>

@@ -1,6 +1,8 @@
 <?php
     // put your discord webhook here
     $webhook = "";
+    // for reports (optional)
+    $reports_webhook = "";
     
     // debug mode
     $debug = true;
