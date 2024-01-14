@@ -45,7 +45,7 @@
 	<li class="selected">Style</li>
 </ul>
 
-<div class="alert-message info"><p>There settings only apply locally, not site wide.</p></div>
+<div class="alert-message info"><p>These settings apply to this browser only.</p></div>
 	<form action="" method="POST">
 		<h3><i class="bi bi-brush"></i> Site Style</h3>
 		<select name="theme">
