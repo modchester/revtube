@@ -196,7 +196,7 @@
                   $join = strtotime($row["date"]);
                   $join2 = date('F d, Y',$join);
                     echo "<div class='card message'>
-                    ".$row["description"]."
+                    ".htmlspecialchars($row["description"])."
                     </div>
                     <hr>
                     <h3>Statistics</h3>
