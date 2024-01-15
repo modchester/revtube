@@ -1,6 +1,8 @@
 
-      /* Override some defaults */
+
+/* Override some defaults */
       body {
+        background: #fbfbfb;
         padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
       .container > footer p {

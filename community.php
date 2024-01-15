@@ -39,11 +39,11 @@
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
               <ul class="tabs" data-tabs="tabs">
-  <li><a href="profile?user=<?php echo $_GET['user']; ?>">Home</a></li>
-  <li><a href="all_videos?user=<?php echo $_GET['user']; ?>">All Videos</a></li>
-  <li><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
-  <li><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
-  <li class="active"><a href="community?user=<?php echo $_GET['user']; ?>">Community</a></li>
+  <li><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
+  <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
+  <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
+  <li><a href="subscriptions?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscriptions</a></li>
+  <li class="active"><a href="community?user=<?php echo htmlspecialchars($_GET['user']); ?>">Community</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -83,7 +83,7 @@
                         error_reporting(~E_ALL & ~E_DEPRECATED);
                         $pfp = idFromUser($row['author']);
                         $time = time_elapsed_string($row['date']);
-                        echo '<div class="comment"><img class="cmn" height="34px" width="34px" src="content/pfp/'.getUserPic($pfp).'"><div class="commenttitle"><a style="font-weight:bold;" href="profile?user='.$row['author'].'">'.$row['author'].'</a> <span title="'.$row['date'].'">('.$time.')</span></div><div class="cmntxt">'.$row['content'].'</div></div>';
+                        echo '<div class="comment"><img class="cmn" height="34px" width="34px" src="content/pfp/'.getUserPic($pfp).'"><div class="commenttitle"><a style="font-weight:bold;" href="profile?user='.htmlspecialchars($row['author']).'">'.htmlspecialchars($row['author']).'</a> <span title="'.$row['date'].'">('.$time.')</span></div><div class="cmntxt">'.htmlspecialchars($row['content']).'</div></div>';
                     }
                     }
                     else{
@@ -115,7 +115,7 @@
                     $verified = '';
                   }
                   echo('
-            <h3><h2>'.$row["username"].' '.$staff.' '.$verified.'</h2></h3>
+            <h3><h2>'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
       if(isset($_SESSION['profileuser3'])) {
@@ -125,11 +125,11 @@
       } else {
           if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
          echo '
-         <a class="yt-button danger" href="/subscribe?name=' . $row['username'] . '">Subscribe ('.$rows.')</a>
+         <a class="yt-button danger" href="/subscribe?name=' . htmlspecialchars($row['username']) . '">Subscribe ('.$rows.')</a>
          ';
          } else { 
           echo '
-          <a class="yt-button" href="/unsubscribe?name=' . $row['username'] . '">Unsubscribe ('.$rows.')</a>
+          <a class="yt-button" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '">Unsubscribe ('.$rows.')</a>
       ';
            }}
           } else {

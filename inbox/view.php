@@ -28,7 +28,7 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
-                        if ($row['sender'] == "redst0ne" OR $row['sender'] == "VidFusion") {
+                        if ($row['sender'] == "redst0ne" OR $row['sender'] == $site['name']) {
                             $official = '<i title="This is an official message from the '.$site['name'].' team." class="bi bi-patch-check-fill"></i>';
                         } else {
                             $official = "";
@@ -36,10 +36,10 @@
                         if ($_SESSION['profileuser3'] !== $row['reciever']) {
                             echo '<script>window.location.href = "../index?err=Forbidden.";</script>';
                         }
-                        echo '<h2>'.$row['subject'].'</h2>
-<em>From: '.$row['sender'].' '.$official.'<br>
-To: '.$row['reciever'].'<br>Sent: '.$row['date'].'<br></em><hr>
-                           <p> '.$row['content'].'</p>
+                        echo '<h2>'.htmlspecialchars($row['subject']).'</h2>
+<em>From: '.htmlspecialchars($row['sender']).' '.$official.'<br>
+To: '.htmlspecialchars($row['reciever']).'<br>Sent: '.$row['date'].'<br></em><hr>
+                           <p> '.htmlspecialchars($row['content']).'</p>
                         ';
                     }
                 }

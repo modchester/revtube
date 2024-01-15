@@ -39,11 +39,11 @@
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
               <ul class="tabs" data-tabs="tabs">
-  <li><a href="profile?user=<?php echo $_GET['user']; ?>">Home</a></li>
-  <li><a href="all_videos?user=<?php echo $_GET['user']; ?>">All Videos</a></li>
-  <li><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
-  <li class="active"><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
-  <li><a href="community?user=<?php echo $_GET['user']; ?>">Community</a></li>
+  <li><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
+  <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
+  <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
+  <li class="active"><a href="subscriptions?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscriptions</a></li>
+  <li><a href="community?user=<?php echo htmlspecialchars($_GET['user']); ?>">Community</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -84,10 +84,10 @@
                         $name = htmlspecialchars($row['receiver']);
                         echo "<div class='user'>
 				    	<div class='user-info'>
-						    <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".$name."</b></a> (".$rows." subscribers)</div>
+						    <div><a href='./profile?user=".htmlspecialchars($name)."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".htmlspecialchars($name)."</b></a> (".$rows." subscribers)</div>
 						    <!-- <div><span class='black'>".$rows."</span> subscribers</div> -->
 					    </div>
-					  <!-- <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' src='content/pfp/".getUserPic($pid)."'></a></div> -->
+					  <!-- <div><a href='./profile?user=".htmlspecialchars($name)."'><img class='cmn' height='34px' width='34px' src='content/pfp/".getUserPic($pid)."'></a></div> -->
 				    </div>
 				    <hr>";
                     }
@@ -130,11 +130,11 @@
       } else {
           if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
          echo '
-         <a class="yt-button danger" href="/subscribe?name=' . $row['username'] . '">Subscribe ('.$rows.')</a>
+         <a class="yt-button danger" href="/subscribe?name=' . htmlspecialchars($row['username']) . '">Subscribe ('.$rows.')</a>
          ';
          } else { 
           echo '
-          <a class="yt-button" href="/unsubscribe?name=' . $row['username'] . '">Unsubscribe ('.$rows.')</a>
+          <a class="yt-button" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '">Unsubscribe ('.$rows.')</a>
       ';
            }}
           } else {

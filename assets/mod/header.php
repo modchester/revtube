@@ -45,19 +45,19 @@ $start = $time;
             }
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]." <img style='margin-bottom:-2px;' height='12px' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
+              <a href=\"#\" class=\"dropdown-toggle\">".htmlspecialchars($row["username"])." <img style='margin-bottom:-2px;' height='12px' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
               <ul class=\"dropdown-menu\">
               <li></li>
-                <li><a href=\"./profile?user=".$row["username"]."\">Your Channel</a></li>
+                <li><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">Your Channel</a></li>
                 <!--<li><a href=\"upload\">Upload</a></li>-->
                 <li><a href='my_videos'>Studio</a></li>
                 <li class=\"divider\"></li>
                 <li><a href=\"account\">Settings</a></li>
                 ".$adminlink."
-                <li><a href=\"logout\">Logout ".$row["username"]."</a></li>
+                <li><a href=\"logout\">Logout ".htmlspecialchars($row["username"])."</a></li>
               </ul>
             </li>
-          </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".$row["username"]."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";
+          </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".htmlspecialchars($row["username"])."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";
 			    }
 			    $statement->close();
       }

@@ -28,7 +28,7 @@
                                         $idk = strtotime($row['date']);
                                         $upload = date("F d, Y", $idk);
                                         $title = htmlspecialchars($row['videotitle']);
-                                        $desc = $row['description'];
+                                        $desc = htmlspecialchars($row['description']);
                                     if ($_SESSION['profileuser3'] !== $row['author']) {
                                         echo('<script>window.location.href = "/?err=This is not your video!";</script>');
                                     }

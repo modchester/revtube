@@ -42,9 +42,9 @@
                         $out = strlen($row['content']) > 25 ? mb_substr($row['content'],0,25)."..." : $row['content'];
                         echo '
                           <tr>
-                            <td>'.$row['sender'].'</td>
-                            <td>'.$row['subject'].'</td>
-                            <td>'.$out.'</td>
+                            <td>'.htmlspecialchars($row['sender']).'</td>
+                            <td>'.htmlspecialchars($row['subject']).'</td>
+                            <td>'.htmlspecialchars($out).'</td>
                             <td><a href="view?id='.$row['id'].'">View</a></td>
                           </tr>
                           <tr>

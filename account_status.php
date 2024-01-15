@@ -82,9 +82,9 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 			        <div class=\"user-info\">
 				        <a href=\"./profile?user=".$row["username"]."\"><img width=\"225px\" height=\"225px\" src=\"/content/pfp/".getUserPic($row["id"])."\"></a>
 				        <div class=\"user-stats\">
-					        <div class=\"username\"><a href=\"./profile?user=".$row["username"]."\">".$row["username"]."</a></div>
+					        <div class=\"username\"><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">".htmlspecialchars($row["username"])."</a></div>
 					        <div><span class=\"subscribers black\">".$rows."</span> subscribers</div>
-					        <div>Your E-mail: <span class=\"black\">".$row["email"]."</span></div>
+					        <div>Your E-mail: <span class=\"black\">".htmlspecialchars($row["email"])."</span></div>
 					        <div>Joined: <span class=\"black\">".$row["date"]."</span></div>
 				        </div>
 			        </div>
