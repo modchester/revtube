@@ -11,13 +11,13 @@ $start = $time;
       <div class="fill">
         <div class="container">
           <a class="brand logost" href="/"><!--<strong><?php echo $site['name']; ?></strong>--></a>
-          <ul class="nav">
+         <!-- <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/videos">Videos</a></li>
             <li><a href="/channels">Channels</a></li>
             <li><a href="/explore">Explore</a></li>
-           <!-- <li><a href="/upload">Upload</a></li> -->
-          </ul>
+           <!- <li><a href="/upload">Upload</a></li> ->
+          </ul>-->
           <form class="pull-left" action="results">
             <input name="q" type="text" placeholder="Search">
             <button type="submit" class="yt-button searchbtn"><i class="bi bi-search"></i></button>

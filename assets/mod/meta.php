@@ -9,8 +9,9 @@
         content: url('<?php echo $site['logo_source']; ?>') !important;
         height: 23px;
         margin-top: -2px !important;
-        margin-right: -13px !important;
-         margin-left: -45px !important; 
+        /* margin-right: -13px !important; */
+        margin-right: 99px !important;
+         margin-left: -36px !important; 
         margin-bottom: -1px;
         /* filter: invert(1); */
     } </style>
