@@ -20,15 +20,15 @@
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\">".$row["username"]."</a>
+              <a href=\"#\" class=\"dropdown-toggle\">".htmlspecialchars($row["username"])."</a>
               <ul class=\"dropdown-menu\">
               <li></li>
                 <li><a href=\"../\">Back to ".$site['name']."</a></li>
                 <li class=\"divider\"></li>
-                <li><a href=\"logout\">Logout ".$row["username"]."</a></li>
+                <li><a href=\"logout\">Logout ".htmlspecialchars($row["username"])."</a></li>
               </ul>
             </li>
-          </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".$row["username"]."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";
+          </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".htmlspecialchars($row["username"])."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";
 			    }
 			    $statement->close();
       }

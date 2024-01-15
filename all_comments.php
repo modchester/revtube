@@ -41,9 +41,9 @@
                                 </div>
                                 <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.htmlspecialchars($row['videotitle']).'</b></a></div>
                                 <div class="col-1-3 video-info">
-                                    <div><a href="profile?user='.$row['author'].'">'.$row['author'].'</a></div>
+                                    <div><a href="profile?user='.htmlspecialchars($row['author']).'">'.htmlspecialchars($row['author']).'</a></div>
                                     <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
-                                    <div><em>'.$row['description'].'</em></div>
+                                    <div><em>'.htmlspecialchars($row['description']).'</em></div>
                                 </div>
                             </div>
                             <hr>';
@@ -65,7 +65,7 @@
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
-            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . "</a> <span title='".$row["date"]."'>(" . $time . ")</span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
+            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . "</a> <span title='".$row["date"]."'>(" . $time . ")</span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div>";
         }
         $stmt->close();
     ?>

@@ -38,11 +38,11 @@
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
               <ul class="tabs" data-tabs="tabs">
-  <li class="active"><a href="profile?user=<?php echo $_GET['user']; ?>">Home</a></li>
-  <li><a href="all_videos?user=<?php echo $_GET['user']; ?>">All Videos</a></li>
-  <li><a href="subscribers?user=<?php echo $_GET['user']; ?>">Subscribers</a></li>
-  <li><a href="subscriptions?user=<?php echo $_GET['user']; ?>">Subscriptions</a></li>
-  <li><a href="community?user=<?php echo $_GET['user']; ?>">Community</a></li>
+  <li class="active"><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
+  <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
+  <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
+  <li><a href="subscriptions?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscriptions</a></li>
+  <li><a href="community?user=<?php echo htmlspecialchars($_GET['user']); ?>">Community</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -69,7 +69,7 @@
                      //   $finalstring .= "</div>";
 
                        // echo $finalstring;
-                        $username = $row["username"];
+                        $username = htmlspecialchars($row["username"]);
                     }
                     $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `author` = ?");
                     $statement->bind_param("s", $username);
@@ -97,7 +97,7 @@
                                 <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.htmlspecialchars($row['videotitle']).'</b></a></div>
                                 <div class="col-1-3 video-info">
                                     <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
-                                    <div><em>'.$row['description'].'</em></div>
+                                    <div><em>'.htmlspecialchars($row['description']).'</em></div>
                                 </div>
                             </div>
                             <hr>';
@@ -132,21 +132,21 @@
                     $verified = '';
                   }
                   echo('
-            <h3><h2>'.$row["username"].' '.$staff.' '.$verified.'</h2></h3>
+            <h3><h2>'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
       if(isset($_SESSION['profileuser3'])) {
         if($row['username'] == $_SESSION['profileuser3']) {
           echo '
-          <a href="account" id="editprof" class="yt-button primary" type="button">Manage Account</a>';
+          <a href="/account" id="editprof" class="yt-button primary" type="button">Manage Account</a>';
       } else {
           if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
          echo '
-         <a class="yt-button danger" href="/subscribe?name=' . $row['username'] . '">Subscribe ('.$rows.')</a>
+         <a class="yt-button danger" href="/subscribe?name=' . htmlspecialchars($row['username']) . '">Subscribe ('.$rows.')</a>
          ';
          } else { 
           echo '
-          <a class="yt-button" href="/unsubscribe?name=' . $row['username'] . '">Unsubscribe ('.$rows.')</a>
+          <a class="yt-button" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '">Unsubscribe ('.$rows.')</a>
       ';
            }}
           } else {
@@ -196,7 +196,7 @@
                   $join = strtotime($row["date"]);
                   $join2 = date('F d, Y',$join);
                     echo "<div class='card message'>
-                    ".$row["description"]."
+                    ".htmlspecialchars($row["description"])."
                     </div>
                     <hr>
                     <h3>Statistics</h3>

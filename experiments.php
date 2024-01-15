@@ -15,20 +15,23 @@
         </div>
         <div class="row">
           <div class="span10">
+<!--
+fluent ui was moved into site style settings :3
 <div>
     <h3>Experiment #1 - Fluent UI</h3>
     <p>Makes the 2013 YouTube esque UI look more like the UI found in Windows 11. 
     <form action="" method="POST">
     <?php 
-   if ($_SESSION["fluentUIenabled"] = "false") {
+   /*if ($_SESSION["fluentUIenabled"] = "false") {
         echo '<input class="yt-button" name="enabledfluent" type="submit" value="ENABLE">';
    } 
    if ($_SESSION["fluentUIenabled"] = "true") {
     echo '<input class="yt-button" name="disablefluent" type="submit" value="DISABLE">';
-   }
+   }*/
    ?>
     </form>
-</div>
+</div>-->
+<h3>There are no public experiments at the moment. Check back later!</h3>
 </div>
     </div> <!-- /container -->
     <?php include './assets/mod/footer.php'; ?>

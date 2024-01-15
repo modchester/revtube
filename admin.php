@@ -90,8 +90,8 @@
                         
         
             <th>'.$row['id'].'</th>
-            <td>'.$row['username'].'</td>
-            <td>'.$row['email'].'</td>
+            <td>'.htmlspecialchars($row['username']).'</td>
+            <td>'.htmlspecialchars($row['email']).'</td>
             <td>'.$row['date'].'</td>
             <td>'.$verified.'</td>
           </tr>
@@ -141,7 +141,7 @@
                     $result = $statement->get_result();
                     if($result->num_rows !== 0){
                         while($row = $result->fetch_assoc()) {
-                            echo '<li>' . $row['author'] . ' &bull; ' . $row['content'] . ' &bull; ' . $row['date'] . '</li>';
+                            echo '<li>' . htmlspecialchars($row['author']) . ' &bull; ' . htmlspecialchars($row['content']) . ' &bull; ' . $row['date'] . '</li>';
                         }
                     }
                     else{

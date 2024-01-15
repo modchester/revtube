@@ -13,4 +13,4 @@ RevTube is currently in development, so we do not have a public instance at this
 ## January 12, 2024
 The RevTube branding has been restored. (Also it's been a little over 2 years since this project started so that's neat, I guess.)
 
-*To see every update, view the full [changelog](https://github.com/cosmixcode/revtube/blob/semi-2013/changelog.md).*
+*To see every update, view the full [changelog](https://github.com/ars0nstudios/revtube/blob/semi-2013/changelog.md).*
