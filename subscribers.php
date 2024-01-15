@@ -76,7 +76,7 @@
                     $statement->bind_param("s", $_GET['user']);
                     $statement->execute();
                     $result = $statement->get_result();
-                    echo "<h3>".$_GET['user']."'s subscribers</h3>";
+                    echo "<h3>".htmlspecialchars($_GET['user'])."'s subscribers</h3>";
                     if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
                         $pid = idFromUser($row['sender']);
@@ -120,7 +120,7 @@
                     $verified = '';
                   }
                   echo('
-            <h3><h2>'.$row["username"].' '.$staff.' '.$verified.'</h2></h3>
+            <h3><h2>'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
             '); 
       if(isset($_SESSION['profileuser3'])) {
@@ -187,7 +187,7 @@
                   $join = strtotime($row["date"]);
                   $join2 = date('F d, Y',$join);
                     echo "<div class='card message'>
-                    ".$row["description"]."
+                    ".htmlspecialchars($row["description"])."
                     </div>
                     <hr>
                     <h3>Statistics</h3>

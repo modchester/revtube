@@ -70,7 +70,7 @@
                      //   $finalstring .= "</div>";
 
                        // echo $finalstring;
-                        $username = $row["username"];
+                        $username = htmlspecialchars($row["username"]);
                     }
                     $statement = $mysqli->prepare("SELECT * FROM `community` WHERE `author` = ? ORDER BY date DESC");
                     $statement->bind_param("s", $username);
@@ -179,7 +179,7 @@
                   $join = strtotime($row["date"]);
                   $join2 = date('F d, Y',$join);
                     echo "<div class='card message'>
-                    ".$row["description"]."
+                    ".htmlspecialchars($row["description"])."
                     </div>
                     <hr>
                     <h3>Statistics</h3>
