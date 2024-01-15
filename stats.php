@@ -34,7 +34,7 @@
             <hr>
 <h3>Server info</h3>
 <p>OS: <?php echo php_uname() ?></p>
-<!--<p>CPU: <?php //exec('wmic cpu get name | find /v "Name"', $cpuname); //print_r($cpuname); ?></p>-->
+<!-- <p>CPU: <?php //exec('wmic cpu get name | find /v "Name"', $cpuname); print($cpuname[0]); ?></p> -->
           </div>
           <div class="span4">
 <?php include './assets/mod/whatsnew.php'; ?>

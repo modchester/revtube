@@ -1,6 +1,8 @@
 
-      /* Override some defaults */
+
+/* Override some defaults */
       body {
+        background: #fbfbfb;
         padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
       .container > footer p {
@@ -687,4 +689,11 @@ display:inline-block;
 }
 .dropdown-toggle {
   margin-right: 0 !important; 
+}
+
+.searchbtn {
+  color: #424242!important;
+  font-weight: 9;
+  font-size: 13px;  
+  line-height: 2px;
 }

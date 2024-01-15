@@ -80,8 +80,8 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</span>
              </div>
              <div id="rewatch-author">
-              <img class="rewatch-pfp" src="content/pfp/' .getUserPic($pfp). '" width="48" height="48">
-              <a style="color:#333;text-decoration:none;" href="profile?user='.$row['author'].'"><span class="rewatch-name">' . $row['author'] . ' '.$verified.'</a>';
+              <img class="rewatch-pfp" src="content/pfp/' .htmlspecialchars(getUserPic($pfp)). '" width="48" height="48">
+              <a style="color:#333;text-decoration:none;" href="profile?user='.htmlspecialchars($row['author']).'"><span class="rewatch-name">' . htmlspecialchars($row['author']) . ' '.$verified.'</a>';
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
                 <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
@@ -89,11 +89,11 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         if(isset($_SESSION['profileuser3'])) {
             if(ifSubscribed($_SESSION['profileuser3'], $row['author'], $mysqli) == false) {
            echo '
-           <a class="yt-button danger" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . $row['author'] . '">Subscribe</a>
+           <a class="yt-button danger" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['author']) . '">Subscribe</a>
            ';
            } else { 
             echo '
-            <a class="yt-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . $row['author'] . '">Unsubscribe</a>
+            <a class="yt-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['author']) . '">Unsubscribe</a>
         ';
              } 
             } else {
@@ -109,7 +109,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
             </div>
             <div class="rewatch-content">
             <p id="rewatch-date"><strong>Published on ' . $uploaddate . '</strong></p>
-               <span id="description">' . $row['description'] . '</span>
+               <span id="description">' . htmlspecialchars($row['description']) . '</span>
            <hr>         
                 ';
             $videoid = $row['vid'];
@@ -190,7 +190,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
-            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .getUserPic($pfp). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . $row['author'] . "'>" . $row['author'] . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . $row['comment'] . "</div></div>";
+            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .htmlspecialchars(getUserPic($pfp)). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div>";
         }
         $stmt->close();
     ?>

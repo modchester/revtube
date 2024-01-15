@@ -32,7 +32,7 @@
       }
     ?>
    <?php include("getsubs.php"); ?><hr>
-        <a href="https://discord.gg/GbbQBsWXPK"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
+        <a href="//discord.gg/GbbQBsWXPK"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
         <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
     </ul>
 </div>

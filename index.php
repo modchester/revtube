@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="featured-video-info">
                                     <div class="video-title"><a href="/watch?v='.$row['vid'].'">'.htmlspecialchars($row['videotitle']).'</a></div>
-                                    <div class="video-author"><a href="/profile?id='.$row['author'].'">'.$row['author'].'</a></div>
+                                    <div class="video-author"><a href="/profile?id='.htmlspecialchars($row['author']).'">'.htmlspecialchars($row['author']).'</a></div>
                                 </div>
                             </div>';
                             $howmany++;
@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="col-1-3 video-title"><a href="watch?v='.$row['vid'].'"><b>'.htmlspecialchars($row['videotitle']).'</b></a></div>
                                 <div class="col-1-3 video-info">
-                                    <div><a href="profile?user='.$row['author'].'">'.$row['author'].'</a></div>
+                                    <div><a href="profile?user='.htmlspecialchars($row['author']).'">'.htmlspecialchars($row['author']).'</a></div>
                                     <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
                                 </div>
                             </div>
