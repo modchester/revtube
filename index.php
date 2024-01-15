@@ -67,7 +67,7 @@
                         }
                     }
                     else{
-                        echo "It seems there are no videos here. Perhaps one of your videos could be here?";
+                        echo "It seems there are no videos here. Maybe one of your videos could be here?";
                     }
                 ?>
             </div>

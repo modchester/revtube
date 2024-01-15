@@ -51,7 +51,7 @@
                     }
                 }
                 else{
-                    echo "Hm. Interesting. Either nobody has uploaded yet or we have a serious problem o_o";
+                    echo "No videos were found.";
                 }
                 $statement->close();
             ?>
