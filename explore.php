@@ -10,10 +10,8 @@
   }
   </style>
     </head>
-    <?php include './assets/mod/guide.php';?>
   <body>
 <?php include './assets/mod/header.php';?>
-<!-- guide -->
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -25,7 +23,6 @@
         </div>
         
         <div class="row">
-        <?php //include './assets/mod/guide.php';?>
           <div class="span10">
           <?php if(isset($_SESSION['profileuser3'])) {
           echo '<h3>From your subscriptions</h3>';

@@ -10,10 +10,8 @@
   }
   </style>
     </head>
-    <?php include './assets/mod/guide.php';?>
   <body>
 <?php include './assets/mod/header.php';?>
-<!-- guide -->
     <div class="container">
  <div class="content">
         <div class="page-header">

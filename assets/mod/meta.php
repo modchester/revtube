@@ -7,7 +7,7 @@
     <title><?php echo $site['name']; ?></title>
     <style>      .logost {
         content: url('<?php echo $site['logo_source']; ?>') !important;
-        height: 23px;
+        height: 26px;
         margin-top: -2px !important;
         /* margin-right: -13px !important; */
         margin-right: 99px !important;

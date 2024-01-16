@@ -70,7 +70,9 @@
                       </div>
                       <center>
                   <input class="yt-button primary" type="submit" name="submit" value="Login"> <a href="passwordresets" class="yt-button danger" onclick="//alert('Contact the team with proof that you own the channel.')">Forgot your password?</a>
-                              </center>
+                             <br><br>
+                              <a href="/aregister" class="link">Don't have a account?</a>
+                </center>
                 </form>
               </div>
               <p class="footer">&copy <?php echo date("Y"); echo " ".$site['name']; ?></p>
