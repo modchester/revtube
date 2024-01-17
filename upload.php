@@ -21,6 +21,13 @@
              window.location.href = "/";
              </script>');
     }
+    
+    if(isset($_SERVER['HTTPS'])) {
+        $protocol = 'https';
+    } else {
+        $protocol = 'http';
+    }
+
    if (isset($_POST['submit'])){
 //     if(empty($_POST['fileToUpload'])) {
 //         error_reporting(E_ALL);
@@ -95,7 +102,7 @@
                $length = round(exec("$ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ".$processed_file));
                $video = $_POST['videotitle'];
                $user = $_SESSION['profileuser3'];
-             //  $v_id = randstr(11);
+               //  $v_id = randstr(11);
                $statement = $mysqli->prepare("INSERT INTO videos (videotitle, vid, description, author, filename, thumb, duration, date) VALUES (?, ?, ?, ?, ?, ?, ?, now())");
                $statement->bind_param("sssssss", $videotitle, $v_id, $description, $author, $filename, $thumb, $length);
                $videotitle = htmlspecialchars($_POST['videotitle']);
@@ -106,18 +113,18 @@
                exec($thumbcmd);
                $statement->execute();
                $statement->close();
-                $webhookurl = $webhook;
-                $msg = "**$user** just uploaded **$video** => https://".$_SERVER["SERVER_NAME"]."/watch?v=".$v_id."";
-                $json_data = array ('content'=>"$msg");
-                $make_json = json_encode($json_data);
-                $ch = curl_init( $webhookurl );
-                curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-                curl_setopt( $ch, CURLOPT_POST, 1);
-                curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
-                curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-                curl_setopt( $ch, CURLOPT_HEADER, 0);
-                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-                $response = curl_exec( $ch );
+               $webhookurl = $webhook;
+               $msg = "**$user** just uploaded **$video** => $protocol://".$_SERVER["SERVER_NAME"]."/watch?v=".$v_id."";
+               $json_data = array ('content'=>"$msg");
+               $make_json = json_encode($json_data);
+               $ch = curl_init( $webhookurl );
+               curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+               curl_setopt( $ch, CURLOPT_POST, 1);
+               curl_setopt( $ch, CURLOPT_POSTFIELDS, $make_json);
+               curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+               curl_setopt( $ch, CURLOPT_HEADER, 0);
+               curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+               $response = curl_exec( $ch );
                echo('<script>
              window.location.href = "/?msg=Your video has been uploaded!";
              </script>');
