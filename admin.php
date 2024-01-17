@@ -4,9 +4,11 @@
   <?php include './assets/mod/db.php';?>
     <?php include './assets/mod/meta.php';?>
     </head>
+<?php include './assets/mod/guide.php';?>
   <body>
 <?php include './assets/mod/header.php';?>
 <?php
+if(isset($_SESSION['profileuser3'])) {
                     $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? ");
                     $statement->bind_param("s", $_SESSION['profileuser3']);
                     $statement->execute();
@@ -23,6 +25,11 @@
                     else{
                         echo "";
                     }
+                  } else {
+                    echo('<script>
+                    window.location.href = "/?msg=You are not allowed to view that page.";
+                    </script>');
+                  }
                 ?>
     <div class="container">
  <div class="content">
