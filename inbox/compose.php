@@ -59,7 +59,7 @@
     // }
        if(!isset($_SESSION['profileuser3'])) {
         echo '<script>
-        window.location.href = "../alogin";
+        window.location.href = "../login";
         </script>';
        }
                $statement = $mysqli->prepare("INSERT INTO inbox (sender, reciever, subject, content, date) VALUES (?, ?, ?, ?, now())");

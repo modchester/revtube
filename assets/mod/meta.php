@@ -41,3 +41,6 @@
     <?php if($site['siteTheme'] == 'dark') { ?>
     <link href="/assets/css/dark.css" rel="stylesheet">
     <?php } ?>
+    <?php if($site['siteTheme'] == 'l2013') { ?>
+    <link href="/assets/css/late2013.css" rel="stylesheet">
+    <?php } ?>

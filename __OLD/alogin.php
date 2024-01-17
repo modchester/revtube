@@ -57,7 +57,7 @@
             <center><h3>User Login</h3>
             <br>
             <div class="card blue">
-                <form method="post" action="/alogin">
+                <form method="post" action="/login">
                     <div class="input-group">
                       <!--  <label for="username">Username: </label>-->
                         <input type="text" name="name" pattern="[^()/><\][\\\x22,;|]+" placeholder="Channel Name" required>

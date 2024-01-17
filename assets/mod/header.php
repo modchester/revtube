@@ -41,7 +41,7 @@ $start = $time;
           <?php } ?>
           	<?php
       if(!$loggedIn) {
-        echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/alogin">Sign in</a></li></ul>';
+        echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/login">Sign in</a></li></ul>';
       } else {
         $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
 			    $statement->bind_param("s", $_SESSION['profileuser3']);

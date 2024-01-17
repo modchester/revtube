@@ -35,7 +35,7 @@ include("branding.php"); ?>
           Sign in now to see your channels and recommendations!
 
         <br><br>
-          <a class="yt-button primary" href="/alogin">Sign in ›</a>
+          <a class="yt-button primary" href="/login">Sign in ›</a>
         </div>';
       } ?>
     </ul>

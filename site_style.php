@@ -24,7 +24,10 @@
 		$errorGato = 'Lana';
 	}
 	
-	
+	if($theme == 'L2013') {
+		$theme = 'Semi Late 2013';
+	}
+
 	if($videoPlayer == 'yt2016') {
 		$videoPlayer = 'YouTube (2016)';
 	} elseif($videoPlayer == 'videotag') {
@@ -64,6 +67,7 @@
 			<option value="default"> Default</option>
   			<option value="fluent"> Fluent</option>
 			<option value="dark"> Dark</option>
+			<option value="l2013"> Semi Late 2013</option>
 		</select>
 		<br><br>
 		<h3><i class="bi bi-play-btn"></i> Video Player</h3>
