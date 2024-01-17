@@ -18,9 +18,9 @@
 	$videoPlayer = $_COOKIE['videoPlayer'] ?? 'yt2013';
 	$errorGato = ucfirst($_COOKIE['errorGato']) ?? 'revoozie_rtx';
 
-	if($errorGato == 'revoozie_rtx') {
+	if($errorGato == 'Revoozie_rtx') {
 		$errorGato = 'Revoozie (RTX)';
-	} elseif($errorGato == 'anal') { 
+	} elseif($errorGato == 'Anal') { 
 		$errorGato = 'Lana';
 	}
 	
