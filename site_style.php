@@ -8,11 +8,23 @@
 		if(isset($_POST['player'])) {
 			setrawcookie("videoPlayer", $_POST['player'], time() + 2000000, "/");
 		}
+
+		if(isset($_POST['errorgato'])) {
+			setrawcookie("errorGato", $_POST['errorgato'], time() + 2000000, "/");
+		}
 	}
 
 	$theme = ucfirst($_COOKIE['siteTheme']) ?? 'Default';
 	$videoPlayer = $_COOKIE['videoPlayer'] ?? 'yt2013';
+	$errorGato = ucfirst($_COOKIE['errorGato']) ?? 'revoozie_rtx';
 
+	if($errorGato == 'revoozie_rtx') {
+		$errorGato = 'Revoozie (RTX)';
+	} elseif($errorGato == 'anal') { 
+		$errorGato = 'Lana';
+	}
+	
+	
 	if($videoPlayer == 'yt2016') {
 		$videoPlayer = 'YouTube (2016)';
 	} elseif($videoPlayer == 'videotag') {
@@ -60,6 +72,13 @@
 			<option value="yt2016"> YouTube (2016)</option>
 			<option value="videotag"> Browser Default </option>
 		</select>
+		<br><br>
+		<h3>🐱 Error Page Cat</h3>
+		<select name="errorgato">
+			<option value="revoozie_rtx"> Revoozie (RTX)</option>
+  			<option value="revoozie"> Revoozie</option>
+			<option value="anal"> Lana </option>
+		</select>
 		<div class="input-group">
 			<br>
 			<div><input class="yt-button" type="submit" value="Update" name="submit"></div>
@@ -72,7 +91,9 @@
 			<br><br>
 			<p><i class="bi bi-play-btn"></i> Video Player</p>
 			<input type="text" disabled value="<?php echo htmlspecialchars($videoPlayer); ?>">
-
+			<br><br>
+			<p>🐱 Error Page Cat</p>
+			<input type="text" disabled value="<?php echo htmlspecialchars($errorGato); ?>">
             </div>
         </div>
       </div>
