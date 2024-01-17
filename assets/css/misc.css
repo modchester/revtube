@@ -726,3 +726,18 @@ display:inline-block;
   background: rgb(29, 29, 29)!important;
   color: #fff!important;
 }
+
+.vidmang {
+  padding: 10px;
+  margin-bottom: -10px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  color: rgb(68, 68, 68);
+  height: auto;
+  box-sizing: border-box;
+  
+}
+
+#IhateThisShit {
+  margin-top: 50px;
+}

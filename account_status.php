@@ -43,8 +43,8 @@
 						$icon = "bad";
 						$standing = " Bad standing";
 					}
-					if($row['strikes'] == 3) {
-						$strikenum = 3;
+					if($row['strikes'] > 3) {
+						$strikenum = number_format($row['strikes']);
 						$strikestyle = "color: red; font-weight: bold;";
 						$msg = "Your account has been terminated.";
 						$etc = "strikes";

@@ -64,11 +64,16 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, Y', strtotime($row['date']));
             $pfp = idFromUser($row['author']);
+            /* spagetti idea
+            <div class="alert-message vidmang"><p><span style="color: transparent; user-select: none; -o-user-select: none; -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; cursor: default;">stupid hack.</span></p><span id="IhateThisShit"><a class="pull-left yt-button" href="/my_videos">Video Manager</a></span><span style="float: right; margin-top: -22px;"><a class="pull-left yt-button" href="/my_videos">Video Manager</a></span></div>
+            it sucks so much istg
+            */
             echo '
             <div class="rewatch">
             <iframe height="360px" width="640px" src="/player/index?v=//'.$_SERVER["SERVER_NAME"].'/content/video/' . $row["filename"] . '&vid='.$row['vid'].'" style="border: none;"></iframe>
             <!--<video height="360px" width="640px" src="content/video/' . $row["filename"] . '" controls>No HTML5?</video>-->
             '.$debugmsg1.'
+            
             <div class="rewatch-content rewatch-main">
              <h1 id="rewatch-title">
                <span id="title">' . htmlspecialchars($row['videotitle']) . '</span>

@@ -20,7 +20,7 @@
                                     while($row = $result->fetch_assoc()){
                                             $hash = $row['password'];
                                             if(password_verify($_POST['password'], $hash)){
-                                                if ($row['strikes'] == 3) {
+                                                if ($row['strikes'] > 3) {
                                                     echo('<script>
                                          window.location.href = "/?err=Your account has been terminated due to too many violations of the <a href=guidelines>Community Guidelines</a>.";
                                          </script>');

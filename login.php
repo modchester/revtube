@@ -29,7 +29,7 @@
                                     while($row = $result->fetch_assoc()){
                                             $hash = $row['password'];
                                             if(password_verify($_POST['password'], $hash)){
-                                              if ($row['strikes'] == 3) {
+                                              if ($row['strikes'] > 3) {
                                                 echo('<div class="alert-message error loginerror page-alert">
                                      <p>Your account has been terminated due to too many violations of the <a style="color:white;"href=guidelines>Community Guidelines</a>.</p>
                                      </div>');
