@@ -70,7 +70,7 @@ $start = $time;
                 <li class=\"divider\"></li>
                 <li><a href=\"account\">Settings</a></li>
                 ".$adminlink."
-                <li><a href=\"logout\">Logout ".htmlspecialchars($row["username"])."</a></li>
+                <li><a href=\"logout?url=".htmlspecialchars($_SERVER['REQUEST_URI'])."\">Logout ".htmlspecialchars($row["username"])."</a></li>
               </ul>
             </li>
           </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".htmlspecialchars($row["username"])."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";
