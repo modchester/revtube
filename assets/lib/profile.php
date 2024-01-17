@@ -243,12 +243,12 @@ function isAdmin($username, $conn) {
     $stmt->close();
 }
 
-function UpdateLoginTime($username, $connection) {
-    $stmt = $connection->prepare("UPDATE users SET lastlogin = now() WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->close();
-}
+    // function UpdateLoginTime($username, $connection) {
+    //     $stmt = $connection->prepare("UPDATE users SET lastlogin = now() WHERE username = ?");
+    //     $stmt->bind_param("s", $username);
+    //     $stmt->execute();
+    //     $stmt->close();
+    // }
 
 function updateVideoCommenting($id, $type, $connection) {
     $stmt = $connection->prepare("UPDATE videos SET commenting = ? WHERE rid = ?");
@@ -640,3 +640,6 @@ function timestamp(int $seconds) {
     }
 }
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
