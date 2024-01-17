@@ -366,19 +366,19 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .yt-uix-button.yt-uix-button-player.html5-async-progress .yt-uix-button-icon,.yt-uix-button.yt-uix-button-player.html5-async-progress:focus .yt-uix-button-icon,.yt-uix-button.yt-uix-button-player.html5-async-progress:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -473px -58px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -473px -58px;
     height: 17px;
     width: 17px
 }
 
 .yt-uix-button.yt-uix-button-player.html5-async-success .yt-uix-button-icon,.yt-uix-button.yt-uix-button-player.html5-async-success:focus .yt-uix-button-icon,.yt-uix-button.yt-uix-button-player.html5-async-success:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -474px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -474px -255px;
     height: 14px;
     width: 12px
 }
 
 .yt-uix-button.yt-uix-button-player.html5-async-error .yt-uix-button-icon,.yt-uix-button.yt-uix-button-player.html5-async-error:focus .yt-uix-button-icon,.yt-uix-button.yt-uix-button-player.html5-async-error:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -28px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -28px -255px;
     height: 14px;
     width: 12px
 }
@@ -472,11 +472,11 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .ytp-drop-down-menu-button-checked .ytp-drop-down-menu-button-check {
-    background: no-repeat url(./playerspritesheet.png) -82px -409px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -82px -409px
 }
 
 .ytp-drop-down-menu-button-checked:hover:not(.ytp-disabled) .ytp-drop-down-menu-button-check {
-    background: no-repeat url(./playerspritesheet.png) 0 -277px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -277px
 }
 
 .ytp-drop-down-menu-button-selected .ytp-drop-down-menu-button-check {
@@ -885,7 +885,7 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-clip-end {
-    background: no-repeat url(./playerspritesheet.png) -386px -427px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -386px -427px;
     background-size: auto;
     width: 9px;
     height: 16px
@@ -893,7 +893,7 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 
 .html5-clip-start {
     margin-left: -1px;
-    background: no-repeat url(./playerspritesheet.png) -82px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -82px -255px;
     background-size: auto;
     width: 9px;
     height: 16px
@@ -919,7 +919,7 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-clip-marker-hover .html5-clip-marker {
-    background: no-repeat url(./playerspritesheet.png) -445px -397px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -445px -397px;
     background-size: auto;
     width: 17px;
     height: 17px
@@ -1098,7 +1098,7 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 
 .ytp-settings-button {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) 0 -393px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -393px;
     background-size: auto;
     width: 30px;
     height: 25px
@@ -1109,23 +1109,23 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .ytp-settings-button:not(.ytp-disabled):focus,.ytp-settings-button:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -122px -400px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -122px -400px
 }
 
 .ytp-settings-button-active {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -34px -277px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -277px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-settings-button-active:focus,.ytp-settings-button-active:hover {
-    background: no-repeat url(./playerspritesheet.png) -406px -284px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -406px -284px
 }
 
 .ytp-settings-hd-quality-badge {
-    background: no-repeat url(./playerspritesheet.png) -347px -297px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -347px -297px;
     background-size: auto;
     width: 13px;
     height: 9px;
@@ -1133,7 +1133,7 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .ytp-settings-2k-quality-badge {
-    background: no-repeat url(./playerspritesheet.png) -347px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -347px -226px;
     background-size: auto;
     width: 13px;
     height: 9px;
@@ -1141,7 +1141,7 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .ytp-settings-4k-quality-badge {
-    background: no-repeat url(./playerspritesheet.png) -224px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -224px -255px;
     background-size: auto;
     width: 13px;
     height: 9px;
@@ -1150,26 +1150,26 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 
 .ytp-size-toggle-small {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -190px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -190px -226px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-size-toggle-small:focus,.ytp-size-toggle-small:hover {
-    background: no-repeat url(./playerspritesheet.png) 0 -157px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -157px
 }
 
 .ytp-size-toggle-large {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -473px 0;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -473px 0;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-size-toggle-large:focus,.ytp-size-toggle-large:hover {
-    background: no-repeat url(./playerspritesheet.png) -313px -326px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -313px -326px
 }
 
 .ytp-time-display {
@@ -1339,47 +1339,47 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .ytp-button-play {
-    background: no-repeat url(./playerspritesheet.png) -34px -58px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -58px;
     background-size: auto;
     width: 55px;
     height: 25px
 }
 
 .ytp-button-play:not(.ytp-disabled):focus,.ytp-button-play:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -121px -255px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -121px -255px
 }
 
 .ytp-button-pause {
-    background: no-repeat url(./playerspritesheet.png) -224px -419px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -224px -419px;
     background-size: auto;
     width: 55px;
     height: 25px
 }
 
 .ytp-button-pause:not(.ytp-disabled):focus,.ytp-button-pause:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -466px -426px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -466px -426px
 }
 
 .ytp-button-replay {
-    background: no-repeat url(./playerspritesheet.png) -347px -239px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -347px -239px;
     background-size: auto;
     width: 55px;
     height: 25px
 }
 
 .ytp-button-replay:not(.ytp-disabled):focus,.ytp-button-replay:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -440px -310px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -440px -310px
 }
 
 .ytp-button-stop {
-    background: no-repeat url(./playerspritesheet.png) -445px -339px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -445px -339px;
     background-size: auto;
     width: 55px;
     height: 25px
 }
 
 .ytp-button-stop:not(.ytp-disabled):focus,.ytp-button-stop:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -82px -226px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -82px -226px
 }
 
 .ytp-playlist-controls {
@@ -1388,37 +1388,37 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .ytp-button-next {
-    background: no-repeat url(./playerspritesheet.png) -283px -419px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -283px -419px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-button-next:not(.ytp-disabled):focus,.ytp-button-next:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -190px -419px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -190px -419px
 }
 
 .ytp-button-next:active {
-    background: no-repeat url(./playerspritesheet.png) 0 -186px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -186px
 }
 
 .ytp-button-next:active:hover {
-    background: no-repeat url(./playerspritesheet.png) -190px -284px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -190px -284px
 }
 
 .ytp-button-prev {
-    background: no-repeat url(./playerspritesheet.png) -34px -364px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -364px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-button-prev:not(.ytp-disabled):focus,.ytp-button-prev:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) 0 -364px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -364px
 }
 
 .ytp-button-prev:active:hover {
-    background: no-repeat url(./playerspritesheet.png) -122px -458px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -122px -458px
 }
 
 .html5-volume-control {
@@ -1511,60 +1511,60 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-volume-button[data-value=max] .yt-uix-button-icon,.html5-volume-button[data-value=loud] .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -406px -397px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -406px -397px
 }
 
 .html5-volume-button[data-value=max]:focus .yt-uix-button-icon,.html5-volume-button[data-value=max]:hover .yt-uix-button-icon,.html5-volume-button[data-value=loud]:focus .yt-uix-button-icon,.html5-volume-button[data-value=loud]:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -141px -226px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -141px -226px
 }
 
 .html5-volume-button[data-value=normal] .yt-uix-button-icon,.html5-volume-button[data-value=quiet] .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -364px -297px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -364px -297px
 }
 
 .html5-volume-button[data-value=normal]:focus .yt-uix-button-icon,.html5-volume-button[data-value=normal]:hover .yt-uix-button-icon,.html5-volume-button[data-value=quiet]:focus .yt-uix-button-icon,.html5-volume-button[data-value=quiet]:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -68px -188px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -68px -188px
 }
 
 .html5-volume-button[data-value=min] .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -116px -284px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -116px -284px
 }
 
 .html5-volume-button[data-value=min]:focus .yt-uix-button-icon,.html5-volume-button[data-value=min]:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -224px -390px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -224px -390px
 }
 
 .html5-volume-button[data-value=off] .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -288px -456px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -288px -456px
 }
 
 .html5-volume-button[data-value=off]:focus .yt-uix-button-icon,.html5-volume-button[data-value=off]:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -406px -339px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -406px -339px
 }
 
 .ytp-button-fullscreen-enter {
     display: none;
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -440px -281px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -440px -281px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-button-fullscreen-enter:not(.ytp-disabled):focus,.ytp-button-fullscreen-enter:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -473px -79px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -473px -79px
 }
 
 .ytp-button-fullscreen-exit {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -473px -195px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -473px -195px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-button-fullscreen-exit:not(.ytp-disabled):focus,.ytp-button-fullscreen-exit:not(.ytp-disabled):hover {
-    background: no-repeat url(./playerspritesheet.png) -406px -426px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -406px -426px
 }
 
 .yt-uix-button.yt-uix-button-player.html5-text-button {
@@ -1576,13 +1576,13 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-watch-later-button .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) 0 -114px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -114px;
     height: 25px;
     width: 30px
 }
 
 .html5-watch-later-button:focus .yt-uix-button-icon,.html5-watch-later-button:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -190px -255px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -190px -255px
 }
 
 .house-brand .html5-watch-later-button {
@@ -1595,13 +1595,13 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-watch-on-youtube-button .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -459px -456px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -459px -456px;
     height: 25px;
     width: 52px
 }
 
 .html5-watch-on-youtube-button:focus .yt-uix-button-icon,.html5-watch-on-youtube-button:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -445px -368px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -445px -368px
 }
 
 .el-embedded .html5-watch-on-youtube-button {
@@ -1622,21 +1622,21 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-remote-button .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -156px -356px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -156px -356px;
     height: 25px;
     width: 30px
 }
 
 .html5-remote-button:focus .yt-uix-button-icon,.html5-remote-button:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -122px -371px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -122px -371px
 }
 
 .remote-loaded .html5-remote-button .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -512px -76px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -512px -76px
 }
 
 .remote-loaded .html5-remote-button:focus .yt-uix-button-icon,.remote-loaded .html5-remote-button:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -122px -429px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -122px -429px
 }
 
 .remote-loaded .html5-annotations-button,.remote-loaded .html5-fullscreen-button,.remote-loaded .html5-large-player-button,.remote-loaded .html5-quality-button,.remote-loaded .html5-small-player-button,.remote-loaded .html5-threed-button,.remote-loaded .html5-captions-actions,.remote-loaded .html5-watch-on-youtube-button,.remote-loaded .ytp-button-fullscreen-enter {
@@ -1653,21 +1653,21 @@ body[data-player-size=fullscreen] #masthead-container,body[data-player-size=full
 }
 
 .html5-playlist-button .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -406px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -406px -255px;
     height: 25px;
     width: 30px
 }
 
 .html5-playlist-button:focus .yt-uix-button-icon,.html5-playlist-button:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -34px 0
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px 0
 }
 
 .playlist-loaded .html5-playlist-button .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -82px -448px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -82px -448px
 }
 
 .playlist-loaded .html5-playlist-button:focus .yt-uix-button-icon,.playlist-loaded .html5-playlist-button:hover .yt-uix-button-icon {
-    background: no-repeat url(./playerspritesheet.png) -34px -130px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -130px
 }
 
 .ytp-hide-mouse {
@@ -2020,7 +2020,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 
 .ytp-button-like {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) 0 -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -226px;
     width: 22px;
     height: 23px
 }
@@ -2030,7 +2030,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 }
 
 .ytp-button-like:hover,.ytp-button-pressed.ytp-button-like {
-    background: no-repeat url(./playerspritesheet.png) -34px -393px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -393px;
     width: 22px;
     height: 23px;
     opacity: 1
@@ -2038,13 +2038,13 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 
 .ytp-button-dislike {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -95px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -95px -255px;
     width: 22px;
     height: 23px
 }
 
 .ytp-button-dislike:hover,.ytp-button-pressed.ytp-button-dislike {
-    background: no-repeat url(./playerspritesheet.png) -406px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -406px -226px;
     width: 22px;
     height: 23px;
     opacity: 1
@@ -2052,7 +2052,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 
 .ytp-button-share {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -224px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -224px -226px;
     width: 22px;
     height: 23px;
     margin-top: 3px;
@@ -2060,7 +2060,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 }
 
 .ytp-button-share:hover {
-    background: no-repeat url(./playerspritesheet.png) 0 0;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 0;
     width: 22px;
     height: 23px
 }
@@ -2071,7 +2071,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 
 .ytp-button-info {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -34px -29px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -29px;
     width: 22px;
     height: 23px;
     margin-top: 3px;
@@ -2079,7 +2079,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 }
 
 .ytp-button-info:hover {
-    background: no-repeat url(./playerspritesheet.png) -82px -421px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -82px -421px;
     width: 22px;
     height: 23px
 }
@@ -2293,7 +2293,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 .yt-uix-button-icon-new-window {
     margin-right: 0;
     margin-left: 7px;
-    background: no-repeat url(./playerspritesheet.png) -525px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -525px -226px;
     background-size: auto;
     width: 13px;
     height: 13px
@@ -2867,7 +2867,7 @@ body[data-player-size=fullscreen] .el-detailpage .html5-endscreen.videowall-ends
 }
 
 .html5-watermark[src*="/img/pixel"] {
-    background: no-repeat url(./playerspritesheet.png) -34px -87px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -87px;
     width: 87px;
     height: 39px
 }
@@ -4125,7 +4125,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
     position: absolute;
     top: 8px;
     right: 15px;
-    background: no-repeat url(./playerspritesheet.png) -34px -130px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -130px;
     background-size: auto;
     width: 30px;
     height: 25px
@@ -4134,7 +4134,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 .videowall-still-listlabel-icon {
     display: inline-block;
     vertical-align: middle;
-    background: no-repeat url(./playerspritesheet.png) -34px -130px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -130px;
     background-size: auto;
     width: 30px;
     height: 25px
@@ -4312,7 +4312,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
     left: 0;
     opacity: .85;
     cursor: pointer;
-    background: no-repeat url(./playerspritesheet.png) -62px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -62px -226px;
     background-size: auto;
     width: 16px;
     height: 16px
@@ -4358,7 +4358,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 }
 
 .annotation .annotation-x-button {
-    background: no-repeat url(./playerspritesheet.png) -440px -255px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -440px -255px;
     background-size: auto;
     width: 22px;
     height: 22px
@@ -4366,7 +4366,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 
 .annotation.annotation-type-custom .annotation-x-button {
     margin-top: 3px;
-    background: no-repeat url(./playerspritesheet.png) 0 -318px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -318px;
     background-size: auto;
     width: 10px;
     height: 10px
@@ -4567,7 +4567,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 }
 
 .iv-cards-background button>div {
-    background: no-repeat url(./playerspritesheet.png) -156px -313px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -156px -313px;
     background-size: auto;
     width: 10px;
     height: 10px
@@ -4631,7 +4631,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 
 .iv-cards-notif>button div {
     margin: 10px;
-    background: no-repeat url(./playerspritesheet.png) -512px -24px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -512px -24px;
     background-size: auto;
     width: 28px;
     height: 29px
@@ -5022,7 +5022,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 
 .ytp-button-expand .ytp-button-playlist-icon {
     float: left;
-    background: no-repeat url(./playerspritesheet.png) -284px -226px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -284px -226px;
     background-size: auto;
     width: 21px;
     height: 10px;
@@ -5031,7 +5031,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 }
 
 .ytp-button-expand:hover .ytp-button-playlist-icon {
-    background: no-repeat url(./playerspritesheet.png) -347px -355px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -347px -355px;
     background-size: auto;
     width: 21px;
     height: 10px
@@ -5039,7 +5039,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 
 .ytp-button-collapse .ytp-button-playlist-icon {
     float: left;
-    background: no-repeat url(./playerspritesheet.png) 0 -143px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -143px;
     background-size: auto;
     width: 21px;
     height: 10px;
@@ -5109,7 +5109,7 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 .ytp-remote-display-container {
     padding: 12px 12px 30px;
     vertical-align: middle;
-    background: no-repeat url(./playerspritesheet.png) -125px 0;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -125px 0;
     background-size: auto;
     width: 344px;
     height: 222px;
@@ -5418,38 +5418,38 @@ body[data-player-size=fullscreen] .html5-tablet.html5-video-player .video-click-
 
 .ytp-subtitles-button {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -156px -327px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -156px -327px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-subtitles-button:focus,.ytp-subtitles-button:hover {
-    background: no-repeat url(./playerspritesheet.png) -122px -342px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -122px -342px
 }
 
 .ytp-subtitles-button-active {
     float: right;
-    background: no-repeat url(./playerspritesheet.png) -473px -29px;
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -473px -29px;
     background-size: auto;
     width: 30px;
     height: 25px
 }
 
 .ytp-subtitles-button-active:focus,.ytp-subtitles-button-active:hover {
-    background: no-repeat url(./playerspritesheet.png) -327px -456px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -327px -456px
 }
 
 .cc-international .ytp-subtitles-button {
-    background: no-repeat url(./playerspritesheet.png) -432px -226px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -432px -226px
 }
 
 .cc-international .ytp-subtitles-button:focus,.cc-international .ytp-subtitles-button:hover {
-    background: no-repeat url(./playerspritesheet.png) -34px -188px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) -34px -188px
 }
 
 .cc-international .ytp-subtitles-button-active,.cc-international .ytp-subtitles-button-active:focus,.cc-international .ytp-subtitles-button-active:hover {
-    background: no-repeat url(./playerspritesheet.png) 0 -27px
+    background: no-repeat url(/yts/cssbin/playerspritesheet.png) 0 -27px
 }
 
 .threed-created .html5-threed-button {
