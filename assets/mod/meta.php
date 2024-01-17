@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <meta charset="utf-8">
     <title><?php echo $site['name']; ?></title>
-    <style>      .logost {
+    <style>      
+    .logost {
         content: url('<?php echo $site['logo_source']; ?>') !important;
         height: 26px;
         margin-top: -2px !important;
         /* margin-right: -13px !important; */
         margin-right: 99px !important;
-         margin-left: -36px !important; 
+        margin-left: -36px !important; 
         margin-bottom: -1px;
         /* filter: invert(1); */
     } </style>
