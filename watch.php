@@ -193,7 +193,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
-            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .htmlspecialchars(getUserPic($pfp)). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div>";
+            echo "<div class='comment'><img class='cmn' height='48px' width='48px' src='content/pfp/" .htmlspecialchars(getUserPic($pfp)). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div><br>";
         }
         $stmt->close();
     ?>

@@ -16,3 +16,4 @@ Unused get video info APIs
 Older favicons and logos
 Old sign in page
 FluentBS page from docs/
+Outdated SQL file

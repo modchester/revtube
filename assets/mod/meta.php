@@ -17,13 +17,13 @@
     } </style>
 	  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
     <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="/assets/js/jquery.1.6.4.min.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-twipsy.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-tabs.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The world's smallest video sharing community">
-    <meta name="author" content="neroidev, Kai">
+    <meta name="author" content="neroidev, skyiebox">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
 
     <!-- Le styles -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://s.imon.fr/css3-youtube-buttons/yt-buttons.css" rel="stylesheet">
+    <link href="/assets/css/yt-buttons.css" rel="stylesheet">
 	  <link href="/assets/css/misc.css" rel="stylesheet">
     <link href="/assets/css/2013.css" rel="stylesheet">
     <?php if($site['siteTheme'] == 'fluent') { ?>

@@ -1,4 +1,7 @@
 <h3>What's New</h3>
+<b>Cats & More Themes</b><br>
+You can now change the cat used in error pages like the <a href='/404'>not found</a> page. We are also working on more themes! (added and written by kaisiece)
+<br><br>
 <b>Themes & Players</b><br>
 You can now change your theme and what player you want to use in settings (added by kaisiece).
 <br><br>
