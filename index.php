@@ -10,10 +10,8 @@
   }
   </style>
     </head>
-    <?php include './assets/mod/guide.php';?>
   <body>
 <?php include './assets/mod/header.php';?>
-<!-- guide -->
     <div class="container">
  <div class="content">
         <div class="page-header">
@@ -33,7 +31,7 @@
   <div id="signup-promo-links">
     <button href="/aregister" type="button" class=" yt-uix-button" onclick=";window.location.href=this.getAttribute(\'href\');return false;" role="button" aria-pressed="false" fdprocessedid="mkys6"><span class="yt-uix-button-content">Create Account ›</span></button>
     <span id="signup-promo-have-account">Already have an account? </span>
-    <a href="/alogin">Sign In</a>
+    <a href="/login">Sign In</a>
   </div>
 </div></div>';}?>
           <!-- <h3>Featured Videos</h3>

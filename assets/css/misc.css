@@ -1,8 +1,10 @@
 
-
+:root {
+  --bodybg: #fbfbfb; 
+}
 /* Override some defaults */
       body {
-        background: #fbfbfb;
+        background: var(--bodybg);
         padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
       .container > footer p {
@@ -85,6 +87,8 @@ video {
 .topbar > .fill {
   background: #f1f1f1;
   border-bottom: 1px solid #e8e8e8;
+  padding: 2px;
+  max-height: 40px;
 }
 .topbar h3 a, .topbar .brand, .topbar h3 a:hover, .topbar .brand:hover, .topbar div > ul a.menu:hover, .nav a.menu:hover, .topbar div > ul li.open .menu, .nav li.open .menu, .topbar div > ul .dropdown-toggle:hover, .nav .dropdown-toggle:hover, .topbar div > ul .dropdown.open .dropdown-toggle, .nav .dropdown.open .dropdown-toggle {
   color: #333;
@@ -99,6 +103,11 @@ video {
 a.menu::after, .dropdown-toggle::after {
   border-top-color: #333;
 }
+.dropdown-menu-profile {
+  margin-right: 5px;
+  color: #666;
+  font-size: 11px;
+}
 .page-alert {
 	width: 820px;
 	/* margin-left: auto;
@@ -110,7 +119,10 @@ a.menu::after, .dropdown-toggle::after {
 .guide {
   width: 10%;
   float: left;
+  margin-top: 5px;
   padding: 20px;
+  background: var(--bodybg);
+  height: 100vh;
 }
 .guide span {
   color: rgb(43, 17, 196);
@@ -174,6 +186,7 @@ margin-right: 5%;
   background: #464646;
   color: #fff;
   margin: 10px;
+  font-size: 14px;
   box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 }
 .alert-message {
@@ -200,18 +213,16 @@ margin-right: 5%;
   background-color: #fff;
 }
 .menu-dropdown, .dropdown-menu {
-  border-color: #ccc!important;
+  border: 1px solid #ccc!important;
   border: 1px solid!important;
-  border-radius: 0 0 2px 2px;
+  border-radius: 3px!important;
   box-shadow: none;
 }
-.topbar div > ul .menu-dropdown li a, .nav .menu-dropdown li a, .topbar div > ul .dropdown-menu li a, .nav .dropdown-menu li a {
-  color: #333;
-  text-shadow: none;
+ .dropdown-menu li a {
+  color: #333!important;
+  text-shadow: none!important;
 }
-.topbar div > ul .menu-dropdown li a:hover, .nav .menu-dropdown li a:hover, .topbar div > ul .dropdown-menu li a:hover, .nav .dropdown-menu li a:hover {
-  background-color: #555;
-}
+
 .topbar div > ul .menu-dropdown .divider, .nav .menu-dropdown .divider, .topbar div > ul .dropdown-menu .divider, .nav .dropdown-menu .divider {
   background-color: transparent;
   border-color: #f4f4f4;
@@ -221,8 +232,11 @@ margin-right: 5%;
 .yt-footer {
   background-color: #f2f2f2;
   border-top: 1px solid #e2e2e2;
-  /* width: 100%; */
+  width: 100%;
   padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 .rewatch {
   width: 640px;
@@ -362,7 +376,6 @@ margin-right: 5%;
       box-shadow: inset 0 1px 2px #eee !important;
       border-radius: 0px;
           width: 300px;
-          color: #000;
   }
   .pull-left > input:focus {
       border:1px solid #1c62b9 !important;
@@ -696,4 +709,35 @@ display:inline-block;
   font-weight: 9;
   font-size: 13px;  
   line-height: 2px;
+}
+
+.container .upload-group {
+  padding: 5px;
+}
+
+.container .upload-group .uploadbtn:after {
+  display: none;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+.dropdown-menu li a:hover {
+  background: rgb(29, 29, 29)!important;
+  color: #fff!important;
+}
+
+.vidmang {
+  padding: 10px;
+  margin-bottom: -10px;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  color: rgb(68, 68, 68);
+  height: auto;
+  box-sizing: border-box;
+  
+}
+
+#IhateThisShit {
+  margin-top: 50px;
 }

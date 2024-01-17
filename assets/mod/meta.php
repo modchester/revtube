@@ -7,7 +7,7 @@
     <title><?php echo $site['name']; ?></title>
     <style>      .logost {
         content: url('<?php echo $site['logo_source']; ?>') !important;
-        height: 23px;
+        height: 26px;
         margin-top: -2px !important;
         /* margin-right: -13px !important; */
         margin-right: 99px !important;
@@ -40,4 +40,7 @@
     <?php } ?>
     <?php if($site['siteTheme'] == 'dark') { ?>
     <link href="/assets/css/dark.css" rel="stylesheet">
+    <?php } ?>
+    <?php if($site['siteTheme'] == 'l2013') { ?>
+    <link href="/assets/css/late2013.css" rel="stylesheet">
     <?php } ?>

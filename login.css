@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   
   .box {
@@ -123,4 +123,9 @@ padding: 1px;
   width: 245.45px;
   margin: auto !important;
   padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(32, 85, 165)!important;
 }

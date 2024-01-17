@@ -22,10 +22,26 @@ $start = $time;
             <input name="q" type="text" placeholder="Search">
             <button type="submit" class="yt-button searchbtn"><i class="bi bi-search"></i></button>
           </form>
-          <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
+          <?php if($loggedIn) { ?>
+          <div class="yt-button-group upload-group">
+	          <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
+            <li class="dropdown" data-dropdown="dropdown">
+              <a href="#" class="dropdown-toggle pull-left uploadbtn yt-button"><i class="bi bi-caret-down-fill"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/my_videos">My Videos</a></li>
+                <li><a href="/profile?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">My Channel</a></li>
+                <li><a href="/account">My Account</a></li>
+
+              </ul>
+            </li>
+
+          </div>
+          <?php } else { ?>
+            <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
+          <?php } ?>
           	<?php
       if(!$loggedIn) {
-        echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/alogin">Sign in</a></li><li><a class="nav-buttons yt-button primary" href="/aregister">Register</a></li></ul>';
+        echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/login">Sign in</a></li></ul>';
       } else {
         $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
 			    $statement->bind_param("s", $_SESSION['profileuser3']);
@@ -45,8 +61,8 @@ $start = $time;
             }
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\">".htmlspecialchars($row["username"])." <img style='margin-bottom:-2px;' height='12px' width='12px' src='/content/pfp/".getUserPic($row["id"])."'></a>
-              <ul class=\"dropdown-menu\">
+              <a href=\"#\" class=\"dropdown-toggle\">".htmlspecialchars($row["username"])." <img style='margin-top: -7px; vertical-align: middle;' height='32px' width='32px' src='/content/pfp/".getUserPic($row["id"])."'></a>
+              <ul class=\"dropdown-menu dropdown-menu-profile\">
               <li></li>
                 <li><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">Your Channel</a></li>
                 <!--<li><a href=\"upload\">Upload</a></li>-->
@@ -77,3 +93,5 @@ $start = $time;
    }); 
 </script>
 <!-- <div class="stickybanner">clipIt will</div> -->
+<!-- guide -->
+<?php include $_SERVER['DOCUMENT_ROOT'].'/assets/mod/guide.php';?>

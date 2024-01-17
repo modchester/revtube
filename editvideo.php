@@ -41,7 +41,7 @@
             <?php
             if(!isset($_SESSION['profileuser3'])) {
               echo('<script>
-              window.location.href = "/alogin";
+              window.location.href = "/login";
               </script>');
           }
           ?>

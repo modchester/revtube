@@ -47,7 +47,7 @@
     }
        if(!isset($_SESSION['profileuser3'])) {
         echo '<script>
-        window.location.href = "alogin.php";
+        window.location.href = "login.php";
         </script>';
        }
        function randstr($len, $charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"){
@@ -135,7 +135,7 @@
             <?php
             if(!isset($_SESSION['profileuser3'])) {
               echo('<script>
-              window.location.href = "/alogin";
+              window.location.href = "/login";
               </script>');
           }
           ?>
