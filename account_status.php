@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php 
+  include './assets/mod/meta.php';
+   ?>   
 </head>
 
   <body>
@@ -60,15 +62,17 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
         <div class="row">
           <div class="span10">
 		  <ul class="yt-navigation-dark">
+	<?php if(isset($_SESSION['profileuser3'])) { ?>
 	<a href="/account"><li>Edit Profile</li></a>
 	<li class="selected">Status</li>
+	<?php } ?>
 	<a href="/site_style"><li>Style</li></a>
 </ul>
 		    <h3>Account Status</h3>
 			Community guidelines: <?php echo $icon; ?> <?php echo $standing;?><br>
 <?php echo $strike; ?>
 				</div><div class="span4">
-			<h3>Your Account Details</h3>
+			<h3>Hiya, <?php echo $profileUser3; ?>!</h3>
 			<?php
 			if(isset($_SESSION['profileuser3'])){
 			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
@@ -83,14 +87,14 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 				        <a href=\"./profile?user=".$row["username"]."\"><img width=\"225px\" height=\"225px\" src=\"/content/pfp/".getUserPic($row["id"])."\"></a>
 				        <div class=\"user-stats\">
 					        <div class=\"username\"><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">".htmlspecialchars($row["username"])."</a></div>
+							<div><i class='bi bi-envelope-at-fill'></i> - <span class=\"black\">".htmlspecialchars($row["email"])."</span></div>
 					        <div><span class=\"subscribers black\">".$rows."</span> subscribers</div>
-					        <div>Your E-mail: <span class=\"black\">".htmlspecialchars($row["email"])."</span></div>
-					        <div>Joined: <span class=\"black\">".$row["date"]."</span></div>
+					        <div>You joined on <span class=\"black\">".$row["date"]."</span></div>
 				        </div>
 			        </div>
 			        <hr>
-			        <h3>Your Current Description</h3>
-			        <textarea class=\"current-description\" readonly>".$row["description"]."</textarea>";
+			        <h3>Your Current Bio</h3>
+			        <textarea class=\"current-description\" readonly>".htmlspecialchars($row["description"])."</textarea>";
 			    }
 			    $statement->close();
 			}
