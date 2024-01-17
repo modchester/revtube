@@ -22,40 +22,40 @@
 					if($row['strikes'] == 0) {
 						$strikenum = 0;
 						$strikestyle = "color: green; font-weight: bold;";
-						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
+						$msg = "You are <b>eligible</b> to apply for the Partner Program!<br><br><a id='partnerButton' href='#' onclick='applyPartner();' style='width: 280px; text-align: center;' class='yt-button'>Apply</a>";
 						$etc = "strikes";
-						$icon = "good";
-						$standing = " Good standing";
+						$icon = '<i style="color: #008008" class="bi bi-check-circle-fill"></i>';
+						$standing = " <span style='".$strikestyle."'>Good standing</span>";
 					}
 					if($row['strikes'] == 1) {
 						$strikenum = 1;
 						$strikestyle = "color: orange; font-weight: bold;";
-						$msg = "You are eligible to apply for the Partner Program.<br><a href='#'>Apply</a>";
+						$msg = "You are <b>eligible</b> to apply for the Partner Program!<br><br><a id='partnerButton' href='#' onclick='applyPartner();' style='width: 280px; text-align: center;' class='yt-button'>Apply</a>";
 						$etc = "strike";
-						$icon = "warn";
-						$standing = " Middling standing";
+						$icon = '<i style="color: orange" class="bi bi-exclamation-circle-fill"></i>';
+						$standing = " <span style='".$strikestyle."'>Middling standing</span>";
 					}
 					if($row['strikes'] == 2) {
 						$strikenum = 2;
 						$strikestyle = "color: red; font-weight: bold;";
 						$msg = "You are <b>NOT</b> eligible to apply for the Partner Program.";
 						$etc = "strikes";
-						$icon = "bad";
-						$standing = " Bad standing";
+						$icon = '<i style="color: red" class="bi bi-dash-circle-fill"></i>';
+						$standing = " <span style='".$strikestyle."'>Bad standing</span>";
 					}
 					if($row['strikes'] > 3) {
 						$strikenum = number_format($row['strikes']);
 						$strikestyle = "color: red; font-weight: bold;";
 						$msg = "Your account has been terminated.";
 						$etc = "strikes";
-						$icon = "bad";
-						$standing = " Bad standing";
+						$icon = '<i style="color: red" class="bi bi-dash-circle-fill"></i>';
+						$standing = " <span style='".$strikestyle."'>Bad standing</span>";
 					}
 			    }
-$strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$etc.'</span><!--<h3>Partner Program</h3>'.$msg.'-->';
+$strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$etc.'</span><h3>Partner Program</h3>'.$msg.'';
 			}
 			?>
-          <h1>Account Status <img style="margin-top:2px !Important;" height="24" src="./assets/img/accstatus/<?php echo $icon;?>.png"><!--<small>BETA</small>--></h1>
+          <h1>Account Status <?php echo $icon; ?><!--<small>BETA</small>--></h1>
         </div>
         <div class="row">
           <div class="span10">
@@ -65,7 +65,7 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 	<a href="/site_style"><li>Style</li></a>
 </ul>
 		    <h3>Account Status</h3>
-			Community guidelines: <img style="margin-top:2px !Important;" height="12" src="./assets/img/accstatus/<?php echo $icon;?>.png"> <?php echo $standing;?><br>
+			Community guidelines: <?php echo $icon; ?> <?php echo $standing;?><br>
 <?php echo $strike; ?>
 				</div><div class="span4">
 			<h3>Your Account Details</h3>
@@ -100,6 +100,16 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
       </div>
 
     </div> <!-- /container -->
+		<script>
+			function applyPartner() {
+				var partnerButton = document.getElementById('partnerButton');
+				alert('Soon.');
 
+				// thing to do when the application is sent (which we will do later) - skyiebox
+				partnerButton.innerHTML = 'Applied';
+				partnerButton.onclick = '';
+				partnerButton.setAttribute('disabled', true);
+			}
+		</script>
   </body>
 </html>
