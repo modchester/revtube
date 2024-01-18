@@ -135,7 +135,7 @@ a.menu::after, .dropdown-toggle::after {
 }
 .topbar .container {
   margin: 0px!important;
-  padding-left: 55px;
+  margin-left: 55px !important;
   width: 100%;
 }
 
@@ -748,4 +748,8 @@ display:inline-block;
     margin-left: -58px;
     border: 1px solid #ccc !important;
     border-radius: 2px !important;
+}
+.yt-footer {
+  box-sizing: border-box;
+  /* so the footer doesn't cause there to be a bottom scrollbar */
 }
