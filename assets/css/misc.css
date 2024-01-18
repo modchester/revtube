@@ -713,6 +713,7 @@ display:inline-block;
 
 .container .upload-group {
   padding: 5px;
+  margin-left: 20px;
 }
 
 .container .upload-group .uploadbtn:after {
@@ -740,4 +741,11 @@ display:inline-block;
 
 #IhateThisShit {
   margin-top: 50px;
+}
+
+.yt-button-group > .dropdown.open > .dropdown-menu {
+  margin-top: -13px;
+    margin-left: -58px;
+    border: 1px solid #ccc !important;
+    border-radius: 2px !important;
 }

@@ -26,7 +26,7 @@ $start = $time;
           <div class="yt-button-group upload-group">
 	          <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
             <li class="dropdown" data-dropdown="dropdown">
-              <a href="#" class="dropdown-toggle pull-left uploadbtn yt-button"><i class="bi bi-caret-down-fill"></i></a>
+              <a href="#" class="dropdown-toggle pull-left uploadbtn uploaddrp yt-button"><i class="bi bi-caret-down-fill"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="/my_videos">My Videos</a></li>
                 <li><a href="/profile?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">My Channel</a></li>
