@@ -340,7 +340,7 @@ margin-right: 5%;
 /* .comment shit */
 .cmn {
   float: left;
-  margin-right: 3px;
+  margin-right: 7px;
 }
 .cmntxt {
   display: block;
@@ -752,4 +752,18 @@ display:inline-block;
 .yt-footer {
   box-sizing: border-box;
   /* so the footer doesn't cause there to be a bottom scrollbar */
+}
+
+.huname {
+  margin-right: 5px;
+    color: #666;
+    font-size: 11px !important;
+    margin-top: -1px !important;
+}
+
+.cmn {
+  float: left;
+}
+.cmntxt {
+  overflow: hidden;
 }
