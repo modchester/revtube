@@ -135,7 +135,7 @@ a.menu::after, .dropdown-toggle::after {
 }
 .topbar .container {
   margin: 0px!important;
-  padding-left: 55px;
+  margin-left: 55px !important;
   width: 100%;
 }
 
@@ -340,7 +340,7 @@ margin-right: 5%;
 /* .comment shit */
 .cmn {
   float: left;
-  margin-right: 3px;
+  margin-right: 7px;
 }
 .cmntxt {
   display: block;
@@ -713,6 +713,7 @@ display:inline-block;
 
 .container .upload-group {
   padding: 5px;
+  margin-left: 20px;
 }
 
 .container .upload-group .uploadbtn:after {
@@ -740,4 +741,29 @@ display:inline-block;
 
 #IhateThisShit {
   margin-top: 50px;
+}
+
+.yt-button-group > .dropdown.open > .dropdown-menu {
+  margin-top: -13px;
+    margin-left: -58px;
+    border: 1px solid #ccc !important;
+    border-radius: 2px !important;
+}
+.yt-footer {
+  box-sizing: border-box;
+  /* so the footer doesn't cause there to be a bottom scrollbar */
+}
+
+.huname {
+  margin-right: 5px;
+    color: #666;
+    font-size: 11px !important;
+    margin-top: -1px !important;
+}
+
+.cmn {
+  float: left;
+}
+.cmntxt {
+  overflow: hidden;
 }
