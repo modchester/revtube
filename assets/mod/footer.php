@@ -6,7 +6,9 @@
         margin-top: -2px !important;
         margin-right: -13px !important;
         margin-bottom: -1px;
-        /* filter: invert(1); */
+        /* to make it look like similar to the 2012 footer somewhat? idfk */
+        filter: grayscale(1);
+        opacity: 0.6;
     } </style>
     <h3><a class="footerlogost" href="/"><strong><?php echo $site['name']; ?></strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
     <?php
@@ -28,9 +30,10 @@ $total_time = round(($finish - $start), 4);
             $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
             $phpver = phpversion();
             ?>
-    <p><abbr title="semi-2011 made by Cattskit and redst0ne">&copy; <?php echo $site['name']; ?> 2021-<?php echo date("Y"); ?></abbr> <?php if(isset($debugmsg)) { echo $debugmsg; } ?></p>
-    <!-- almost ready for launch i guess -redst0ne 05/04/23 -->
-    <!-- will people ever be willing to actually use this? -redst0ne 06/17/23 -->
-    <!-- maybe? -redst0ne 11/22/23 -->
+    <p><abbr title="semi-2013 made by skyiebox and neroidev">&copy; <?php echo $site['name']; ?> 2021-<?php echo date("Y"); ?></abbr> <?php if(isset($debugmsg)) { echo $debugmsg; } ?> <a>Help</a> <a>Developers</a> <a>Discord</a></p>
+    <!-- almost ready for launch i guess -neroidev 05/04/23 -->
+    <!-- will people ever be willing to actually use this? -neroidev 06/17/23 -->
+    <!-- maybe? -neroidev 11/22/23 -->
+    <!-- yea probably -neroidev 01/18/24 -->
 </footer>
 
