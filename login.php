@@ -29,7 +29,7 @@
                                     while($row = $result->fetch_assoc()){
                                             $hash = $row['password'];
                                             if(password_verify($_POST['password'], $hash)){
-                                              if ($row['strikes'] == 3) {
+                                              if ($row['strikes'] > 3) {
                                                 echo('<div class="alert-message error loginerror page-alert">
                                      <p>Your account has been terminated due to too many violations of the <a style="color:white;"href=guidelines>Community Guidelines</a>.</p>
                                      </div>');
@@ -70,7 +70,9 @@
                       </div>
                       <center>
                   <input class="yt-button primary" type="submit" name="submit" value="Login"> <a href="passwordresets" class="yt-button danger" onclick="//alert('Contact the team with proof that you own the channel.')">Forgot your password?</a>
-                              </center>
+                             <br><br>
+                              <a href="/aregister" class="link">Don't have a account?</a>
+                </center>
                 </form>
               </div>
               <p class="footer">&copy <?php echo date("Y"); echo " ".$site['name']; ?></p>

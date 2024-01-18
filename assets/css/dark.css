@@ -1,6 +1,10 @@
-    /* magnum22 was here :) */
+    /* magnum22 and kai was here :) */
     
-    body { background-color: #000 !important; color: #bfbfbf; }
+    :root { --bodybg: #000; }
+
+    .pull-left > input { color: #868686; }
+
+    body { background-color: var(--bodybg) !important; color: #bfbfbf; }
     
     a { color: #248eff; }
     
@@ -17,6 +21,8 @@
     .btn.info, .alert-message.info { background: #0c4169; border-color: #3a78ab; }
     
     .topbar a { color: #ccc; }
+    
+    .guide { background: var(--bodybg); }
     
     .guide .guide-item:hover { background: #333; box-shadow: 0 0 0 1px #555 inset; transition: box-shadow 0.3s ease; }
     

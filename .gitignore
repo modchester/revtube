@@ -2,6 +2,7 @@ content/video/
 content/unprocessed/
 content/tmp/
 content/thumb/
+content/background/
 *.bak
 *.mp4
 *.db

@@ -8,8 +8,6 @@
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
 <?php include './assets/lib/profile.php';?>
-<!-- guide -->
-<?php include './assets/mod/guide.php';?>
      <?php if($debug) { 
       $omid = $_GET['v'];
       $debugmsg1 = '<div class="alert-message warning debug-alert"><p><strong>Current video ID:</strong> '.$omid.' </p></div>'; 
@@ -66,11 +64,16 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, Y', strtotime($row['date']));
             $pfp = idFromUser($row['author']);
+            /* spagetti idea
+            <div class="alert-message vidmang"><p><span style="color: transparent; user-select: none; -o-user-select: none; -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; cursor: default;">stupid hack.</span></p><span id="IhateThisShit"><a class="pull-left yt-button" href="/my_videos">Video Manager</a></span><span style="float: right; margin-top: -22px;"><a class="pull-left yt-button" href="/my_videos">Video Manager</a></span></div>
+            it sucks so much istg
+            */
             echo '
             <div class="rewatch">
             <iframe height="360px" width="640px" src="/player/index?v=//'.$_SERVER["SERVER_NAME"].'/content/video/' . $row["filename"] . '&vid='.$row['vid'].'" style="border: none;"></iframe>
             <!--<video height="360px" width="640px" src="content/video/' . $row["filename"] . '" controls>No HTML5?</video>-->
             '.$debugmsg1.'
+            
             <div class="rewatch-content rewatch-main">
              <h1 id="rewatch-title">
                <span id="title">' . htmlspecialchars($row['videotitle']) . '</span>
@@ -190,7 +193,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
-            echo "<div class='comment'><img class='cmn' height='34px' width='34px' src='content/pfp/" .htmlspecialchars(getUserPic($pfp)). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div>";
+            echo "<div class='comment'><img class='cmn' height='48px' width='48px' src='content/pfp/" .htmlspecialchars(getUserPic($pfp)). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div><br>";
         }
         $stmt->close();
     ?>

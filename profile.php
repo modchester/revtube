@@ -12,7 +12,7 @@
             $statement->execute();
             $result = $statement->get_result();
             while($row = $result->fetch_assoc()) {
-                if ($row['strikes'] == 3) {
+                if ($row['strikes'] > 3) {
                   echo('<script>
              window.location.href = "/?err=This account has been terminated for a violation of '.$site['name'].'\'s Community Guidelines.";
              </script>');

@@ -6,7 +6,7 @@
       if(!isset($_SESSION['profileuser3'])) {
         echo '
         <script>
-             window.location.href = "../alogin";
+             window.location.href = "../login";
              </script>';
       } else {
         $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
