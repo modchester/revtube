@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php 
+  include './assets/mod/meta.php';
+   ?>   
 </head>
 
   <body>
@@ -16,8 +18,10 @@
         <div class="row">
           <div class="span10">
 		  <ul class="yt-navigation-dark">
+	<?php if(isset($_SESSION['profileuser3'])) { ?>
 	<li class="selected">Edit Profile</li>
 	<a href="/account_status"><li>Status</li></a>
+	<?php } ?>
 	<a href="/site_style"><li>Style</li></a>
 </ul>
 		    <h3>Edit your settings</h3>
@@ -31,7 +35,7 @@
 				    <input type="file" name="new_bck" id="new_bck">
 				</div>
 				<div class="input-group">
-				    <label for="description">Description: </label>
+				    <label for="description">Bio: </label>
 				    <textarea class="yt-search-input" name="description" rows="4" cols="50"></textarea>
 				</div>
 				<div class="input-group">
@@ -40,7 +44,8 @@
 				</div>
 				<div class="input-group">
 					<div></div>
-					<div class="red"><?php
+					<div class="red">
+						<?php
 				if (isset($_POST["submit"])){
 					if(isset($_FILES["new_pic"]) && is_uploaded_file($_FILES["new_pic"]["tmp_name"])){
 						$supportedFormats = [
@@ -115,7 +120,7 @@
 					}
 				}
 			?></div></div></div><div class="span4">
-			<h3>Your Account Details</h3>
+			<h3>Hiya, <?php echo $profileUser3; ?>!</h3>
 			<?php
 			if(isset($_SESSION['profileuser3'])){
 			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
@@ -130,13 +135,13 @@
 				        <a href=\"./profile?user=".$row["username"]."\"><img width=\"225px\" height=\"225px\" src=\"/content/pfp/".getUserPic($row["id"])."\"></a>
 				        <div class=\"user-stats\">
 					        <div class=\"username\"><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">".htmlspecialchars($row["username"])."</a></div>
+							<div><i class='bi bi-envelope-at-fill'></i> - <span class=\"black\">".htmlspecialchars($row["email"])."</span></div>
 					        <div><span class=\"subscribers black\">".$rows."</span> subscribers</div>
-					        <div>Your E-mail: <span class=\"black\">".htmlspecialchars($row["email"])."</span></div>
-					        <div>Joined: <span class=\"black\">".$row["date"]."</span></div>
+					        <div>You joined on <span class=\"black\">".$row["date"]."</span></div>
 				        </div>
 			        </div>
 			        <hr>
-			        <h3>Your Current Description</h3>
+			        <h3>Your Current Bio</h3>
 			        <textarea class=\"current-description\" readonly>".htmlspecialchars($row["description"])."</textarea>";
 			    }
 			    $statement->close();

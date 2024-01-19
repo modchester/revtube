@@ -49,11 +49,9 @@ $start = $time;
 			    $result = $statement->get_result();
 			    if($result->num_rows === 0) exit('No rows');
 			    while($row = $result->fetch_assoc()) {
-             if($row['strikes'] == 3) {
-               echo('<script>window.location.href = "logout";</script>');
-     } else {
-       echo "";
-     }
+             if($row['strikes'] > 3) {
+               echo('<script>window.location.href = "/logout?url=/?err=Your account has been terminated for a violation of '.$site['name'].'\'s Community Guidelines.";</script>');
+             }
             if ($row["is_admin"] == 1) {
               $adminlink = "<li><a href=\"admin\">Admin Panel</a></li>";
             } else {
@@ -70,7 +68,7 @@ $start = $time;
                 <li class=\"divider\"></li>
                 <li><a href=\"account\">Settings</a></li>
                 ".$adminlink."
-                <li><a href=\"logout\">Logout ".htmlspecialchars($row["username"])."</a></li>
+                <li><a href=\"logout?url=".htmlspecialchars($_SERVER['REQUEST_URI'])."\">Logout ".htmlspecialchars($row["username"])."</a></li>
               </ul>
             </li>
           </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".htmlspecialchars($row["username"])."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";

@@ -55,8 +55,10 @@
         <div class="row">
           <div class="span10">
 		  <ul class="yt-navigation-dark">
+	<?php if(isset($_SESSION['profileuser3'])) { ?>			
 	<a href="/account"><li>Edit Profile</li></a>
 	<a href="/account_status"><li>Status</li></a>
+	<?php } ?>
 	<li class="selected">Style</li>
 </ul>
 
@@ -85,7 +87,7 @@
 		</select>
 		<div class="input-group">
 			<br>
-			<div><input class="yt-button" type="submit" value="Update" name="submit"></div>
+			<div><input class="yt-button" type="submit" value="Update" name="submit" style="width: 210px;"></div>
 		</div>
 	</form>	
 </div><div class="span4">

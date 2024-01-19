@@ -5,6 +5,10 @@ include("./assets/mod/db.php");
 
  if(session_destroy())
  {
-  header("Location: index.php");
+  if(!isset($_GET['url'])) {
+    header("Location: /");
+  } else {
+    header("Location: ".$_GET['url']);
+  }
  }
 ?>
