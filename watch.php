@@ -150,7 +150,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                 }
             }
 
-        echo '<h4><strong><a href="/all_comments?v='.$_GET['v'].'">All comments ('.$count.')</a></strong></h4>';
+        echo '<h4 class="allc"><a href="/all_comments?v='.$_GET['v'].'"><strong>ALL COMMENTS</strong></a> <span class="allcc">('.$count.')</span></h4>';
 ?>
 
 

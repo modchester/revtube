@@ -767,3 +767,13 @@ display:inline-block;
 .cmntxt {
   overflow: hidden;
 }
+.allc, .allcc {
+  font-size: 13px;
+  color: #666666 !important;
+}
+.allc > a > strong {
+  color: #666666 !important;
+}
+.allcc {
+font-weight: normal;
+}
