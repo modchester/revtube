@@ -226,8 +226,8 @@ margin-right: 5%;
 .topbar div > ul .menu-dropdown .divider, .nav .menu-dropdown .divider, .topbar div > ul .dropdown-menu .divider, .nav .dropdown-menu .divider {
   background-color: transparent;
   border-color: #f4f4f4;
-  margin-left: 8px;
-  margin-right: 8px;
+  /* margin-left: 8px;
+  margin-right: 8px; */
 }
 .yt-footer {
   background-color: #f2f2f2;
@@ -766,4 +766,14 @@ display:inline-block;
 }
 .cmntxt {
   overflow: hidden;
+}
+.allc, .allcc {
+  font-size: 13px;
+  color: #666666 !important;
+}
+.allc > a > strong {
+  color: #666666 !important;
+}
+.allcc {
+font-weight: normal;
 }

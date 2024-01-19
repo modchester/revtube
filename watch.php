@@ -8,6 +8,7 @@
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
 <?php include './assets/lib/profile.php';?>
+<link rel="stylesheet" href="./assets/css/sub.css">
      <?php if($debug) { 
       $omid = $_GET['v'];
       $debugmsg1 = '<div class="alert-message warning debug-alert"><p><strong>Current video ID:</strong> '.$omid.' </p></div>'; 
@@ -64,6 +65,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, Y', strtotime($row['date']));
             $pfp = idFromUser($row['author']);
+            $rows = getSubscribers($row['author'], $mysqli);
             /* spagetti idea
             <div class="alert-message vidmang"><p><span style="color: transparent; user-select: none; -o-user-select: none; -ms-user-select: none; -moz-user-select: none; -webkit-user-select: none; -khtml-user-select: none; cursor: default;">stupid hack.</span></p><span id="IhateThisShit"><a class="pull-left yt-button" href="/my_videos">Video Manager</a></span><span style="float: right; margin-top: -22px;"><a class="pull-left yt-button" href="/my_videos">Video Manager</a></span></div>
             it sucks so much istg
@@ -88,20 +90,20 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
               if($row['author'] == $_SESSION['profileuser3']) {
                 echo '
                 <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
-            } else {
+              } else {
         if(isset($_SESSION['profileuser3'])) {
             if(ifSubscribed($_SESSION['profileuser3'], $row['author'], $mysqli) == false) {
            echo '
-           <a class="yt-button danger" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['author']) . '">Subscribe</a>
+           <a class="yt-button danger" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['author']) . '">Subscribe</a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
            ';
            } else { 
             echo '
-            <a class="yt-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['author']) . '">Unsubscribe</a>
+            <a class="yt-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['author']) . '">Unsubscribe</a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
         ';
              } 
             } else {
                 echo'
-                <a class="yt-button danger disabled" style="margin-left: 44px; margin-top: 8px;">Subscribe</a>
+                <a class="yt-button danger disabled" style="margin-left: 44px; margin-top: 8px;">Subscribe</a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
             ';
             }
         }
@@ -148,7 +150,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                 }
             }
 
-        echo '<h4><strong><a href="/all_comments?v='.$_GET['v'].'">All comments ('.$count.')</a></strong></h4>';
+        echo '<h4 class="allc"><a href="/all_comments?v='.$_GET['v'].'"><strong>ALL COMMENTS</strong></a> <span class="allcc">('.$count.')</span></h4>';
 ?>
 
 
