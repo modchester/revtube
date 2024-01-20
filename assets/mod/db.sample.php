@@ -94,7 +94,7 @@
          $signedInMessage = "Logged out";
       }
 
-      $debugmsg = "<center><span style='color: red;'>[DEBUG]</span> ".$signedInMessage." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver </center>";
+      $debugmsg = $signedInMessage." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver";
 	   //echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    } else {
       error_reporting(0); 

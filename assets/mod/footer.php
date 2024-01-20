@@ -2,15 +2,23 @@
 <footer class="yt-footer">
 <style>      .footerlogost {
         content: url('<?php echo $site['logo_source']; ?>') !important;
-        height: 23px;
+        height: 30px;
         margin-top: -2px !important;
         margin-right: -13px !important;
         margin-bottom: -1px;
-        /* to make it look like similar to the 2012 footer somewhat? idfk */
-        filter: grayscale(1);
-        opacity: 0.6;
     } </style>
-    <h3><a class="footerlogost" href="/"><strong><?php echo $site['name']; ?></strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a></h3>
+    <h3>
+        
+        <a class="footerlogost" href="/"><strong><?php echo $site['name']; ?></strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a>
+        <!-- buttons -->
+        <ul class="footer-buttons">
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Translations aren't implemented.')"><i class="bi bi-14 bi-globe-americas"></i> Language: <b>English</b> <i class="bi bi-caret-down-fill"></i></a></li> 
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Country-specific settings aren't implemented.')">Country: <b>Worldwide</b> <i class="bi bi-caret-down-fill"></i></a></li> 
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Safety settings aren't implemented.')">Safety: <b>Off</b> <i class="bi bi-caret-down-fill"></i></a></li>  
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Safety settings aren't implemented.')"><i class="bi bi-14 bi-question-circle-fill"></i> Help <i class="bi bi-caret-down-fill"></i></a></li>  
+        </ul>
+            
+     </h3>
     <?php
 $time = microtime();
 $time = explode(' ', $time);
@@ -18,19 +26,25 @@ $time = $time[1] + $time[0];
 $finish = $time;
 $total_time = round(($finish - $start), 4);
 ?>
-    <?php
-            $sql = "SELECT COUNT(*) FROM users";
-            $result = mysqli_query($mysqli, $sql);
-            $usercount = mysqli_fetch_assoc($result)['COUNT(*)'];
-            $sql2 = "SELECT COUNT(*) FROM videos";
-            $result2 = mysqli_query($mysqli, $sql2);
-            $videocount = mysqli_fetch_assoc($result2)['COUNT(*)'];
-            $sql3 = "SELECT COUNT(*) FROM comments";
-            $result3 = mysqli_query($mysqli, $sql3);
-            $commentcount = mysqli_fetch_assoc($result3)['COUNT(*)'];
-            $phpver = phpversion();
-            ?>
-    <p><abbr title="semi-2013 made by skyiebox and neroidev">&copy; <?php echo $site['name']; ?> 2021-<?php echo date("Y"); ?></abbr> <?php if(isset($debugmsg)) { echo $debugmsg; } ?> <a>Help</a> <a>Developers</a> <a>Discord</a></p>
+    <p>
+       <!-- links -->
+        <ul class="footer-links">
+            <li><a href="/info/about">About</a></li> 
+            <li><a href="/info/developers">Developers</a></li>
+            <li><a href="//discord.gg/EnQ5ht83MS">Discord</a></li>
+            <li><a href="/blog">Blog</a></li>
+                
+            <!-- second ! -->
+            <br>
+            <li class="second-footer-link"><a href="/guidelines">Community Guidelines</a></li>
+            <li class="second-footer-link"><a href="/stats">Statistics</a></li>
+            <li class="second-footer-link"><a href="/info/partners">Partners</a></li>
+            <li class="second-footer-link footer-copyright"><span dir="ltr">© <?php echo $site['name']; ?> 2021-<?php echo date("Y"); ?></span></li>
+            <?php if(isset($debugmsg)) { ?><li class="second-footer-link" style="margin-left: -10px;">- <?php echo $debugmsg; ?></li><?php } ?>
+        </ul>
+    </p>
+    
+    <p> </p>
     <!-- almost ready for launch i guess -neroidev 05/04/23 -->
     <!-- will people ever be willing to actually use this? -neroidev 06/17/23 -->
     <!-- maybe? -neroidev 11/22/23 -->
