@@ -2,6 +2,8 @@
     
     :root { --bodybg: #000; }
 
+    .footer-links, .footer-links li a { color: #868686; }
+    
     .pull-left > input { color: #868686; }
 
     body { background-color: var(--bodybg) !important; color: #bfbfbf; }

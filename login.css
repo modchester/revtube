@@ -1,3 +1,32 @@
+.dark .box {
+  background: #0a0a0a;
+  box-shadow: none;
+  color: white;
+  border-color: #222;
+}
+
+.dark {
+  background: black;
+}
+
+.footer {
+  color: white;
+}
+
+.dark .divimg img {
+  filter: invert(0)!important;
+}
+
+.dark input {
+  border-color: #2f2c2c!important;
+}
+
+  .dark .box .inputBox input:focus ~ label,
+  .dark .box .inputBox input:valid ~ label,
+  .dark .box .inputBox input:not([value=""]) ~ label {
+    background-color: #0a0a0a;
+  }
+  
 body {
     margin: 0;
     padding: 0;
@@ -25,7 +54,6 @@ body {
     color: #fff;
     text-align: center;
     color: #202124;
-    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
     font-size: 24px;
     font-weight: 400;
   }

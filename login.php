@@ -17,7 +17,7 @@
 
 </style>
 </head>
-<body>
+<body class="<?php echo htmlspecialchars($site['siteTheme']); ?>">
 <?php
                                 if(!empty($_POST)){
                                     $username = htmlspecialchars($_POST['name']);
