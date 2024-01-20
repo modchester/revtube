@@ -138,6 +138,7 @@
 					    $statement->execute();
 					    $statement->close();
 					}
+					
 					if(isset($_POST['css'])) {
 						if(isset($_SESSION['profileuser3'])) {
 			   				$statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
