@@ -19,6 +19,7 @@
 
 .dark input {
   border-color: #2f2c2c!important;
+  color: white;
 }
 
   .dark .box .inputBox input:focus ~ label,
