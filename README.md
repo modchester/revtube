@@ -1,6 +1,6 @@
 # RevTube: PHP video sharing software
 
-*UI formerly maintaned by Kaisiece/[skyiebox](https://github.com/skyiebox), now maintained by kylarz/ky-1.*
+*UI is maintaned by Kaisiece/[skyiebox](https://github.com/skyiebox) and kylarz/ky-1.*
 
 RevTube is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
 # Access the site 
@@ -9,8 +9,8 @@ RevTube is a video <!--(with audio uploading a feature that was going to be adde
 For the current "skeuo" layout, the link is https://rev.yoretude.com.
 -->
 RevTube is currently in development, so we do not have a public instance at this time.
-# Changelog (only shows latest major update)
+<!--# Changelog (only shows latest major update)
 ## January 12, 2024
 The RevTube branding has been restored. (Also it's been a little over 2 years since this project started so that's neat, I guess.)
 
-*To see every update, view the full [changelog](https://github.com/ars0nstudios/revtube/blob/semi-2013/changelog.md).*
+*To see every update, view the full [changelog](https://github.com/ars0nstudios/revtube/blob/semi-2013/changelog.md).*-->
