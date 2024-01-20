@@ -2,7 +2,7 @@
 <footer class="yt-footer">
 <style>      .footerlogost {
         content: url('<?php echo $site['logo_source']; ?>') !important;
-        height: 30px;
+        height: 28px;
         margin-top: -2px !important;
         margin-right: -13px !important;
         margin-bottom: -1px;

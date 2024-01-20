@@ -10,13 +10,10 @@
                     $statement = $mysqli->prepare("SELECT * FROM announcements ORDER BY date DESC LIMIT 1 ");
                     $statement->execute();
                     $result = $statement->get_result();
-                    if($result->num_rows !== 0){
+                    if($result->num_rows !== 0) {
                         while($row = $result->fetch_assoc()) {
                           $humandate = time_elapsed_string(''.$row['date'].'');
                             echo '<div class="alert-message info"><p>From <b>' . $row['author'] . ':</b> ' . $row['content'] . ' ('.$humandate.')</p></div>';
                         }
-                    }
-                    else{
-                        echo "";
                     }
                 ?>
