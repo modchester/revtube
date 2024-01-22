@@ -116,6 +116,7 @@ CREATE TABLE `users` (
   `strikes` int(11) NOT NULL DEFAULT 0,
   `username` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT 'No description.',
+  `custom_css` varchar(1024) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `pfp` varchar(255) NOT NULL DEFAULT 'default.png',
