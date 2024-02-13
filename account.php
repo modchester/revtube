@@ -38,6 +38,26 @@
 				    <label for="description">Bio: </label>
 				    <textarea class="yt-search-input" name="description" rows="4" cols="50"></textarea>
 				</div>
+			<?php
+			if(isset($_SESSION['profileuser3'])){
+			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+			    $statement->bind_param("s", $_SESSION['profileuser3']);
+			    $statement->execute();
+			    $result = $statement->get_result();
+			    if($result->num_rows === 0) exit('No rows');
+			    while($row = $result->fetch_assoc()) { ?>
+				
+				<?php if($row['is_verified'] == 1) { ?>
+				<div class="input-group">
+				    <label for="css">Custom CSS: </label>
+				    <textarea class="yt-search-input" name="css" rows="4" cols="50"><?php echo $row['custom_css']; ?></textarea>
+				</div>
+				
+			    <?php } }
+			    $statement->close();
+			}
+			?>
+			
 				<div class="input-group">
 					<div></div>
 					<div><input style="float:right;margin-right:159px;" class="yt-button" type="submit" value="Update" name="submit"></div>
@@ -118,7 +138,24 @@
 					    $statement->execute();
 					    $statement->close();
 					}
-				}
+					
+					if(isset($_POST['css'])) {
+						if(isset($_SESSION['profileuser3'])) {
+			   				$statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+			    			$statement->bind_param("s", $_SESSION['profileuser3']);
+			    			$statement->execute();
+			    			$result = $statement->get_result();
+			    			if($result->num_rows === 0) exit('No rows');
+			    			while($row = $result->fetch_assoc()) {
+								
+								if($row['is_verified'] == 1) {
+									$statement = $mysqli->prepare("UPDATE `users` SET `custom_css` = ? WHERE `username` = '" . $_SESSION["profileuser3"] . "'");
+					    			$statement->bind_param("s", $_POST['css']);
+					    			$statement->execute();
+					    			$statement->close();
+								}
+					}	
+				} } }
 			?></div></div></div><div class="span4">
 			<h3>Hiya, <?php echo htmlspecialchars($_SESSION['profileuser3']); ?>!</h3>
 			<?php

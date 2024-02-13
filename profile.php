@@ -127,10 +127,16 @@
                     $staff = '';
                   }
                   if($row['is_verified'] == 1) {
+                    if(!empty($row['custom_css'])) {
+                      $customCSS = '<style>'.$row['custom_css'].'</style>';
+                      echo $customCSS;
+                    }
+                    
                     $verified = '<img style="margin-bottom:-3px;" height="24px" src="/assets/img/verified_dark.png">';
                   } else {
                     $verified = '';
                   }
+                  
                   echo('
             <h3><h2>'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
             <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
