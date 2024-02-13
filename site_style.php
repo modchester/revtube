@@ -1,5 +1,8 @@
 <?php
+	include("./assets/mod/branding.php");
+
 	// written by skyiebox, 1/14/2023
+	// updated by skyiebox, 2/13/2023 (1 day before this page became 1 month old!)
 	if(isset($_POST)) {
 		if(isset($_POST['theme'])) {
 			setrawcookie("siteTheme", $_POST['theme'], time() + 2000000, "/");
@@ -14,9 +17,9 @@
 		}
 	}
 
-	$theme = ucfirst($_COOKIE['siteTheme']) ?? 'Default';
-	$videoPlayer = $_COOKIE['videoPlayer'] ?? 'yt2013';
-	$errorGato = ucfirst($_COOKIE['errorGato']) ?? 'revoozie_rtx';
+	$theme = ucfirst($site['siteTheme']);
+	$videoPlayer = $site['videoPlayer'];
+	$errorGato = ucfirst($site['errorGato']);
 
 	if($errorGato == 'Revoozie_rtx') {
 		$errorGato = 'Revoozie (RTX)';

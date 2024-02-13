@@ -21,7 +21,7 @@ if($site['siteTheme'] == 'dark') {
 if($site['errorGato'] == 'anal') {
     $site['errorGatoNum'] = 6;
 } elseif($site['errorGato'] == 'revoozie') {
-    $site['errorGatoNum'] = 7;
+    $site['errorGatoNum'] = rand(7, 12);
 } else {
     $site['errorGatoNum'] = rand(1,5);
 }
