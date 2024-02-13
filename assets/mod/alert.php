@@ -17,3 +17,8 @@
                         }
                     }
                 ?>
+
+
+<noscript>
+  <div class="alert-message warning"><p>Javascript is disabled, but it's needed for some parts of <?php echo $site['name']; ?>.</p></div>
+</noscript>
