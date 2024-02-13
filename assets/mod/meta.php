@@ -15,13 +15,14 @@
     } </style>
 	  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
     <link rel="apple-touch-icon-precomposed" sizes="220x220" href="/assets/img/favicon.png">
-    <script src="/assets/js/jquery.1.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-twipsy.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="/assets/js/bootstrap-tabs.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The world's smallest video sharing community">
-    <meta name="author" content="neroidev, skyiebox">
+    <meta name="author" content="neroidev, skyiebox/Cattskit">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -34,5 +35,5 @@
 	  <link href="/assets/css/misc.css" rel="stylesheet">
     <link href="/assets/css/2013.css" rel="stylesheet">
     <?php if($site['siteTheme'] !== 'default') { ?>
-      <link href="/assets/css/theme?r=<?php echo rand(1,9999); ?>" rel="stylesheet">
+      <link href="/assets/css/theme?cache=<?php echo rand(1,9999); ?>" rel="stylesheet">
     <?php } ?>

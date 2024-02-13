@@ -20,13 +20,13 @@ $start = $time;
           </ul>-->
           <form class="pull-left" action="results">
             <input name="q" type="text" placeholder="Search">
-            <button type="submit" class="yt-button searchbtn"><i class="bi bi-search"></i></button>
+            <button type="submit" class="yt-button searchbtn" aria-label="Search"><i class="bi bi-search"></i></button>
           </form>
           <?php if($loggedIn) { ?>
           <div class="yt-button-group upload-group">
-	          <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
+	          <a class="pull-left uploadbtn yt-button" href="upload" aria-label="Upload">Upload</a>
             <li class="dropdown" data-dropdown="dropdown">
-              <a href="#" class="dropdown-toggle pull-left uploadbtn uploaddrp yt-button"><i class="bi bi-caret-down-fill"></i></a>
+              <a href="#" aria-label="Upload Button Dropdown" class="dropdown-toggle pull-left uploadbtn uploaddrp yt-button"><i class="bi bi-caret-down-fill"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="/my_videos">My Videos</a></li>
                 <li><a href="/profile?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">My Channel</a></li>
@@ -37,7 +37,7 @@ $start = $time;
 
           </div>
           <?php } else { ?>
-            <a class="pull-left uploadbtn yt-button" href="upload">Upload</a>
+            <a class="pull-left uploadbtn yt-button" aria-label="Upload" href="upload">Upload</a>
           <?php } ?>
           	<?php
       if(!$loggedIn) {
@@ -59,7 +59,7 @@ $start = $time;
             }
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\"><span class='huname'>".htmlspecialchars($row["username"])."</span> <img style='margin-top: -7px; vertical-align: middle;' height='32px' width='32px' src='/content/pfp/".getUserPic($row["id"])."'></a>
+              <a href=\"#\" class=\"dropdown-toggle\"><span class='huname'>".htmlspecialchars($row["username"])."</span> <img style='margin-top: -7px; vertical-align: middle;' alt='".htmlspecialchars($row["username"])."' height='32px' width='32px' src='/content/pfp/".getUserPic($row["id"])."'></a>
               <ul class=\"dropdown-menu dropdown-menu-profile\">
               <li></li>
                 <li><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">Your Channel</a></li>
