@@ -5,6 +5,7 @@ $site['videoPlayer'] = $_COOKIE['videoPlayer'] ?? 'yt2013';
 $site['siteTheme'] = $_COOKIE['siteTheme'] ?? 'default';
 $site['errorGato'] = $_COOKIE['errorGato'] ?? 'revoozie_rtx';
 $site['name'] = 'RevTube';
+$site['allowedThemees'] = array('dark', 'fluent', 'l2013');
 
 // the commented lines are for the pre-late 2013 logo
 // it kinda sucks, i was testing
