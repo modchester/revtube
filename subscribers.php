@@ -38,7 +38,7 @@
         <div class="container-flex">
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
-              <ul class="tabs" data-tabs="tabs">
+              <ul class="yt-tabs" data-tabs="tabs">
   <li><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
   <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
   <li class="active"><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
@@ -84,7 +84,7 @@
                         $name = htmlspecialchars($row['sender']);
                         echo "<div class='user'>
 				    	<div class='user-info'>
-						    <div><a href='./profile?user=".htmlspecialchars($name)."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".$htmlspecialchars($name)."</b></a> (".$rows." subscribers)</div>
+						    <div><a href='./profile?user=".$name."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".$name."</b></a> (".$rows." subscribers)</div>
 						    <!-- <div><span class='black'>".$rows."</span> subscribers</div> -->
 					    </div>
 					  <!-- <div><a href='./profile?user=".htmlspecialchars($name)."'><img class='cmn' height='34px' width='34px' src='content/pfp/".getUserPic($pid)."'></a></div> -->

@@ -72,7 +72,7 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 			Community guidelines: <?php echo $icon; ?> <?php echo $standing;?><br>
 <?php echo $strike; ?>
 				</div><div class="span4">
-			<h3>Hiya, <?php echo $profileUser3; ?>!</h3>
+			<h3>Hiya, <?php echo htmlspecialchars($_SESSION['profileuser3']); ?>!</h3>
 			<?php
 			if(isset($_SESSION['profileuser3'])){
 			    $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");

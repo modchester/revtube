@@ -37,7 +37,7 @@
         <div class="container-flex">
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
-              <ul class="tabs" data-tabs="tabs">
+              <ul class="yt-tabs" data-tabs="tabs">
   <li class="active"><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
   <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
   <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
@@ -186,7 +186,7 @@
               $totalviews = 0;
           }
           ?>
-            <h3>Bio</h3>
+            <h3>About Me</h3>
                             <?php
                 $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `username` = ? LIMIT 1");
                 $statement->bind_param("s", $_GET['user']);
@@ -201,10 +201,11 @@
                     <hr>
                     <h3>Statistics</h3>
                     <div class='card message'>
-                    Joined ".$join2."<br>
                     <span class='stat'>".$rows."</span> subscribers
                     <br>
-                    <span class='stat'>".$totalviews."</span> views
+                    <span class='stat'>".$totalviews."</span> views<br>
+                    <span style='display:inline-block;float:right !important;'>Joined ".$join2."</span>
+
                     ";
                 }
                 $statement->close();

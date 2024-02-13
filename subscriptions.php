@@ -38,7 +38,7 @@
         <div class="container-flex">
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
-              <ul class="tabs" data-tabs="tabs">
+              <ul class="yt-tabs" data-tabs="tabs">
   <li><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
   <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
   <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>

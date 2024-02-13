@@ -24,6 +24,7 @@
      error_reporting(E_ALL ^ E_WARNING);
      while($row = $result->fetch_assoc()) {
       $name = $row['author'];
+      $commentsenabled = $row["comments_enabled"];
      }
      $stmt = $mysqli->prepare("SELECT * FROM users WHERE username = ?");
      $stmt->bind_param("s", $name);
@@ -81,7 +82,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                <span id="title">' . htmlspecialchars($row['videotitle']) . '</span>
              </h1>
              <div class="rewatch-views">
-               <span class="rewatch-views-text" style="width: 47px;display: inline-block;padding-bottom: 3px;">'.$row['views'].'</span><br>
+               <span class="rewatch-views-text" style="width: 47px;display: inline-block;padding-bottom: 3px;">'.$row['views'].' <span class="s2o">views</span></span><br>
                <span class="rewatch-likes"><i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</span>
              </div>
              <div id="rewatch-author">
@@ -109,7 +110,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         }
            echo '</div>
             <div class="rewatch-buttons">
-            <a class="yt-button ok" href="/like?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button ok" href="/dislike?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a> <a style="margin-left:0px;float:right;" class="yt-button ok" href="/report?v=' . $row['vid'] . '&offender=' . $row['author'] . '"><i class="bi bi-flag-fill"></i> Report</a>
+            <a class="yt-button ok" href="/like?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-up-fill"></i> Like</a> <a style="margin-left:0px;" class="yt-button ok" href="/dislike?v=' . $row['vid'] . '"><i class="bi bi-hand-thumbs-down-fill"></i> Dislike</a> <a style="margin-left:0px;float:right;" class="yt-button ok report" href="/report?v=' . $row['vid'] . '&offender=' . $row['author'] . '"><i class="bi bi-flag-fill"></i> Report</a>
             </div>
             </div>
             <div class="rewatch-content">
@@ -149,8 +150,9 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
                     echo "<strong style='font-size:8pt;''>This video is featured on the main page!</strong>";
                 }
             }
-
+            if($commentsenabled !== 0) {
         echo '<h4 class="allc"><a href="/all_comments?v='.$_GET['v'].'"><strong>ALL COMMENTS</strong></a> <span class="allcc">('.$count.')</span></h4>';
+            }
 ?>
 
 
@@ -174,7 +176,9 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         }
     ?>
 
-
+<?php
+ if($commentsenabled !== 0) {
+  echo '
     <form action="" method="post" enctype="multipart/form-data"><br>
         <textarea class="yt-search-input" name="bio" rows="3" cols="40" required="required" style="width: 600px; height: 60px;"></textarea><br><br>
         <input class="yt-button primary" type="submit" value="Comment" name="submit" style="float: right;">
@@ -182,7 +186,9 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         <br>
         <small>Make sure to follow our <a href="/guidelines">Community Guidelines</a>!</small>
     </form>
-    <hr>
+    <hr>';
+ }
+ ?>
     <?php
         $stmt = $mysqli->prepare("SELECT * FROM comments WHERE tovideoid = ? ORDER BY date DESC");
         $stmt->bind_param("s", $_GET['v']);
@@ -190,13 +196,17 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         $result = $stmt->get_result();
         if($result->num_rows === 0) echo('No comments.');
         include("assets/lib/time.php");
+        if($commentsenabled !== 1) {
+          echo '<div class="cmndisabled">Comments are disabled for this video.</div>';
+        } else {
         while($row = $result->fetch_assoc()) {
           error_reporting(~E_ALL & ~E_DEPRECATED);
           $count = $result->num_rows;
           $pfp = idFromUser($row['author']);
           $time = time_elapsed_string($row['date']);
             echo "<div class='comment'><img class='cmn' height='48px' width='48px' src='content/pfp/" .htmlspecialchars(getUserPic($pfp)). "'><div class='commenttitle'><a style='font-weight:bold;' href='profile?user=" . htmlspecialchars($row['author']) . "'>" . htmlspecialchars($row['author']) . " ".getVerified($row["author"])."</a> <span title='".$row["date"]."'><span class='cmt'>" . $time . "</span></span></div><div class='cmntxt'>" . htmlspecialchars($row['comment']) . "</div></div><br>";
-        }
+          }
+          }
         $stmt->close();
     ?>
     <?php
