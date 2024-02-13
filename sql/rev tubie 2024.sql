@@ -118,6 +118,7 @@ CREATE TABLE `users` (
   `description` varchar(255) NOT NULL DEFAULT 'No description.',
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `custom_css` varchar(2048) NOT NULL DEFAULT '/* rare */', 
   `pfp` varchar(255) NOT NULL DEFAULT 'default.png',
   `is_admin` int(1) NOT NULL DEFAULT 0,
   `is_verified` int(1) NOT NULL DEFAULT 0
