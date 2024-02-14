@@ -53,7 +53,7 @@ width: 640px !important; */
 
 
   <body id="" class="date-20131219 en_US ltr   ytg-old-clearfix  site-left-aligned " dir="ltr">
-<div id="player" class="full-frame"></div><div id="player-unavailable" class="ytp-error hid"><div id="unavailable-submessage" class="ytp-error-content"></div></div>  <script id="js-2900126986" class="www-embed-player" src="/www-embed-player-vflUmkt61.js" data-loaded="true"></script>
+<div id="player" class="full-frame"></div><div id="player-unavailable" class="ytp-error hid"><div id="unavailable-submessage" class="ytp-error-content"></div></div>  <script id="js-2900126986" class="www-embed-player" src="/yts/jsbin/www-embed-player-vflUmkt61.js" data-loaded="true"></script>
 <script>yt.setConfig({
   EVENT_ID: "RUXDUpmwIoiRiQLA54GABQ",
   VIDEO_ID: "LHdA7Yc-8Rg",
