@@ -118,24 +118,4 @@ yt.setConfig({
 		"legacy_cast": true
 	}
 });
-writeEmbed();</script><script>ytcsi.info('st', 27);yt.setConfig({'CSI_SERVICE_NAME': "youtube",'TIMING_ACTION': "",'TIMING_INFO': {"e":"9416126,9416891,9422596,9428398,9431012,9433096,9433223,9433946,9434676,9435527,9435876,9437066,9437553,9438338","yt_lt":"cold","yt_li":0,"cver":"1.20160609","c":"WEB"}});</script><noscript><div class="player-unavailable"><h1 class="message">An error occurred.</h1><div class="submessage"><a href="http://web.archive.org/web/20160614154433/http://www.youtube.com/watch?v=lpXgJGGfeqs" target="_blank">Try watching this video on www.youtube.com</a>, or enable JavaScript if it is disabled in your browser.</div></div></noscript></body></html><!--
-     FILE ARCHIVED ON 15:44:33 Jun 14, 2016 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 18:37:11 Apr 17, 2022.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 299.506
-  exclusion.robots: 0.258
-  exclusion.robots.policy: 0.249
-  RedisCDXSource: 1.273
-  esindex: 0.01
-  LoadShardBlock: 259.54 (3)
-  PetaboxLoader3.datanode: 70.082 (4)
-  CDXLines.iter: 30.817 (3)
-  load_resource: 57.887
-  PetaboxLoader3.resolve: 45.565
--->
+writeEmbed();</script><script>ytcsi.info('st', 27);yt.setConfig({'CSI_SERVICE_NAME': "youtube",'TIMING_ACTION': "",'TIMING_INFO': {"e":"9416126,9416891,9422596,9428398,9431012,9433096,9433223,9433946,9434676,9435527,9435876,9437066,9437553,9438338","yt_lt":"cold","yt_li":0,"cver":"1.20160609","c":"WEB"}});</script><noscript><div class="player-unavailable"><h1 class="message">An error occurred.</h1><div class="submessage"><a href="http://web.archive.org/web/20160614154433/http://www.youtube.com/watch?v=lpXgJGGfeqs" target="_blank">Try watching this video on www.youtube.com</a>, or enable JavaScript if it is disabled in your browser.</div></div></noscript></body></html>

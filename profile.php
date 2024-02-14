@@ -1,4 +1,5 @@
-        <!DOCTYPE html>
+<?php ob_start(); ?>
+       <!DOCTYPE html>
 <html lang="en">
   <head>
   <?php include './assets/mod/meta.php';?>      
@@ -13,10 +14,12 @@
             $result = $statement->get_result();
             while($row = $result->fetch_assoc()) {
                 if ($row['strikes'] > 3) {
-                  echo('<script>
-             window.location.href = "/?err=This account has been terminated for a violation of '.$site['name'].'\'s Community Guidelines.";
-             </script>');
-                  }
+                  ob_end_clean();
+                  $error = 404;
+                  $message = $error_messages['terminated_account'];
+                  include('./error.php');
+                  die();
+                }
             }
             $statement->close();
         ?>

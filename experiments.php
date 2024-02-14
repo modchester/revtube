@@ -37,9 +37,3 @@ fluent ui was moved into site style settings :3
     <?php include './assets/mod/footer.php'; ?>
   </body>
 </html>
-
-<script>
-     if (localStorage.getItem("fluentUIenabled") !== "true") {
-    localStorage.setItem("fluentUIenabled", "false");
-     }
-</script>

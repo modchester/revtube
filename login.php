@@ -7,7 +7,7 @@
     <title>Login</title>
     <?php include("assets/mod/branding.php"); ?>
     <?php include("assets/mod/db.php"); ?>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
     <link href="https://s.imon.fr/css3-youtube-buttons/yt-buttons.css" rel="stylesheet">
   <link href="/assets/css/2013.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

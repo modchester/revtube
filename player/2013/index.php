@@ -1,12 +1,12 @@
 <?php
 if(isset($_GET["v"])) {
-$vid = htmlspecialchars($_GET["v"]);
+  $vid = htmlspecialchars($_GET["v"]);
 }
 
 //if $vid is null then dont show anything
 if ($vid == null) {
-require("setVideo.php");
-die();
+  require("setVideo.php");
+  die();
 }
 ?>
 
@@ -74,7 +74,7 @@ yt.setConfig({
     url: "http://s.ytimg.com/yts/swfbin/player-vflqv4MLv/watch_as3.swf",
     args: {
       enablejsapi: "0",
-      iurlmaxres: "./thumbs/<?php echo $vid; ?>.png",
+      iurlmaxres: "/content/thumbs/<?php echo $vid; ?>.png",
       threed_module: "1",
       ldpj: "-3",
       fexp: "931319,927606,901479,930102,916624,909717,924616,932295,936912,936910,923305,936913,907231,907240,921090",
@@ -89,10 +89,10 @@ yt.setConfig({
       allow_ratings: 1,
       cc3_module: "1",
       sw: "1.0",
-      iurlsd: "./thumbs/<?php echo $vid; ?>.png",
+      iurlsd: "/content/thumbs/<?php echo $vid; ?>.png",
       cc_module:
         "http://s.ytimg.com/yts/swfbin/player-vflqv4MLv/subtitle_module.swf",
-      iurl: "./thumbs/<?php echo $vid; ?>.png",
+      iurl: "/content/thumbs/<?php echo $vid; ?>.png",
       cc_font: "Arial Unicode MS, arial, verdana, _sans",
       length_seconds: 253,
       title: "Player",

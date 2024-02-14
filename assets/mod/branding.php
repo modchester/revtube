@@ -26,4 +26,16 @@ if($site['errorGato'] == 'anal') {
 } else {
     $site['errorGatoNum'] = rand(1,5);
 }
+
+
+// error pages
+$error_messages = [
+    'terminated_account' => 'This account has been terminated due to violations of our Community Guidelines.',
+    '404' => "We're sorry, the page you requested cannot be found. Try searching for something else.",
+    '400' => "Bad request, we're sorry.",
+    '401' => "Authorization is required. Should have access but you don't? Contact us for help.",
+    '403' => "Forbidden. Should have access but you don't? Contact us for help.",
+    '500' => 'An internal server error has occurred.'
+]
+
 ?>
