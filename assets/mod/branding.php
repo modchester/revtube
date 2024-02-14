@@ -35,7 +35,8 @@ $error_messages = [
     '400' => "Bad request, we're sorry.",
     '401' => "Authorization is required. Should have access but you don't? Contact us for help.",
     '403' => "Forbidden. Should have access but you don't? Contact us for help.",
-    '500' => 'An internal server error has occurred.'
+    '500' => 'An internal server error has occurred.',
+    '123' => 'This is a example error message to check if things are working.',
 ]
 
 ?>

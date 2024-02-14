@@ -11,7 +11,7 @@ die();
 ?>
 <!DOCTYPE html>  <html lang="en" dir="ltr" data-cast-api-enabled="true">
 <head>
-<title>2016 YouTube video player</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RevTube Player</title><meta name="viewport" content="width=device-width, initial-scale=1">
 <style name="www-roboto">
 a.ytp-youtube-button.ytp-button {
     display: none;
@@ -66,7 +66,7 @@ yt.setConfig({
 			"innertube_api_version": "v1",
 			"rel": "1",
 			"enablecastapi": "1",
-			"iurl": "test.png",
+			"iurl": "/content/thumb/<?php echo $_GET['vid']; ?>.jpg",
 			"fflags": "html5_idle_preload_secs=0\u0026cards_drawer_auto_open_duration=-1\u0026tv_player_heartbeats=true\u0026video_metadata_provider_with_query_id=true\u0026dash_html5_max_request_size_factor=1.0\u0026kids_enable_columbia_lp=true\u0026native_controls_assume_media_volume=true\u0026legacy_autoplay_flag=true\u0026product_listing_ads_cards_drawer_auto_open=true\u0026html5_deadzone_multiplier=1.0\u0026html5_background_cap_idle_secs=0\u0026kids_enable_latam_lp=true\u0026html5_tight_max_buffer_allowed_impaired_time=0.0\u0026cards_drawer_auto_open_offset=-10000\u0026gaming_mweb=true\u0026gaming_i18n=true\u0026html5_longer_seek_delay=true\u0026html5_max_buffer_duration=0\u0026html5_live_disable_dg_pacing=true\u0026html5_reseek_on_infinite_buffer=true\u0026beacon_abandoned_only=true\u0026html5_request_sizing_multiplier=0.8\u0026html5_background_quality_cap=0\u0026kids_enable_onboarding_existing_users_android=false\u0026kids_enable_onboarding_existing_users_ios=false\u0026html5_throttle_rate=0.0\u0026html5_check_for_reseek=true\u0026html5_live_only_stick_to_head=true\u0026chrome_promo_enabled=true\u0026sidebar_renderers=true\u0026html5_multicam=true\u0026yto_feature_hub_channel=false\u0026yto_enable_unlimited_landing_page_yto_features=true\u0026flex_theater_mode=true\u0026enable_mrm_channel_approve=true\u0026disable_new_pause_state3=true\u0026yto_enable_watch_offer_module=true\u0026generate_shopping_companions_on_desktop=true\u0026html5_tight_max_buffer_allowed_bandwidth_stddevs=0.0\u0026legacy_poster_behavior=true\u0026html5_dash_mpd_version=4\u0026enable_mweb_ypc_promotion_renderer=true\u0026firefox_eme=true\u0026feeds_on_innertube=true\u0026launch_new_wallet_api=true\u0026live_chunk_readahead=3\u0026log_it_display_tree=true\u0026enable_yt_music_lp=true\u0026dynamic_ad_break_seek_threshold_sec=0\u0026html5_sticky_quality_duration_secs=604800\u0026html5_bandwidth_window_size=0\u0026yto_enable_ytr_promo_refresh_assets=true\u0026mpu_visible_threshold_count=2\u0026high_res_timestamps=true\u0026html5_auto_format_cap_on_battery=0\u0026html5_request_delay_cutoff=0.0\u0026html5_strip_emsg=true\u0026html5_playing_event_buffer_underrun=true\u0026dynamic_ad_break_pause_threshold_sec=0\u0026enable_audio_cast=true\u0026yt_unlimited_special_offers_offer_ids=element:'unlimited.P.1462582356814744',element:'unlimited.P.1462582568961775',element:'unlimited.P.1462582932821829',element:'unlimited.P.1462583256800336',element:'unlimited.P.1462583542437412',element:'unlimited.P.1462583711646004',element:'unlimited.P.1462838921272750'\u0026fix_backfill_mpu_api_stats_ads=true\u0026legacy_cast=true",
 			"allow_ratings": 1,
 			"avg_rating": 4.9256128487,

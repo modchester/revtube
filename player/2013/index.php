@@ -3,6 +3,8 @@ if(isset($_GET["v"])) {
   $vid = htmlspecialchars($_GET["v"]);
 }
 
+$videoid = htmlspecialchars($_GET["vid"]) ?? die('no video id?');
+
 //if $vid is null then dont show anything
 if ($vid == null) {
   require("setVideo.php");
@@ -38,12 +40,6 @@ background: #1F6CCD !important;
 .ytp-large-play-button-image {
 background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAA8CAYAAAAXDvbIAAAAAXNSR0IArs4c6QAABEJJREFUeF7tnM1PE0EUwN/bYuCkeKNqIph4UKnUxMSj9eRR/AvkxAUKnOVgPWJCJHwkfhyoV4yhhmBCYgIejBpNLLRKYqLWRNgSNHxEwmf3yW7Z7faD0qULO7PMHpuZN29++zrz3uy8h2Dx8bZ8PUsS1gKmakHB2tzuElItEeX9XngYpRpQ8ltUoXhzUqIA0mJJMj0UpZQnv61ECSBPAhVKyAMXf5Uky9QIi3VQAULFVgekMD1xhIDVAVzRnmBCm4cEkbW19fDCk6tLxeZVEKoGU0r1AECjK6DYOQmERUAKr61uhHaDmwe1Jjh9HXErAgTVduriOlnqMkPHGgstD1lQTwfjDQrShABaogmQEl3b2AzkWmwWVG/r5GfbN44S9eO4WUTu8902629ArWmL30GiMMeTc0x1VKhxduDyS10BA6q3Lf4TSnaFHNOfzYERE3JvfV0WVG0tBYqyqTEfWkmA/pm++sm05wkANa1f7iEqIT7UZ1NLIimU7L9034DqDcaGhU9a5ssimJD7fTcyUNtiC8KNKhMqAMh9Pu2fj2I9LR+mLoGgIpDsu/AGtQgKttKxrXjKIpCBKjapskCaOwuotqHMCNI9APS2xsaP7JGezWAFVJuBquKYgjrYXAfxmVV4/Hoe/q2nDmC6hyZSO1xh4u8/3HEerp2rhJUNgEfjf6B7NHloFGwdaCcAQG8wRrYK3ocwHareVV5SoOvVHAy9+7sPaQ52YRkqt3BJicr9DVeYtNRcW+PJctVQlQuoZsu9O/QbxmLLDv7Hiw/NHVR9Oh9+rEPXyCy8/77CHFxuobIMl3uoLMJ1DVQzXHXNnZ5ddWxZcB1UneTzj8vQNSLD7OLmocN1LVSdZPfY4UdnroWqhrudL2RHIjLXQdXPDpw8mHENVBZgGgEKbxFVoV1H3ZQ6h2aYOTLk2lKd3OGLuRRcQlVD1JZwwhF3qRT/jCuoLMf7ZthpqAzc9ss9pDYryQtMTWfjPJWBr6mFoPJ0hmoYgXHyzxhULmHqVFmDWn+mEh6MzsHT8flS9gNW27DzNfWm7zi8/bbCjK+53zfG1Hf//U6CtX4ZqO1TD0HBDtYU5FEfA6q4mm7f68tAFak+tlHVU3/ETWrbkAIY91NVmSxc/bFxbo6JMu78a1AZCFUdI2HXwLnZKaeC8UECarJL/lGUk5dHJTJUyjeDvIw/sQSUCXXndEqXYkr4jbVvJ6ip1SjEY5EAITYle+uf5UE92fzpRFVVZUJk/lklmr6Tau6VVURBJKpZBIqwKBEG9OzpPEvVfzjVMnWLPBgWFrsHYFKiEnqacoGqvXat9oOSEhJuVmGwqvu0vrHaU3K1H7MYrZSSJ9UIBAFA9B/pyhVqbSoJIpDyRPYqAFa02Ffue9Krp22XWPKTImkllgpXTDuAymgWl7tdm+uFu3IbFKqmtlNJTc2MtjK8JahWBB/ltv8BXGyQW93TJaEAAAAASUVORK5CYII=') !important;
 }
-.ytp-thumbnail {
-	background-image: url('/content/thumb/<?php echo $_GET['vid']; ?>.jpg') !important;
-background-size: cover;
-  /* height: 360px !important;
-width: 640px !important; */
-}
 </style>
 
 <!DOCTYPE html>  <html lang="en" dir="ltr"  data-cast-api-enabled="true">
@@ -74,7 +70,7 @@ yt.setConfig({
     url: "http://s.ytimg.com/yts/swfbin/player-vflqv4MLv/watch_as3.swf",
     args: {
       enablejsapi: "0",
-      iurlmaxres: "/content/thumbs/<?php echo $vid; ?>.png",
+      iurlmaxres: "/content/thumb/<?php echo $videoid; ?>.jpg",
       threed_module: "1",
       ldpj: "-3",
       fexp: "931319,927606,901479,930102,916624,909717,924616,932295,936912,936910,923305,936913,907231,907240,921090",
@@ -89,10 +85,10 @@ yt.setConfig({
       allow_ratings: 1,
       cc3_module: "1",
       sw: "1.0",
-      iurlsd: "/content/thumbs/<?php echo $vid; ?>.png",
+      iurlsd: "/content/thumb/<?php echo $videoid; ?>.jpg",
       cc_module:
         "http://s.ytimg.com/yts/swfbin/player-vflqv4MLv/subtitle_module.swf",
-      iurl: "/content/thumbs/<?php echo $vid; ?>.png",
+      iurl: "/content/thumb/<?php echo $videoid; ?>.jpg",
       cc_font: "Arial Unicode MS, arial, verdana, _sans",
       length_seconds: 253,
       title: "Player",
