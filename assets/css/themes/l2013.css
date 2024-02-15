@@ -29,34 +29,3 @@
     font-size: 0.9em;
     letter-spacing: -0.05em;
 }
-
-.sub-button {
-    color: #fefefe!important;
-    box-shadow: 0 1px 0 rgba(0,0,0,.15)!important;
-    background-image: linear-gradient(to top,#c7231a 0,#e62c22 100%)!important;
-    border: none;
-    padding: 5.5px 8px 5.5px 8px!important;
-    border-radius: 2px;
-    text-shadow: none!important;
-    line-height: 12px!important;
-}
-
-.sub-button:hover {
-    background-image: linear-gradient(to top,#dc2f2c 0,#fa362a 100%)!important;
-    box-shadow: 0 1px 0 rgba(0,0,0,.20)!important;
-}
-
-.sub-button-text {
-    position: relative;
-    bottom: 2px;
-    margin-top: 5px;
-}
-
-.sub-button:before {
-    content: url('/assets/img/sub.png');
-    margin-right: 5px;
-}
-
-.subbed-button .sub-button-text {
-    bottom: 0px;
-}
