@@ -1,14 +1,14 @@
 <?php
 //first method, pick your video via URL
 if(isset($_GET["video_id"])) {
-$vid = htmlspecialchars($_GET["video_id"]); // this entire if statement is not required if you are using second method
+    $vid = htmlspecialchars($_GET["video_id"]); // this entire if statement is not required if you are using second method
 }
 
 // second method, hardcode it in
 // $vid = "Insert video file name here";
 
 if ($vid == null) {
-die();
+    die();
 }
 
 // $name = $_GET['title'];
