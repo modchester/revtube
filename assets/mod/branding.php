@@ -9,7 +9,11 @@ $site['name'] = 'RevTube';
 $site['allowedThemes'] = array('dark', 'fluent', 'l2013');
 
 // kill me
-$site[' '] = (int)$site['uploadedVideoYear'];
+$site['uploadedVideoYear'] = (int)$site['uploadedVideoYear'];
+
+if($site['uploadedVideoYear'] < 2005) {
+    $site['uploadedVideoYear'] = date('Y');
+}
 
 // the commented lines are for the pre-late 2013 logo
 // it kinda sucks, i was testing
