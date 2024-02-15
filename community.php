@@ -110,6 +110,11 @@
                     $staff = '';
                   }
                   if($row['is_verified'] == 1) {
+                    if(!empty($row['custom_css'])) {
+                      $customCSS = '<style>'.$row['custom_css'].'</style>';
+                      echo $customCSS;
+                    }
+                    
                     $verified = '<img style="margin-bottom:-3px;" height="24px" src="/assets/img/verified_dark.png">';
                   } else {
                     $verified = '';
@@ -184,10 +189,11 @@
                     <hr>
                     <h3>Statistics</h3>
                     <div class='card message'>
-                    Joined ".$join2."<br>
                     <span class='stat'>".$rows."</span> subscribers
                     <br>
-                    <span class='stat'>".$totalviews."</span> views
+                    <span class='stat'>".$totalviews."</span> views<br>
+                    <span style='display:inline-block;float:right !important;'>Joined ".$join2."</span>
+
                     ";
                 }
                 $statement->close();
