@@ -11,7 +11,7 @@ $site['allowedThemes'] = array('dark', 'fluent', 'l2013');
 // kill me
 $site['uploadedVideoYear'] = (int)$site['uploadedVideoYear'];
 
-if($site['uploadedVideoYear'] < 2005) {
+if($site['uploadedVideoYear'] < 2005 OR $site['uploadedVideoYear'] > date('Y')) {
     $site['uploadedVideoYear'] = date('Y');
 }
 
