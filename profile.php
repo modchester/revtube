@@ -28,6 +28,11 @@
             body {
                 background: url('/content/background/<?php $id = idFromUser($_GET['user']); echo getBackground($id);?>') !important;
             }
+
+            #editprof-container {
+              text-align: center;
+              margin: 0 auto;
+            }
             </style>
     <div class="container">
  <div class="content">
@@ -148,7 +153,7 @@
       if(isset($_SESSION['profileuser3'])) {
         if($row['username'] == $_SESSION['profileuser3']) {
           echo '
-          <a href="/account" id="editprof" class="yt-button primary" type="button">Manage Account</a>';
+          <div id="editprof-container"><a href="/account" id="editprof" class="yt-button primary" type="button">Manage Account</a></div>';
       } else {
           if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
          echo '
