@@ -139,7 +139,7 @@
 			<input type="text" disabled value="<?php echo htmlspecialchars($errorGato); ?>">
 			<br><br>
 			<p><i class="bi bi-clock-history"></i> Uploaded Video Year</p>
-			<s type="text" disabled value="<?php echo $site['uploadedVideoYear']; ?>">
+			<input type="text" disabled value="<?php echo $site['uploadedVideoYear']; ?>">
             </div>
         </div>
       </div>
