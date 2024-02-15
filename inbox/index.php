@@ -19,16 +19,17 @@
         
         <div class="row">
         <?php //include './assets/mod/guide.php';?>
-          <div class="span10">
+          <div class="span14">
             <h2></h2>
             <table class="condensed-table">
               <!-- why did glass beach make a cover of welcome to the black parade -->
+              <!-- good question but why is this in the revtube src ? -->
                         <thead>
                           <tr>
                             <th>From</th>
                             <th>Subject</th>
                             <th>Content</th>
-                            <th>Actions</th>
+                            <th>Date</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -39,13 +40,15 @@
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
+                      $pfp = idFromUser($row['sender']);
+                      $uploaddate = date('F d, Y', strtotime($row['date']));
                         $out = strlen($row['content']) > 25 ? mb_substr($row['content'],0,25)."..." : $row['content'];
                         echo '
                           <tr>
-                            <td>'.htmlspecialchars($row['sender']).'</td>
-                            <td>'.htmlspecialchars($row['subject']).'</td>
+                            <td><img class="inbpfp" height="10px" src="../content/pfp/' .htmlspecialchars(getUserPicN($pfp)). '"> '.htmlspecialchars($row['sender']).'</td>
+                            <td><b><a href="view?id='.$row['id'].'">'.htmlspecialchars($row['subject']).'</a></b></td>
                             <td>'.htmlspecialchars($out).'</td>
-                            <td><a href="view?id='.$row['id'].'">View</a></td>
+                            <td>'.$uploaddate.'</td>
                           </tr>
                           <tr>
                         ';
@@ -61,15 +64,15 @@
             <ul class="unstyled">
 
             </ul>
-          </div>
+          </div><!--
           <div class="span4">
             <?php include '../assets/mod/inboxwhatsnew.php'; ?>
-            <!--<input class="input" type="text" placeholder="Username">
+            <!-<input class="input" type="text" placeholder="Username">
             <br>
             <input class="input" type="password" placeholder="Password">
             <br>
-            <button class="btn" type="submit">login</button>-->
-          </div>
+            <button class="btn" type="submit">login</button>->
+          </div>-->
         </div>
       </div>
 

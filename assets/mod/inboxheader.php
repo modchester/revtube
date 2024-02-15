@@ -1,7 +1,7 @@
 <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="/"><strong>Inbox<sup>BETA</sup></strong></a>
+          <a class="brand inboxst" href="/inbox/index"><!--<strong>Inbox<sup>BETA</sup></strong>--></a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/inbox/index">Inbox</a></li>

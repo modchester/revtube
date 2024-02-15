@@ -1,6 +1,7 @@
 <div class="guide">
     <ul>
-        <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>    
+        <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>   
+        <a href="/inbox/compose"><li class="guide-item"><i class="bi bi-pencil-fill"></i> Compose</li></a> 
     <span>My mail</span>
     <?php
       if(!isset($_SESSION['profileuser3'])) {
