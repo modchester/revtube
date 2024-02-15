@@ -860,3 +860,19 @@ font-weight: normal;
   opacity: 1;
   filter: none;
 }
+    .inboxst {
+        content: url('/assets/img/logos/inbox.png') !important;
+        height: 28px;
+        margin-top: -2px !important;
+        /* margin-right: -13px !important; */
+        margin-left: -46px !important; 
+        margin-bottom: -1px;
+        /* filter: invert(1); */
+    }
+    .content .span14 {
+      min-height: 500px;
+  }
+
+  thead {
+    display: none;
+  }
