@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
   <?php include './assets/mod/meta.php';?>      
+  <link rel="stylesheet" href="./assets/css/sub.css">
 </head>
   <body>
 <?php include './assets/mod/db.php';?>
@@ -151,17 +152,17 @@
       } else {
           if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
          echo '
-         <a class="yt-button danger" href="/subscribe?name=' . htmlspecialchars($row['username']) . '">Subscribe ('.$rows.')</a>
+         <a class="yt-button sub-button" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['username']) . '"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
          ';
          } else { 
           echo '
-          <a class="yt-button" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '">Unsubscribe ('.$rows.')</a>
-      ';
+          <a class="yt-button subbed-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '"><span class="sub-button-text">Unsubscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+          ';
            }}
           } else {
               echo'
-              <a class="yt-button danger disabled">Subscribe ('.$rows.')</a>
-          ';
+              <a class="yt-button disabled sub-button" style="margin-left: 44px; margin-top: 8px;"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+              ';
           }
         }
       //}}
