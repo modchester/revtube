@@ -24,18 +24,20 @@
 					if($row['strikes'] == 0) {
 						$strikenum = 0;
 						$strikestyle = "color: green; font-weight: bold;";
-						$msg = "You are <b>eligible</b> to apply for the Partner Program!<br><br><a id='partnerButton' href='#' onclick='applyPartner();' style='width: 280px; text-align: center;' class='yt-button'>Apply</a>";
+						$msg = "You are <b>eligible</b> to apply for the Partner Program!";
 						$etc = "strikes";
 						$icon = '<i style="color: #008008" class="bi bi-check-circle-fill"></i>';
 						$standing = " <span style='".$strikestyle."'>Good standing</span>";
+						$canApply = true;
 					}
 					if($row['strikes'] == 1) {
 						$strikenum = 1;
 						$strikestyle = "color: orange; font-weight: bold;";
-						$msg = "You are <b>eligible</b> to apply for the Partner Program!<br><br><a id='partnerButton' href='#' onclick='applyPartner();' style='width: 280px; text-align: center;' class='yt-button'>Apply</a>";
+						$msg = "You are <b>eligible</b> to apply for the Partner Program!";
 						$etc = "strike";
 						$icon = '<i style="color: orange" class="bi bi-exclamation-circle-fill"></i>';
 						$standing = " <span style='".$strikestyle."'>Middling standing</span>";
+						$canApply = true;
 					}
 					if($row['strikes'] == 2) {
 						$strikenum = 2;
@@ -71,6 +73,31 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 		    <h3>Account Status</h3>
 			Community guidelines: <?php echo $icon; ?> <?php echo $standing;?><br>
 <?php echo $strike; ?>
+
+<?php if($canApply) { ?>
+	<?php
+		// temp
+		$partnerStatus = 'not_sent'; // not_sent, not_reviewed, denied, accepted
+
+		if($partnerStatus == 'denied') {
+			$partnerText = '<p>Your partner application has been <b style="color: red;">denied</b>.</p>';
+			$alreadyApplied = true;
+		} elseif($partnerStatus == 'accepted') { 
+			$partnerText = '<p>Your partner application has been <b style="color: #008008;">accepted</b>!</p>';
+			$alreadyApplied = true;
+		} elseif($partnerStatus == 'not_reviewed') {
+			$partnerText = '<p>Your partner application has not been reviewed yet.</p>';
+			$alreadyApplied = true;
+		} else {
+			$partnerText = "<p>You haven't sent a partner application.</p>";
+			$alreadyApplied = false;
+		}
+	?>
+
+	<br><br>
+	<?php echo $partnerText; ?>
+	<a id='partnerButton' href='#' <?php if(!$alreadyApplied) { ?>onclick='applyPartner();'<?php } ?> style='width: 280px; text-align: center;' <?php if($alreadyApplied) { ?>disabled<?php } ?> class='yt-button'><?php if(!$alreadyApplied) { ?>Apply<?php } else { ?>Applied<?php } ?></a>
+<?php } ?>
 				</div><div class="span4">
 			<?php include("./assets/mod/account_settings_card.php"); ?>
             </div>
@@ -79,15 +106,17 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 
     </div> <!-- /container -->
 		<script>
+			<?php if(!$alreadyApplied) { ?>
 			function applyPartner() {
 				var partnerButton = document.getElementById('partnerButton');
 				alert('Soon.');
 
-				// thing to do when the application is sent (which we will do later) - skyiebox
+				// thing to do when the application is sent (which we will do later) - skyiebox/cattskit
 				partnerButton.innerHTML = 'Applied';
 				partnerButton.onclick = '';
 				partnerButton.setAttribute('disabled', true);
 			}
+			<?php } ?>
 		</script>
   </body>
 </html>
