@@ -9,7 +9,13 @@
 <?php include './assets/mod/header.php';?>
 <?php include './assets/lib/profile.php';?>
 <link rel="stylesheet" href="./assets/css/sub.css">
-     <?php if($debug) { 
+     <?php
+     
+     if(isset($_GET['previewUnsigned'])) {
+      $_SESSION['profileuser3'] = null;
+     }
+
+     if($debug) { 
       $omid = $_GET['v'];
       $debugmsg1 = '<div class="alert-message warning debug-alert"><p><strong>Current video ID:</strong> '.$omid.' </p></div>'; 
      } else {
@@ -95,7 +101,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         if(isset($_SESSION['profileuser3'])) {
             if(ifSubscribed($_SESSION['profileuser3'], $row['author'], $mysqli) == false) {
            echo '
-           <a class="yt-button danger sub-button" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['author']) . '"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
+           <a class="yt-button sub-button" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['author']) . '"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
            ';
            } else { 
             echo '
@@ -104,7 +110,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
              } 
             } else {
                 echo'
-                <a class="yt-button danger disabled sub-button" style="margin-left: 44px; margin-top: 8px;"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+                <a class="yt-button disabled sub-button" style="margin-left: 44px; margin-top: 8px;"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
             ';
             }
         }

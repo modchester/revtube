@@ -114,3 +114,35 @@ background-image: linear-gradient(to bottom,#5384be 0,#3f76b7 100%) !important;
 .rewatch-views-text {
     text-align: right;
 }
+
+/* 2013M/L sub button */
+.sub-button {
+    color: #fefefe!important;
+    box-shadow: 0 1px 0 rgba(0,0,0,.15)!important;
+    background-image: linear-gradient(to top,rgb(22, 76, 177) 0,#266ae7 100%)!important;
+    border: none;
+    padding: 5.5px 8px 5.5px 8px!important;
+    border-radius: 2px;
+    text-shadow: none!important;
+    line-height: 12px!important;
+}
+
+.sub-button:hover {
+    background-image: linear-gradient(to top,#2c5bdc 0,#2a73fa 100%)!important;
+    box-shadow: 0 1px 0 rgba(0,0,0,.20)!important;
+}
+
+.sub-button-text {
+    position: relative;
+    bottom: 2px;
+    margin-top: 5px;
+}
+
+.sub-button:before {
+    content: url('/assets/img/sub.png');
+    margin-right: 5px;
+}
+
+.subbed-button .sub-button-text {
+    bottom: 0px;
+}
