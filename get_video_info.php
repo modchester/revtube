@@ -1,22 +1,26 @@
 <?php
-//first method, pick your video via URL
-if(isset($_GET["video_id"])) {
-    $vid = htmlspecialchars($_GET["video_id"]); // this entire if statement is not required if you are using second method
+// by cattskit/skyiebox with love <3
+function getVideoIdFromUrl($url) {
+    $url = trim($url, '//');
+    $url = str_replace('/', '', $url);
+    $url = str_replace('contentvideo', '', $url);
+    $url =  preg_replace('/' . preg_quote('&', '/') . '.*/', '', $url);
+    $url = str_replace('.mp4', '', $url);
+    $url = str_replace($_SERVER['SERVER_NAME'], '', $url);
+
+    return $url;
 }
 
-// second method, hardcode it in
-// $vid = "Insert video file name here";
+if(isset($_GET["video_id"])) {
+    $vid = htmlspecialchars($_GET["video_id"]);
+}
 
 if ($vid == null) {
     die();
+} else {
+    $actual_vid = getVideoIdFromUrl($vid);
 }
 
-// $name = $_GET['title'];
-// $author = $_GET['author'];
-$name = "test";
-$author = "test";
-
-// 2012 fixed player, get_video_info.php, crazy frog#8833
 ?>
 <?php
 /* 
@@ -141,21 +145,21 @@ $main_data = array(
     "allow_ratings" => "1",
     "keywords" => "renegade,black,dawn,release,C&C,cnc,ut3,unreal,tournament,msuc,udk,development,kit,ion,cannon,mod",
     "account_playback_token" => "",
-    "video_id" => "dQw4w9WgXcQ",
-    "thumbnail_url" => "./thumbs/".$vid.".png",
+    "video_id" => $actual_vid,
+    "thumbnail_url" => "\/thumbs/".$actual_vid.".jpg",
     "status" => "ok",
     "has_cc" => "false",
     "fexp" => "907063,919329,913565,920704,912806,902000,922403,922405,929901,913605,925006,908529,920201,930101,911116,926403,910221,901451,919114",
     "ftoken" => "",
-    "iurlsd" => "./thumbs/".$vid.".png",
+    "iurlsd" => "\/thumbs/".$actual_vid.".jpg",
     "cc_font" => "Arial Unicode MS, arial, verdana, _sans",
     "pltype" => "contentugc",
     "allow_embed" => "1",
-    "author" => "ROBLOX",
+    "author" => "RevTube User",
     "length_seconds" => "0",
     "storyboard_spec" => "",
     "abd" => "1",
-    "iurlmaxres" => "./thumbs/".$vid.".png",
+    "iurlmaxres" => "\/thumbs/".$actual_vid.".jpg",
     "watermark" => ",http://s.ytimg.com/yts/img/watermark/youtube_watermark-vflHX6b6E.png,http://s.ytimg.com/yts/img/watermark/youtube_hd_watermark-vflAzLcD6.png",
     "cc3_module" => "http://s.ytimg.com/yts/swfbin/subtitles3_module-vflfzxB9O.swf",
     "tmi" => "1",
