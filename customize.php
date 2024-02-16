@@ -31,10 +31,6 @@
 	} elseif($errorGato == 'Anal') { 
 		$errorGato = 'Lana';
 	}
-	
-	if($theme == 'L2013') {
-		$theme = 'Semi Late 2013';
-	}
 
 	if($videoPlayer == 'yt2016') {
 		$videoPlayer = 'YouTube (2016)';
