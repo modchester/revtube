@@ -37,14 +37,10 @@
 //         </script>');
 //     }
     if(empty($_POST['videotitle'])) {
-        echo('<script>
-        window.location.href = "/?err=No title.";
-        </script>');
+        $_POST['videotitle'] = date('F j, Y');
     }
     if(empty($_POST['bio'])) {
-        echo('<script>
-        window.location.href = "/?err=No description.";
-        </script>');
+        $_POST['bio'] = 'I am too lazy to put in a description.';
     }
     if (strlen($_POST['videotitle']) > 50) {
         echo('<script>
@@ -164,8 +160,8 @@
                     </div>
                      <br>
                     <div class="input-group">
-                  <label for="bio">Description (required)</label> 
-                        <textarea class="yt-search-input" style="background-color: var(--inputlol);" name="bio" placeholder="Enter a description for your video here" rows="4" cols="50" required="required"></textarea>
+                  <label for="bio">Description</label> 
+                        <textarea class="yt-search-input" style="background-color: var(--inputlol);" name="bio" placeholder="Enter a description for your video here" rows="4" cols="50"></textarea>
                     </div>
                     <div class="input-group">
                          <br>

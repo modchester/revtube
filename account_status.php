@@ -102,6 +102,7 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 
 	<br><br>
 	<?php echo $partnerText; ?>
+
 	<a id='partnerButton' href='#' <?php if(!$alreadyApplied) { ?>onclick='applyPartner();'<?php } ?> style='width: 280px; text-align: center;' <?php if($alreadyApplied) { ?>disabled<?php } ?> class='yt-button'><?php if(!$alreadyApplied) { ?>Apply<?php } else { ?>Applied<?php } ?></a>
 <?php } ?>
 				</div><div class="span4">
