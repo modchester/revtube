@@ -70,10 +70,10 @@ while($row = $result->fetch_assoc()) {
                         <link rel="stylesheet" href="../assets/css/sub.css">
                         <div id="rewatch-author">
                         <img class="rewatch-pfp" src="../content/pfp/' .htmlspecialchars(getUserPicN($pfp)). '" width="48" height="48">
-                        <a style="color:#333;text-decoration:none;" href="profile?user='.htmlspecialchars($row['sender']).'"><span class="rewatch-name">' . htmlspecialchars($row['sender']) . ' '.$verified.'</a>';
+                        <a style="color:#333;text-decoration:none;" href="/profile?user='.htmlspecialchars($row['sender']).'"><span class="rewatch-name">' . htmlspecialchars($row['sender']) . ' '.$verified.'</a>';
                         if($row['sender'] == $_SESSION['profileuser3']) {
                           echo '
-                          <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
+                          <a href="/account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
                         } else {
                   if(isset($_SESSION['profileuser3'])) {
                       if(ifSubscribed($_SESSION['profileuser3'], $row['sender'], $mysqli) == false) {
