@@ -1,8 +1,9 @@
 <?php
 	include("./assets/mod/branding.php");
 
-	// written by skyiebox, 1/14/2023
-	// updated by skyiebox, 2/13/2023 (1 day before this page became 1 month old!)
+	// written by skyiebox, 1/14/2024
+	// updated by skyiebox, 2/13/2024 (1 day before this page became 1 month old!)
+	// updated by skyiebox, 2/16/2024
 	if(isset($_POST)) {
 		if(isset($_POST['theme'])) {
 			setrawcookie("siteTheme", $_POST['theme'], time() + 2000000, "/");
