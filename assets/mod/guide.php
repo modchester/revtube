@@ -1,7 +1,12 @@
 <?php 
 if(!isset($noGuide)) {
 
-include("branding.php"); ?>
+include("branding.php"); 
+
+if(isset($_SESSION['profileuser3'])) {
+  include("signed_in_guide.php");
+} else {
+?>
 <div class="guide">
     <ul>
         <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>    
@@ -40,4 +45,4 @@ include("branding.php"); ?>
       } ?>
     </ul>
 </div>
-<?php } ?>
+<?php } } ?>

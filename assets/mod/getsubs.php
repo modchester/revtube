@@ -5,7 +5,7 @@
                                           $stmt->bind_param("s", $_SESSION['profileuser3']);
                                           $stmt->execute();
                                           $result = $stmt->get_result();
-                                          if($result->num_rows !== 0){ echo "<span>Your subscriptions</span>"; }
+                                          if($result->num_rows !== 0){ echo "<span>Subscriptions ($result->num_rows)</span>"; }
                                           
                                           while($row = $result->fetch_assoc()) {
                                             $pid = idFromUser($row['receiver']);
