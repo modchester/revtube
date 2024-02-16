@@ -66,7 +66,7 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 	<a href="/account"><li>Edit Profile</li></a>
 	<li class="selected">Status</li>
 	<?php } ?>
-	<a href="/site_style"><li>Style</li></a>
+	<a href="/customize"><li>Customize</li></a>
 </ul>
 		    <h3>Account Status</h3>
 			Community guidelines: <?php echo $icon; ?> <?php echo $standing;?><br>

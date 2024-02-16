@@ -15,6 +15,10 @@
 		if(isset($_POST['errorgato'])) {
 			setrawcookie("errorGato", $_POST['errorgato'], time() + 2000000, "/");
 		}
+
+		if(isset($_POST['uploadedyear'])) {
+			setrawcookie("uploadyear", (int)$_POST['uploadedyear'], time() + 2000000, "/");
+		}
 	}
 
 	$theme = ucfirst($site['siteTheme']);
@@ -44,6 +48,11 @@
 <html lang="en">
   <head>
   <?php include './assets/mod/meta.php';?>      
+  <style>
+	input, textarea, select, .uneditable-input {
+		max-width: 210px!important;
+	}
+  </style>
 </head>
 
   <body>
@@ -53,7 +62,7 @@
  <div class="content">
         <div class="page-header">
         <?php include './assets/mod/alert.php';?>
-          <h1>Change Site Style <small>BETA</small></h1>
+          <h1>Customize The Site <small>BETA</small></h1>
         </div>
         <div class="row">
           <div class="span10">
@@ -62,12 +71,12 @@
 	<a href="/account"><li>Edit Profile</li></a>
 	<a href="/account_status"><li>Status</li></a>
 	<?php } ?>
-	<li class="selected">Style</li>
+	<li class="selected">Customize</li>
 </ul>
 
 <div class="alert-message info"><p>These settings apply to this browser only.</p></div>
 	<form action="" method="POST">
-		<h3><i class="bi bi-brush"></i> Site Style</h3>
+		<h3><i class="bi bi-brush"></i> Site Theme</h3>
 		<select name="theme">
 			<option value="default"> Default</option>
   			<option value="fluent"> Fluent</option>
@@ -88,6 +97,31 @@
   			<option value="revoozie"> Revoozie</option>
 			<option value="anal"> Lana </option>
 		</select>
+		<br><br>
+		<h3><i class="bi bi-clock-history"></i> Uploaded Video Year</h3>
+		<select name="uploadedyear">
+			<option value="2024">2024</option>
+			<option value="2023">2023</option>
+			<option value="2022">2022</option>
+			<option value="2021">2021</option>
+			<option value="2020">2020</option>
+			<option value="2019">2019</option>
+			<option value="2018">2018</option>
+			<option value="2017">2017</option>
+			<option value="2016">2016</option>
+			<option value="2015">2015</option>
+			<option value="2014">2014</option>
+			<option value="2013">2013</option>
+			<option value="2012">2012</option>
+			<option value="2011">2011</option>
+			<option value="2010">2010</option>
+			<option value="2009">2009</option>
+			<option value="2008">2008</option>
+			<option value="2007">2007</option>
+			<option value="2006">2006</option>
+			<option value="2005">2005</option>
+		</select>
+
 		<div class="input-group">
 			<br>
 			<div><input class="yt-button" type="submit" value="Update" name="submit" style="width: 210px;"></div>
@@ -103,6 +137,9 @@
 			<br><br>
 			<p>🐱 Error Page Cat</p>
 			<input type="text" disabled value="<?php echo htmlspecialchars($errorGato); ?>">
+			<br><br>
+			<p><i class="bi bi-clock-history"></i> Uploaded Video Year</p>
+			<s type="text" disabled value="<?php echo $site['uploadedVideoYear']; ?>">
             </div>
         </div>
       </div>

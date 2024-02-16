@@ -2,7 +2,7 @@
 ## This list contains everyone who has contributed to the RevTube project (since December 28, 2021).
 ### Arson Studios
 - kylarz: PHP, "RevTube" name, CSS
-- Kaisiece (Woozie): Watch page, PHP, semi-2013 frontend (mostly), site style
+- Kaisiece (Woozie): Watch page, PHP, semi-2013 frontend (mostly), customize settings
 ### Other contributors
 - ww5z: other help, former "VistaTube" name
 - cleber299: dark theme

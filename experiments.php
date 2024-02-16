@@ -16,7 +16,7 @@
         <div class="row">
           <div class="span10">
 <!--
-fluent ui was moved into site style settings :3
+fluent ui was moved into customize settings :3
 <div>
     <h3>Experiment #1 - Fluent UI</h3>
     <p>Makes the 2013 YouTube esque UI look more like the UI found in Windows 11. 

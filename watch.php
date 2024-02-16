@@ -64,7 +64,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         if($result->num_rows === 0) exit('No rows');
         error_reporting(E_ALL ^ E_WARNING);
         while($row = $result->fetch_assoc()) {
-            $uploaddate = date('F d, Y', strtotime($row['date']));
+            $uploaddate = date('F d, '.$site['uploadedVideoYear'], strtotime($row['date']));
             $pfp = idFromUser($row['author']);
             $rows = getSubscribers($row['author'], $mysqli);
             /* spagetti idea

@@ -16,7 +16,7 @@
         <div class="row">
           <div class="span10">
 <h2>- kylarz: PHP, "RevTube" name, CSS</h2>
-<h2>- Kaisiece (Woozie): Watch page, PHP, semi-2013 frontend (mostly), site style</h2>
+<h2>- Kaisiece (Woozie): Watch page, PHP, semi-2013 frontend (mostly), customize</h2>
 <h2>- cleber299: dark theme</h2>
           </div>
           <div class="span4">
