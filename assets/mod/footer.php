@@ -39,8 +39,8 @@ $total_time = round(($finish - $start), 4);
             <li class="second-footer-link"><a href="/guidelines">Community Guidelines</a></li>
             <li class="second-footer-link"><a href="/stats">Statistics</a></li>
             <li class="second-footer-link"><a href="/info/partners">Partners</a></li>
+            <?php if(isset($debugmsg)) { ?><?php echo $debugmsg; ?><?php } ?>
             <li class="second-footer-link footer-copyright"><span dir="ltr">© <?php echo $site['name']; ?> 2021-<?php echo date("Y"); ?></span></li>
-            <?php if(isset($debugmsg)) { ?><li class="second-footer-link" style="margin-left: -10px;">- <?php echo $debugmsg; ?></li><?php } ?>
         </ul>
     </p>
     

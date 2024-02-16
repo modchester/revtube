@@ -98,12 +98,16 @@
       $phpver = phpversion();
       
       if(!$profileUser3 == null) {
-         $signedInMessage = "Logged in as ".$profileUser3;
+         $signedInMessage = '<li class="second-footer-link">Signed in as '.$profileUser3.'</li>';
       } else {
-         $signedInMessage = "Logged out";
+         $signedInMessage = '<li class="second-footer-link">Signed out</li>';
       }
 
-      $debugmsg = $signedInMessage." - Users: $usercount | Videos: $videocount | Comments: $commentcount | Running PHP $phpver";
+      $debugmsg = $signedInMessage.'
+      <li class="second-footer-link">Users: '.$usercount.'</li> 
+      <li class="second-footer-link">Videos: '.$videocount.'</li>
+      <li class="second-footer-link">Comements: '.$commentcount.'</li>
+      <li class="second-footer-link">Running PHP '.$phpver.'</li>';
 	   //echo '<br>revtube is undergoing some changes please ignore any huge bugs as they most likely will be fixed soon after';
    } else {
       error_reporting(0); 

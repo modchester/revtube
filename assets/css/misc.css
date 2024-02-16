@@ -791,12 +791,12 @@ font-weight: normal;
     margin: 0;
     margin-left: 30px;
 }
-.footer-links, .footer-links li a {
+.footer-links, .footer-links li a, .footer-links li {
   margin-left: 0px;
   color: #333;
   font-weight: bold;
 }
-.second-footer-link a, .footer-copyright {
+.second-footer-link a, .footer-copyright, .second-footer-link {
   color: #666!important;
   font-size: 11px;
 }
