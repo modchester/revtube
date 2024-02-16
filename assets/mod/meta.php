@@ -1,4 +1,10 @@
-<?php include("branding.php"); ?>
+<?php 
+include("branding.php");
+
+if(!isset($mysqli)) {
+  die('Hey buddy, your database PHP file is missing.');
+}
+?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <meta charset="utf-8">
     <title><?php echo $site['name']; ?></title>
