@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +27,7 @@
      $stmt->bind_param("s", $_GET['v']);
      $stmt->execute();
      $result = $stmt->get_result();
-     if($result->num_rows === 0) exit('No rows');
+     if($result->num_rows === 0) errorPage(404, 404);
      error_reporting(E_ALL ^ E_WARNING);
      while($row = $result->fetch_assoc()) {
       $name = $row['author'];
@@ -36,7 +37,7 @@
      $stmt->bind_param("s", $name);
      $stmt->execute();
      $result = $stmt->get_result();
-     if($result->num_rows === 0) exit('No rows');
+     if($result->num_rows === 0) errorPage(404, 404);
      error_reporting(E_ALL ^ E_WARNING);
      while($row = $result->fetch_assoc()) {
       if($row['is_verified'] == 1) {
@@ -67,7 +68,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         $stmt->bind_param("s", $_GET['v']);
         $stmt->execute();
         $result = $stmt->get_result();
-        if($result->num_rows === 0) exit('No rows');
+        if($result->num_rows === 0) errorPage(404, 404);
         error_reporting(E_ALL ^ E_WARNING);
         while($row = $result->fetch_assoc()) {
             $uploaddate = date('F d, '.$site['uploadedVideoYear'], strtotime($row['date']));
@@ -150,7 +151,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
             $stmt->bind_param("s", $_GET['v']);
             $stmt->execute();
             $result = $stmt->get_result();
-            if($result->num_rows === 0) exit('No rows');
+            if($result->num_rows === 0) errorPage(404, 404);
             while($row = $result->fetch_assoc()) {
                 if ($row['featured'] == '1') {
                     echo "<strong style='font-size:8pt;''>This video is featured on the main page!</strong>";

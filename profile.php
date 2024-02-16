@@ -15,11 +15,7 @@
             $result = $statement->get_result();
             while($row = $result->fetch_assoc()) {
                 if ($row['strikes'] > 3) {
-                  ob_end_clean();
-                  $error = 404;
-                  $message = $error_messages['terminated_account'];
-                  include('./error.php');
-                  die();
+                  errorPage(404, 'terminated_account');
                 }
             }
             $statement->close();

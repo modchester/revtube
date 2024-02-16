@@ -6,7 +6,7 @@ function banUser($username, $mysqli) {
     // $stmt->execute();
     // $stmt->close();
     
-    $stmt = $mysqli->prepare("UPDATE users SET strikes = '3' WHERE username = ?");
+    $stmt = $mysqli->prepare("UPDATE users SET strikes = '4' WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->close();

@@ -1,4 +1,6 @@
 <?php
+    ob_start();
+
     // put your discord webhook here
     $webhook = "";
     // for reports (optional)
@@ -22,6 +24,14 @@
     }
 
     session_start();
+
+    function errorPage($code, $message) {
+      ob_end_clean();
+      $error = $code;
+      $message = $error_messages[$message];
+      include('../../../error.php');
+      die();
+    }
 
     function idFromUser($nameuser){
     	global $mysqli;
@@ -68,7 +78,7 @@
       $stmt->bind_param("s", $name);
       $stmt->execute();
       $result = $stmt->get_result();
-      if($result->num_rows === 0) exit('No rows');
+      if($result->num_rows === 0) return '';
       error_reporting(E_ALL ^ E_WARNING);
       while($row = $result->fetch_assoc()) {
        if($row['is_verified'] == 1) {

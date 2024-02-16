@@ -22,7 +22,7 @@ $start = $time;
 			    $statement->bind_param("s", $_SESSION['profileuser3']);
 			    $statement->execute();
 			    $result = $statement->get_result();
-			    if($result->num_rows === 0) exit('No rows');
+			    if($result->num_rows === 0) errorPage(404, 404);
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">

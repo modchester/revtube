@@ -4,7 +4,6 @@
   <?php include './assets/mod/db.php';?>
     <?php include './assets/mod/meta.php';?>
     </head>
-<?php include './assets/mod/guide.php';?>
   <body>
 <?php include './assets/mod/header.php';?>
 <?php

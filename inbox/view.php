@@ -25,7 +25,7 @@
   $stmt->bind_param("s", $_GET['id']);
   $stmt->execute();
   $result = $stmt->get_result();
-  if($result->num_rows === 0) exit('No rows');
+  if($result->num_rows === 0) errorPage(404, 404);
   error_reporting(E_ALL ^ E_WARNING);
   while($row = $result->fetch_assoc()) {
    $name = $row['sender'];
@@ -34,7 +34,7 @@ $stmt = $mysqli->prepare("SELECT * FROM users WHERE username = ?");
 $stmt->bind_param("s", $name);
 $stmt->execute();
 $result = $stmt->get_result();
-if($result->num_rows === 0) exit('No rows');
+if($result->num_rows === 0) errorPage(404, 404);
 error_reporting(E_ALL ^ E_WARNING);
 while($row = $result->fetch_assoc()) {
  if($row['is_verified'] == 1) {
