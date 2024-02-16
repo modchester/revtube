@@ -20,7 +20,30 @@
         <div class="row">
         <?php //include './assets/mod/guide.php';?>
           <div class="span10">
-
+<?php
+  $stmt = $mysqli->prepare("SELECT * FROM inbox WHERE id = ?");
+  $stmt->bind_param("s", $_GET['id']);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  if($result->num_rows === 0) exit('No rows');
+  error_reporting(E_ALL ^ E_WARNING);
+  while($row = $result->fetch_assoc()) {
+   $name = $row['sender'];
+  }
+$stmt = $mysqli->prepare("SELECT * FROM users WHERE username = ?");
+$stmt->bind_param("s", $name);
+$stmt->execute();
+$result = $stmt->get_result();
+if($result->num_rows === 0) exit('No rows');
+error_reporting(E_ALL ^ E_WARNING);
+while($row = $result->fetch_assoc()) {
+ if($row['is_verified'] == 1) {
+   $verified = '<img rel="twipsy" id="vfb" title="Verified" class="verihover" src="../assets/img/verified_small.png">';
+ } else {
+   $verified = '';
+ }
+}
+?>
             <?php
                     $statement = $mysqli->prepare("SELECT * FROM inbox WHERE reciever = ? AND id = ? ORDER BY id DESC");
                 $statement->bind_param("si", $_SESSION['profileuser3'], $_GET['id']);
@@ -36,11 +59,40 @@
                         if ($_SESSION['profileuser3'] !== $row['reciever']) {
                             echo '<script>window.location.href = "../index?err=Forbidden.";</script>';
                         }
-                        echo '<h2>'.htmlspecialchars($row['subject']).'</h2>
-<em>From: '.htmlspecialchars($row['sender']).' '.$official.'<br>
-To: '.htmlspecialchars($row['reciever']).'<br>Sent: '.$row['date'].'<br></em><hr>
-                           <p> '.htmlspecialchars($row['content']).'</p>
-                        ';
+                        echo '<h2>'.htmlspecialchars($row['subject']).'</h2>';
+                        $uploaddate = date('F d, Y', strtotime($row['date']));
+            $pfp = idFromUser($row['sender']);
+            $rows = getSubscribers($row['sender'], $mysqli);
+                        echo '  
+                        <div class="rewatch-views">
+                        <p style="margin-right:20px;"><b>'.$uploaddate.'</b></p>
+                        </div>
+                        <link rel="stylesheet" href="../assets/css/sub.css">
+                        <div id="rewatch-author">
+                        <img class="rewatch-pfp" src="../content/pfp/' .htmlspecialchars(getUserPicN($pfp)). '" width="48" height="48">
+                        <a style="color:#333;text-decoration:none;" href="profile?user='.htmlspecialchars($row['sender']).'"><span class="rewatch-name">' . htmlspecialchars($row['sender']) . ' '.$verified.'</a>';
+                        if($row['sender'] == $_SESSION['profileuser3']) {
+                          echo '
+                          <a href="account" id="editprof" style="margin-left: 44px; margin-top: 8px;" class="yt-button" type="button"><i class="bi bi-gear-fill"></i> Manage Account</a>';
+                        } else {
+                  if(isset($_SESSION['profileuser3'])) {
+                      if(ifSubscribed($_SESSION['profileuser3'], $row['sender'], $mysqli) == false) {
+                     echo '
+                     <a class="yt-button sub-button" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['sender']) . '"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
+                     ';
+                     } else { 
+                      echo '
+                      <a class="yt-button subbed-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['sender']) . '"><span class="sub-button-text">Unsubscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+                  ';
+                       } 
+                      } else {
+                          echo'
+                          <a class="yt-button disabled sub-button" style="margin-left: 44px; margin-top: 8px;"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+                      ';
+                      }
+                  }
+                     echo '</div><hr>
+                     <p style="font-size:14px;"> '.htmlspecialchars($row['content']).'</p>';
                     }
                 }
                 else{

@@ -876,3 +876,7 @@ font-weight: normal;
   thead {
     display: none;
   }
+  .inbpfp {
+    height: 20px !important;
+    vertical-align: middle;
+  }
