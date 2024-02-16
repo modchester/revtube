@@ -11,7 +11,16 @@
     $ffmpeg = 'C:\ffmpeg.exe';
     $ffprobe = 'C:\ffprobe.exe';
     
-    $mysqli = new mysqli("localhost", "root", "", "revtube");
+    try {
+      $mysqli = new mysqli("localhost", "root", "", "revtube");
+    } catch (Exception $e) {
+      if($debug) {
+          die('<pre>Error while connecting to database. error: '.$e.'</pre>');
+      } else {
+          die('<pre>Error while connecting to database.</pre>');
+      }
+    }
+
     session_start();
 
     function idFromUser($nameuser){
