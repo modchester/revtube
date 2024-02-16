@@ -79,9 +79,10 @@
 		<h3><i class="bi bi-brush"></i> Site Theme</h3>
 		<select name="theme">
 			<option value="default"> Default</option>
-  			<option value="fluent"> Fluent</option>
 			<option value="dark"> Dark</option>
-			<option value="l2013"> Semi Late 2013</option>
+			<option value="" disabled>-- No longer updated --</option>
+			<option value="fluent"> Fluent</option>
+			<!--<option value="l2013"> Semi Late 2013</option>-->
 		</select>
 		<br><br>
 		<h3><i class="bi bi-play-btn"></i> Video Player</h3>

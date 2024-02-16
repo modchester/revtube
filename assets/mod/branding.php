@@ -6,7 +6,7 @@ $site['siteTheme'] = $_COOKIE['siteTheme'] ?? 'default';
 $site['errorGato'] = $_COOKIE['errorGato'] ?? 'revoozie_rtx';
 $site['uploadedVideoYear'] = $_COOKIE['uploadyear'] ?? date('Y');
 $site['name'] = 'RevTube';
-$site['allowedThemes'] = array('dark', 'fluent', 'l2013');
+$site['allowedThemes'] = array('dark', 'fluent');
 
 // kill me
 $site['uploadedVideoYear'] = (int)$site['uploadedVideoYear'];
@@ -15,15 +15,9 @@ if($site['uploadedVideoYear'] < 2005 OR $site['uploadedVideoYear'] > date('Y')) 
     $site['uploadedVideoYear'] = date('Y');
 }
 
-// the commented lines are for the pre-late 2013 logo
-// it kinda sucks, i was testing
 if($site['siteTheme'] == 'dark') {
-    //$site['logo_source'] = '/assets/img/logos/2013_dark.png';
     $site['logo_source'] = '/assets/img/logos/2013L_dark.png';
-} elseif($site['siteTheme'] == 'l2013') {
-    $site['logo_source'] = '/assets/img/logos/2013L.png';
 } else {
-    //$site['logo_source'] = '/assets/img/logos/2013.png';
     $site['logo_source'] = '/assets/img/logos/2013L.png';
 }
   

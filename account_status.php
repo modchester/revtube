@@ -21,6 +21,8 @@
 			    $result = $statement->get_result();
 			    if($result->num_rows === 0) errorPage(404, 404);
 			    while($row = $result->fetch_assoc()) {
+					$account = $row;
+
 					if($row['strikes'] == 0) {
 						$strikenum = 0;
 						$strikestyle = "color: green; font-weight: bold;";
@@ -76,8 +78,12 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 
 <?php if($canApply) { ?>
 	<?php
-		// temp
-		$partnerStatus = 'not_sent'; // not_sent, not_reviewed, denied, accepted
+		// not_sent, not_reviewed, denied, accepted
+		if($account['is_verified'] == 1) {
+			$partnerStatus = 'accepted';
+		} else {
+			$partnerStatus = 'not_sent'; // use db for this pls
+		}
 
 		if($partnerStatus == 'denied') {
 			$partnerText = '<p>Your partner application has been <b style="color: red;">denied</b>.</p>';
