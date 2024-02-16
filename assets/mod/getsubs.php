@@ -10,7 +10,7 @@
                                           while($row = $result->fetch_assoc()) {
                                             $pid = idFromUser($row['receiver']);
                                             $rows = getSubscribers($row['receiver'], $mysqli);
-echo '<a href="/profile?user='.htmlspecialchars($row['receiver']).'"><li class="guide-item"><img src="/content/pfp/' .getUserPic($pid). '" width="8px" height"8px"> '.htmlspecialchars($row['receiver']).'</li></a>';
+echo '<a href="/profile?user='.htmlspecialchars($row['receiver']).'"><li class="guide-item"><img style="vertical-align: bottom;" src="/content/pfp/' .getUserPic($pid). '" width="21px" height="19px"> '.htmlspecialchars($row['receiver']).'</li></a>';
                                           }
                                         }
                                         ?>
