@@ -45,6 +45,14 @@
 		}
 		return $userpic;
     }
+
+    function getUserPicN($uid){
+      $userpic = (string)$uid;
+     if(file_exists("../content/pfp/".$userpic) !== TRUE){
+        $userpic = "default.png";
+     }
+     return $userpic;
+   }
     
     function getBackground($uid){
       $backg = (string)$uid;
