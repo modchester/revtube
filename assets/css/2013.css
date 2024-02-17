@@ -146,3 +146,26 @@ background-image: linear-gradient(to bottom,#5384be 0,#3f76b7 100%) !important;
 .subbed-button .sub-button-text {
     bottom: 0px;
 }
+
+#accountDropdown {
+    padding: 12px;
+    max-height: 120px;
+    height: 120px;
+    background: #ececec;
+    margin-top: 40px;
+}
+
+#accountDropdown .account-links {
+    float: right;
+    padding-right: 50px;
+    list-style-type: none;
+}
+
+a {
+    color: #4397d7;
+}
+
+#dropdown-icon {
+    color: #666;
+    font-size: 11px;
+}

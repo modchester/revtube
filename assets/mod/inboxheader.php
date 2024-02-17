@@ -19,10 +19,10 @@ $start = $time;
         echo '<ul class="nav secondary-nav"><li><a class="nav-buttons yt-button primary" href="/login">Sign in</a></li></ul>';
       } else {
         $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
-			    $statement->bind_param("s", $_SESSION['profileuser3']);
+			    $statement->bind_param("s", $profileUser3);
 			    $statement->execute();
 			    $result = $statement->get_result();
-			    if($result->num_rows === 0) errorPage(404, 404);
+			    if($result->num_rows == 0) errorPage(404, 404);
 			    while($row = $result->fetch_assoc()) {
 			        echo "<ul class=\"nav secondary-nav\">
             <li class=\"dropdown\" data-dropdown=\"dropdown\">

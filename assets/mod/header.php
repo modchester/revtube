@@ -1,12 +1,11 @@
-<!-- <div class="gbar">
-  test
-</div> -->
+
 <?php
 $time = microtime();
 $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 ?>
+<?php include('gbar.php'); ?>
 <div class="topbar">
       <div class="fill">
         <div class="container">
@@ -49,6 +48,7 @@ $start = $time;
 			    $result = $statement->get_result();
 			    if($result->num_rows === 0) errorPage(404, 404);
 			    while($row = $result->fetch_assoc()) {
+             $signedIn = true;
              if($row['strikes'] > 3) {
                echo('<script>window.location.href = "/logout?url=/?err=Your account has been terminated for a violation of '.$site['name'].'\'s Community Guidelines.";</script>');
              }
@@ -58,20 +58,8 @@ $start = $time;
               $adminlink = "";
             }
 			        echo "<ul class=\"nav secondary-nav\">
-            <li class=\"dropdown\" data-dropdown=\"dropdown\">
-              <a href=\"#\" class=\"dropdown-toggle\"><span class='huname'>".htmlspecialchars($row["username"])."</span> <img style='margin-top: -7px; vertical-align: middle;' alt='".htmlspecialchars($row["username"])."' height='32px' width='32px' src='/content/pfp/".getUserPic($row["id"])."'></a>
-              <ul class=\"dropdown-menu dropdown-menu-profile\">
-              <li></li>
-                <li><a href=\"./profile?user=".htmlspecialchars($row["username"])."\">Your Channel</a></li>
-                <!--<li><a href=\"upload\">Upload</a></li>-->
-                <li><a href='my_videos'>Studio</a></li>
-                <li class=\"divider\"></li>
-                <li><a href=\"account\">Settings</a></li>
-                ".$adminlink."
-                <li><a href=\"logout?url=".htmlspecialchars($_SERVER['REQUEST_URI'])."\">Logout ".htmlspecialchars($row["username"])."</a></li>
-              </ul>
-            </li>
-          </ul><!--<br><div style=\"color: white\" class=\"pull-right\"><strong><a href=\"./profile?id=".$row["id"]."\">".htmlspecialchars($row["username"])."</a></strong> - <a href=\"./account\">Manage Account</a> - <a href=\"./alogout\">Logout</a></div>-->";
+              <a href=\"#\" onclick='openAccountDropdown();'><span class='huname'>".htmlspecialchars($row["username"])."</span> <img style='margin-top: -7px; vertical-align: middle;' alt='".htmlspecialchars($row["username"])."' height='32px' width='32px' src='/content/pfp/".getUserPic($row["id"])."'> <i id='dropdown-icon' class='bi bi-caret-down-fill'></i></a>
+              </ul>";
 			    }
 			    $statement->close();
       }
@@ -91,5 +79,22 @@ $start = $time;
    }); 
 </script>
 <!-- <div class="stickybanner">clipIt will</div> -->
+<!-- acc dropdown -->
+<?php if(isset($signedIn)) { ?>
+  <div id="accountDropdown" style="display: none;">
+    <ul class="account-links">
+      <li><a href="/profile?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">My Channel</li>
+      <li><a href="/my_videos">Video Manager</li>
+      <li><a href="/subscriptions?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">Subscriptions</li>
+      <li><a href="/inbox">Inbox</li>
+      <li><a href="/account">Settings</li>
+      <li><a href="/logout?url=<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">Sign out</li>
+
+    </ul>
+  </div>
+
+  <script src="/assets/js/acc.js"></script>
+<?php } ?>
+
 <!-- guide -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/assets/mod/guide.php';?>

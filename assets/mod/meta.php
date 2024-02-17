@@ -35,6 +35,7 @@ include("branding.php");
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/yt-buttons.css" rel="stylesheet">
 	  <link href="/assets/css/misc.css" rel="stylesheet">
+    <link href="/assets/css/gbar.css" rel="stylesheet">
     <link href="/assets/css/2013.css" rel="stylesheet">
     <?php if($site['siteTheme'] !== 'default') { ?>
       <link href="/assets/css/theme?cache=<?php echo rand(1,9999); ?>" rel="stylesheet">
