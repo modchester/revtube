@@ -1,3 +1,8 @@
+<style>
+  .guide {
+    padding-top: 100px !important;
+  }
+  </style>
 <div class="guide">
     <ul>
         <a href="/"><li class="guide-item"><i class="bi bi-house-door-fill"></i> Home</li></a>   
