@@ -874,3 +874,8 @@ font-weight: normal;
     height: 20px !important;
     vertical-align: middle;
   }
+
+  html {
+    overflow-x: hidden !important;
+    /* i hate css raaaah */
+  }
