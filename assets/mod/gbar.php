@@ -82,7 +82,7 @@
                 <h2 class="gbxx">Account Options</h2><span class="gbtcb"></span>
                 <ol class="gbtc">
                     <li class="gbt"><a class="gbgt" id="gbg4"
-                            href="/profile?name=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>" aria-haspopup="true"
+                            href="/profile?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>" aria-haspopup="true"
                             aria-owns="gbd4"><span class="gbtb2"></span>
                             <script
                                 nonce="">document.getElementById('gbg4').addEventListener('click', function clickHandler(event) { gbar.logger.il(50); gbar.tg(event, this); });</script>

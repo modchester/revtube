@@ -879,3 +879,6 @@ font-weight: normal;
     overflow-x: hidden !important;
     /* i hate css raaaah */
   }
+  .topbar {
+    margin-top: -1px;
+  }

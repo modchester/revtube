@@ -1,6 +1,6 @@
-    /* magnum22 and kai was here :) */
+    /* magnum22, kai and kylarz were here :) */
     
-    :root { --bodybg: #000; }
+    :root { --bodybg: #000 !important; }
 
     .footer-links, .footer-links li a { color: #868686; }
     
@@ -216,4 +216,17 @@
     input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
       background-color: #0a0a0a;
       border-color: #222;
+    }
+
+    .yt-subscription-button-subscriber-count-branded-horizontal, .yt-subscription-button-subscriber-count-unbranded-horizontal {
+        background: #050505 !important;
+        border: 1px solid #333 !important;
+        color: #ccc !important;
+    }
+    .yt-subscription-button-subscriber-count-branded-horizontal:after, .yt-subscription-button-subscriber-count-unbranded-horizontal:after {
+        border-color: transparent #050505 !important;
+    }
+
+    #accountDropdown {
+        background: #222;
     }
