@@ -1,0 +1,29 @@
+.yt-search-input {
+    width: 85%;
+}
+.rlabel {
+    text-align: left;
+}
+.upload-select {
+    margin: 5px 0 !important;
+}
+.bar {
+    background-color: #636363;
+    padding: 7px;
+    height: 22px;
+    margin: -20px;
+    margin-top: -22px !important;
+    margin-bottom: 10px;
+}
+.bar-right {
+    float: right;
+    margin-top: -1px;
+}
+.bar-left {
+    float: left;
+    margin-top: 2px;
+}
+.bar-left p {
+    color: #FFF;
+    font-weight: bold !important;
+}

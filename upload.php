@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
   <?php include './assets/mod/meta.php';?>      
+  <link rel="stylesheet" href="./assets/css/upload.css">
 </head>
 
   <body>
@@ -9,12 +10,14 @@
     <?php include("./assets/mod/header.php"); ?>
 <div class="container">
 <div class="content">
+<!-- TODO: Remove this old page header completely 
 <div class="page-header">
-            <?php include './assets/mod/msg.php'; ?>
-            <?php include './assets/mod/alert.php'?>
+            <?php //include './assets/mod/msg.php'; ?>
+            <?php //include './assets/mod/alert.php'?>
           <h1>Upload your video <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
+          <?php //include './assets/mod/todaysdate.php'; ?>
         </div>
+-->
 <?php
     if(!isset($_SESSION['profileuser3'])) {
         echo('<script>
@@ -142,8 +145,16 @@
               </script>');
           }
           ?>
+          <div class="bar">
+            <div class="bar-left">
+                <p>Upload</p>
+            </div>
+            <div class="bar-right">
+                <a class="yt-button" href="my_videos">Video Manager</a>
+        </div>
+        </div>
           <div class="row">
-          <div class="span10">
+          <div class="span8">
                 <!-- <h1>Upload Video</h1> -->
                <!-- <h3><i>Please check if you're logged in, if you're not, you need to sign in to upload videos.</i></h3>
                 <small>This will be fixed in a later update.</small> -->
@@ -168,14 +179,26 @@
                         <div></div>
                         <div><input type="submit" class="yt-button primary" value="Upload" name="submit"></div>
                     </div>
-                </form>
+                
         </div>
-        <div class="span4">
-            <h1>New Upload</h1>
-            <p>We're currently working on a new design for the upload page, one which matches with most of the other pages on the site. <br> Keep in mind that currently we only support .mp4 files. This may change in the future though.<br>Remember to read the <a href="guidelines">Community Guidelines</a> before you upload.
-            <!-- <div class="banner">UPLOAD IS UNDER MAINTENANCE PLEASE WAIT</div> -->
+        <div class="span6">
+        <div class="input-group">
+                       <label class="rlabel" for="privacy">Privacy Settings </label>
+        <select class="upload-select" name="privacy">
+			<option value="public"> Public</option>
+			<option value="unlisted"> Unlisted</option>
+			<option value="private"> Private</option>
+		</select>
+        </div>
 
+        <div class="input-group">
+                       <label class="rlabel" for="category">Category </label>
+        <select class="upload-select" name="category">
+			<option value="select"> Select a category</option>
+		</select>
         </div>
+        </div>
+    </form>
         </div>
             </div>
         </div>
