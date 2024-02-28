@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
   <?php include './assets/mod/meta.php';?>      
+  <link rel="stylesheet" href="./assets/css/sub.css">
 </head>
-
   <body>
 <?php include './assets/mod/db.php';?>
 <?php include './assets/mod/header.php';?>
@@ -14,10 +14,8 @@
             $result = $statement->get_result();
             while($row = $result->fetch_assoc()) {
                 if ($row['strikes'] > 3) {
-                  echo('<script>
-             window.location.href = "/?err=This account has been terminated for a violation of '.$site['name'].'\'s Community Guidelines.";
-             </script>');
-                  }
+                  errorPage(404, 'terminated_account');
+                }
             }
             $statement->close();
         ?>
@@ -33,18 +31,22 @@
             </style>
     <div class="container">
  <div class="content">
- <?php include ("./assets/mod/channelheader.php"); ?>
+        <div class="page-header">
+        <?php include './assets/mod/alert.php';?>
+          <h1>Channel <small><div id="clockbox"></div></small></h1>
+          <?php include './assets/mod/todaysdate.php'; ?>
+        </div>
         <div class="row">
           <div class="span10">
         <div class="container-flex">
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
               <ul class="yt-tabs" data-tabs="tabs">
-  <li><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
+  <li class="active"><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
   <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
   <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
   <li><a href="subscriptions?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscriptions</a></li>
-  <li class="active"><a href="community?user=<?php echo htmlspecialchars($_GET['user']); ?>">Community</a></li>
+  <li><a href="community?user=<?php echo htmlspecialchars($_GET['user']); ?>">Community</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -73,22 +75,40 @@
                        // echo $finalstring;
                         $username = htmlspecialchars($row["username"]);
                     }
-                    $statement = $mysqli->prepare("SELECT * FROM `community` WHERE `author` = ? ORDER BY date DESC");
+                    $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `author` = ?");
                     $statement->bind_param("s", $username);
                     $statement->execute();
                     $result = $statement->get_result();
-                    echo "<h3>$username's posts</h3>";
+                    echo "<h3>Videos</h3>";
                     if($result->num_rows !== 0){
                       include("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
-                        error_reporting(~E_ALL & ~E_DEPRECATED);
-                        $pfp = idFromUser($row['author']);
-                        $time = time_elapsed_string($row['date']);
-                        echo '<div class="comment"><img class="cmn" height="34px" width="34px" src="content/pfp/'.getUserPic($pfp).'"><div class="commenttitle"><a style="font-weight:bold;" href="profile?user='.htmlspecialchars($row['author']).'">'.htmlspecialchars($row['author']).'</a> <span title="'.$row['date'].'">('.$time.')</span></div><div class="cmntxt">'.htmlspecialchars($row['content']).'</div></div>';
+                      $likec = getLikes($row['vid'], $mysqli);
+    $dislikec = getDislikes($row['vid'], $mysqli);
+    $views = getViews($row['vid'], $mysqli); 
+    if($row['duration'] > 3600) {
+      $lengthlist = floor($row['duration'] / 3600) . ":" . gmdate("i:s", $row['duration'] % 3600);
+    } else { 
+      $lengthlist = gmdate("i:s", $row['duration'] % 3600) ;
+    };
+                        echo '
+                        <div class="video container-flex">
+                                <div class="col-1-3 video-thumbnail">
+                                <a href="/watch?v='.$row['vid'].'">
+                                    <img height="70px" width="120px" src="content/thumb/'.$row['vid'].'.jpg">
+                                </a>
+                                </div>
+                                <div class="col-1-3 video-title"><a href="/watch?v='.$row['vid'].'"><b>'.htmlspecialchars($row['videotitle']).'</b></a></div>
+                                <div class="col-1-3 video-info">
+                                    <div>'.$lengthlist.' &bull; '.$row['views'].' views &bull; <i class="bi bi-hand-thumbs-up-fill"></i> '.$likec.' <i class="bi bi-hand-thumbs-down-fill"></i> '.$dislikec.'</div>
+                                    <div><em>'.htmlspecialchars($row['description']).'</em></div>
+                                </div>
+                            </div>
+                            <hr>';
                     }
                     }
                     else{
-                        echo("This channel has no posts.");
+                        echo("This channel has no videos.");
                         $totalviews = "0";
                     }
                     $statement->close();
@@ -96,7 +116,59 @@
             </div>
         </div>
           </div>
-          <div class="span4" id="channel">
+          <div class="span4">
+          <?php
+                $statement = $mysqli->prepare("SELECT * FROM `users` WHERE `username` = ? LIMIT 1");
+                $statement->bind_param("s", $_GET['user']);
+                $statement->execute();
+                $result = $statement->get_result();
+                while($row = $result->fetch_assoc()) {
+                  $pfp = idFromUser($_GET['user']);
+                  $rows = getSubscribers($_GET['user'], $mysqli);
+                  if($row['is_admin'] == 1) {
+                    $staff = '<i class="bi bi-shield-fill"></i>';
+                  } else {
+                    $staff = '';
+                  }
+                  if($row['is_verified'] == 1) {
+                    if(!empty($row['custom_css'])) {
+                      $customCSS = '<style>'.$row['custom_css'].'</style>';
+                      echo $customCSS;
+                    }
+                    
+                    $verified = '<img style="margin-bottom:-3px;" height="24px" src="/assets/img/verified_dark.png">';
+                  } else {
+                    $verified = '';
+                  }
+                  
+                  echo('
+            <h3><h2 id="profileUsername">'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
+            <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
+            '); 
+      if(isset($_SESSION['profileuser3'])) {
+        if($row['username'] == $_SESSION['profileuser3']) {
+          echo '
+          <div id="editprof-container"><a href="/account" id="editprof" class="yt-button primary" type="button">Manage Account</a></div>';
+      } else {
+          if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
+         echo '
+         <a class="yt-button sub-button" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['username']) . '"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
+         ';
+         } else { 
+          echo '
+          <a class="yt-button subbed-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '"><span class="sub-button-text">Unsubscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+          ';
+           }}
+          } else {
+              echo'
+              <a class="yt-button disabled sub-button" style="margin-left: 44px; margin-top: 8px;"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
+              ';
+          }
+        }
+      //}}
+            echo '';
+            ?>
+            <hr>
             <?php 
             // this doesnt work because i forgot views have their own table not including author names
             // never mind i fixed

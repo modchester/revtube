@@ -33,11 +33,7 @@
             </style>
     <div class="container">
  <div class="content">
-        <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
-          <h1>Channel <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
-        </div>
+ <?php include ("./assets/mod/channelheader.php"); ?>
         <div class="row">
           <div class="span10">
         <div class="container-flex">
@@ -85,12 +81,12 @@
                     if($result->num_rows !== 0){
                     while($row = $result->fetch_assoc()) {
                         $pid = idFromUser($row['receiver']);
-                        $rows = getSubscribers($row['receiver'], $mysqli);
+                        $rowe = getSubscribers($row['receiver'], $mysqli);
                         $name = htmlspecialchars($row['receiver']);
                         echo "<div class='user'>
 				    	<div class='user-info'>
 						    <div><a href='./profile?user=".htmlspecialchars($name)."'><img class='cmn' height='34px' width='34px' style='padding-right:2px;' src='content/pfp/".getUserPic($pid). "'> <b>".htmlspecialchars($name)."</b></a> (".$rows." subscribers)</div>
-						    <!-- <div><span class='black'>".$rows."</span> subscribers</div> -->
+						    <!-- <div><span class='black'>".$rowe."</span> subscribers</div> -->
 					    </div>
 					  <!-- <div><a href='./profile?user=".htmlspecialchars($name)."'><img class='cmn' height='34px' width='34px' src='content/pfp/".getUserPic($pid)."'></a></div> -->
 				    </div>
@@ -105,58 +101,7 @@
             </div>
         </div>
           </div>
-          <div class="span4">
-          <?php
-                $statement = $mysqli->prepare("SELECT * FROM `users` WHERE `username` = ? LIMIT 1");
-                $statement->bind_param("s", $_GET['user']);
-                $statement->execute();
-                $result = $statement->get_result();
-                while($row = $result->fetch_assoc()) {
-                  $pfp = idFromUser($_GET['user']);
-                  $rows = getSubscribers($_GET['user'], $mysqli);
-                  if($row['is_admin'] == 1) {
-                    $staff = '<i class="bi bi-shield-fill"></i>';
-                  } else {
-                    $staff = '';
-                  }
-                  if($row['is_verified'] == 1) {
-                    if(!empty($row['custom_css'])) {
-                      $customCSS = '<style>'.$row['custom_css'].'</style>';
-                      echo $customCSS;
-                    }
-
-                    $verified = '<img style="margin-bottom:-3px;" height="24px" src="/assets/img/verified_dark.png">';
-                  } else {
-                    $verified = '';
-                  }
-                  echo('
-            <h3><h2>'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
-            <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
-            '); 
-      if(isset($_SESSION['profileuser3'])) {
-        if($row['username'] == $_SESSION['profileuser3']) {
-          echo '
-          <div id="editprof-container"><a href="/account" id="editprof" class="yt-button primary" type="button">Manage Account</a></div>';
-      } else {
-          if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
-         echo '
-         <a class="yt-button danger" href="/subscribe?name=' . htmlspecialchars($row['username']) . '">Subscribe ('.$rows.')</a>
-         ';
-         } else { 
-          echo '
-          <a class="yt-button" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '">Unsubscribe ('.$rows.')</a>
-      ';
-           }}
-          } else {
-              echo'
-              <a class="yt-button danger disabled">Subscribe ('.$rows.')</a>
-          ';
-          }
-        }
-      //}}
-            echo '';
-            ?>
-            <hr>
+          <div class="span4" id="channel">
             <?php 
             // this doesnt work because i forgot views have their own table not including author names
             // never mind i fixed
@@ -187,7 +132,7 @@
               $totalviews = 0;
           }
           ?>
-            <h3>Bio</h3>
+            <h3>About Me</h3>
                             <?php
                 $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `username` = ? LIMIT 1");
                 $statement->bind_param("s", $_GET['user']);

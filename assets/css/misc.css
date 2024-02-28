@@ -883,3 +883,32 @@ font-weight: normal;
   .topbar {
     margin-top: -1px;
   }
+  /* new channel design   made by kylarz below */
+  #usernamecontainer {
+    font-size: 14px !important;
+  }
+
+  #rechannel-pfp {
+    height: 55px;
+width: 55px;
+float: left;
+margin-top: -7px;
+margin-left: -7px;
+margin-right: 10px;
+box-shadow: 0 1px 1px rgba(0,0,0,.4);
+  }
+  .page-header > h1 {
+    margin-top: -9px !important;
+  }
+  .yt-tabs {
+    margin-top: -11px;
+    margin-left: -8px;
+  }
+  #editprof-container, .subbtnrechannel {
+margin-top: -42px !important;
+float: right;
+}
+.subbtnrechannel {
+margin-top: -52px !important;
+}
+/* no more new channel stuff haha */

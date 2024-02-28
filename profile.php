@@ -23,19 +23,15 @@
             body {
                 background: url('/content/background/<?php $id = idFromUser($_GET['user']); echo getBackground($id);?>') !important;
             }
-
+/* 
             #editprof-container {
               text-align: center;
               margin: 0 auto;
-            }
+            } */
             </style>
     <div class="container">
  <div class="content">
-        <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
-          <h1>Channel <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
-        </div>
+       <?php include ("./assets/mod/channelheader.php"); ?>
         <div class="row">
           <div class="span10">
         <div class="container-flex">
@@ -75,7 +71,7 @@
                        // echo $finalstring;
                         $username = htmlspecialchars($row["username"]);
                     }
-                    $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `author` = ?");
+                    $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `author` = ? ORDER BY `date` DESC");
                     $statement->bind_param("s", $username);
                     $statement->execute();
                     $result = $statement->get_result();
@@ -116,59 +112,7 @@
             </div>
         </div>
           </div>
-          <div class="span4">
-          <?php
-                $statement = $mysqli->prepare("SELECT * FROM `users` WHERE `username` = ? LIMIT 1");
-                $statement->bind_param("s", $_GET['user']);
-                $statement->execute();
-                $result = $statement->get_result();
-                while($row = $result->fetch_assoc()) {
-                  $pfp = idFromUser($_GET['user']);
-                  $rows = getSubscribers($_GET['user'], $mysqli);
-                  if($row['is_admin'] == 1) {
-                    $staff = '<i class="bi bi-shield-fill"></i>';
-                  } else {
-                    $staff = '';
-                  }
-                  if($row['is_verified'] == 1) {
-                    if(!empty($row['custom_css'])) {
-                      $customCSS = '<style>'.$row['custom_css'].'</style>';
-                      echo $customCSS;
-                    }
-                    
-                    $verified = '<img style="margin-bottom:-3px;" height="24px" src="/assets/img/verified_dark.png">';
-                  } else {
-                    $verified = '';
-                  }
-                  
-                  echo('
-            <h3><h2 id="profileUsername">'.htmlspecialchars($row["username"]).' '.$staff.' '.$verified.'</h2></h3>
-            <img id="prfp" style="height:225px;width:225px;" src="/content/pfp/' .getUserPic($pfp). '">
-            '); 
-      if(isset($_SESSION['profileuser3'])) {
-        if($row['username'] == $_SESSION['profileuser3']) {
-          echo '
-          <div id="editprof-container"><a href="/account" id="editprof" class="yt-button primary" type="button">Manage Account</a></div>';
-      } else {
-          if(ifSubscribed($_SESSION['profileuser3'], $row['username'], $mysqli) == false) {
-         echo '
-         <a class="yt-button sub-button" style="margin-left: 44px; margin-top: 8px;" href="/subscribe?name=' . htmlspecialchars($row['username']) . '"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span> 
-         ';
-         } else { 
-          echo '
-          <a class="yt-button subbed-button" style="margin-left: 44px; margin-top: 8px;" href="/unsubscribe?name=' . htmlspecialchars($row['username']) . '"><span class="sub-button-text">Unsubscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
-          ';
-           }}
-          } else {
-              echo'
-              <a class="yt-button disabled sub-button" style="margin-left: 44px; margin-top: 8px;"><span class="sub-button-text">Subscribe</span></a> <span class="yt-subscription-button-subscriber-count-branded-horizontal subscribed">'.$rows.'</span>
-              ';
-          }
-        }
-      //}}
-            echo '';
-            ?>
-            <hr>
+          <div class="span4" id="channel">
             <?php 
             // this doesnt work because i forgot views have their own table not including author names
             // never mind i fixed
