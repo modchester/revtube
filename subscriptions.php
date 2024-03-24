@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
 <?php 
             $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
             $statement->bind_param("s", $_GET['user']);
@@ -33,7 +33,7 @@
             </style>
     <div class="container">
  <div class="content">
- <?php include ("./assets/mod/channelheader.php"); ?>
+ <?php require_once ("./assets/mod/channelheader.php"); ?>
         <div class="row">
           <div class="span10">
         <div class="container-flex">
@@ -167,6 +167,6 @@
       </div>
 
     </div></div> <!-- /container -->
-    <?php include './assets/mod/footer.php'; ?>
+    <?php require_once './assets/mod/footer.php'; ?>
   </body>
 </html>

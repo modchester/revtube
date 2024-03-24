@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
+        <?php require_once './assets/mod/alert.php';?>
           <h1>All Comments <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
+          <?php require_once './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -22,7 +22,7 @@
                 $statement->execute();
                 $result = $statement->get_result();
                 if($result->num_rows !== 0){
-                  include("assets/lib/profile.php");
+                  require_once("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
@@ -79,13 +79,13 @@
     ?>
           </div>
           <div class="span4">
-         <?php include './assets/mod/whatsnew.php'; ?>
+         <?php require_once './assets/mod/whatsnew.php'; ?>
           </div>
         </div>
       </div>
 
     </div>      
-    <?php include './assets/mod/footer.php'; ?>
+    <?php require_once './assets/mod/footer.php'; ?>
 </div></div> <!-- /container -->
 
   </body>

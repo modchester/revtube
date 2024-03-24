@@ -1,10 +1,10 @@
 <?php 
 if(!isset($noGuide)) {
 
-include("branding.php"); 
+require_once("branding.php"); 
 
 if(isset($_SESSION['profileuser3'])) {
-  include("signed_in_guide.php");
+  require_once("signed_in_guide.php");
 } else {
 ?>
 <div class="guide">
@@ -31,7 +31,7 @@ if(isset($_SESSION['profileuser3'])) {
 			    $statement->close();
       }
     ?>
-   <?php include("getsubs.php"); ?><hr>
+   <?php require_once("getsubs.php"); ?><hr>
         <a href="//discord.gg/GbbQBsWXPK"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
         <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
         <?php if(!isset($_SESSION['profileuser3'])) {

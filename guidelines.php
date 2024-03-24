@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
+        <?php require_once './assets/mod/alert.php';?>
           <h1>Community Guidelines <small>Last updated November 25, 2023</small></h1>
         </div>
         <div class="row">
@@ -51,7 +51,7 @@
             <ul class="unstyled">
             <li>Leaving multiple comments with no purpose or spamming will get your comment(s) deleted.</li>
 <br>
-<li>Posting links to your videos or profiles (links that lead off-platform included) is not allowed and carries the same punishment as above.</li>
+<li>Posting links to your videos or profiles (links that lead off-platform require_onced) is not allowed and carries the same punishment as above.</li>
         </ul>
         <h2>Strike System</h2>
         <ul class="unstyled">
@@ -59,11 +59,11 @@
 </ul>
           </div>
           <div class="span4">
-<?php include './assets/mod/whatsnew.php'; ?>
+<?php require_once './assets/mod/whatsnew.php'; ?>
       </div>
 
       
     </div></div></div> <!-- /container -->
-    <?php include './assets/mod/footer.php'; ?>
+    <?php require_once './assets/mod/footer.php'; ?>
   </body>
 </html>

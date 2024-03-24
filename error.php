@@ -1,5 +1,5 @@
 <?php 
-include($_SERVER['DOCUMENT_ROOT']."/assets/mod/branding.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/assets/mod/branding.php");
 
 // this is for the profile terminated error yk
 if(!isset($error)) {

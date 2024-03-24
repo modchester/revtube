@@ -1,4 +1,4 @@
-<?php include($_SERVER['DOCUMENT_ROOT']."/assets/mod/branding.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT']."/assets/mod/branding.php"); ?>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

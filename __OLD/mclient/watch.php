@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+<?php require_once("header.php"); ?>
 <form action="" method="POST">
 <label>Enter Video ID:</label><br />
 <input class="yt-search-input" type="text" name="vid" placeholder="Enter video ID" required/>

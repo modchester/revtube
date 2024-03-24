@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include '../assets/mod/meta.php';?>
-    <?php include '../assets/mod/db.php';?>
+    <?php require_once '../assets/mod/meta.php';?>
+    <?php require_once '../assets/mod/db.php';?>
     </head>
-    <?php include '../assets/mod/inboxguide.php';?>
+    <?php require_once '../assets/mod/inboxguide.php';?>
   <body>
-<?php include '../assets/mod/inboxheader.php';?>
+<?php require_once '../assets/mod/inboxheader.php';?>
 <!-- guide -->
     <div class="container">
  <div class="content">
         <div class="page-header">
-            <?php include '../assets/mod/msg.php'; ?>
-            <?php include '../assets/mod/inboxalert.php'?>
+            <?php require_once '../assets/mod/msg.php'; ?>
+            <?php require_once '../assets/mod/inboxalert.php'?>
           <h1>Sent <small><div id="clockbox"></div></small></h1>
-          <?php include '../assets/mod/todaysdate.php'; ?>
+          <?php require_once '../assets/mod/todaysdate.php'; ?>
         </div>
         
         <div class="row">
-        <?php //include './assets/mod/guide.php';?>
+        <?php //require_once './assets/mod/guide.php';?>
           <div class="span10">
             <h2></h2>
             <table class="condensed-table">
@@ -62,7 +62,7 @@
             </ul>
           </div>
           <div class="span4">
-            <?php include '../assets/mod/inboxwhatsnew.php'; ?>
+            <?php require_once '../assets/mod/inboxwhatsnew.php'; ?>
             <!--<input class="input" type="text" placeholder="Username">
             <br>
             <input class="input" type="password" placeholder="Password">
@@ -73,6 +73,6 @@
       </div>
 
     </div> <!-- /container -->
-    <?php include '../assets/mod/footer.php'; ?>
+    <?php require_once '../assets/mod/footer.php'; ?>
   </body>
 </html>

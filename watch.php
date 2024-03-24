@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>   
+  <?php require_once './assets/mod/meta.php';?>   
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
-<?php include './assets/lib/profile.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
+<?php require_once './assets/lib/profile.php';?>
 <link rel="stylesheet" href="./assets/css/sub.css">
      <?php
      
@@ -202,7 +202,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows === 0) echo('No comments.');
-        include("assets/lib/time.php");
+        require_once("assets/lib/time.php");
         if($commentsenabled !== 1) {
           echo '<div class="cmndisabled">Comments are disabled for this video.</div>';
         } else {
@@ -243,7 +243,7 @@ mysqli_query($mysqli, "UPDATE videos SET views = views+1 WHERE vid = '".$_GET['v
         </div>
       </div>
 
-      <?php include './assets/mod/footer.php'; ?>
+      <?php require_once './assets/mod/footer.php'; ?>
 
     </div> <!-- /container -->
 

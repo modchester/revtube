@@ -1,7 +1,7 @@
 <?php
 header("Content-Type:application/json");
 if (isset($_GET['return']) && $_GET['return']!="") {
-	include('../assets/mod/db.php');
+	require_once('../assets/mod/db.php');
 	$result = mysqli_query(
 	$mysqli,
 	"SELECT * FROM `videos` ORDER BY RAND() LIMIT 1");

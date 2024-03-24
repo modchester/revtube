@@ -4,7 +4,7 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 ?>
-<?php include('inboxgbar.php'); ?>
+<?php require_once('inboxgbar.php'); ?>
 <div class="topbar">
       <div class="fill">
         <div class="container">

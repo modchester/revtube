@@ -5,7 +5,7 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 ?>
-<?php include('gbar.php'); ?>
+<?php require_once('gbar.php'); ?>
 <div class="topbar">
       <div class="fill">
         <div class="container">
@@ -97,4 +97,4 @@ $start = $time;
 <?php } ?>
 
 <!-- guide -->
-<?php include $_SERVER['DOCUMENT_ROOT'].'/assets/mod/guide.php';?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'].'/assets/mod/guide.php';?>

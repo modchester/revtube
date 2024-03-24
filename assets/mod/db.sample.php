@@ -29,7 +29,7 @@
       ob_end_clean();
       $error = $code;
       $message = $error_messages[$message];
-      include('../../../error.php');
+      require_once('../../../error.php');
       die();
     }
 

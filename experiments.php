@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
+        <?php require_once './assets/mod/alert.php';?>
           <h1>Experiments <small>Try out new (BETA) features</small></h1>
         </div>
         <div class="row">
@@ -34,6 +34,6 @@ fluent ui was moved into customize settings :3
 <h3>There are no public experiments at the moment. Check back later!</h3>
 </div>
     </div> <!-- /container -->
-    <?php include './assets/mod/footer.php'; ?>
+    <?php require_once './assets/mod/footer.php'; ?>
   </body>
 </html>

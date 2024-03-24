@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
   <link rel="stylesheet" href="./assets/css/upload.css">
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-    <?php include("./assets/mod/header.php"); ?>
+<?php require_once './assets/mod/db.php';?>
+    <?php require_once("./assets/mod/header.php"); ?>
 <div class="container">
 <div class="content">
 <!-- TODO: Remove this old page header completely 
 <div class="page-header">
-            <?php //include './assets/mod/msg.php'; ?>
-            <?php //include './assets/mod/alert.php'?>
+            <?php //require_once './assets/mod/msg.php'; ?>
+            <?php //require_once './assets/mod/alert.php'?>
           <h1>Upload your video <small><div id="clockbox"></div></small></h1>
-          <?php //include './assets/mod/todaysdate.php'; ?>
+          <?php //require_once './assets/mod/todaysdate.php'; ?>
         </div>
 -->
 <?php
@@ -203,7 +203,7 @@
             </div>
         </div>
     <hr>
-    <?php include("./assets/mod/footer.php") ?>
+    <?php require_once("./assets/mod/footer.php") ?>
 </body>
 </html>
 <?php $mysqli->close();?>

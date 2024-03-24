@@ -6,7 +6,7 @@
   <p style="margin-top:2px;"><strong>We've updated our Community Guidelines!</strong> Take a moment to read the <a href="/guidelines">updated guidelines</a>.</p>
 </div> -->
 <?php
-                    include("assets/mod/time.php");
+                    require_once("assets/mod/time.php");
                     $statement = $mysqli->prepare("SELECT * FROM announcements ORDER BY date DESC LIMIT 1 ");
                     $statement->execute();
                     $result = $statement->get_result();

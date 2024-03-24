@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include '../assets/mod/meta.php';?>      
+  <?php require_once '../assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include '../assets/mod/db.php';?>
-<?php include '../assets/mod/header.php';?>
+<?php require_once '../assets/mod/db.php';?>
+<?php require_once '../assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include '../assets/mod/msg.php';?>
+        <?php require_once '../assets/mod/msg.php';?>
           <h1>Developers <small>Last updated February 1, 2023</small></h1>
         </div>
         <div class="row">
@@ -20,11 +20,11 @@
 <h2>- cleber299: dark theme</h2>
           </div>
           <div class="span4">
-<?php include '../assets/mod/whatsnew.php'; ?>
+<?php require_once '../assets/mod/whatsnew.php'; ?>
       </div>
 
       
     </div></div></div> <!-- /container -->
-    <?php include '../assets/mod/footer.php'; ?>
+    <?php require_once '../assets/mod/footer.php'; ?>
   </body>
 </html>

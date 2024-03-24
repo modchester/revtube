@@ -1,5 +1,5 @@
 <?php
-include("./assets/mod/db.php");
+require_once("./assets/mod/db.php");
     if (isset($_POST['textarea2'])){
         if(!isset($_SESSION['profileuser3'])) {
             die("Login to post announcements...");

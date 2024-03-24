@@ -2,16 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
+        <?php require_once './assets/mod/alert.php';?>
           <h1><small style="font-size:30px;">Help / </small>Password Resets <small>Last updated November 25, 2023</small></h1>
         </div>
         <div class="row">
@@ -30,10 +30,10 @@
                 <small><em>Article written by <a href="profile?user=kylarz">kylarz</a> on November 25, 2023.</em></small>
 </div>
           <div class="span4">
-<?php include './assets/mod/whatsnew.php'; ?>
+<?php require_once './assets/mod/whatsnew.php'; ?>
       </div>
 
     </div> </div></div><!-- /container -->
-    <?php include './assets/mod/footer.php'; ?>
+    <?php require_once './assets/mod/footer.php'; ?>
   </body>
 </html>

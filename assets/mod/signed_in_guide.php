@@ -10,7 +10,7 @@
         <a href="/account"><li class="guide-item">Settings</li></a>
         <a href="/upload"><li class="guide-item">Upload</li></a>
         <hr>
-        <?php include("getsubs.php"); ?>
+        <?php require_once("getsubs.php"); ?>
         <a href="//discord.gg/GbbQBsWXPK"><li class="guide-item"><i class="bi bi-discord"></i> Discord</li></a>
         <a href="/channels"><li class="guide-item"><i class="bi bi-plus-circle-fill"></i> Browse channels</li></a>
     </ul>

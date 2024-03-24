@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <?php include("assets/mod/branding.php"); ?>
-    <?php include("assets/mod/db.php"); ?>
+    <?php require_once("assets/mod/branding.php"); ?>
+    <?php require_once("assets/mod/db.php"); ?>
     <link rel="stylesheet" href="/assets/css/login.css">
     <link href="/assets/css/yt-buttons.css" rel="stylesheet">
   <link href="/assets/css/2013.css" rel="stylesheet">

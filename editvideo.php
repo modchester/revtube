@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
 </head>
 <style>
     .content .span9, .content .span5 {
@@ -9,15 +9,15 @@
 }
 </style>
   <body>
-<?php include './assets/mod/db.php';?>
-    <?php include("./assets/mod/header.php"); ?>
+<?php require_once './assets/mod/db.php';?>
+    <?php require_once("./assets/mod/header.php"); ?>
 <div class="container">
 <div class="content">
 <div class="page-header">
-            <?php include './assets/mod/msg.php'; ?>
-            <?php include './assets/mod/alert.php'?>
+            <?php require_once './assets/mod/msg.php'; ?>
+            <?php require_once './assets/mod/alert.php'?>
           <h1>Edit your video <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
+          <?php require_once './assets/mod/todaysdate.php'; ?>
         </div>
         <?php
                                     $statement = $mysqli->prepare("SELECT * FROM `videos` WHERE `vid` = ? LIMIT 1");
@@ -102,7 +102,7 @@
             </div>
         </div>
     <hr>
-    <?php include("./assets/mod/footer.php") ?>
+    <?php require_once("./assets/mod/footer.php") ?>
 </body>
 </html>
 <?php $mysqli->close();?>

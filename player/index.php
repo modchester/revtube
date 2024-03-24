@@ -1,11 +1,11 @@
 <?php 
-include("../assets/mod/branding.php"); 
+require_once("../assets/mod/branding.php"); 
 
 if($site['videoPlayer'] == 'yt2016') {
-    include("./2016/index.php");
+    require_once("./2016/index.php");
 } elseif($site['videoPlayer'] == 'videotag') {
-    include("./videotag/index.php");
+    require_once("./videotag/index.php");
 } else {
-    include("./2013/index.php");
+    require_once("./2013/index.php");
 }
 ?>

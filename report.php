@@ -1,13 +1,13 @@
-<?php include("./assets/mod/webhook.php"); ?>
+<?php require_once("./assets/mod/webhook.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>
+  <?php require_once './assets/mod/meta.php';?>
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-    <?php include("./assets/mod/header.php");?>
+<?php require_once './assets/mod/db.php';?>
+    <?php require_once("./assets/mod/header.php");?>
     <center>
     <?php
     if (isset($_POST['submit'])){
@@ -125,7 +125,7 @@ if(isset($_POST["submit"])){
         </div>
     </div>
     <hr>
-    <?php include("./assets/mod/footer.php") ?>
+    <?php require_once("./assets/mod/footer.php") ?>
 </body>
 </html>
 <?php $mysqli->close();?>

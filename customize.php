@@ -1,5 +1,5 @@
 <?php
-	include("./assets/mod/branding.php");
+	require_once("./assets/mod/branding.php");
 
 	// written by skyiebox, 1/14/2024
 	// updated by skyiebox, 2/13/2024 (1 day before this page became 1 month old!)
@@ -44,7 +44,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
   <style>
 	input, textarea, select, .uneditable-input {
 		max-width: 210px!important;
@@ -53,12 +53,12 @@
 </head>
 
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
+        <?php require_once './assets/mod/alert.php';?>
           <h1>Customize The Site <small>BETA</small></h1>
         </div>
         <div class="row">

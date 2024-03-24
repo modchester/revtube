@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>      
   <link rel="stylesheet" href="./assets/css/sub.css">
 </head>
   <body>
-<?php include './assets/mod/db.php';?>
-<?php include './assets/mod/header.php';?>
+<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/header.php';?>
 <?php 
             $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
             $statement->bind_param("s", $_GET['user']);
@@ -32,9 +32,9 @@
     <div class="container">
  <div class="content">
         <div class="page-header">
-        <?php include './assets/mod/alert.php';?>
+        <?php require_once './assets/mod/alert.php';?>
           <h1>Channel <small><div id="clockbox"></div></small></h1>
-          <?php include './assets/mod/todaysdate.php'; ?>
+          <?php require_once './assets/mod/todaysdate.php'; ?>
         </div>
         <div class="row">
           <div class="span10">
@@ -81,7 +81,7 @@
                     $result = $statement->get_result();
                     echo "<h3>Videos</h3>";
                     if($result->num_rows !== 0){
-                      include("assets/lib/profile.php");
+                      require_once("assets/lib/profile.php");
                     while($row = $result->fetch_assoc()) {
                       $likec = getLikes($row['vid'], $mysqli);
     $dislikec = getDislikes($row['vid'], $mysqli);
@@ -230,6 +230,6 @@
       </div>
 
     </div></div> <!-- /container -->
-    <?php include './assets/mod/footer.php'; ?>
+    <?php require_once './assets/mod/footer.php'; ?>
   </body>
 </html>
