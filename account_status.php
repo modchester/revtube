@@ -86,16 +86,16 @@ $strike = 'You currently have <span style="'.$strikestyle.'">'.$strikenum.' '.$e
 		}
 
 		if($partnerStatus == 'denied') {
-			$partnerText = '<p>Your partner application has been <b style="color: red;">denied</b>.</p>';
+			$partnerText = '<p id="partnerText">Your partner application has been <b style="color: red;">denied</b>.</p>';
 			$alreadyApplied = true;
 		} elseif($partnerStatus == 'accepted') { 
-			$partnerText = '<p>Your partner application has been <b style="color: #008008;">accepted</b>!</p>';
+			$partnerText = '<p id="partnerText">Your partner application has been <b style="color: #008008;">accepted</b>!</p>';
 			$alreadyApplied = true;
 		} elseif($partnerStatus == 'not_reviewed') {
-			$partnerText = '<p>Your partner application has not been reviewed yet.</p>';
+			$partnerText = "<p id='partnerText'>Your partner application has not been reviewed yet.</p>";
 			$alreadyApplied = true;
 		} else {
-			$partnerText = "<p>You haven't sent a partner application.</p>";
+			$partnerText = "<p id='partnerText'>You haven't sent a partner application.</p>";
 			$alreadyApplied = false;
 		}
 	?>
