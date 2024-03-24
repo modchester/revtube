@@ -51,7 +51,7 @@
             <ul class="unstyled">
             <li>Leaving multiple comments with no purpose or spamming will get your comment(s) deleted.</li>
 <br>
-<li>Posting links to your videos or profiles (links that lead off-platform require_onced) is not allowed and carries the same punishment as above.</li>
+<li>Posting links to your videos or profiles (links that lead off-platform included) is not allowed and carries the same punishment as above.</li>
         </ul>
         <h2>Strike System</h2>
         <ul class="unstyled">

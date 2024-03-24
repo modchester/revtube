@@ -17,7 +17,7 @@
           <div class="span10">
             <h2>Uploading Rules</h2>
             <ul class="unstyled">
-<li>No NSFW content at all. This require_onces hardcore porn, softcore porn, Rule 34, hentai and, basically any type of porn.</li>
+<li>No NSFW content at all. This includes hardcore porn, softcore porn, Rule 34, hentai and, basically any type of porn.</li>
 <br>
 <li><strong>NO NSFL CONTENT.</strong> Including all types of gore, propaganda, and child porn (goes with no nsfw aswell).</li>
 <br>
