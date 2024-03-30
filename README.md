@@ -1,6 +1,6 @@
 # RevTube: PHP video sharing software
 
-*UI is maintaned by Kaisiece/[skyiebox](https://github.com/skyiebox) and kylarz/ky-1.*
+*Maintaned by [Kaisiece](https://github.com/kaisiece) and [kylarz](https://github.com/ky-1).*
 
 RevTube is a video <!--(with audio uploading a feature that was going to be added)--> sharing site designed as an alternative to YouTube and similar sites.
 # Access the site 
