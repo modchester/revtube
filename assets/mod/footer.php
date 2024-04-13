@@ -40,7 +40,7 @@ $total_time = round(($finish - $start), 4);*/
             <li class="second-footer-link"><a href="/stats">Statistics</a></li>
             <li class="second-footer-link"><a href="/info/partners">Partners</a></li>
             <?php if(isset($debugmsg)) { ?><?php echo $debugmsg; ?><?php } ?>
-            <li class="second-footer-link footer-copyright"><span dir="ltr">© <?php echo $site['name']; ?> 2021-<?php echo date("Y"); ?></span></li>
+            <li class="second-footer-link footer-copyright"><span dir="ltr">© cattowithtea and ky-1,  2021-<?php echo date("Y"); ?></span></li>
         </ul>
     </p>
     
