@@ -9,5 +9,5 @@
 ### Hosting:
 - tyretical: hosting (November 2021-April 2022)
 - jrs: temporary hosting (July 2022)
-- tobskep: hosting (March 2023, until November 2023 for other projects)
+- tobskep: hosting (March 2023-November 2023, March 2024-present)
 - shiypc/John: hosting (November 2023-January 2024, shit died)
