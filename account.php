@@ -50,7 +50,7 @@
 				<?php if($row['is_verified'] == 1) { ?>
 				<div class="input-group">
 				    <label for="css">Custom CSS: </label>
-				    <textarea class="yt-search-input" name="css" rows="4" cols="50"><?php echo $row['custom_css']; ?></textarea>
+				    <textarea class="yt-search-input" id="css" name="css" rows="4" cols="50"><?php echo $row['custom_css']; ?></textarea>
 				</div>
 				
 			    <?php } }
