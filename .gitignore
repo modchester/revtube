@@ -9,5 +9,6 @@ content/background/
 content/pfp/
 content/background/
 !*content/pfp/default
+!*content/pfp/.htaccess
 assets/mod/db.php
 .DS_Store
