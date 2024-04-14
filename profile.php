@@ -16,6 +16,18 @@
                 if ($row['strikes'] > 3) {
                   errorPage(404, 'terminated_account');
                 }
+                $username = htmlspecialchars($row['username']);
+                $description = htmlspecialchars($row['description']);
+                echo '<meta name="title" content="'.$username.' - '.$site['name'].'">
+                <meta name="description" content="'.$description.'">
+                <meta property="og:site_name" content="'.$site['name'].'" />
+                <meta property="og:title" content="'.$username.'">
+                <meta property="og:description" content="'.$description.'">
+                <meta property="og:image" content="/content/pfp/'.getUserPic($username).'">
+                <meta property="og:url" content="profile.php?name='.$username.'">
+                <meta property="twitter:title" content="'.$username.'">
+                <meta property="twitter:description" content="'.$description.'">
+                <meta property="twitter:image" content="/content/pfp/'.getUserPic($username).'">';
             }
             $statement->close();
         ?>
