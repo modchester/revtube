@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
   <?php require_once './assets/mod/meta.php';?>      
-  <link rel="stylesheet" href="./assets/css/sub.css">
+  <link rel="stylesheet" href="/assets/css/sub.css">
 </head>
   <body>
 <?php require_once './assets/mod/db.php';?>
