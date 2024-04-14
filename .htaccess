@@ -1,6 +1,7 @@
 Options +FollowSymlinks -MultiViews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^user/(.*)$ /profile.php?user=$1
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 ErrorDocument 404 /error.php?code=404
 ErrorDocument 500 /error.php?code=500
