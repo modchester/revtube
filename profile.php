@@ -23,11 +23,11 @@
                 <meta property="og:site_name" content="'.$site['name'].'" />
                 <meta property="og:title" content="'.$username.'">
                 <meta property="og:description" content="'.$description.'">
-                <meta property="og:image" content="/content/pfp/'.getUserPic($username).'">
+                <meta property="og:image" content="/content/pfp/'.getUserPicN($username).'">
                 <meta property="og:url" content="profile.php?name='.$username.'">
                 <meta property="twitter:title" content="'.$username.'">
                 <meta property="twitter:description" content="'.$description.'">
-                <meta property="twitter:image" content="/content/pfp/'.getUserPic($username).'">';
+                <meta property="twitter:image" content="/content/pfp/'.getUserPicN($username).'">';
             }
             $statement->close();
         ?>
