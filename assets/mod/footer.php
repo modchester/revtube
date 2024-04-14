@@ -12,9 +12,9 @@
         <a class="footerlogost" href="/"><strong><?php echo $site['name']; ?></strong><!--<img src="./assets/navlogo.png" height="17px" width="59px">--></a>
         <!-- buttons -->
         <ul class="footer-buttons">
-            <li><a class="pull-left yt-button" href="#" onclick="alert('Translations aren't implemented.')"><i class="bi bi-14 bi-globe-americas"></i> Language: <b>English</b> <i class="bi bi-caret-down-fill"></i></a></li> 
-            <li><a class="pull-left yt-button" href="#" onclick="alert('Country-specific settings aren't implemented.')">Country: <b>Worldwide</b> <i class="bi bi-caret-down-fill"></i></a></li> 
-            <li><a class="pull-left yt-button" href="#" onclick="alert('Safety settings aren't implemented.')">Safety: <b>Off</b> <i class="bi bi-caret-down-fill"></i></a></li>  
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Translations aren\'t implemented.')"><i class="bi bi-14 bi-globe-americas"></i> Language: <b>English</b> <i class="bi bi-caret-down-fill"></i></a></li> 
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Country-specific settings aren\'t implemented.')">Country: <b>Worldwide</b> <i class="bi bi-caret-down-fill"></i></a></li> 
+            <li><a class="pull-left yt-button" href="#" onclick="alert('Safety settings aren\'t implemented.')">Safety: <b>Off</b> <i class="bi bi-caret-down-fill"></i></a></li>  
             <li><a class="pull-left yt-button" href="#" onclick="alert('No help for you.')"><i class="bi bi-14 bi-question-circle-fill"></i> Help <i class="bi bi-caret-down-fill"></i></a></li>  
         </ul>
             
