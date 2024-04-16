@@ -5,6 +5,8 @@
     $webhook = "";
     // for reports (optional)
     $reports_webhook = "";
+    // for lastfm integration (optional)
+    $lastfmkey = "";
     
     // debug mode
     $debug = true;

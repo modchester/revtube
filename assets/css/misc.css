@@ -915,3 +915,16 @@ margin-top: -52px !important;
 #css {
   font-family: monospace !important;
 }
+.fa-lastfm {
+  color: #DF1303;
+  float: right;
+  margin-top: 2px;
+}
+.nooverflow {
+  width: 167px;
+  /* margin-left: 52px; */
+  /* margin-top: -33px; */
+  white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}

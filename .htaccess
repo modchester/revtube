@@ -1,6 +1,10 @@
 Options +FollowSymlinks -MultiViews
 RewriteEngine On
 RewriteRule ^user/(.*)$ /profile.php?user=$1
+RewriteRule ^subscribers/(.*)$ /subscribers.php?user=$1
+RewriteRule ^subscriptions/(.*)$ /subscriptions.php?user=$1
+RewriteRule ^discussion/(.*)$ /discussion.php?user=$1
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 ErrorDocument 404 /error.php?code=404

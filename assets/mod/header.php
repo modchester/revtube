@@ -86,10 +86,10 @@ $start = $time;
       <li><a href="/profile?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">My Channel</li>
       <li><a href="/my_videos">Video Manager</li>
       <li><a href="/subscriptions?user=<?php echo htmlspecialchars($_SESSION['profileuser3']); ?>">Subscriptions</li>
-      <li><a href="/inbox">Inbox</li>
+      <li><a href="/inbox/index">Inbox</li>
       <li><a href="/account">Settings</li>
+      <?php echo $adminlink; ?>
       <li><a href="/logout?url=<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">Sign out</li>
-
     </ul>
   </div>
 

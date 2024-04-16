@@ -40,11 +40,11 @@
             <div class="col-2-3">
               <!-- <img class="profilebanner" src="content/banners/default.png"> -->
               <ul class="yt-tabs" data-tabs="tabs">
-  <li><a href="profile?user=<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
-  <li><a href="all_videos?user=<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
-  <li><a href="subscribers?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
-  <li><a href="subscriptions?user=<?php echo htmlspecialchars($_GET['user']); ?>">Subscriptions</a></li>
-  <li class="active"><a href="community?user=<?php echo htmlspecialchars($_GET['user']); ?>">Community</a></li>
+  <li><a href="/user/<?php echo htmlspecialchars($_GET['user']); ?>">Home</a></li>
+  <li><a href="/videos/<?php echo htmlspecialchars($_GET['user']); ?>">All Videos</a></li>
+  <li><a href="/subscribers/<?php echo htmlspecialchars($_GET['user']); ?>">Subscribers</a></li>
+  <li><a href="/subscriptions/<?php echo htmlspecialchars($_GET['user']); ?>">Subscriptions</a></li>
+  <li class="active"><a href="/discussion/<?php echo htmlspecialchars($_GET['user']); ?>">Discussion</a></li>
 </ul>
                 <?php
                     $statement = $mysqli->prepare("SELECT `username`, `id` FROM `users` WHERE `username` = ? LIMIT 1");
@@ -124,19 +124,61 @@
               $totalviews = 0;
           }
           ?>
-            <h3>About Me</h3>
+                        <h3>About Me</h3>
                             <?php
-                $statement = $mysqli->prepare("SELECT `description`, `date` FROM `users` WHERE `username` = ? LIMIT 1");
+                $statement = $mysqli->prepare("SELECT `description`, `date`, `lastfmuser` FROM `users` WHERE `username` = ? LIMIT 1");
                 $statement->bind_param("s", $_GET['user']);
                 $statement->execute();
                 $result = $statement->get_result();
                 while($row = $result->fetch_assoc()) {
                   $join = strtotime($row["date"]);
                   $join2 = date('F d, Y',$join);
+                  $lastfmuser = $row['lastfmuser'];
                     echo "<div class='card message'>
                     ".htmlspecialchars($row["description"])."
-                    </div>
-                    <hr>
+                    </div><hr>";
+                }
+                ?>
+                                 <?php
+                    if(!empty($lastfmuser) && isset($lastfmkey)) {
+ $user     = $lastfmuser; // Enter your username here
+ $key      = $lastfmkey; // Enter your API Key
+ $status   = 'Last Played'; // default to this, if 'Now Playing' is true, the json will reflect this.
+ $endpoint = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' . $user . '&&limit=2&api_key=' . $key . '&format=json';
+ $ch = curl_init();
+ curl_setopt($ch, CURLOPT_URL, $endpoint);
+ curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+ curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+ curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0); // 0 for indefinite
+ curl_setopt($ch, CURLOPT_TIMEOUT, 10); // 10 second attempt before timing out
+ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+ $response = curl_exec($ch);
+ $lastfm[] = json_decode($response, true);
+ curl_close($ch);
+
+ $artwork = $lastfm[0]['recenttracks']['track'][0]['image'][2]['#text'];
+ if ( empty( $artwork ) ) {  // Check if album artwork exists on last.fm, else use our own fallback image
+    $artwork = 'img/no_art.jpg';
+}
+
+$trackInfo = [
+    'name'       => $lastfm[0]['recenttracks']['track'][0]['name'],
+    'artist'     => $lastfm[0]['recenttracks']['track'][0]['artist']['#text'],
+    'link'       => $lastfm[0]['recenttracks']['track'][0]['url'],
+    'albumArt'   => $artwork,
+    'status'     => $status
+];
+
+if ( !empty($lastfm[0]['recenttracks']['track'][0]['@attr']['nowplaying']) ) {
+    $trackInfo['nowPlaying'] = $lastfm[0]['recenttracks']['track'][0]['@attr']['nowplaying'];
+    $trackInfo['status'] = 'Now Playing';
+}
+echo '<div><img style="float:left;margin-right:5px;margin-top:4px;" height="48px" width="48px" src="'.$trackInfo['albumArt'].'"><b>'.$trackInfo['status'].' <i class="fab fa-lastfm"></i></b><br><div class="nooverflow"><a href="'.$trackInfo['link'].'">'.$trackInfo['name'].'</a><br>'.$trackInfo['artist'].'</div></div><hr>';
+                    }
+ ?>
+                <?php echo "
                     <h3>Statistics</h3>
                     <div class='card message'>
                     <span class='stat'>".$rows."</span> subscribers
@@ -145,7 +187,6 @@
                     <span style='display:inline-block;float:right !important;'>Joined ".$join2."</span>
 
                     ";
-                }
                 $statement->close();
                 ?>
             <!--<input class="input" type="text" placeholder="Username">
