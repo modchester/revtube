@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php require_once './assets/mod/meta.php';?>      
+  <?php require_once './assets/mod/meta.php';?>     
+  <link rel="stylesheet" href="/assets/css/sub.css">
+  <script src="https://kit.fontawesome.com/fbb4da9442.js" crossorigin="anonymous"></script> 
 </head>
 
   <body>
