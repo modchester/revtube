@@ -1,7 +1,7 @@
 <?php
 header("Content-Type:application/json");
 if (isset($_GET['username']) && $_GET['username']!="") {
-	require_once('../assets/mod/db.php');
+	require_once('../assets/mod/db_init.php');
 	$username = $_GET['username'];
 	$result = mysqli_query(
 	$mysqli,

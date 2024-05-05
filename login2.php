@@ -1,4 +1,4 @@
-<?php require_once("assets/mod/db.php"); ?>
+<?php require_once("assets/mod/db_init.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

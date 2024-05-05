@@ -6,7 +6,7 @@
   <script src="https://kit.fontawesome.com/fbb4da9442.js" crossorigin="anonymous"></script>
 </head>
   <body>
-<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/db_init.php';?>
 <?php require_once './assets/mod/header.php';?>
 <?php 
             $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");

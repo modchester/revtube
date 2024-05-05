@@ -1,5 +1,5 @@
 <?php require("assets/lib/profile.php"); ?>
-<?php require("assets/mod/db.php"); ?>
+<?php require("assets/mod/db_init.php"); ?>
 <?php
 $name = $_GET['name'];
 

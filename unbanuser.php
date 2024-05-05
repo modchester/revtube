@@ -1,6 +1,6 @@
 <?php
 require_once("assets/lib/admin.php");
-require_once("assets/mod/db.php");
+require_once("assets/mod/db_init.php");
                     $statement = $mysqli->prepare("SELECT * FROM users WHERE username = ? ");
                     $statement->bind_param("s", $_SESSION['profileuser3']);
                     $statement->execute();

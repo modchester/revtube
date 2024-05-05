@@ -1,4 +1,4 @@
-<?php require("assets/mod/db.php"); ?>
+<?php require("assets/mod/db_init.php"); ?>
 <?php
 
 $stmt = $mysqli->prepare("SELECT * FROM videos WHERE vid = ?");

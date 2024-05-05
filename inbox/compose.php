@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <?php require_once '../assets/mod/meta.php';?>
-    <?php require_once '../assets/mod/db.php';?>
+    <?php require_once '../assets/mod/db_init.php';?>
     </head>
     <?php require_once '../assets/mod/inboxguide.php';?>
   <body>

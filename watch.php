@@ -6,7 +6,7 @@
 </head>
 
   <body>
-<?php require_once './assets/mod/db.php';?>
+<?php require_once './assets/mod/db_init.php';?>
 <?php require_once './assets/mod/header.php';?>
 <?php require_once './assets/lib/profile.php';?>
 <link rel="stylesheet" href="./assets/css/sub.css">

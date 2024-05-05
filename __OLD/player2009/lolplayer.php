@@ -1,4 +1,4 @@
-<?php require_once("../../assets/mod/db.php");?>
+<?php require_once("../../assets/mod/db_init.php");?>
 <head>
     <link rel="stylesheet" href="./assets/player.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
