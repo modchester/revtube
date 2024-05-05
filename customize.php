@@ -4,6 +4,8 @@
 	// written by skyiebox, 1/14/2024
 	// updated by skyiebox, 2/13/2024 (1 day before this page became 1 month old!)
 	// updated by skyiebox, 2/16/2024
+	// Updated by modchester to remove "Fluent", 5/5/2024
+
 	if(isset($_POST)) {
 		if(isset($_POST['theme'])) {
 			setrawcookie("siteTheme", $_POST['theme'], time() + 2000000, "/");
@@ -77,9 +79,11 @@
 		<select name="theme">
 			<option value="default"> Default</option>
 			<option value="dark"> Dark</option>
-			<option value="" disabled>-- No longer updated --</option>
-			<option value="fluent"> Fluent</option>
-			<!--<option value="l2013"> Semi Late 2013</option>-->
+			<!-- 
+				<option value="" disabled>-- No longer updated --</option>
+				<option value="fluent"> Fluent</option>
+				<option value="l2013"> Semi Late 2013</option>
+			-->
 		</select>
 		<br><br>
 		<h3><i class="bi bi-play-btn"></i> Video Player</h3>

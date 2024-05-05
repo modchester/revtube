@@ -6,7 +6,7 @@ $site['siteTheme'] = $_COOKIE['siteTheme'] ?? 'default';
 $site['errorGato'] = $_COOKIE['errorGato'] ?? 'revoozie_rtx';
 $site['uploadedVideoYear'] = $_COOKIE['uploadyear'] ?? date('Y');
 $site['name'] = 'RevTube';
-$site['allowedThemes'] = array('dark', 'fluent');
+$site['allowedThemes'] = array('dark');
 
 // kill me
 $site['uploadedVideoYear'] = (int)$site['uploadedVideoYear'];
